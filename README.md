@@ -1,8 +1,21 @@
 # AadidessWebFrontend
 
+                      _____ _____ _____  ______  _____ _____ 
+     /\        /\   |  __ \_   _|  __ \|  ____|/ ____/ ____|
+    /  \      /  \  | |  | || | | |  | | |__  | (___| (___  
+   / /\ \    / /\ \ | |  | || | | |  | |  __|  \___ \\___ \ 
+  / ____ \  / ____ \| |__| || |_| |__| | |____ ____) |___) |
+ /_/    \_\/_/    \_\_____/_____|_____/|______|_____/_____/ 
+                                                            
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.8.
 
-nvm use 22
+## Stack
+
+- Angular 21 (standalone, zoneless, signals)
+- SCSS with BEM methodology
+- Node.js 22 (LTS)
+- Future backoffice: Node.js + MongoDB
 
 ## Development server
 
