@@ -1,12 +1,4 @@
-# AadidessWebFrontend
-
-                      _____ _____ _____  ______  _____ _____ 
-     /\        /\   |  __ \_   _|  __ \|  ____|/ ____/ ____|
-    /  \      /  \  | |  | || | | |  | | |__  | (___| (___  
-   / /\ \    / /\ \ | |  | || | | |  | |  __|  \___ \\___ \ 
-  / ____ \  / ____ \| |__| || |_| |__| | |____ ____) |___) |
- /_/    \_\/_/    \_\_____/_____|_____/|______|_____/_____/ 
-                                                            
+# AadidessWebFrontend                                       
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.8.
 
