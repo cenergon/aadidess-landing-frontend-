@@ -1,0 +1,38 @@
+<div class="aranceles">
+  <h1 class="aranceles__titulo">Aranceles 2026</h1>
+
+  @for (categoria of categorias; track categoria.nombre; let i = $index) {
+    <div
+      #categoriaDiv
+      class="aranceles__categoria"
+      [class.aranceles__categoria--expanded]="isExpanded(i)"
+    >
+      <button
+        class="aranceles__cabecera"
+        (click)="toggleCategoria(i)"
+        [attr.aria-expanded]="isExpanded(i)"
+      >
+        <span class="aranceles__nombre-categoria">{{ categoria.nombre }}</span>
+        <span class="aranceles__icono material-symbols-outlined">
+          {{ isExpanded(i) ? 'expand_less' : 'expand_more' }}
+        </span>
+      </button>
+
+      @if (isExpanded(i)) {
+        <div class="aranceles__items">
+          @for (item of categoria.items; track item.descripcion) {
+            <div class="aranceles__item">
+              <span class="aranceles__descripcion">{{ item.descripcion }}</span>
+              <span
+                class="aranceles__precio"
+                [class.aranceles__precio--confirmar]="item.precio === 'A confirmar'"
+              >
+                {{ item.precio }}
+              </span>
+            </div>
+          }
+        </div>
+      }
+    </div>
+  }
+</div>

@@ -1,0 +1,90 @@
+<section class="escuelas-clubes">
+  <!-- Barra superior fija con título y botones de navegación -->
+  <div class="escuelas-clubes__sticky-nav">
+    <div class="escuelas-clubes__container">
+      <h1 class="escuelas-clubes__title">Escuelas y Clubes reconocidos por la AADIDESS</h1>
+      <div class="escuelas-clubes__indice">
+        @for (l of localidades; track l.slug) {
+          <button
+            class="indice-btn"
+            (click)="scrollALocalidad(l.slug)"
+            [class.indice-btn--activo]="localidadActiva() === l.slug"
+          >
+            {{ l.nombre }}
+          </button>
+        }
+      </div>
+    </div>
+  </div>
+
+  <!-- Contenido que se desplaza debajo de la barra -->
+  <div class="escuelas-clubes__contenido">
+    <div class="escuelas-clubes__container">
+      @for (l of localidades; track l.slug) {
+        <div class="escuelas-clubes__localidad" [id]="l.slug">
+          <h2 class="escuelas-clubes__localidad-titulo">
+            <span class="material-symbols-outlined">location_on</span>
+            {{ l.nombre }}
+          </h2>
+          <div class="escuelas-clubes__grid">
+            @for (e of l.escuelas; track e.nombre) {
+              <div class="escuelas-clubes__card" [class.escuelas-clubes__card--open]="escuelaAbierta() === e.nombre">
+                <button class="escuelas-clubes__card-header" (click)="toggleEscuela(e.nombre)">
+                  <span>{{ e.nombre }}</span>
+                  <span class="material-symbols-outlined chevron">expand_more</span>
+                </button>
+                <div class="escuelas-clubes__card-body">
+                  @if (e.email) {
+                    <p class="dato">
+                      <span class="material-symbols-outlined icono">mail</span>
+                      <span [innerHTML]="e.email.replace('/', '/<br>')"></span>
+                    </p>
+                  }
+                  @if (e.web) {
+                    <p class="dato">
+                      <span class="material-symbols-outlined icono">public</span>
+                      <a [href]="'https://' + e.web" target="_blank" rel="noopener">{{ e.web }}</a>
+                    </p>
+                  }
+                  @if (e.telefono) {
+                    <p class="dato">
+                      <span class="material-symbols-outlined icono">call</span>
+                      {{ e.telefono }}
+                    </p>
+                  }
+                </div>
+              </div>
+            }
+          </div>
+        </div>
+      }
+
+      <!-- Sección de requisitos al final -->
+      <div class="escuelas-clubes__requisitos">
+        <h2 class="escuelas-clubes__requisitos-titulo">Requisitos (Vigencia 2024)</h2>
+        <p class="escuelas-clubes__aviso">
+          A partir del 2025 AADIDESS reconocerá solo a aquellas escuelas que además de cumplir con los requisitos establecidos, tengan un plantel mínimo de 10 instructores que deberá contar con Instructores de los niveles 1, 2 y 3.
+        </p>
+        <details class="escuelas-clubes__acordeon">
+          <summary>Plan Nacional de Profesionalización de la Enseñanza - Requisitos para Escuelas y Clubes Adheridos</summary>
+          <ol>
+            <li>Contar con un plantel de 10 instructores como mínimo.</li>
+            <li>Los eventuales deberán ser autorizados por AADIDESS por períodos no mayores a 15 días.</li>
+            <li>Los cursantes o socios que infrinjan las competencias de su capacitación serán sancionados con la suspensión temporaria de participación en cursos.</li>
+            <li>Las PP deberán ser realizadas en escuelas reconocidas o adheridas.</li>
+            <li>Poseer habilitación para funcionar como tal dentro de un centro de esquí del territorio nacional, otorgado por la autoridad competente.</li>
+            <li>Que el Director de la Escuela de Esquí Alpino y Snowboard o del Club Deportivo sea un Instructor Nivel 3 o superior, socio de esta asociación.</li>
+            <li>Que el plantel de Instructores esté conformado por, como mínimo, un 20% de Instructores Nivel 3 o superior, argentinos, socios de AADIDESS, con título vigente.</li>
+            <li>Que el porcentaje de Instructores de nacionalidad extranjera con título validado no supere el 20%.</li>
+            <li>Que la totalidad del plantel tenga título válido para AADIDESS en un plazo de 3 años.</li>
+            <li>Que la enseñanza oficial sea la determinada por AADIDESS.</li>
+            <li>Que no se contrate a personas sin habilitación AADIDESS.</li>
+            <li>La CD podrá hacer excepciones en áreas de desarrollo.</li>
+            <li>Adherir al Plan Nacional de Profesionalización a partir del 2025.</li>
+            <li>El resto corre a partir de este año.</li>
+          </ol>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>

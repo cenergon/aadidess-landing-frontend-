@@ -1,0 +1,256 @@
+$color-dark: #24243c;
+$color-accent: #60d0f1;
+$color-white: #ffffff;
+$color-border: rgba(36, 36, 60, 0.08);
+$shadow-card: 0 2px 12px rgba(0, 0, 0, 0.04);
+$shadow-hover: 0 6px 20px rgba(36, 36, 60, 0.08);
+$radius-md: 8px;
+$radius-lg: 12px;
+
+.formas-pago {
+  max-width: 900px;
+  margin: 2rem auto 4rem;
+  padding: 0 1.5rem;
+
+  // --- Elementos copiables (sin ícono, feedback integrado) ---
+    &__copiar {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    cursor: pointer;
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    // Cuando está activo (recién copiado) se pone color acento
+    &--activo {
+        color: $color-accent;
+    }
+
+    .copiado-tooltip {
+        position: absolute;
+        top: -1.8rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background: $color-dark;
+        color: $color-white;
+        font-size: 0.75rem;
+        padding: 0.2rem 0.75rem;
+        border-radius: 999px;
+        white-space: nowrap;
+        pointer-events: none;
+        z-index: 10;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+    }
+
+  &__container {
+    // no extra
+  }
+
+  &__titulo {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: $color-dark;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    letter-spacing: -0.5px;
+  }
+
+  // Medios aceptados
+  &__medios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  &__medio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: $color-dark;
+    padding: 1rem;
+    background: $color-white;
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+    min-width: 120px;
+    transition: box-shadow 0.2s, border-color 0.2s;
+
+    .material-symbols-outlined {
+      font-size: 2rem;
+      color: $color-accent;
+    }
+
+    &:hover {
+      border-color: rgba($color-accent, 0.25);
+      box-shadow: $shadow-hover;
+    }
+  }
+
+  // Aviso
+  &__aviso {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba($color-accent, 0.06);
+    border: 1px solid rgba($color-accent, 0.15);
+    border-radius: $radius-md;
+    padding: 1rem 1.5rem;
+    margin-bottom: 2.5rem;
+    font-size: 0.95rem;
+    color: $color-dark;
+
+    .material-symbols-outlined {
+      color: $color-accent;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    a {
+      color: $color-accent;
+      font-weight: 600;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // Destacados (Macro Click, Mercado Pago)
+  &__destacados {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__destacado {
+    background: $color-white;
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
+    padding: 1.75rem;
+    position: relative;
+    box-shadow: $shadow-card;
+    transition: box-shadow 0.2s, border-color 0.2s;
+
+    &:hover {
+      box-shadow: $shadow-hover;
+      border-color: rgba($color-accent, 0.15);
+    }
+
+    &-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    &-logo {
+      // Antes 40px, ahora bastante más grande
+      width: 150px;
+      height: 150px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+  }
+
+  &__badge {
+    display: inline-block;
+    background: $color-accent;
+    color: $color-white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.2rem 0.75rem;
+    border-radius: 999px;
+    letter-spacing: 0.5px;
+  }
+
+  &__subtitulo {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: $color-dark;
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.6;
+  }
+
+  // Transferencia
+  &__transferencia {
+    margin-top: 1rem;
+  }
+
+  &__descripcion {
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.7;
+  }
+
+  &__bancos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__banco {
+    background: $color-white;
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+    padding: 1.5rem;
+    box-shadow: $shadow-card;
+    transition: box-shadow 0.2s, border-color 0.2s;
+
+    &:hover {
+      box-shadow: $shadow-hover;
+      border-color: rgba($color-accent, 0.15);
+    }
+
+    &-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+
+      h3 {
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: $color-dark;
+        margin: 0;
+      }
+    }
+
+    &-logo {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    &-datos {
+      p {
+        margin: 0.5rem 0;
+        font-size: 0.9rem;
+        color: $color-dark;
+        strong {
+          color: $color-dark;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+}
+

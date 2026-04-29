@@ -1,0 +1,47 @@
+<div class="convenios-beneficios">
+  <div class="convenios-beneficios__columna">
+    <h2 class="convenios-beneficios__titulo-columna">CONVENIOS</h2>
+    <div
+      class="acordeon"
+      *ngFor="let item of convenios(); let i = index"
+      [class.acordeon--open]="isOpen(item.titulo)"
+      #acordeonItem
+    >
+      <div
+        class="acordeon__header"
+        (click)="togglePanel(item.titulo, i)"
+        role="button"
+        [attr.aria-expanded]="isOpen(item.titulo)"
+      >
+        <span class="material-symbols-outlined acordeon__icono-decorativo">workspace_premium</span>
+        <span class="acordeon__titulo">{{ item.titulo }}</span>
+        <span class="material-symbols-outlined acordeon__chevron">expand_more</span>
+      </div>
+      <div class="acordeon__contenido" [innerHTML]="item.contenidoHtml"></div>
+    </div>
+  </div>
+
+  <div class="convenios-beneficios__columna">
+    <h2 class="convenios-beneficios__titulo-columna">BENEFICIOS</h2>
+    <div
+      class="acordeon"
+      *ngFor="let item of beneficios(); let i = index"
+      [class.acordeon--open]="isOpen(item.titulo)"
+      #acordeonItem
+    >
+      <div
+        class="acordeon__header"
+        (click)="togglePanel(item.titulo, i + convenios().length)"
+        role="button"
+        [attr.aria-expanded]="isOpen(item.titulo)"
+      >
+        <span class="material-symbols-outlined acordeon__icono-decorativo">auto_awesome</span>
+        <span class="acordeon__titulo">{{ item.titulo }}</span>
+        <span class="material-symbols-outlined acordeon__chevron">expand_more</span>
+      </div>
+      <div class="acordeon__contenido" [innerHTML]="item.contenidoHtml"></div>
+    </div>
+  </div>
+</div>
+
+<app-beneficios-comerciales></app-beneficios-comerciales>

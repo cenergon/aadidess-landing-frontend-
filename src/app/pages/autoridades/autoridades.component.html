@@ -1,0 +1,32 @@
+<section class="autoridades">
+  <div class="autoridades__container">
+    <h1 class="autoridades__title">Autoridades</h1>
+    <div class="autoridades__grid">
+      @for (autoridad of autoridades; track autoridad.nombre) {
+        <div class="autoridades__card">
+          <div class="autoridades__avatar">
+            @if (getFotoUrl(autoridad.foto)) {
+              <img
+                [src]="autoridad.foto"
+                [alt]="autoridad.nombre"
+                class="autoridades__foto"
+                loading="lazy"
+              />
+            } @else {
+              <div class="autoridades__placeholder">
+                {{ getInitials(autoridad.nombre) }}
+              </div>
+            }
+          </div>
+          <h2 class="autoridades__nombre">{{ autoridad.nombre }}</h2>
+          @if (autoridad.periodo) {
+            <p class="autoridades__periodo">{{ autoridad.periodo }}</p>
+          }
+          <p class="autoridades__cargo">{{ autoridad.cargo }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<app-delegados></app-delegados>

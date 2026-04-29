@@ -1,0 +1,30 @@
+<div class="beneficios-comerciales">
+  <div class="beneficios-grid">
+    @for (beneficio of beneficios; track beneficio.nombre) {
+      <div class="beneficios-grid__card" (click)="abrirModal(beneficio)">
+        <div class="beneficios-grid__logo-wrapper">
+          <img [src]="beneficio.logo" [alt]="beneficio.nombre" class="beneficios-grid__logo" />
+        </div>
+        <div class="beneficios-grid__overlay">
+          <span class="material-symbols-outlined beneficios-grid__overlay-icon">visibility</span>
+          <span class="beneficios-grid__overlay-text">Ver beneficio</span>
+        </div>
+      </div>
+    }
+  </div>
+</div>
+
+@defer (when modalActivo()) {
+  @if (modalActivo(); as beneficio) {
+    <div class="modal-backdrop" (click)="cerrarModal()">
+      <div class="modal-contenido" (click)="$event.stopPropagation()">
+        <button class="modal-contenido__cerrar" (click)="cerrarModal()">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+        <img [src]="beneficio.logo" [alt]="beneficio.nombre" class="modal-contenido__logo" />
+        <h3 class="modal-contenido__titulo">{{ beneficio.nombre }}</h3>
+        <div class="modal-contenido__descripcion" [innerHTML]="beneficio.descripcionHtml"></div>
+      </div>
+    </div>
+  }
+}

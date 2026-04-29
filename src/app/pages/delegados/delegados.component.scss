@@ -1,0 +1,100 @@
+$color-dark: #24243c;
+$color-accent: #60d0f1;
+$color-white: #ffffff;
+$color-border: rgba(36, 36, 60, 0.08);
+$color-text-muted: #5c5c6e;
+$radius-md: 8px;
+$radius-full: 999px;
+$transition-smooth: 0.2s ease;
+
+.delegados {
+  padding: 3rem 1.5rem;
+  background-color: $color-white;
+  font-family: 'Roboto', sans-serif;
+
+  &__container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: $color-dark;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  // Tabs
+  &__tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  &__tab {
+    background-color: $color-white;
+    border: 1px solid $color-border;
+    color: $color-dark;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.5rem 1.2rem;
+    border-radius: $radius-full;
+    cursor: pointer;
+    transition: all $transition-smooth;
+    font-family: inherit;
+
+    &:hover {
+      background-color: rgba(96, 208, 241, 0.08);
+      border-color: $color-accent;
+    }
+
+    &--active {
+      background-color: $color-accent;
+      color: $color-white;
+      border-color: $color-accent;
+    }
+  }
+
+  // Lista de delegados
+  &__list {
+    min-height: 80px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    color: $color-dark;
+    font-size: 0.95rem;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid $color-border;
+    transition: color $transition-smooth;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  &__empty {
+    text-align: center;
+    color: $color-text-muted;
+    font-style: italic;
+    padding: 1rem 0;
+  }
+}

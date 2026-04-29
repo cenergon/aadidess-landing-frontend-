@@ -1,0 +1,263 @@
+// ============================================
+// NavBar – AADIDESS
+// ============================================
+
+$color-dark: #24243c;
+$color-accent: #60d0f1;
+$color-white: #ffffff;
+$color-border: rgba(36, 36, 60, 0.08);
+$color-hover-bg: rgba(96, 208, 241, 0.08);
+$shadow-dropdown: 0 4px 16px rgba(36, 36, 60, 0.06);
+$radius-md: 8px;
+$radius-sm: 6px;
+$transition-base: 0.2s ease;
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: $color-white;
+  border-bottom: 1px solid $color-border;
+  font-family: 'Roboto', sans-serif;
+
+  &__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    height: 64px;
+    gap: 2rem;
+  }
+
+  // ---- Brand ----
+  &__brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: $color-dark;
+    flex-shrink: 0;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  &__logo-icon {
+    font-size: 2rem;
+    color: $color-accent;
+  }
+
+  &__logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+
+  // ---- Hamburger ----
+  &__hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: $color-dark;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin-left: auto;
+
+    .material-symbols-outlined {
+      font-size: 1.75rem;
+    }
+
+    @media (max-width: 768px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  // ---- Overlay mobile ----
+  &__overlay {
+    display: none;
+
+    @media (max-width: 768px) {
+      display: block;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.2);
+      z-index: 90;
+    }
+  }
+
+  // ---- Menu principal ----
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-left: auto;
+
+    @media (max-width: 768px) {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 280px;
+      background: $color-white;
+      box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1.5rem;
+      gap: 0.75rem;
+      transform: translateX(100%);
+      transition: transform 0.25s ease;
+      z-index: 95;
+      overflow-y: auto;
+
+      &--open {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  // ---- Enlace simple ----
+  &__link {
+    position: relative;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: $color-dark;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    transition: color $transition-base;
+    white-space: nowrap;
+
+    // Underline animado
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $color-accent;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform $transition-base;
+    }
+
+    &:hover {
+      color: $color-accent;
+
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  // ---- Dropdown ----
+  &__dropdown {
+    position: relative;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  &__dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    font-family: inherit;
+    color: $color-dark;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    transition: color $transition-base;
+    white-space: nowrap;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  &__chevron {
+    font-size: 1.2rem;
+    transition: transform $transition-base;
+  }
+
+  // Flecha rotada cuando dropdown abierto
+  .navbar__dropdown-toggle[aria-expanded='true'] .navbar__chevron {
+    transform: rotate(180deg);
+  }
+
+  &__dropdown-panel {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    background: $color-white;
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+    box-shadow: $shadow-dropdown;
+    backdrop-filter: blur(8px);
+    padding: 0.5rem;
+    min-width: 240px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity $transition-base, transform $transition-base,
+      visibility $transition-base;
+    z-index: 10;
+
+    &--open {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+      visibility: visible;
+    }
+
+    @media (max-width: 768px) {
+      position: static;
+      transform: none;
+      box-shadow: none;
+      border: none;
+      border-left: 2px solid $color-accent;
+      border-radius: 0;
+      margin-left: 1rem;
+      padding: 0.25rem 0 0.25rem 0.75rem;
+      min-width: auto;
+      backdrop-filter: none;
+      // En mobile se muestra/oculta con la clase
+      display: none;
+
+      &--open {
+        display: flex;
+      }
+    }
+  }
+
+  &__dropdown-link {
+    display: block;
+    padding: 0.6rem 0.75rem;
+    border-radius: $radius-sm;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: $color-dark;
+    text-decoration: none;
+    transition: background-color $transition-base, color $transition-base;
+
+    &:hover {
+      background-color: $color-hover-bg;
+      color: $color-accent;
+    }
+  }
+
+  &__logo-img {
+    height: 40px; // Ajustá según el diseño de tu SVG
+    width: auto;
+    display: block;
+  }
+
+}

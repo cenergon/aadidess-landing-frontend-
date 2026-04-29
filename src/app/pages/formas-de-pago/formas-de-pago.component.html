@@ -1,0 +1,121 @@
+<section class="formas-pago">
+  <div class="formas-pago__container">
+    <h1 class="formas-pago__titulo">Formas de Pago</h1>
+
+    <!-- Medios aceptados -->
+    <div class="formas-pago__medios">
+      <div class="formas-pago__medio">
+        <span class="material-symbols-outlined">account_balance</span>
+        <span>Depósito</span>
+      </div>
+      <div class="formas-pago__medio">
+        <span class="material-symbols-outlined">swap_horiz</span>
+        <span>Transferencia</span>
+      </div>
+      <div class="formas-pago__medio">
+        <span class="material-symbols-outlined">credit_card</span>
+        <span>Tarjeta de Crédito</span>
+      </div>
+      <div class="formas-pago__medio">
+        <span class="material-symbols-outlined">storefront</span>
+        <span>Mercado Pago</span>
+      </div>
+    </div>
+
+    <!-- Aviso comprobante con email copiable -->
+    <div class="formas-pago__aviso">
+      <span class="material-symbols-outlined">info</span>
+      <p>
+        Al realizar un pago de cuota social por depósito, transferencia o tarjeta de crédito, 
+        enviar el comprobante a 
+        <span
+          class="formas-pago__copiar"
+          [class.formas-pago__copiar--activo]="copiadoId() === 'email'"
+          (click)="copiarTexto('central@aadidess.com', 'email')"
+        >
+          central&#64;aadidess.com
+          @if (copiadoId() === 'email') {
+            <span class="copiado-tooltip">¡Copiado!</span>
+          }
+        </span>
+      </p>
+    </div>
+
+    <!-- Destacados (Macro Click, Mercado Pago) -->
+    <div class="formas-pago__destacados">
+      @for (destacado of destacados; track destacado.titulo) {
+        <div class="formas-pago__destacado">
+          <div class="formas-pago__destacado-header">
+            <img [src]="destacado.svg" [alt]="destacado.titulo" class="formas-pago__destacado-logo" />
+            <span class="formas-pago__badge">¡NUEVO!</span>
+          </div>
+          <h2 class="formas-pago__subtitulo">{{ destacado.titulo }}</h2>
+          <p>{{ destacado.descripcion }}</p>
+        </div>
+      }
+    </div>
+
+    <!-- Depósito / Transferencia -->
+    <div class="formas-pago__transferencia">
+      <h2 class="formas-pago__subtitulo">Depósito o Transferencia Bancaria</h2>
+      <p class="formas-pago__descripcion">
+        Todos los depósitos deben realizarse a nombre de la 
+        <strong>Asociación Argentina de Instructores de Esquí y Snowboard</strong>.
+        Una vez realizado debe enviarse escaneo o foto del cupón de depósito o transferencia 
+        bancaria, que sea legible el número de operación; caso contrario será rechazada la misma 
+        (puede estar remarcado con birome). El comprobante de depósito enviado debe tener el 
+        sello de pago y número de comprobante visible.
+      </p>
+
+      <div class="formas-pago__bancos">
+        @for (banco of bancos; track banco.banco; let i = $index) {
+          <div class="formas-pago__banco">
+            <div class="formas-pago__banco-header">
+              <img [src]="banco.svg" [alt]="banco.banco" class="formas-pago__banco-logo" />
+              <h3>{{ banco.banco }}</h3>
+            </div>
+            <div class="formas-pago__banco-datos">
+              <p><strong>Tipo:</strong> {{ banco.tipoCuenta }}</p>
+              <p><strong>CBU:</strong> 
+                <span
+                  class="formas-pago__copiar"
+                  [class.formas-pago__copiar--activo]="copiadoId() === 'banco-' + i + '-cbu'"
+                  (click)="copiarTexto(banco.cbu, 'banco-' + i + '-cbu')"
+                >
+                  {{ banco.cbu }}
+                  @if (copiadoId() === 'banco-' + i + '-cbu') {
+                    <span class="copiado-tooltip">¡Copiado!</span>
+                  }
+                </span>
+              </p>
+              <p><strong>CUIT:</strong> 
+                <span
+                  class="formas-pago__copiar"
+                  [class.formas-pago__copiar--activo]="copiadoId() === 'banco-' + i + '-cuit'"
+                  (click)="copiarTexto(banco.cuit, 'banco-' + i + '-cuit')"
+                >
+                  {{ banco.cuit }}
+                  @if (copiadoId() === 'banco-' + i + '-cuit') {
+                    <span class="copiado-tooltip">¡Copiado!</span>
+                  }
+                </span>
+              </p>
+              <p><strong>Alias:</strong> 
+                <span
+                  class="formas-pago__copiar"
+                  [class.formas-pago__copiar--activo]="copiadoId() === 'banco-' + i + '-alias'"
+                  (click)="copiarTexto(banco.alias, 'banco-' + i + '-alias')"
+                >
+                  {{ banco.alias }}
+                  @if (copiadoId() === 'banco-' + i + '-alias') {
+                    <span class="copiado-tooltip">¡Copiado!</span>
+                  }
+                </span>
+              </p>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

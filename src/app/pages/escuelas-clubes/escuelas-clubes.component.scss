@@ -1,0 +1,217 @@
+$color-dark: #24243c;
+$color-accent: #60d0f1;
+$color-white: #ffffff;
+$color-border: rgba(36, 36, 60, 0.08);
+$shadow-card: 0 2px 12px rgba(0, 0, 0, 0.04);
+$radius-md: 8px;
+
+.escuelas-clubes {
+  background: $color-white;
+  font-family: 'Roboto', sans-serif;
+
+  // --- Barra fija superior ---
+  &__sticky-nav {
+    position: sticky;
+    top: 40px; /* 25px (TopBar) + 64px (NavBar) */
+    z-index: 98;
+    background: rgba($color-white, 0.95);
+    backdrop-filter: blur(4px);
+    border-bottom: 1px solid $color-border;
+    padding: 1.5rem 0;
+  }
+
+  &__container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  &__title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: $color-dark;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  &__indice {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .indice-btn {
+    background: $color-white;
+    border: 1px solid $color-border;
+    color: $color-dark;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.5rem 1.2rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+
+    &:hover {
+      background: rgba($color-accent, 0.08);
+      border-color: $color-accent;
+    }
+
+    &--activo {
+      background: $color-accent;
+      color: $color-white;
+      border-color: $color-accent;
+    }
+  }
+
+  // --- Contenido scrollable ---
+  &__contenido {
+    padding: 2rem 0 4rem;
+  }
+
+  &__localidad {
+    margin-bottom: 3rem;
+
+    &-titulo {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: $color-dark;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+      scroll-margin-top: 170px; /* 89px navbar + altura aprox sticky + margen */
+
+      .material-symbols-outlined {
+        font-size: 2rem;
+        color: $color-accent;
+      }
+    }
+  }
+
+  // --- Acordeones de escuelas ---
+  &__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  &__card {
+    background: $color-white;
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+    overflow: hidden;
+    transition: box-shadow 0.2s, transform 0.2s, background 0.2s, border-color 0.2s;
+
+    // Hover: borde celeste + fondo y sombra como en Aranceles
+    &:hover {
+      border-color: rgba($color-accent, 0.25);
+      background: rgba($color-accent, 0.03);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(36, 36, 60, 0.06);
+    }
+
+    // Expandido: borde celeste más suave, sin desplazamiento
+    &--open {
+      border-color: rgba($color-accent, 0.15);
+      box-shadow: $shadow-card;
+      transform: none;
+    }
+
+    &-header {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1rem;
+      font-weight: 500;
+      color: $color-dark;
+      cursor: pointer;
+      font-family: inherit;
+      transition: background 0.2s;
+
+      &:hover {
+        background: rgba($color-accent, 0.04);
+      }
+
+      .chevron {
+        font-size: 1.2rem;
+        transition: transform 0.25s;
+      }
+
+      .escuelas-clubes__card--open & .chevron {
+        transform: rotate(180deg);
+      }
+    }
+
+    &-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      padding: 0 1.5rem;
+
+      .escuelas-clubes__card--open & {
+        max-height: 300px;
+        padding-bottom: 1rem;
+      }
+
+      .dato {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-size: 0.9rem;
+        color: $color-dark;
+        margin-bottom: 0.5rem;
+
+        .icono {
+          color: $color-accent;
+          font-size: 1.2rem;
+          flex-shrink: 0;
+        }
+
+        a {
+          color: $color-accent;
+          text-decoration: none;
+          &:hover { text-decoration: underline; }
+        }
+      }
+    }
+  }
+
+  // --- Requisitos ---
+  &__requisitos {
+    margin-top: 4rem;
+    &-titulo {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: $color-dark;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__aviso {
+    font-size: 0.95rem;
+    color: lighten($color-dark, 20%);
+    margin-bottom: 1.5rem;
+  }
+
+  &__acordeon {
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+    padding: 1rem;
+    summary {
+      font-weight: 600;
+      cursor: pointer;
+      color: $color-dark;
+    }
+    ol {
+      margin-top: 1rem;
+      padding-left: 1.2rem;
+      li { margin-bottom: 0.5rem; }
+    }
+  }
+}

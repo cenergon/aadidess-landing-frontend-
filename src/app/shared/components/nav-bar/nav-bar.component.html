@@ -1,0 +1,89 @@
+<nav class="navbar" role="navigation" aria-label="Navegación principal">
+  <div class="navbar__container">
+    <!-- Logo como imagen SVG -->
+    <a href="/" class="navbar__brand" aria-label="Ir al inicio">
+      <img
+        src="svgs/logo-aadidess.svg"
+        alt="AADIDESS"
+        class="navbar__logo-img"
+      />
+    </a>
+
+    <!-- Botón hamburguesa (mobile) -->
+    <button
+      class="navbar__hamburger"
+      (click)="toggleMobileMenu()"
+      [attr.aria-expanded]="mobileMenuOpen()"
+      aria-controls="main-menu"
+      aria-label="Abrir menú"
+    >
+      <span class="material-symbols-outlined">
+        {{ mobileMenuOpen() ? 'close' : 'menu' }}
+      </span>
+    </button>
+
+    <!-- Overlay para cerrar menú mobile -->
+    @if (mobileMenuOpen()) {
+      <div
+        class="navbar__overlay"
+        (click)="toggleMobileMenu()"
+        aria-hidden="true"
+      ></div>
+    }
+
+    <!-- Menú principal -->
+    <div
+      id="main-menu"
+      class="navbar__menu"
+      [class.navbar__menu--open]="mobileMenuOpen()"
+    >
+      @for (item of navItems; track item.label) {
+        @if (item.children && item.children.length) {
+          <!-- Dropdown -->
+          <div
+            class="navbar__dropdown"
+            (mouseenter)="setActiveDropdown(item.label)"
+            (mouseleave)="setActiveDropdown(null)"
+            (keydown.escape)="setActiveDropdown(null)"
+          >
+            <button
+              class="navbar__dropdown-toggle"
+              [attr.aria-expanded]="isDropdownOpen(item.label)"
+              aria-haspopup="true"
+              (click)="setActiveDropdown(isDropdownOpen(item.label) ? null : item.label)"
+            >
+              <span>{{ item.label }}</span>
+              <span
+                class="material-symbols-outlined navbar__chevron"
+                aria-hidden="true"
+              >
+                expand_more
+              </span>
+            </button>
+            <div
+              class="navbar__dropdown-panel"
+              [class.navbar__dropdown-panel--open]="isDropdownOpen(item.label)"
+            >
+              @for (child of item.children; track child.label) {
+                <a
+                  [href]="child.link"
+                  class="navbar__dropdown-link"
+                >
+                  {{ child.label }}
+                </a>
+              }
+            </div>
+          </div>
+        } @else {
+          <!-- Enlace simple -->
+          <a
+            [href]="item.link"
+            class="navbar__link"
+          >
+            {{ item.label }}
+          </a>
+        }
+      }
+    </div>
+  </div>
+</nav>

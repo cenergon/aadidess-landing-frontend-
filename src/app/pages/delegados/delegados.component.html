@@ -1,0 +1,33 @@
+<section class="delegados" #delegadosContainer>
+  <div class="delegados__container">
+    <h2 class="delegados__title">Delegados</h2>
+
+    <!-- Chips / Tabs de cerros -->
+    <div class="delegados__tabs" role="tablist" aria-label="Seleccionar cerro">
+      @for (cerro of cerros; track cerro.nombre) {
+        <button
+          class="delegados__tab"
+          [class.delegados__tab--active]="cerro.nombre === cerroSeleccionado()"
+          (click)="seleccionarCerro(cerro.nombre)"
+          role="tab"
+          [attr.aria-selected]="cerro.nombre === cerroSeleccionado()"
+        >
+          {{ cerro.nombre }}
+        </button>
+      }
+    </div>
+
+    <!-- Lista de delegados -->
+    <div class="delegados__list">
+      @if (delegadosActuales().length > 0) {
+        <ul class="delegados__grid">
+          @for (nombre of delegadosActuales(); track nombre) {
+            <li class="delegados__item">{{ nombre }}</li>
+          }
+        </ul>
+      } @else {
+        <p class="delegados__empty">Sin delegado</p>
+      }
+    </div>
+  </div>
+</section>
