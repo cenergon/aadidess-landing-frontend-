@@ -1,13 +1,11 @@
-$color-dark: #24243c;
-$color-accent: #60d0f1;
-$color-white: #ffffff;
 $radius-md: 8px;
-$transition-smooth: 0.2s ease;
+$transition-smooth: var(--transition-base);
 
 .estatuto {
   padding: 4rem 1.5rem;
   font-family: 'Roboto', sans-serif;
-  background-color: $color-white;
+  background-color: var(--color-bg-primary);
+  transition: background-color var(--transition-base), color var(--transition-base);
 
   &__container {
     max-width: 600px;
@@ -18,8 +16,9 @@ $transition-smooth: 0.2s ease;
   &__title {
     font-size: 2rem;
     font-weight: 700;
-    color: $color-dark;
+    color: var(--color-text-primary);
     margin-bottom: 2rem;
+    transition: color var(--transition-base);
   }
 
   &__actions {
@@ -30,20 +29,20 @@ $transition-smooth: 0.2s ease;
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
-    background-color: $color-accent;
-    color: $color-white;
+    background-color: var(--color-accent);
+    color: var(--color-text-inverse);
     font-size: 1.1rem;
     font-weight: 600;
     padding: 1rem 2rem;
     border-radius: $radius-md;
     text-decoration: none;
-    transition: background-color $transition-smooth,
-                transform $transition-smooth,
-                box-shadow $transition-smooth;
+    transition: background-color var(--transition-base),
+                transform var(--transition-base),
+                box-shadow var(--transition-base);
     box-shadow: 0 2px 8px rgba(96, 208, 241, 0.25);
 
     &:hover {
-      background-color: darken($color-accent, 8%);
+      background-color: var(--color-accent-hover);
       transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(96, 208, 241, 0.35);
     }
@@ -59,7 +58,8 @@ $transition-smooth: 0.2s ease;
 
   &__note {
     font-size: 0.9rem;
-    color: lighten($color-dark, 25%);
+    color: var(--color-text-secondary);
     margin-top: 1rem;
+    transition: color var(--transition-base);
   }
 }

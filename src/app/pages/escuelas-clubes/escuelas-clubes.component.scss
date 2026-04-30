@@ -1,23 +1,22 @@
-$color-dark: #24243c;
-$color-accent: #60d0f1;
-$color-white: #ffffff;
-$color-border: rgba(36, 36, 60, 0.08);
-$shadow-card: 0 2px 12px rgba(0, 0, 0, 0.04);
 $radius-md: 8px;
+$transition-base: var(--transition-base);
 
 .escuelas-clubes {
-  background: $color-white;
+  background: var(--color-bg-primary);
   font-family: 'Roboto', sans-serif;
+  transition: background-color var(--transition-base), color var(--transition-base);
 
   // --- Barra fija superior ---
   &__sticky-nav {
     position: sticky;
     top: 40px; /* 25px (TopBar) + 64px (NavBar) */
     z-index: 98;
-    background: rgba($color-white, 0.95);
+    background: rgba(var(--color-bg-elevated-rgb, 255, 255, 255), 0.95);
     backdrop-filter: blur(4px);
-    border-bottom: 1px solid $color-border;
+    border-bottom: 1px solid var(--color-border);
     padding: 1.5rem 0;
+    transition: background-color var(--transition-base),
+                border-color var(--transition-base);
   }
 
   &__container {
@@ -29,9 +28,10 @@ $radius-md: 8px;
   &__title {
     font-size: 2.2rem;
     font-weight: 700;
-    color: $color-dark;
+    color: var(--color-text-primary);
     text-align: center;
     margin-bottom: 1.5rem;
+    transition: color var(--transition-base);
   }
 
   &__indice {
@@ -42,9 +42,9 @@ $radius-md: 8px;
   }
 
   .indice-btn {
-    background: $color-white;
-    border: 1px solid $color-border;
-    color: $color-dark;
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-primary);
     font-size: 0.9rem;
     font-weight: 500;
     padding: 0.5rem 1.2rem;
@@ -54,14 +54,14 @@ $radius-md: 8px;
     font-family: inherit;
 
     &:hover {
-      background: rgba($color-accent, 0.08);
-      border-color: $color-accent;
+      background: var(--color-accent-glow);
+      border-color: var(--color-accent);
     }
 
     &--activo {
-      background: $color-accent;
-      color: $color-white;
-      border-color: $color-accent;
+      background: var(--color-accent);
+      color: var(--color-text-inverse);
+      border-color: var(--color-accent);
     }
   }
 
@@ -76,16 +76,17 @@ $radius-md: 8px;
     &-titulo {
       font-size: 1.6rem;
       font-weight: 600;
-      color: $color-dark;
+      color: var(--color-text-primary);
       display: flex;
       align-items: center;
       gap: 0.5rem;
       margin-bottom: 1.5rem;
       scroll-margin-top: 170px; /* 89px navbar + altura aprox sticky + margen */
+      transition: color var(--transition-base);
 
       .material-symbols-outlined {
         font-size: 2rem;
-        color: $color-accent;
+        color: var(--color-accent);
       }
     }
   }
@@ -98,24 +99,27 @@ $radius-md: 8px;
   }
 
   &__card {
-    background: $color-white;
-    border: 1px solid $color-border;
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
     border-radius: $radius-md;
     overflow: hidden;
-    transition: box-shadow 0.2s, transform 0.2s, background 0.2s, border-color 0.2s;
+    transition: box-shadow 0.2s,
+                transform 0.2s,
+                background 0.2s,
+                border-color 0.2s;
 
     // Hover: borde celeste + fondo y sombra como en Aranceles
     &:hover {
-      border-color: rgba($color-accent, 0.25);
-      background: rgba($color-accent, 0.03);
+      border-color: rgba(var(--color-accent-rgb, 96, 208, 241), 0.25);
+      background: var(--color-accent-glow);
       transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(36, 36, 60, 0.06);
+      box-shadow: var(--shadow-lg);
     }
 
     // Expandido: borde celeste más suave, sin desplazamiento
     &--open {
-      border-color: rgba($color-accent, 0.15);
-      box-shadow: $shadow-card;
+      border-color: rgba(var(--color-accent-rgb, 96, 208, 241), 0.15);
+      box-shadow: var(--shadow-md);
       transform: none;
     }
 
@@ -129,13 +133,13 @@ $radius-md: 8px;
       align-items: center;
       font-size: 1rem;
       font-weight: 500;
-      color: $color-dark;
+      color: var(--color-text-primary);
       cursor: pointer;
       font-family: inherit;
-      transition: background 0.2s;
+      transition: background 0.2s, color var(--transition-base);
 
       &:hover {
-        background: rgba($color-accent, 0.04);
+        background: var(--color-accent-glow);
       }
 
       .chevron {
@@ -164,17 +168,18 @@ $radius-md: 8px;
         align-items: center;
         gap: 0.75rem;
         font-size: 0.9rem;
-        color: $color-dark;
+        color: var(--color-text-primary);
         margin-bottom: 0.5rem;
+        transition: color var(--transition-base);
 
         .icono {
-          color: $color-accent;
+          color: var(--color-accent);
           font-size: 1.2rem;
           flex-shrink: 0;
         }
 
         a {
-          color: $color-accent;
+          color: var(--color-accent);
           text-decoration: none;
           &:hover { text-decoration: underline; }
         }
@@ -188,26 +193,32 @@ $radius-md: 8px;
     &-titulo {
       font-size: 1.6rem;
       font-weight: 600;
-      color: $color-dark;
+      color: var(--color-text-primary);
       margin-bottom: 1rem;
+      transition: color var(--transition-base);
     }
   }
 
   &__aviso {
     font-size: 0.95rem;
-    color: lighten($color-dark, 20%);
+    color: var(--color-text-secondary);
     margin-bottom: 1.5rem;
+    transition: color var(--transition-base);
   }
 
   &__acordeon {
-    border: 1px solid $color-border;
+    border: 1px solid var(--color-border);
     border-radius: $radius-md;
     padding: 1rem;
+    transition: border-color var(--transition-base);
+
     summary {
       font-weight: 600;
       cursor: pointer;
-      color: $color-dark;
+      color: var(--color-text-primary);
+      transition: color var(--transition-base);
     }
+
     ol {
       margin-top: 1rem;
       padding-left: 1.2rem;

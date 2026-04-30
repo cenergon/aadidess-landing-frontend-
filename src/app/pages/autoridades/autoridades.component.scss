@@ -1,14 +1,9 @@
-$color-dark: #24243c;
-$color-accent: #60d0f1;
-$color-white: #ffffff;
-$color-border: rgba(36, 36, 60, 0.08);
-$shadow-card: 0 2px 8px rgba(36, 36, 60, 0.04);
-$shadow-hover: 0 6px 20px rgba(36, 36, 60, 0.08);
 $radius-lg: 12px;
-$transition-smooth: 0.25s ease;
+$transition-smooth: var(--transition-base);
 
 .autoridades {
   padding: 3rem 1.5rem;
+  transition: background-color var(--transition-base), color var(--transition-base);
 
   &__container {
     max-width: 1200px;
@@ -18,9 +13,10 @@ $transition-smooth: 0.25s ease;
   &__title {
     font-size: 2rem;
     font-weight: 700;
-    color: $color-dark;
+    color: var(--color-text-primary);
     margin-bottom: 2rem;
     text-align: center;
+    transition: color var(--transition-base);
   }
 
   &__grid {
@@ -37,20 +33,24 @@ $transition-smooth: 0.25s ease;
   }
 
   &__card {
-    background: $color-white;
-    border: 1px solid $color-border;
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
     border-radius: $radius-lg;
     padding: 2rem 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    box-shadow: $shadow-card;
-    transition: transform $transition-smooth, box-shadow $transition-smooth;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-base),
+                box-shadow var(--transition-base),
+                background-color var(--transition-base),
+                border-color var(--transition-base);
 
     &:hover {
       transform: translateY(-4px);
-      box-shadow: $shadow-hover;
+      box-shadow: var(--shadow-lg);
+      border-color: var(--color-accent);
     }
   }
 
@@ -60,10 +60,11 @@ $transition-smooth: 0.25s ease;
     border-radius: 50%;
     margin-bottom: 1rem;
     overflow: hidden;
-    background-color: $color-border;
+    background-color: var(--color-bg-secondary);
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color var(--transition-base);
   }
 
   &__foto {
@@ -75,26 +76,28 @@ $transition-smooth: 0.25s ease;
   &__placeholder {
     font-size: 1.5rem;
     font-weight: 600;
-    color: $color-accent;
+    color: var(--color-accent);
   }
 
   &__nombre {
     font-size: 1.1rem;
     font-weight: 600;
-    color: $color-dark;
+    color: var(--color-text-primary);
     margin: 0 0 0.5rem;
+    transition: color var(--transition-base);
   }
 
   &__periodo {
     font-size: 0.85rem;
-    color: lighten($color-dark, 30%);
+    color: var(--color-text-secondary);
     margin: 0 0 0.25rem;
+    transition: color var(--transition-base);
   }
 
   &__cargo {
     font-size: 0.95rem;
     font-weight: 500;
-    color: $color-accent;
+    color: var(--color-accent);
     margin: 0;
   }
 }

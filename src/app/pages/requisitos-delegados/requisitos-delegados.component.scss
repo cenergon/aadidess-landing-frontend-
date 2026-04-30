@@ -1,15 +1,11 @@
-$color-dark: #24243c;
-$color-accent: #60d0f1;
-$color-white: #ffffff;
-$color-border: rgba(36, 36, 60, 0.08);
-$color-text-muted: #4a4a5e;
 $radius-md: 8px;
-$transition-smooth: 0.2s ease;
+$transition-smooth: var(--transition-base);
 
 .requisitos {
   padding: 4rem 1.5rem;
   font-family: 'Roboto', sans-serif;
-  background-color: $color-white;
+  background-color: var(--color-bg-primary);
+  transition: background-color var(--transition-base), color var(--transition-base);
 
   &__container {
     max-width: 800px;
@@ -19,9 +15,10 @@ $transition-smooth: 0.2s ease;
   &__title {
     font-size: 2rem;
     font-weight: 700;
-    color: $color-dark;
+    color: var(--color-text-primary);
     margin-bottom: 2.5rem;
     text-align: center;
+    transition: color var(--transition-base);
   }
 
   &__block {
@@ -38,17 +35,18 @@ $transition-smooth: 0.2s ease;
     gap: 0.6rem;
     font-size: 1.4rem;
     font-weight: 600;
-    color: $color-dark;
+    color: var(--color-text-primary);
     margin-bottom: 1.2rem;
+    transition: color var(--transition-base);
 
     &--exclusion {
-      color: $color-dark; // mantiene el mismo color base
+      color: var(--color-text-primary);
     }
   }
 
   &__icon {
     font-size: 1.8rem;
-    color: $color-accent;
+    color: var(--color-accent);
 
     .requisitos__subtitle--exclusion & {
       color: #f87171; // rojo suave para las exclusiones, manteniendo armonía
@@ -69,7 +67,8 @@ $transition-smooth: 0.2s ease;
     padding-left: 1.8rem;
     font-size: 1rem;
     line-height: 1.6;
-    color: $color-dark;
+    color: var(--color-text-primary);
+    transition: color var(--transition-base);
 
     &::before {
       content: '';
@@ -79,7 +78,7 @@ $transition-smooth: 0.2s ease;
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background-color: $color-accent;
+      background-color: var(--color-accent);
     }
   }
 }

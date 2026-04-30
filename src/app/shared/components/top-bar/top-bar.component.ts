@@ -1,10 +1,10 @@
 import { Component, computed } from '@angular/core';
-import { DatePipe } from '@angular/common';
+// No imports needed
 
 @Component({
   selector: 'app-top-bar',
   standalone: true,
-  imports: [DatePipe],
+  imports: [],
   templateUrl: './top-bar.component.html',
   styleUrl: './top-bar.component.scss',
 })

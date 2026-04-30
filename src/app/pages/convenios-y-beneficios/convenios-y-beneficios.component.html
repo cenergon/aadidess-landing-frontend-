@@ -10,12 +10,16 @@
       <div
         class="acordeon__header"
         (click)="togglePanel(item.titulo, i)"
+        (click)="$event.stopPropagation()"
         role="button"
         [attr.aria-expanded]="isOpen(item.titulo)"
       >
         <span class="material-symbols-outlined acordeon__icono-decorativo">workspace_premium</span>
         <span class="acordeon__titulo">{{ item.titulo }}</span>
-        <span class="material-symbols-outlined acordeon__chevron">expand_more</span>
+        <span
+          class="material-symbols-outlined acordeon__chevron"
+          (click)="$event.stopPropagation()"
+        >expand_more</span>
       </div>
       <div class="acordeon__contenido" [innerHTML]="item.contenidoHtml"></div>
     </div>
@@ -32,12 +36,16 @@
       <div
         class="acordeon__header"
         (click)="togglePanel(item.titulo, i + convenios().length)"
+        (click)="$event.stopPropagation()"
         role="button"
         [attr.aria-expanded]="isOpen(item.titulo)"
       >
         <span class="material-symbols-outlined acordeon__icono-decorativo">auto_awesome</span>
         <span class="acordeon__titulo">{{ item.titulo }}</span>
-        <span class="material-symbols-outlined acordeon__chevron">expand_more</span>
+        <span
+          class="material-symbols-outlined acordeon__chevron"
+          (click)="$event.stopPropagation()"
+        >expand_more</span>
       </div>
       <div class="acordeon__contenido" [innerHTML]="item.contenidoHtml"></div>
     </div>
