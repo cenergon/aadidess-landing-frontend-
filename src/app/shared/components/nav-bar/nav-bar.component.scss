@@ -2,15 +2,15 @@
 // NavBar – AADIDESS
 // ============================================
 
-$color-dark: #24243c;
-$color-accent: #60d0f1;
-$color-white: #ffffff;
-$color-border: rgba(36, 36, 60, 0.08);
-$color-hover-bg: rgba(96, 208, 241, 0.08);
-$shadow-dropdown: 0 4px 16px rgba(36, 36, 60, 0.06);
-$radius-md: 8px;
-$radius-sm: 6px;
-$transition-base: 0.2s ease;
+$color-dark: var(--color-text-primary, #24243c);
+$color-accent: var(--color-accent, #60d0f1);
+$color-white: var(--color-bg-primary, #ffffff);
+$color-border: var(--color-border, rgba(36, 36, 60, 0.08));
+$color-hover-bg: var(--color-hover-bg, rgba(96, 208, 241, 0.08));
+$shadow-dropdown: var(--shadow-dropdown, 0 4px 16px rgba(36, 36, 60, 0.06));
+$radius-md: var(--radius-md, 8px);
+$radius-sm: var(--radius-sm, 6px);
+$transition-base: var(--transition-base, 0.2s ease);
 
 .navbar {
   position: sticky;
@@ -258,6 +258,11 @@ $transition-base: 0.2s ease;
     height: 40px; // Ajustá según el diseño de tu SVG
     width: auto;
     display: block;
+    transition: filter $transition-base;
+  }
+
+  :host-context([data-theme="dark"]) &__logo-img {
+    filter: brightness(0) invert(0.9);
   }
 
 }
