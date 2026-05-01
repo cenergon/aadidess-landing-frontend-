@@ -37,4 +37,7 @@ body {
   font-weight: 400;
   margin: 0;
   padding: 0;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  transition: background-color var(--transition-base), color var(--transition-base);
 }

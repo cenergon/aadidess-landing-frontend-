@@ -1,7 +1,8 @@
-$color-dark: #24243c;
+$color-dark: var(--color-text-primary);
+// $color-dark: #24243c;
 $color-accent: #60d0f1;
-$color-white: #ffffff;
-$color-border: rgba(36, 36, 60, 0.08);
+$color-white: var(--color-bg-elevated);
+$color-border: var(--color-border);
 $shadow-card: 0 2px 12px rgba(0, 0, 0, 0.04);
 $shadow-hover: 0 6px 20px rgba(36, 36, 60, 0.08);
 $radius-md: 8px;
@@ -78,6 +79,7 @@ $radius-lg: 12px;
     font-size: 1.75rem;
     color: $color-accent;
     transition: transform 0.25s ease;
+
     // Cuando la categoría está expandida, rotamos el icono (si usamos expand_more/expand_less ya cambia, pero podemos animar)
     .aranceles__categoria--expanded & {
       transform: rotate(180deg);
@@ -114,10 +116,11 @@ $radius-lg: 12px;
 
   &__descripcion {
     font-size: 0.95rem;
-    color: #333;
+    color: $color-dark;
     flex: 1;
     padding-right: 1.5rem;
     line-height: 1.5;
+    transition: color var(--transition-base);
   }
 
   &__precio {
@@ -148,6 +151,7 @@ $radius-lg: 12px;
     opacity: 0;
     transform: translateY(-6px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

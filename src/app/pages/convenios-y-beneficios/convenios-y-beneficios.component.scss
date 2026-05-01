@@ -93,12 +93,11 @@ $transition-base: var(--transition-base);
   &__contenido {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.35s ease, padding 0.2s ease;
     padding: 0 1.25rem;
     color: var(--color-text-secondary);
     font-size: 0.95rem;
     line-height: 1.6;
-    transition: color var(--transition-base);
+    transition: max-height 0.35s ease, padding 0.2s ease, color var(--transition-base);
 
     p {
       margin: 0 0 0.75rem;

@@ -69,8 +69,16 @@ export class ConveniosYBeneficiosComponent {
       return next;
     });
 
-    // Scroll al acordeón recién expandido/colapsado - REMOVIDO para evitar scroll indeseado
-    // El scroll automático causaba comportamiento indeseado al hacer click en el chevrón
+    // Scroll al acordeón recién expandido/colapsado
+    setTimeout(() => {
+      const itemsArray = this.items.toArray();
+      if (itemsArray[index]) {
+        itemsArray[index].nativeElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    }, 50);
   }
 
   isOpen(titulo: string): boolean {
