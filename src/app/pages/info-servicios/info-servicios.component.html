@@ -1,0 +1,22 @@
+<section class="info-servicios">
+  <div class="info-servicios__container">
+    <div class="info-servicios__grid">
+      @for (servicio of servicios; track servicio.titulo) {
+        <div
+          class="info-servicios__card"
+          [style.--card-color]="'var(' + servicio.colorVar + ')'"
+        >
+          <img
+            [src]="getIconoSrc(servicio)"
+            [alt]="servicio.titulo"
+            class="info-servicios__icono"
+            loading="lazy"
+          />
+          <h3 class="info-servicios__titulo">{{ servicio.titulo }}</h3>
+          <p class="info-servicios__descripcion">{{ servicio.descripcion }}</p>
+          <a [routerLink]="servicio.link" class="info-servicios__boton">{{ servicio.textoBoton }}</a>
+        </div>
+      }
+    </div>
+  </div>
+</section>

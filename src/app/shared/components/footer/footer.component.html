@@ -1,0 +1,42 @@
+<footer class="footer">
+  <div class="footer__container">
+    <div class="footer__grid">
+      <!-- Información de la asociación y contactos -->
+      <div class="footer__info">
+        <p class="footer__asociacion">{{ asociacion }}</p>
+        
+        <div class="footer__contactos">
+          <h3 class="footer__contactos-titulo">{{ contactos.titulo }}</h3>
+          <p class="footer__sede">{{ contactos.sede }}</p>
+          <p class="footer__direccion">{{ contactos.direccion }}</p>
+          <p class="footer__localidad">{{ contactos.localidad }}</p>
+          <div class="footer__telefonos">
+            <p class="footer__telefono-label">Teléfonos:</p>
+            @for (tel of contactos.telefonos; track tel) {
+              <p class="footer__telefono">{{ tel }}</p>
+            }
+          </div>
+        </div>
+      </div>
+
+      <!-- Logos de instituciones internacionales -->
+      <div class="footer__logos">
+        @for (logo of logos; track logo.alt) {
+          <a
+            href="javascript:void(0)"
+            class="footer__logo-link"
+            (click)="abrirEnlace(logo.url)"
+            [attr.aria-label]="logo.alt"
+          >
+            <img
+              [src]="logo.imagen"
+              [alt]="logo.alt"
+              class="footer__logo"
+              loading="lazy"
+            />
+          </a>
+        }
+      </div>
+    </div>
+  </div>
+</footer>

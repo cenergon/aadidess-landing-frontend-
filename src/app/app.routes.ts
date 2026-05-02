@@ -12,6 +12,7 @@ import { PorQueSerSocioComponent } from './pages/por-que-ser-socio/por-que-ser-s
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { WipComponent } from './pages/wip/wip.component';
 import { CalendarioComponent } from './pages/calendario/calendario.component';
+import { HomeComponent } from './pages/home/home.component';
 
 
 export const routes: Routes = [
@@ -28,7 +29,8 @@ export const routes: Routes = [
     { path: 'socios/por-que-ser-socio', component: PorQueSerSocioComponent },
     { path: 'contacto', component: ContactoComponent },
     { path: 'wip', component: WipComponent },
-    { path: 'calendario', component: CalendarioComponent }
+    { path: 'calendario', component: CalendarioComponent },
+    { path: '', component: HomeComponent }
 
     
 

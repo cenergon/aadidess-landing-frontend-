@@ -61,6 +61,11 @@ export class ThemeToggleComponent implements OnInit {
     } else {
       root.setAttribute(this.THEME_ATTRIBUTE, theme);
     }
+
+    // Notificar a otros componentes del cambio
+    window.dispatchEvent(new CustomEvent('theme-changed', { 
+      detail: { theme: root.getAttribute(this.THEME_ATTRIBUTE) } 
+    }));
   }
 
   private updateThemeLabel(): void {

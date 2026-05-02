@@ -1,0 +1,109 @@
+$radius-lg: 12px;
+$transition-smooth: var(--transition-base);
+
+.footer {
+  padding: 2.5rem 1.5rem;
+  background-color: var(--color-bg-elevated);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+  transition: background-color var(--transition-base), border-color var(--transition-base);
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  &__asociacion {
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+    margin: 0;
+    transition: color var(--transition-base);
+  }
+
+  &__contactos {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  &__contactos-titulo {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin: 0 0 0.5rem;
+  }
+
+  &__sede,
+  &__direccion,
+  &__localidad {
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    margin: 0;
+    transition: color var(--transition-base);
+  }
+
+  &__telefonos {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  &__telefono-label,
+  &__telefono {
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    margin: 0;
+    transition: color var(--transition-base);
+  }
+
+  &__logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-end;
+
+    @media (max-width: 768px) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__logo-link {
+    display: inline-block;
+    border-radius: $radius-lg;
+    overflow: hidden;
+    transition: transform var(--transition-base);
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__logo {
+    width: auto;
+    height: 48px;
+    object-fit: contain;
+    display: block;
+  }
+}
