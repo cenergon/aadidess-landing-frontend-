@@ -1,0 +1,93 @@
+<section class="bolsa-trabajo">
+  <div class="bolsa-trabajo__container">
+    <h1 class="bolsa-trabajo__title">{{ titulo }}</h1>
+    <p class="bolsa-trabajo__descripcion">{{ descripcion }}</p>
+
+    <!-- Controles de búsqueda y filtro -->
+    <div class="bolsa-trabajo__filtros">
+      <input
+        type="text"
+        class="bolsa-trabajo__search"
+        placeholder="Buscar por palabra clave..."
+        [value]="searchTerm()"
+        (input)="searchTerm.set($any($event.target).value)"
+      />
+      <select
+        class="bolsa-trabajo__select"
+        [value]="delegacionSeleccionada()"
+        (change)="delegacionSeleccionada.set($any($event.target).value)"
+      >
+        <option value="">Todas las delegaciones</option>
+        @for (deleg of delegaciones(); track deleg) {
+          <option [value]="deleg">{{ deleg }}</option>
+        }
+      </select>
+    </div>
+
+    <!-- Argentina -->
+    <h2 class="bolsa-trabajo__subtitulo">Búsquedas laborales en Argentina</h2>
+    @if (ofertasArgentinaFiltradas().length > 0) {
+      <div class="bolsa-trabajo__grid">
+        @for (oferta of ofertasArgentinaFiltradas(); track oferta.titulo) {
+          <div class="bolsa-trabajo__card">
+            <div class="bolsa-trabajo__imagen-wrapper" (click)="abrirImagen(oferta.imagen)">
+              <img
+                [src]="'images/bolsa-de-trabajo/' + oferta.imagen"
+                [alt]="oferta.titulo"
+                class="bolsa-trabajo__imagen"
+                loading="lazy"
+              />
+            </div>
+            <div class="bolsa-trabajo__info">
+              <h3 class="bolsa-trabajo__titulo-oferta">{{ oferta.titulo }}</h3>
+              <p class="bolsa-trabajo__descripcion-oferta">{{ oferta.descripcion }}</p>
+              <p class="bolsa-trabajo__delegacion">{{ oferta.delegacion }}</p>
+              <p class="bolsa-trabajo__localidad">{{ oferta.localidad }}</p>
+            </div>
+          </div>
+        }
+      </div>
+    } @else {
+      <p class="bolsa-trabajo__sin-resultados">No se encontraron ofertas en Argentina con los filtros actuales.</p>
+    }
+
+    <!-- Exterior -->
+    <h2 class="bolsa-trabajo__subtitulo">Búsquedas laborales en el exterior</h2>
+    @if (ofertasExteriorFiltradas().length > 0) {
+      <div class="bolsa-trabajo__grid">
+        @for (oferta of ofertasExteriorFiltradas(); track oferta.titulo) {
+          <div class="bolsa-trabajo__card">
+            <div class="bolsa-trabajo__imagen-wrapper" (click)="abrirImagen(oferta.imagen)">
+              <img
+                [src]="'images/bolsa-de-trabajo/' + oferta.imagen"
+                [alt]="oferta.titulo"
+                class="bolsa-trabajo__imagen"
+                loading="lazy"
+              />
+            </div>
+            <div class="bolsa-trabajo__info">
+              <h3 class="bolsa-trabajo__titulo-oferta">{{ oferta.titulo }}</h3>
+              <p class="bolsa-trabajo__descripcion-oferta">{{ oferta.descripcion }}</p>
+              <p class="bolsa-trabajo__delegacion">{{ oferta.delegacion }}</p>
+              <p class="bolsa-trabajo__localidad">{{ oferta.localidad }}</p>
+            </div>
+          </div>
+        }
+      </div>
+    } @else {
+      <p class="bolsa-trabajo__sin-resultados">No se encontraron ofertas en el exterior con los filtros actuales.</p>
+    }
+
+    <!-- Modal para imagen maximizada -->
+    @if (imagenAmpliada) {
+      <div class="bolsa-trabajo__modal-backdrop" (click)="cerrarImagen()">
+        <div class="bolsa-trabajo__modal-content">
+          <button class="bolsa-trabajo__modal-close" (click)="cerrarImagen()" aria-label="Cerrar imagen">
+            &times;
+          </button>
+          <img [src]="imagenAmpliada" class="bolsa-trabajo__modal-imagen" alt="Imagen ampliada" />
+        </div>
+      </div>
+    }
+  </div>
+</section>

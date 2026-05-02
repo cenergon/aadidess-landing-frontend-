@@ -1,0 +1,163 @@
+$radius-lg: 12px;
+$transition-smooth: var(--transition-base);
+
+.contacto {
+  padding: 3rem 1.5rem;
+  transition: background-color var(--transition-base), color var(--transition-base);
+
+  &__container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: 0.5rem;
+    text-align: center;
+    transition: color var(--transition-base);
+  }
+
+  &__descripcion {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    text-align: center;
+    margin-bottom: 2rem;
+    transition: color var(--transition-base);
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  &__campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  &__fila {
+    display: flex;
+    gap: 0.75rem;
+
+    .contacto__campo {
+      flex: 1;
+    }
+  }
+
+  &__label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    transition: color var(--transition-base);
+  }
+
+  &__input,
+  &__textarea {
+    padding: 0.6rem 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: $radius-lg;
+    background-color: var(--color-bg-elevated);
+    color: var(--color-text-primary);
+    font-size: 0.9rem;
+    font-family: inherit;
+    transition: border-color var(--transition-base), box-shadow var(--transition-base);
+
+    &:focus {
+      outline: none;
+      border-color: var(--color-accent);
+      box-shadow: 0 0 0 3px rgba(96, 208, 241, 0.25);
+    }
+  }
+
+  &__textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+
+  &__boton {
+    align-self: flex-end;
+    padding: 0.7rem 1.8rem;
+    border: none;
+    border-radius: $radius-lg;
+    background-color: var(--color-accent);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: opacity var(--transition-base), transform var(--transition-base);
+    margin-top: 0.25rem;
+
+    &:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+    &:active {
+      transform: translateY(0);
+    }
+  }
+
+  &__sedes {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__sede {
+    padding: 1.5rem;
+    background-color: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: $radius-lg;
+    box-shadow: var(--shadow-md);
+    transition: background-color var(--transition-base), border-color var(--transition-base);
+  }
+
+  &__sede-nombre {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin: 0 0 0.5rem;
+  }
+
+  &__sede-direccion,
+  &__sede-localidad,
+  &__sede-telefono {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    margin: 0 0 0.25rem;
+    transition: color var(--transition-base);
+  }
+
+  &__sede-localidad {
+    margin-bottom: 0.5rem;
+  }
+
+  &__mapa-contenedor {
+    border-radius: $radius-lg;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-md);
+    transition: border-color var(--transition-base);
+  }
+
+  &__mapa {
+    display: block;
+    width: 100%;
+    height: 350px;
+  }
+}

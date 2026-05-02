@@ -1,0 +1,35 @@
+$radius-lg: 12px;
+$transition-smooth: var(--transition-base);
+
+.por-que-ser-socio {
+  padding: 3rem 1.5rem;
+  transition: background-color var(--transition-base), color var(--transition-base);
+
+  &__container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: 2rem;
+    text-align: center;
+    transition: color var(--transition-base);
+  }
+
+  &__contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  &__parrafo {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    margin: 0;
+    transition: color var(--transition-base);
+  }
+}

@@ -2,8 +2,10 @@
 
 :root {
   --color-bg-primary: #ffffff;
+  --color-bg-tertiary: #0f172a; 
   --color-bg-elevated: #ffffff;
   --color-text-primary: #24243c;
+  --color-text-inverse: #ffffff;
   --color-border: rgba(36, 36, 60, 0.08);
   --color-hover-bg: rgba(96, 208, 241, 0.08);
   --color-accent: #60d0f1;
@@ -15,8 +17,10 @@
 
 [data-theme='dark'] {
   --color-bg-primary: #0f172a;
+  --color-bg-tertiary: #38bdf8;
   --color-bg-elevated: #1e293b;
   --color-text-primary: #f1f5f9;
+  --color-text-inverse: #0f172a;
   --color-border: rgba(148, 163, 184, 0.15);
   --color-hover-bg: rgba(56, 189, 248, 0.15);
   --color-accent: #38bdf8;

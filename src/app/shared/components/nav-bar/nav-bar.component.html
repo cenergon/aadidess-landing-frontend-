@@ -65,23 +65,47 @@
               [class.navbar__dropdown-panel--open]="isDropdownOpen(item.label)"
             >
               @for (child of item.children; track child.label) {
-                <a
-                  [href]="child.link"
-                  class="navbar__dropdown-link"
-                >
-                  {{ child.label }}
-                </a>
+                @if (child.external) {
+                  <!-- Enlace externo en dropdown -->
+                  <a
+                    href="javascript:void(0)"
+                    class="navbar__dropdown-link"
+                    (click)="openExternal(child.link!)"
+                  >
+                    {{ child.label }}
+                  </a>
+                } @else {
+                  <!-- Enlace interno en dropdown -->
+                  <a
+                    [routerLink]="child.link"
+                    class="navbar__dropdown-link"
+                    (click)="mobileMenuOpen.set(false); activeDropdown.set(null)"
+                  >
+                    {{ child.label }}
+                  </a>
+                }
               }
             </div>
           </div>
         } @else {
           <!-- Enlace simple -->
-          <a
-            [href]="item.link"
-            class="navbar__link"
-          >
-            {{ item.label }}
-          </a>
+          @if (item.external) {
+            <a
+              href="javascript:void(0)"
+              class="navbar__link"
+              (click)="openExternal(item.link!)"
+            >
+              {{ item.label }}
+            </a>
+          } @else {
+            <a
+              [routerLink]="item.link"
+              class="navbar__link"
+              (click)="mobileMenuOpen.set(false); activeDropdown.set(null)"
+            >
+              {{ item.label }}
+            </a>
+          }
         }
       }
     </div>

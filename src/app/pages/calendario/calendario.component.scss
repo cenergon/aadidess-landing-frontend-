@@ -1,0 +1,86 @@
+$radius-lg: 12px;
+$transition-smooth: var(--transition-base);
+
+.calendario {
+  padding: 3rem 1.5rem;
+  transition: background-color var(--transition-base), color var(--transition-base);
+
+  &__container {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    transition: color var(--transition-base);
+  }
+
+  &__descripcion {
+    font-size: 1.05rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    transition: color var(--transition-base);
+  }
+
+  &__pasos {
+    margin-bottom: 2rem;
+  }
+
+  &__subtitulo {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 0.75rem;
+    transition: color var(--transition-base);
+  }
+
+  &__lista {
+    padding-left: 1.5rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__item {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+    transition: color var(--transition-base);
+  }
+
+  &__mensaje {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    transition: color var(--transition-base);
+  }
+
+    &__boton {
+        display: block;
+        margin: 0 auto;
+        padding: 0.8rem 2rem;
+        border: none;
+        border-radius: $radius-lg;
+        background-color: var(--color-accent);
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: opacity var(--transition-base), transform var(--transition-base);
+
+        &:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+        &:active {
+            transform: translateY(0);
+        }
+    }
+}

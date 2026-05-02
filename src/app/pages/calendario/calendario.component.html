@@ -1,0 +1,21 @@
+<section class="calendario">
+  <div class="calendario__container">
+    <h1 class="calendario__title">{{ titulo }}</h1>
+    <p class="calendario__descripcion">{{ descripcion }}</p>
+
+    <div class="calendario__pasos">
+      <h2 class="calendario__subtitulo">Pasos para registrarte:</h2>
+      <ol class="calendario__lista">
+        @for (paso of pasos; track paso) {
+          <li class="calendario__item">{{ paso }}</li>
+        }
+      </ol>
+    </div>
+
+    <p class="calendario__mensaje">{{ mensajeFinal }}</p>
+
+    <button class="calendario__boton" (click)="irAlCampus()">
+      Ir al campus virtual
+    </button>
+  </div>
+</section>

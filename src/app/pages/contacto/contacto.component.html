@@ -1,0 +1,74 @@
+<section class="contacto">
+  <div class="contacto__container">
+    <h1 class="contacto__title">{{ titulo }}</h1>
+    <p class="contacto__descripcion">{{ descripcion }}</p>
+
+    <div class="contacto__grid">
+      <!-- Formulario -->
+      <form class="contacto__form" (submit)="$event.preventDefault()">
+        <div class="contacto__campo">
+          <label for="nombre" class="contacto__label">Nombre</label>
+          <input type="text" id="nombre" name="nombre" class="contacto__input" required />
+        </div>
+
+        <div class="contacto__campo">
+          <label for="apellido" class="contacto__label">Apellido</label>
+          <input type="text" id="apellido" name="apellido" class="contacto__input" required />
+        </div>
+
+        <div class="contacto__fila">
+          <div class="contacto__campo">
+            <label for="codigo-area" class="contacto__label">Código de área</label>
+            <input type="text" id="codigo-area" name="codigo-area" class="contacto__input" />
+          </div>
+          <div class="contacto__campo">
+            <label for="telefono" class="contacto__label">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" class="contacto__input" />
+          </div>
+        </div>
+
+        <div class="contacto__campo">
+          <label for="email" class="contacto__label">Email</label>
+          <input type="email" id="email" name="email" class="contacto__input" required />
+        </div>
+
+        <div class="contacto__campo">
+          <label for="consulta" class="contacto__label">Consulta</label>
+          <textarea id="consulta" name="consulta" rows="4" class="contacto__textarea" required></textarea>
+        </div>
+
+        <button type="submit" class="contacto__boton">Enviar</button>
+      </form>
+
+      <!-- Información de sedes -->
+      <aside class="contacto__sedes">
+        @for (sede of sedes; track sede.nombre) {
+          <div class="contacto__sede">
+            <h3 class="contacto__sede-nombre">{{ sede.nombre }}</h3>
+            <p class="contacto__sede-direccion">{{ sede.direccion }}</p>
+            <p class="contacto__sede-localidad">{{ sede.localidad }}</p>
+            @if (sede.telefax) {
+              <p class="contacto__sede-telefono">Telefax: {{ sede.telefax }}</p>
+            }
+            <p class="contacto__sede-telefono">{{ sede.telefono }}</p>
+          </div>
+        }
+      </aside>
+    </div>
+
+    <!-- Mapa -->
+    <div class="contacto__mapa-contenedor">
+        <iframe
+            [src]="mapaSeguro"
+            class="contacto__mapa"
+            width="100%"
+            height="350"
+            style="border:0"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación de AADIDESS"
+        ></iframe>
+    </div>
+  </div>
+</section>

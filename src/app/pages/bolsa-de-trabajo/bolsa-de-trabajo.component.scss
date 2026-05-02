@@ -1,0 +1,210 @@
+$radius-lg: 12px;
+$transition-smooth: var(--transition-base);
+
+.bolsa-trabajo {
+  padding: 3rem 1.5rem;
+  transition: background-color var(--transition-base), color var(--transition-base);
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: 1rem;
+    text-align: center;
+    transition: color var(--transition-base);
+  }
+
+  &__descripcion {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    line-height: 1.6;
+    transition: color var(--transition-base);
+  }
+
+  &__subtitulo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 2.5rem 0 1.5rem;
+    text-align: left;
+    transition: color var(--transition-base);
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 576px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: $radius-lg;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-base),
+                box-shadow var(--transition-base),
+                border-color var(--transition-base);
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--color-accent);
+    }
+  }
+
+  &__imagen-wrapper {
+    width: 100%;
+    aspect-ratio: 3 / 4; /* 1080×1440 → 3:4 */
+    overflow: hidden;
+    background-color: var(--color-bg-secondary);
+    cursor: pointer;
+  }
+
+  &__imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* se mantiene cover para que ocupe el contenedor sin espacios, pero con aspect-ratio 3:4 se ve completa */
+    display: block;
+    transition: transform 0.3s ease;
+
+    .bolsa-trabajo__card:hover & {
+      transform: scale(1.03);
+    }
+  }
+
+  &__info {
+    padding: 1rem 1.25rem 1.25rem;
+  }
+
+  &__titulo-oferta {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 0 0 0.5rem;
+    transition: color var(--transition-base);
+  }
+
+  &__descripcion-oferta {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    margin: 0 0 0.75rem;
+    line-height: 1.4;
+    transition: color var(--transition-base);
+  }
+
+  &__delegacion {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    margin: 0 0 0.25rem;
+    transition: color var(--transition-base);
+  }
+
+  &__localidad {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--color-accent);
+    margin: 0;
+  }
+
+  /* Modal */
+  &__modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+  }
+
+  &__modal-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__modal-close {
+    position: absolute;
+    top: -2.5rem;
+    right: 0;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity var(--transition-base);
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__modal-imagen {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* Filtros */
+.bolsa-trabajo__filtros {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.bolsa-trabajo__search,
+.bolsa-trabajo__select {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: $radius-lg;
+  background-color: var(--color-bg-elevated);
+  color: var(--color-text-primary);
+  font-size: 0.95rem;
+  min-width: 220px;
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(96, 208, 241, 0.25);
+  }
+}
+
+.bolsa-trabajo__select {
+  cursor: pointer;
+}
+
+.bolsa-trabajo__sin-resultados {
+  text-align: center;
+  color: var(--color-text-secondary);
+  padding: 2rem;
+  font-size: 1rem;
+}

@@ -1,0 +1,10 @@
+<section class="por-que-ser-socio">
+  <div class="por-que-ser-socio__container">
+    <h1 class="por-que-ser-socio__title">{{ titulo }}</h1>
+    <div class="por-que-ser-socio__contenido">
+      @for (parrafo of parrafos; track parrafo) {
+        <p class="por-que-ser-socio__parrafo">{{ parrafo }}</p>
+      }
+    </div>
+  </div>
+</section>
