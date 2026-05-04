@@ -1,7 +1,3 @@
-// ============================================
-// NavBar – AADIDESS
-// ============================================
-
 $color-dark: var(--color-text-primary, #24243c);
 $color-accent: var(--color-accent, #60d0f1);
 $color-white: var(--color-bg-primary, #ffffff);
@@ -27,7 +23,7 @@ $transition-base: var(--transition-base, 0.2s ease);
     display: flex;
     align-items: center;
     height: 64px;
-    gap: 2rem;
+    justify-content: space-between; // logo izquierda, toggle derecha
   }
 
   // ---- Brand ----
@@ -63,7 +59,6 @@ $transition-base: var(--transition-base, 0.2s ease);
     color: $color-dark;
     cursor: pointer;
     padding: 0.5rem;
-    margin-left: auto;
 
     .material-symbols-outlined {
       font-size: 1.75rem;
@@ -94,7 +89,8 @@ $transition-base: var(--transition-base, 0.2s ease);
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    margin-left: auto;
+    justify-content: center; // centra los enlaces
+    flex: 1; // ocupa el espacio disponible entre logo y toggle
 
     @media (max-width: 768px) {
       position: fixed;
@@ -112,6 +108,7 @@ $transition-base: var(--transition-base, 0.2s ease);
       transition: transform 0.25s ease;
       z-index: 95;
       overflow-y: auto;
+      justify-content: flex-start; // mobile no centra
 
       &--open {
         transform: translateX(0);
@@ -130,7 +127,6 @@ $transition-base: var(--transition-base, 0.2s ease);
     transition: color $transition-base;
     white-space: nowrap;
 
-    // Underline animado
     &::after {
       content: '';
       position: absolute;
@@ -187,7 +183,6 @@ $transition-base: var(--transition-base, 0.2s ease);
     transition: transform $transition-base;
   }
 
-  // Flecha rotada cuando dropdown abierto
   .navbar__dropdown-toggle[aria-expanded='true'] .navbar__chevron {
     transform: rotate(180deg);
   }
@@ -229,7 +224,6 @@ $transition-base: var(--transition-base, 0.2s ease);
       padding: 0.25rem 0 0.25rem 0.75rem;
       min-width: auto;
       backdrop-filter: none;
-      // En mobile se muestra/oculta con la clase
       display: none;
 
       &--open {
@@ -255,7 +249,7 @@ $transition-base: var(--transition-base, 0.2s ease);
   }
 
   &__logo-img {
-    height: 40px; // Ajustá según el diseño de tu SVG
+    height: 40px;
     width: auto;
     display: block;
     transition: filter $transition-base;
@@ -264,5 +258,4 @@ $transition-base: var(--transition-base, 0.2s ease);
   :host-context([data-theme="dark"]) &__logo-img {
     filter: brightness(0) invert(0.9);
   }
-
 }

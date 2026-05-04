@@ -46,7 +46,7 @@
       @for (destacado of destacados; track destacado.titulo) {
         <div class="formas-pago__destacado">
           <div class="formas-pago__destacado-header">
-            <img [src]="destacado.svg" [alt]="destacado.titulo" class="formas-pago__destacado-logo" />
+            <img [src]="getDestacadoSvg(destacado)" [alt]="destacado.titulo" class="formas-pago__destacado-logo" />
             <span class="formas-pago__badge">¡NUEVO!</span>
           </div>
           <h2 class="formas-pago__subtitulo">{{ destacado.titulo }}</h2>
@@ -71,7 +71,7 @@
         @for (banco of bancos; track banco.banco; let i = $index) {
           <div class="formas-pago__banco">
             <div class="formas-pago__banco-header">
-              <img [src]="banco.svg" [alt]="banco.banco" class="formas-pago__banco-logo" />
+              <img [src]="getBancoLogoSrc(banco)" [alt]="banco.banco" class="formas-pago__banco-logo" />
               <h3>{{ banco.banco }}</h3>
             </div>
             <div class="formas-pago__banco-datos">

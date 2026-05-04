@@ -1,0 +1,213 @@
+<section class="instructor">
+  <div class="instructor__container">
+    <!-- Título y descripción -->
+    <h1 class="instructor__title">Instructor de Esquí – Nivel 1</h1>
+    <p class="instructor__desc">
+      El certificado de Instructor de Esquí NIVEL 1 habilita al titular al dictado de clases,
+      basándose en los principios técnicos y metodológicos de la Técnica Argentina de Esquí y Snowboard,
+      hasta Intermedios 4 de la progresión metodológica. Abarca niños y adultos, clases individuales o
+      colectivas, en pistas balizadas, garantizando condiciones óptimas de seguridad.
+    </p>
+    <p class="instructor__observacion">
+      El Instructor Nivel 1 es reconocido por todas las escuelas y clubes y puede desempeñar su
+      actividad únicamente dentro de los mismos.
+    </p>
+
+    <!-- Barra de acciones rápida (5 botones) -->
+    <div class="instructor__actions">
+      <a href="/aranceles-y-formas-de-pago/aranceles" class="instructor__action-btn">
+        <span class="material-symbols-outlined instructor__action-icon">payments</span>
+        <span class="instructor__action-label">Ver Aranceles</span>
+      </a>
+      <a href="https://aadidess.cipbyte.io/web/#/profile-authentication/login"
+         target="_blank" rel="noopener noreferrer"
+         class="instructor__action-btn">
+        <span class="material-symbols-outlined instructor__action-icon">app_registration</span>
+        <span class="instructor__action-label">Inscripción</span>
+      </a>
+      <button (click)="scrollToClinica()" class="instructor__action-btn">
+        <span class="material-symbols-outlined instructor__action-icon">school</span>
+        <span class="instructor__action-label">Clínica Pre Ingreso</span>
+      </button>
+      <a href="/institucional/reglamento-academico" class="instructor__action-btn">
+        <span class="material-symbols-outlined instructor__action-icon">description</span>
+        <span class="instructor__action-label">Reglamento Académico</span>
+      </a>
+      <a href="/academico/calendario" class="instructor__action-btn">
+        <span class="material-symbols-outlined instructor__action-icon">calendar_month</span>
+        <span class="instructor__action-label">Calendario</span>
+      </a>
+    </div>
+
+    <!-- Video Informativo (tarjeta centrada y ancha) -->
+    <div class="instructor__video-card">
+      <h2 class="instructor__video-titulo">Video Informativo</h2>
+      <div class="instructor__video-wrapper">
+        <iframe src="https://www.youtube.com/embed/pYZdPAXOFDs?si=FZiXXaWPkFNYpMJn"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- Examen de Ingreso -->
+    <section class="instructor__seccion">
+      <h2 class="instructor__seccion-titulo">Examen de Ingreso</h2>
+      <p class="instructor__seccion-intro">Los exámenes de ingreso están divididos en 2 partes</p>
+
+      <div class="instructor__examen-grid">
+        <div class="instructor__examen-card">
+          <h3 class="instructor__examen-titulo">1ra Parte</h3>
+          <p>Dos (2) bajadas en vueltas cortas en pista azul donde se evaluará el Lineamiento Técnico.</p>
+        </div>
+        <div class="instructor__examen-card">
+          <h3 class="instructor__examen-titulo">2da Parte <span class="instructor__condicion">(solo si la 1ra tiene nivel suficiente)</span></h3>
+          <p>
+            “Nivel de Esquí”: dos (2) bajadas en nieve no tratada (fuera de pista de dificultad media).
+            Se inicia con vueltas largas o cortas adaptándose al terreno y controlando velocidad.
+            Es necesario modificar el radio y finalizar con una frenada antes del final de la pista.
+          </p>
+          <p class="instructor__nota">
+            Si las condiciones no lo permiten, se reemplazan por dos bajadas de vueltas largas en pista azul.
+          </p>
+        </div>
+      </div>
+
+      <div class="instructor__importante">
+        <h4 class="instructor__importante-titulo">
+          <span class="material-symbols-outlined instructor__importante-icon">warning</span> Importante
+        </h4>
+        <ul class="instructor__importante-lista">
+          <li>Todas las bajadas deben realizarse en un marco de seguridad y velocidad controlada.</li>
+          <li>No se dan indicaciones o correcciones técnicas ni antes ni durante el examen.</li>
+          <li>Solo se dan indicaciones referidas a la seguridad.</li>
+          <li>Se califica con números ordinales (de cinco en cinco) aprobando con 40 puntos o más.</li>
+          <li>Como referencia se toma el nivel Experto 6: postura, equilibrio, seguridad, centralidad y dominio.</li>
+          <li>Ingresan los mejores promedios. Se toma la mejor nota de cada bajada para promediar.</li>
+          <li>Se redondea el promedio hacia arriba si aprueba y hacia abajo si reprueba.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Requisitos de Ingreso -->
+    <section class="instructor__seccion">
+      <h2 class="instructor__seccion-titulo">Requisitos de Ingreso</h2>
+      <div class="instructor__requisitos-grid">
+        <div class="instructor__requisito-item">
+          <span class="material-symbols-outlined instructor__requisito-icon">check_circle</span>
+          <p>Tener 16 años cumplidos antes de comenzar el Nivel 1.</p>
+        </div>
+        <div class="instructor__requisito-item">
+          <span class="material-symbols-outlined instructor__requisito-icon">check_circle</span>
+          <p>Completar el formulario de inscripción.</p>
+        </div>
+        <div class="instructor__requisito-item">
+          <span class="material-symbols-outlined instructor__requisito-icon">check_circle</span>
+          <p>Abonar el arancel de inscripción antes de la fecha del cierre de inscripciones.</p>
+        </div>
+        <div class="instructor__requisito-item">
+          <span class="material-symbols-outlined instructor__requisito-icon">check_circle</span>
+          <p>Ingresar al cupo determinado por el Consejo Académico (se toman las mejores notas).</p>
+        </div>
+        <div class="instructor__requisito-item">
+          <span class="material-symbols-outlined instructor__requisito-icon">check_circle</span>
+          <p>Presentar Certificado de Salud Física y Salud Mental.</p>
+        </div>
+        <div class="instructor__requisito-item">
+          <span class="material-symbols-outlined instructor__requisito-icon">check_circle</span>
+          <p>Presentar fotocopia DNI 1º y 2º hoja.</p>
+        </div>
+        <div class="instructor__requisito-item">
+          <span class="material-symbols-outlined instructor__requisito-icon">check_circle</span>
+          <p>Copia fiel de partida de nacimiento (en caso de contar con el nuevo DNI).</p>
+        </div>
+        <div class="instructor__requisito-item">
+          <span class="material-symbols-outlined instructor__requisito-icon">check_circle</span>
+          <p>Para extranjeros: aprobar examen de ingreso, constancia de ingreso y estadía legal, dominio fluido del castellano oral y escrito, y certificado de salud.</p>
+        </div>
+      </div>
+      <div class="instructor__requisitos-links">
+        <a href=" /aranceles-y-formas-de-pago/aranceles" class="instructor__link">Ver formas de pago</a>
+        <a href="/academico/FAQ" class="instructor__link">Preguntas frecuentes</a>
+      </div>
+    </section>
+
+    <!-- Plan de Estudios -->
+    <section class="instructor__seccion">
+      <h2 class="instructor__seccion-titulo">Plan de Estudios</h2>
+      <div class="instructor__plan-grid">
+        <div class="instructor__plan-card">
+          <h3 class="instructor__plan-modalidad">Clases en Aula (virtual)</h3>
+          <ul class="instructor__plan-materias">
+            <li>Teoría del Método 1</li>
+            <li>Teoría de la Técnica 1</li>
+            <li>Historia 1</li>
+            <li>Fundamentos de la Enseñanza Aprendizaje</li>
+            <li>Medio Ambiente y Seguridad 1</li>
+            <li>Materiales 1</li>
+            <li>Organización y Reglamentos 1</li>
+          </ul>
+        </div>
+        <div class="instructor__plan-card">
+          <h3 class="instructor__plan-modalidad">Clases en Pista</h3>
+          <ul class="instructor__plan-materias">
+            <li>Práctica de la Técnica 1</li>
+            <li>Práctica del Método 1</li>
+            <li>Técnica de Enseñanza en Infantes</li>
+            <li>Práctica de Medio Ambiente y Seguridad</li>
+            <li>Práctica Pedagógica</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="instructor__metodologia">
+        <h3 class="instructor__metodologia-titulo">Metodología de cursada y evaluación</h3>
+        <ul class="instructor__metodologia-lista">
+          <li>El curso se divide en dos: Clases Aula y Clases Pista.</li>
+          <li>Clases en Aula: se pueden cursar sin examen de ingreso técnico aprobado. Se dictan de manera virtual.</li>
+          <li>Cada materia cuenta con su examen y recuperatorio correspondiente.</li>
+          <li>Una vez cursado el módulo en aula, tienen 2 temporadas para aprobar el examen de ingreso técnico y cursar el módulo en pista.</li>
+          <li>Clases en Pista: se debe aprobar el examen de ingreso técnico y las clases en aula. Es de tiempo completo durante casi tres semanas (doble turno). Requiere total disponibilidad.</li>
+        </ul>
+        <h4 class="instructor__examen-final">Examen Final Técnico</h4>
+        <ul class="instructor__examen-final-lista">
+          <li>Aprueba con 40 puntos en cada gesto.</li>
+          <li>Recuperatorio inmediato posterior al examen (de no aprobarlos, se recursa el módulo técnico).</li>
+          <li>
+            Gestos del Examen Técnico:
+            <ul>
+              <li>Módulo Básico: Vuelta Cuña – Vuelta Elemental</li>
+              <li>Módulo Perfeccionamiento: Super – Corto</li>
+            </ul>
+          </li>
+        </ul>
+        <h4 class="instructor__evaluacion">Evaluación Actitudinal</h4>
+        <p>Realizada por el profesor de pista. Se debe aprobar con 7. De no aprobar se recursa el módulo al año siguiente.</p>
+        <h4 class="instructor__egreso">Condiciones de Egreso</h4>
+        <p>Se considera recibido de instructor Nivel 1 AADIDESS cuando se cuente con los módulos pista y teórico aprobados.</p>
+      </div>
+    </section>
+
+    <!-- Clínica Pre Ingreso (con id para scroll) -->
+    <section id="clinica-pre-ingreso" class="instructor__seccion">
+      <h2 class="instructor__seccion-titulo">Clínica Pre Ingreso Nivel 1</h2>
+      <p class="instructor__clinica-desc">
+        Para interesados en rendir el examen de ingreso a Nivel 1. Esta clínica no es obligatoria,
+        su realización dependerá de la cantidad de inscriptos. El arancel incluye el examen de ingreso a pista;
+        durante la clínica, si el nivel es el requerido, el profesor puede promocionar el ingreso al curso.
+      </p>
+      <ul class="instructor__clinica-detalles">
+        <li><strong>Duración:</strong> 10 horas</li>
+        <li><strong>Fecha:</strong> ver calendario en cada delegación</li>
+        <li><strong>Inscripción: </strong> <a href="/formulario-clinica" class="instructor__link"> Formulario</a></li>
+      </ul>
+      <p class="instructor__clinica-desarrollo">
+        Incluye introducción a aspectos generales (seguridad, terreno, nieve, equipo, Normas FIS),
+        explicación, demostración, ejecución, retroinformación, corrección de errores, fases del gesto,
+        actitudes básicas, ritmo, coordinación y práctica de los gestos de examen.
+      </p>
+    </section>
+  </div>
+</section>

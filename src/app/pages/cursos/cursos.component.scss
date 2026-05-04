@@ -1,0 +1,206 @@
+// Variables reutilizables del sistema de diseño
+$radius-lg: var(--radius-lg, 12px);
+$radius-md: var(--radius-md, 8px);
+$transition-smooth: var(--transition-base, 0.2s ease);
+
+.cursos {
+  padding: 2.5rem 1.5rem;
+  background-color: var(--color-bg-primary);
+  transition: background-color $transition-smooth;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    transition: color $transition-smooth;
+  }
+
+  // ---- Chips de acciones rápidas ----
+  &__chips {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0 0.5rem;
+
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(2, auto);
+    }
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+  }
+
+  &__chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.4rem 0.85rem;
+    border-radius: 20px;
+    background-color: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-primary);
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color $transition-smooth, border-color $transition-smooth,
+      color $transition-smooth, transform $transition-smooth;
+    white-space: nowrap;
+
+    &:hover {
+      background-color: var(--color-hover-bg);
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+      transform: translateY(-1px);
+    }
+  }
+
+  &__chip-icon {
+    font-size: 1.2rem;
+  }
+
+  // ---- Buscador ----
+  &__search {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__search-icon {
+    position: absolute;
+    left: 0.75rem;
+    font-size: 1.3rem;
+    color: var(--color-text-secondary);
+    pointer-events: none;
+  }
+
+  &__search-input {
+    width: 100%;
+    padding: 0.6rem 1rem 0.6rem 2.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: $radius-md;
+    background-color: var(--color-bg-elevated);
+    color: var(--color-text-primary);
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: border-color $transition-smooth, box-shadow $transition-smooth;
+    outline: none;
+
+    &::placeholder {
+      color: var(--color-text-secondary);
+    }
+
+    &:focus {
+      border-color: var(--color-accent);
+      box-shadow: 0 0 0 3px rgba(96, 208, 241, 0.15);
+    }
+  }
+
+  // ---- Grid ----
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);   // 4 columnas en escritorio
+    gap: 1rem;
+
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 576px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  // ---- Tarjeta de curso ----
+  &__card {
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: $radius-lg;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-md);
+    transition: transform $transition-smooth, box-shadow $transition-smooth, border-color $transition-smooth;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--color-accent);
+    }
+  }
+
+  &__card-img {
+    width: 100%;
+    aspect-ratio: 344 / 274;       // Proporción exacta de las imágenes
+    overflow: hidden;
+    background-color: var(--color-bg-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-hover) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+  }
+
+  &__placeholder-text {
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 500;
+    opacity: 0.9;
+  }
+
+  &__nombre {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    padding: 0.75rem 0.75rem 0.4rem;
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+    transition: color $transition-smooth;
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 0.75rem 0.75rem;
+    padding: 0.4rem 0.75rem;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    border-radius: $radius-md;
+    text-decoration: none;
+    transition: background-color $transition-smooth, color $transition-smooth;
+
+    &:hover {
+      background-color: var(--color-accent);
+      color: #fff;
+    }
+  }
+}

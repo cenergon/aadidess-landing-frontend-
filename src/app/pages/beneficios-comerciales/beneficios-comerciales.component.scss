@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 $color-dark: #24243c;
 $color-accent: #60d0f1;
 $color-white: #ffffff;
@@ -11,6 +13,7 @@ $radius-lg: 12px;
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 1.5rem;
+  padding-bottom: 15px;
 }
 
 .beneficios-grid {
@@ -20,8 +23,8 @@ $radius-lg: 12px;
   margin-top: 2rem;
 
   &__card {
-    position: relative; // para que el overlay se superponga correctamente
-    background: $color-white;
+    position: relative;
+    background: --color-bg-accent;
     border: 1px solid $color-border;
     border-radius: $radius-lg;
     padding: 1.5rem;
@@ -63,7 +66,7 @@ $radius-lg: 12px;
     opacity: 0;
     transition: opacity 0.2s ease;
     color: $color-white;
-    pointer-events: none; // para que el click pase a la card
+    pointer-events: none;
 
     .beneficios-grid__card:hover & {
       opacity: 1;
@@ -144,7 +147,7 @@ $radius-lg: 12px;
   &__descripcion {
     font-size: 0.95rem;
     line-height: 1.65;
-    color: lighten($color-dark, 15%);
+    color: color.adjust($color-dark, $lightness: 15%);
 
     p { margin-bottom: 0.75rem; }
     ul, ol { margin: 0.5rem 0; padding-left: 1.25rem; }

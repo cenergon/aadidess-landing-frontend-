@@ -30,23 +30,28 @@ export class NavBarComponent {
         { label: 'Estatuto', link: '/institucional/estatuto' },
         { label: 'Reglamento del Comité Técnico', link: '/institucional/reglamento-comite-tecnico' },
         { label: 'Requisitos para ser Delegado', link: '/institucional/requisitos-delegados' },
-        { label: 'Escuelas y Clubes reconocidos', link: '/institucional/escuelas-clubes' }
+        { label: 'Escuelas y Clubes reconocidos', link: '/institucional/escuelas-clubes' },
+        { label: 'Decálogo', link: 'docs/Decalogo-AA.pdf', external: true }
       ]
     },
-    { label: 'Cursos', link: '#' },
-    { label: 'Noticias', link: '#' },
+    {
+      label: 'Académico',
+      children: [
+        { label: 'Cursos', link: '/academico/cursos' },
+        { label: 'Calendario', link: '/academico/calendario' },
+        { label: 'Campus Virtual', link: 'https://aadidess.cipbyte.io/web/#/profile-authentication', external: true },
+        { label: 'Reglamento del Académico', link: '/institucional/reglamento-academico' },
+      ]
+    },
     {
       label: 'Socios',
       children: [
         { label: 'Convenios y Beneficios', link: '/socios/convenios-y-beneficios' },
         { label: 'Bolsa de Trabajo', link: '/socios/bolsa-de-trabajo' },
-        // Enlace externo: Instructores
         { label: 'Instructores', link: 'https://qr.aadidess.cipbyte.io/#/home', external: true },
         { label: '¿Por qué ser socio?', link: '/socios/por-que-ser-socio' }
       ]
     },
-    { label: 'Tienda', link: '/wip' },
-    { label: 'Contacto', link: '/contacto' },
     {
       label: 'Aranceles y Formas de Pago',
       children: [
@@ -54,10 +59,9 @@ export class NavBarComponent {
         { label: 'Formas de Pago', link: '/aranceles-y-formas-de-pago/formas-de-pago' }
       ]
     },
-    // Enlace externo: Campus Virtual
-    { label: 'Campus Virtual', link: 'https://aadidess.cipbyte.io/web/#/profile-authentication', external: true },
-    { label: 'Calendario', link: '/calendario' },
-    { label: 'Decálogo', link: 'docs/Decalogo-AA.pdf', external: true }
+    { label: 'Noticias', link: '#' },
+    { label: 'Tienda', link: '/wip' },
+    { label: 'Contacto', link: '/contacto' }
   ];
 
   toggleMobileMenu() {
@@ -76,5 +80,4 @@ export class NavBarComponent {
     event?.preventDefault();
     window.open(url, '_blank', 'noopener,noreferrer');
   }
-
 }

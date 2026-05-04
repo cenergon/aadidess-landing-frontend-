@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 interface Banco {
@@ -24,10 +24,19 @@ interface Destacado {
   templateUrl: './formas-de-pago.component.html',
   styleUrls: ['./formas-de-pago.component.scss']
 })
-export class FormasDePagoComponent {
+export class FormasDePagoComponent implements OnInit, OnDestroy {
 
-  // ID único del elemento que se acaba de copiar (null = ninguno)
   copiadoId = signal<string | null>(null);
+  currentTheme = signal<string>('light'); // 'light' o 'dark'
+
+  private themeListener: (e: Event) => void;
+
+  constructor() {
+    this.themeListener = (e: Event) => {
+      const detail = (e as CustomEvent).detail;
+      this.currentTheme.set(detail.theme || 'light');
+    };
+  }
 
   bancos: Banco[] = [
     {
@@ -71,11 +80,35 @@ export class FormasDePagoComponent {
     }
   ];
 
+  ngOnInit(): void {
+    // Tomar el valor inicial del atributo data-theme
+    const initial = document.documentElement.getAttribute('data-theme') || 'light';
+    this.currentTheme.set(initial);
+    window.addEventListener('theme-changed', this.themeListener);
+  }
+
+  ngOnDestroy(): void {
+    window.removeEventListener('theme-changed', this.themeListener);
+  }
+
+  getBancoLogoSrc(banco: Banco): string {
+    if (this.currentTheme() === 'dark' && banco.banco === 'Banco Macro') {
+      return 'svgs/macro-blanco.svg';
+    }
+    return banco.svg;
+  }
+
+  getDestacadoSvg(destacado: Destacado): string {
+    if (this.currentTheme() === 'dark' && destacado.titulo === 'Macro Click') {
+      return 'svgs/macro-blanco.svg';
+    }
+    return destacado.svg;
+  }
+
   async copiarTexto(texto: string, id: string): Promise<void> {
     try {
       await navigator.clipboard.writeText(texto);
     } catch {
-      // Fallback
       const textarea = document.createElement('textarea');
       textarea.value = texto;
       document.body.appendChild(textarea);
@@ -83,7 +116,6 @@ export class FormasDePagoComponent {
       document.execCommand('copy');
       document.body.removeChild(textarea);
     }
-    // Mostrar feedback solo en este elemento
     this.copiadoId.set(id);
     setTimeout(() => this.copiadoId.set(null), 1500);
   }
