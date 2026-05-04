@@ -1,14 +1,18 @@
-<div class="sponsor-bar">
-  <div class="sponsor-bar__logos">
-    @for (sponsor of sponsor; track sponsor.alt) {
-      <img
-  [src]="getImagen(sponsor)"
-  [alt]="sponsor.alt"
-  class="sponsor-bar__logo"
-  loading="lazy"
-  [style.height.px]="sponsor.height || null"
-  [style.transform]="sponsor.escala ? 'scale(' + sponsor.escala + ')' : null"
-    />
-    }
-  </div>
-</div>
+@if (!isHidden()) {
+  <a [routerLink]="'/institucional/sponsors'" class="sponsor-bar-link">
+    <div class="sponsor-bar">
+      <div class="sponsor-bar__logos">
+        @for (sponsor of sponsor; track sponsor.alt) {
+          <img
+            [src]="getImagen(sponsor)"
+            [alt]="sponsor.alt"
+            class="sponsor-bar__logo"
+            loading="lazy"
+            [style.height.px]="sponsor.height || null"
+            [style.transform]="sponsor.escala ? 'scale(' + sponsor.escala + ')' : null"
+          />
+        }
+      </div>
+    </div>
+  </a>
+}
