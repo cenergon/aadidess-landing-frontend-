@@ -38,7 +38,7 @@ export class DelegadosComponent {
       'Bustamante, Ignacio', 'Calello, Pablo', 'Cimorelli, Andrea', 'Dangavs, Cristian',
       'Davies, William', 'Djapic, Ricardo', 'Faccio, Juan Manuel', 'Gimenez, Florencia',
       'Longo, Rodolfo', 'Manzano, Maria', 'Marcaccini, Federico', 'Nabarlaz, Jorge',
-      'Olivieri, Justo', 'Pomar, Fernando', 'Taricco, Jorge', 'Runschke, Gabriel',
+      'Olivieri, Justo', 'Pinna, Matthias', 'Pomar, Fernando', 'Taricco, Jorge', 'Runschke, Gabriel',
       'Spitzer, Marco', 'Vecini, Ricardo'
     ],
     Chapelco: [
