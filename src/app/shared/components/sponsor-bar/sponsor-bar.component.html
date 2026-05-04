@@ -1,0 +1,15 @@
+<div class="sponsor-bar">
+  <div class="sponsor-bar__logos">
+    @for (sponsor of sponsor; track sponsor.alt) {
+      <img
+        [src]="sponsor.imagen"
+        [alt]="sponsor.alt"
+        class="sponsor-bar__logo"
+        [class.sponsor-bar__logo--invert]="sponsor.invertOnDark"
+        loading="lazy"
+        [style.height.px]="sponsor.height || null"
+        [style.transform]="sponsor.escala ? 'scale(' + sponsor.escala + ')' : null"
+      />
+    }
+  </div>
+</div>
