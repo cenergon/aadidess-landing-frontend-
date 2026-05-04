@@ -1,0 +1,77 @@
+<section class="cursos">
+  <div class="cursos__container">
+    <h1 class="cursos__title">Nuestros Cursos</h1>
+
+    <!-- Acciones rápidas -->
+    <div class="cursos__chips">
+      @for (accion of accionesRapidas; track accion.label) {
+        @if (accion.external) {
+          <a
+            [href]="accion.link"
+            class="cursos__chip"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @if (accion.icon) {
+              <span class="material-symbols-outlined cursos__chip-icon">{{ accion.icon }}</span>
+            }
+            <span>{{ accion.label }}</span>
+          </a>
+        } @else {
+          <a
+            [routerLink]="accion.link"
+            class="cursos__chip"
+          >
+            @if (accion.icon) {
+              <span class="material-symbols-outlined cursos__chip-icon">{{ accion.icon }}</span>
+            }
+            <span>{{ accion.label }}</span>
+          </a>
+        }
+      }
+    </div>
+
+    <!-- Buscador -->
+    <div class="cursos__search">
+      <span class="material-symbols-outlined cursos__search-icon">search</span>
+      <input
+        type="text"
+        class="cursos__search-input"
+        placeholder="Buscar curso..."
+        [ngModel]="searchTerm()"
+        (ngModelChange)="searchTerm.set($event)"
+        aria-label="Buscar curso"
+      />
+    </div>
+
+    <!-- Grilla de cursos -->
+    <div class="cursos__grid">
+      @for (curso of filteredCursos(); track curso.nombre) {
+        <div class="cursos__card">
+          <div class="cursos__card-img">
+            @if (getFotoUrl(curso.foto)) {
+              <img
+                [src]="curso.foto"
+                [alt]="curso.nombre"
+                class="cursos__foto"
+                loading="lazy"
+              />
+            } @else {
+              <div class="cursos__placeholder">
+                <span class="cursos__placeholder-text">Sin imagen</span>
+              </div>
+            }
+          </div>
+          <h2 class="cursos__nombre">{{ curso.nombre }}</h2>
+          <a
+            [routerLink]="curso.link || '#'"
+            class="cursos__btn"
+            (click)="$event.stopPropagation()"
+          >
+            VER CURSO
+          </a>
+        </div>
+      }
+    </div>
+  </div>
+</section>

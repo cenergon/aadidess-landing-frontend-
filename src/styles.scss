@@ -1,15 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@use 'sass:color';
 
 :root {
   --color-bg-primary: #ffffff;
   --color-bg-tertiary: #0f172a; 
   --color-bg-elevated: #ffffff;
+  --color-bg-accent: #ffffff;
   --color-text-primary: #24243c;
   --color-text-inverse: #ffffff;
   --color-border: rgba(36, 36, 60, 0.08);
   --color-hover-bg: rgba(96, 208, 241, 0.08);
   --color-accent: #60d0f1;
+  --color-accent-hover: #38bdf8;
+  --color-accent-hover-link: #38bdf8;
+  --color-accent-glow: #38bdf8;
   --shadow-dropdown: 0 4px 16px rgba(36, 36, 60, 0.06);
+  --radius-lg: 12px;
   --radius-md: 8px;
   --radius-sm: 6px;
   --transition-base: 0.2s ease;
@@ -22,11 +28,15 @@
   --color-bg-primary: #0f172a;
   --color-bg-tertiary: #38bdf8;
   --color-bg-elevated: #1e293b;
+  --color-bg-accent: #1e232f;
   --color-text-primary: #f1f5f9;
   --color-text-inverse: #0f172a;
   --color-border: rgba(148, 163, 184, 0.15);
   --color-hover-bg: rgba(56, 189, 248, 0.15);
   --color-accent: #38bdf8;
+  --color-accent-hover: #60d0f1;
+  --color-accent-hover-link: #ffffff;
+  --color-accent-glow: #60d0f1;
   --shadow-dropdown: 0 4px 16px rgba(0, 0, 0, 0.4);
   --color-pisteros: #FF3333;
   --color-demo-team: #6B5DA3;
@@ -50,4 +60,8 @@ body {
   background-color: var(--color-bg-primary);
   color: var(--color-text-primary);
   transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+html, body {
+  height: 100%;
 }

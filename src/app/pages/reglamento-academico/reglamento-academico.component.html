@@ -1,0 +1,46 @@
+<section class="reglamento">
+  <div class="reglamento__layout">
+    <!-- Barra lateral de navegación -->
+    <aside class="reglamento__sidebar">
+      <nav class="reglamento__nav">
+        <h2 class="reglamento__nav-title">Índice</h2>
+        <ul class="reglamento__nav-list">
+          @for (articulo of articulos; track articulo.id) {
+            <li class="reglamento__nav-item">
+              <a
+                class="reglamento__nav-link"
+                (click)="scrollTo(articulo.id)"
+                (keydown.enter)="scrollTo(articulo.id)"
+                tabindex="0"
+                role="link"
+              >
+                {{ articulo.titulo }}
+              </a>
+            </li>
+          }
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <div class="reglamento__content">
+      <h1 class="reglamento__title">Reglamento Académico</h1>
+      <p class="reglamento__subtitle">
+        Instituto Superior de Esquí y Snowboard (ISES) - AADIDESS
+      </p>
+
+      @for (articulo of articulos; track articulo.id) {
+        <article
+          class="reglamento__articulo"
+          [id]="'art-' + articulo.id"
+        >
+          <h2 class="reglamento__articulo-title">{{ articulo.titulo }}</h2>
+          <div
+            class="reglamento__articulo-contenido"
+            [innerHTML]="articulo.contenidoHtml"
+          ></div>
+        </article>
+      }
+    </div>
+  </div>
+</section>

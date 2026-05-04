@@ -1,19 +1,12 @@
-$color-dark: #24243c;
-$color-accent: #60d0f1;
-$color-white: #ffffff;
-$color-border: rgba(36, 36, 60, 0.08);
-$shadow-card: 0 2px 12px rgba(0, 0, 0, 0.04);
-$shadow-hover: 0 6px 20px rgba(36, 36, 60, 0.08);
-$radius-md: 8px;
-$radius-lg: 12px;
-
 .formas-pago {
   max-width: 900px;
   margin: 2rem auto 4rem;
   padding: 0 1.5rem;
+  color: var(--color-text-primary);
+  transition: color var(--transition-base);
 
   // --- Elementos copiables (sin ícono, feedback integrado) ---
-    &__copiar {
+  &__copiar {
     display: inline-flex;
     align-items: center;
     gap: 0.25rem;
@@ -25,25 +18,25 @@ $radius-lg: 12px;
 
     // Cuando está activo (recién copiado) se pone color acento
     &--activo {
-        color: $color-accent;
+      color: var(--color-accent);
     }
 
     .copiado-tooltip {
-        position: absolute;
-        top: -1.8rem;
-        left: 50%;
-        transform: translateX(-50%);
-        background: $color-dark;
-        color: $color-white;
-        font-size: 0.75rem;
-        padding: 0.2rem 0.75rem;
-        border-radius: 999px;
-        white-space: nowrap;
-        pointer-events: none;
-        z-index: 10;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      position: absolute;
+      top: -1.8rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--color-text-primary); // oscuro en ambos temas
+      color: var(--color-bg-primary); // texto invertido
+      font-size: 0.75rem;
+      padding: 0.2rem 0.75rem;
+      border-radius: 999px;
+      white-space: nowrap;
+      pointer-events: none;
+      z-index: 10;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     }
-    }
+  }
 
   &__container {
     // no extra
@@ -52,10 +45,11 @@ $radius-lg: 12px;
   &__titulo {
     font-size: 2.25rem;
     font-weight: 700;
-    color: $color-dark;
+    color: var(--color-text-primary);
     text-align: center;
     margin-bottom: 2.5rem;
     letter-spacing: -0.5px;
+    transition: color var(--transition-base);
   }
 
   // Medios aceptados
@@ -74,22 +68,23 @@ $radius-lg: 12px;
     gap: 0.5rem;
     font-size: 0.95rem;
     font-weight: 500;
-    color: $color-dark;
+    color: var(--color-text-primary);
     padding: 1rem;
-    background: $color-white;
-    border: 1px solid $color-border;
-    border-radius: $radius-md;
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
     min-width: 120px;
-    transition: box-shadow 0.2s, border-color 0.2s;
+    transition: box-shadow var(--transition-base),
+                border-color var(--transition-base);
 
     .material-symbols-outlined {
       font-size: 2rem;
-      color: $color-accent;
+      color: var(--color-accent);
     }
 
     &:hover {
-      border-color: rgba($color-accent, 0.25);
-      box-shadow: $shadow-hover;
+      border-color: var(--color-accent);
+      box-shadow: 0 6px 20px rgba(36, 36, 60, 0.08); // sombra genérica
     }
   }
 
@@ -98,22 +93,24 @@ $radius-lg: 12px;
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    background: rgba($color-accent, 0.06);
-    border: 1px solid rgba($color-accent, 0.15);
-    border-radius: $radius-md;
+    background: var(--color-hover-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
     padding: 1rem 1.5rem;
     margin-bottom: 2.5rem;
     font-size: 0.95rem;
-    color: $color-dark;
+    color: var(--color-text-primary);
+    transition: background var(--transition-base),
+                border-color var(--transition-base);
 
     .material-symbols-outlined {
-      color: $color-accent;
+      color: var(--color-accent);
       font-size: 1.5rem;
       flex-shrink: 0;
     }
 
     a {
-      color: $color-accent;
+      color: var(--color-accent);
       font-weight: 600;
       text-decoration: none;
       &:hover {
@@ -135,17 +132,18 @@ $radius-lg: 12px;
   }
 
   &__destacado {
-    background: $color-white;
-    border: 1px solid $color-border;
-    border-radius: $radius-lg;
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
     padding: 1.75rem;
     position: relative;
-    box-shadow: $shadow-card;
-    transition: box-shadow 0.2s, border-color 0.2s;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    transition: box-shadow var(--transition-base),
+                border-color var(--transition-base);
 
     &:hover {
-      box-shadow: $shadow-hover;
-      border-color: rgba($color-accent, 0.15);
+      box-shadow: 0 6px 20px rgba(36, 36, 60, 0.08);
+      border-color: var(--color-accent);
     }
 
     &-header {
@@ -156,7 +154,6 @@ $radius-lg: 12px;
     }
 
     &-logo {
-      // Antes 40px, ahora bastante más grande
       width: 150px;
       height: 150px;
       object-fit: contain;
@@ -166,8 +163,8 @@ $radius-lg: 12px;
 
   &__badge {
     display: inline-block;
-    background: $color-accent;
-    color: $color-white;
+    background: var(--color-accent);
+    color: var(--color-text-inverse);
     font-size: 0.75rem;
     font-weight: 700;
     padding: 0.2rem 0.75rem;
@@ -178,13 +175,14 @@ $radius-lg: 12px;
   &__subtitulo {
     font-size: 1.3rem;
     font-weight: 600;
-    color: $color-dark;
+    color: var(--color-text-primary);
     margin-bottom: 0.75rem;
+    transition: color var(--transition-base);
   }
 
   p {
     font-size: 0.95rem;
-    color: #444;
+    color: var(--color-text-secondary, var(--color-text-primary));
     line-height: 1.6;
   }
 
@@ -196,7 +194,7 @@ $radius-lg: 12px;
   &__descripcion {
     margin-bottom: 2rem;
     font-size: 0.95rem;
-    color: #444;
+    color: var(--color-text-secondary, var(--color-text-primary));
     line-height: 1.7;
   }
 
@@ -207,16 +205,17 @@ $radius-lg: 12px;
   }
 
   &__banco {
-    background: $color-white;
-    border: 1px solid $color-border;
-    border-radius: $radius-md;
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
     padding: 1.5rem;
-    box-shadow: $shadow-card;
-    transition: box-shadow 0.2s, border-color 0.2s;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    transition: box-shadow var(--transition-base),
+                border-color var(--transition-base);
 
     &:hover {
-      box-shadow: $shadow-hover;
-      border-color: rgba($color-accent, 0.15);
+      box-shadow: 0 6px 20px rgba(36, 36, 60, 0.08);
+      border-color: var(--color-accent);
     }
 
     &-header {
@@ -228,8 +227,9 @@ $radius-lg: 12px;
       h3 {
         font-size: 1.15rem;
         font-weight: 600;
-        color: $color-dark;
+        color: var(--color-text-primary);
         margin: 0;
+        transition: color var(--transition-base);
       }
     }
 
@@ -244,13 +244,12 @@ $radius-lg: 12px;
       p {
         margin: 0.5rem 0;
         font-size: 0.9rem;
-        color: $color-dark;
+        color: var(--color-text-primary);
         strong {
-          color: $color-dark;
+          color: var(--color-text-primary);
           margin-right: 0.5rem;
         }
       }
     }
   }
 }
-
