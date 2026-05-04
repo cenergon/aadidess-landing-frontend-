@@ -29,6 +29,15 @@ import { InstructorNinosComponent } from './pages/instructor-ninos/instructor-ni
 import { PisteroSocorristaPrimerGradoComponent } from './pages/pistero-socorrista-primer-grado/pistero-socorrista-primer-grado.component';
 import { PisteroSocorristaSegundoGradoComponent } from './pages/pistero-socorrista-segundo-grado/pistero-socorrista-segundo-grado.component';
 import { PisteroSocorristaTercerGradoComponent } from './pages/pistero-socorrista-tercer-grado/pistero-socorrista-tercer-grado.component';
+import { ArtificieroComponent } from './pages/artificiero/artificiero.component';
+import { MaestroPisteroComponent } from './pages/maestro-pistero/maestro-pistero.component';
+import { EsquiAdaptadoNivelUnoComponent } from './pages/esqui-adaptado-nivel-uno/esqui-adaptado-nivel-uno.component';
+import { EsquiAdaptadoNivelDosComponent } from './pages/esqui-adaptado-nivel-dos/esqui-adaptado-nivel-dos.component';
+import { InstructorEsquiFondoComponent } from './pages/instructor-esqui-fondo/instructor-esqui-fondo.component';
+import { SkimanComponent } from './pages/skiman/skiman.component';
+import { RcpComponent } from './pages/rcp/rcp.component';
+import { AuxiliarCentroEsquiComponent } from './pages/auxiliar-centro-esqui/auxiliar-centro-esqui.component';
+import { TelemarkComponent } from './pages/telemark/telemark.component';
 
 
 export const routes: Routes = [
@@ -62,6 +71,16 @@ export const routes: Routes = [
     { path: 'academico/cursos/pistero-socorrista-primer-grado', component: PisteroSocorristaPrimerGradoComponent },
     { path: 'academico/cursos/pistero-socorrista-segundo-grado', component: PisteroSocorristaSegundoGradoComponent },
     { path: 'academico/cursos/pistero-socorrista-tercer-grado', component: PisteroSocorristaTercerGradoComponent },
+    { path: 'academico/cursos/artificiero', component: ArtificieroComponent },
+    { path: 'academico/cursos/maestro-pistero', component: MaestroPisteroComponent },
+    { path: 'academico/cursos/esqui-adaptado-nivel-uno', component: EsquiAdaptadoNivelUnoComponent },
+    { path: 'academico/cursos/esqui-adaptado-nivel-dos', component: EsquiAdaptadoNivelDosComponent },
+    { path: 'academico/cursos/instructor-esqui-fondo', component: InstructorEsquiFondoComponent },
+    { path: 'academico/cursos/skiman', component: SkimanComponent },
+    { path: 'academico/cursos/rcp', component: RcpComponent },
+    { path: 'academico/cursos/auxiliar-centro-esqui', component: AuxiliarCentroEsquiComponent },
+    { path: 'academico/cursos/telemark', component: TelemarkComponent },
+
 
 
 

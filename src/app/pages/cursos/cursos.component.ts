@@ -41,15 +41,15 @@ export class CursosComponent {
     { nombre: 'Pistero Socorrista 1º Grado', foto: 'images/cursos/Pistero_Socorrista_1°_Grado.jpeg-1.jpg', link: '/academico/cursos/pistero-socorrista-primer-grado' },
     { nombre: 'Pistero Socorrista 2° grado', foto: 'images/cursos/curso-pistero-2-grado.jpg', link: '/academico/cursos/pistero-socorrista-segundo-grado' },
     { nombre: 'Pistero Socorrista 3° grado', foto: 'images/cursos/curso-pistero-3-grado.jpg', link: '/academico/cursos/pistero-socorrista-tercer-grado' },
-    { nombre: 'Artificiero', foto: 'images/cursos/artificiero.jpg', link: '/academico/cursos/' },
-    { nombre: 'Maestro Pistero', foto: 'images/cursos/maestro-pistero.jpg', link: '/academico/cursos/' },
-    { nombre: 'Esquí Adaptado Nivel 1', foto: 'images/cursos/Esqui_adaptado_nivel_1.jpeg.jpg', link: '/academico/cursos/' },
-    { nombre: 'Esquí Adaptado Nivel 2', foto: 'images/cursos/Esqui_adaptado_nivel_2.jpeg', link: '/academico/cursos/' },
-    { nombre: 'Esquí de Fondo', foto: 'images/cursos/Esqui_de_fondo.jpeg', link: '/academico/cursos/' },
-    { nombre: 'Skiman', foto: 'images/cursos/Skiman.jpeg.jpg', link: '/academico/cursos/' },
-    { nombre: 'RCP', foto: 'images/cursos/RCP-1.jpg', link: '/academico/cursos/' },
-    { nombre: 'Auxiliar de Centro de Esquí', foto: 'images/cursos/auxuliar.jpg', link: '/academico/cursos/' },
-    { nombre: 'Telemark', foto: 'images/cursos/Telemark.jpeg.jpg', link: '/academico/cursos/' }
+    { nombre: 'Artificiero', foto: 'images/cursos/artificiero.jpg', link: '/academico/cursos/artificiero' },
+    { nombre: 'Maestro Pistero', foto: 'images/cursos/maestro-pistero.jpg', link: '/academico/cursos/maestro-pistero' },
+    { nombre: 'Esquí Adaptado Nivel 1', foto: 'images/cursos/Esqui_adaptado_nivel_1.jpeg.jpg', link: '/academico/cursos/esqui-adaptado-nivel-uno' },
+    { nombre: 'Esquí Adaptado Nivel 2', foto: 'images/cursos/Esqui_adaptado_nivel_2.jpeg', link: '/academico/cursos/esqui-adaptado-nivel-dos' },
+    { nombre: 'Esquí de Fondo', foto: 'images/cursos/Esqui_de_fondo.jpeg', link: '/academico/cursos/instructor-esqui-fondo' },
+    { nombre: 'Skiman', foto: 'images/cursos/Skiman.jpeg.jpg', link: '/academico/cursos/skiman' },
+    { nombre: 'RCP', foto: 'images/cursos/RCP-1.jpg', link: '/academico/cursos/rcp' },
+    { nombre: 'Auxiliar de Centro de Esquí', foto: 'images/cursos/auxuliar.jpg', link: '/academico/cursos/auxiliar-centro-esqui' },
+    { nombre: 'Telemark', foto: 'images/cursos/Telemark.jpeg.jpg', link: '/academico/cursos/telemark' }
   ];
 
   accionesRapidas: AccionRapida[] = [
