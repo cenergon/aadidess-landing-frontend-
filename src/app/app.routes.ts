@@ -51,6 +51,7 @@ export const routes: Routes = [
     { path: 'institucional/estatuto', component: EstatutoComponent },
     { path: 'institucional/reglamento-comite-tecnico', component: ReglamentoComiteTecnicoComponent },
     { path: 'institucional/reglamento-academico', component: ReglamentoAcademicoComponent },
+    { path: 'institucional/reglamento-academico', component: ReglamentoAcademicoComponent },
     { path: 'institucional/requisitos-delegados', component: RequisitosDelegadosComponent },
     { path: 'institucional/escuelas-clubes', component: EscuelasClubesComponent },
     { path: 'aranceles-y-formas-de-pago/aranceles', component: ArancelesComponent },

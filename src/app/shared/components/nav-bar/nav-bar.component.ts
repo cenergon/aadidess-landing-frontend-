@@ -45,6 +45,15 @@ export class NavBarComponent {
       ]
     },
     {
+      label: 'Académico',
+      children: [
+        { label: 'Cursos', link: '/academico/cursos' },
+        { label: 'Calendario', link: '/academico/calendario' },
+        { label: 'Campus Virtual', link: 'https://aadidess.cipbyte.io/web/#/profile-authentication', external: true },
+        { label: 'Reglamento del Académico', link: '/institucional/reglamento-academico' },
+      ]
+    },
+    {
       label: 'Socios',
       children: [
         { label: 'Convenios y Beneficios', link: '/socios/convenios-y-beneficios' },
