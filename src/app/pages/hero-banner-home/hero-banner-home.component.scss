@@ -1,0 +1,192 @@
+$transition-smooth: var(--transition-base, 0.2s ease);
+
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  overflow: hidden;
+  background-color: var(--color-bg-primary);
+  user-select: none;
+
+  @media (max-width: 768px) {
+    height: 380px;
+  }
+
+  // ---- Track que contiene los slides ----
+  &__track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transform: translateX(calc(-100% * var(--current-slide, 0)));
+  }
+
+  // ---- Slide individual ----
+  &__slide {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // ---- Imagen de fondo ----
+  &__imagen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  // ---- Overlay para legibilidad ----
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+  }
+
+  // ---- Contenido del slide ----
+  &__contenido {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 700px;
+    padding: 2rem;
+  }
+
+  &__titulo {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 1rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+
+    @media (max-width: 768px) {
+      font-size: 2.2rem;
+    }
+    @media (max-width: 480px) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__subtitulo {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.95);
+    margin: 0 0 2rem;
+    line-height: 1.5;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+
+    @media (max-width: 480px) {
+      font-size: 1.05rem;
+    }
+  }
+
+  &__boton {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    border: 2px solid #ffffff;
+    border-radius: var(--radius-lg, 12px);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color $transition-smooth, color $transition-smooth;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #ffffff;
+      color: #24243c;
+    }
+
+    &:focus-visible {
+      outline: 2px solid #ffffff;
+      outline-offset: 2px;
+    }
+  }
+
+   &__prev,
+  &__next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 2rem;
+    backdrop-filter: blur(12px);
+    opacity: 0;
+    transition: opacity 0.3s ease, background 0.2s ease, backdrop-filter 0.2s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(14px);
+    }
+
+    &:focus-visible {
+      opacity: 1;
+      outline: 2px solid #ffffff;
+      outline-offset: 2px;
+    }
+  }
+
+  &__prev {
+    left: 1rem;
+  }
+
+  &__next {
+    right: 1rem;
+  }
+
+  // Mostrar flechas al hacer hover sobre el banner completo
+  &:hover &__prev,
+  &:hover &__next {
+    opacity: 1;
+  }
+
+  // ---- Dots ----
+  &__dots {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.75rem;
+    z-index: 2;
+  }
+
+  &__dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    transition: background-color $transition-smooth, transform $transition-smooth;
+
+    &--active {
+      background-color: #ffffff;
+      transform: scale(1.2);
+    }
+
+    &:hover {
+      transform: scale(1.3);
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+  }
+}

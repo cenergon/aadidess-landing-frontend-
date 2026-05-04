@@ -1,0 +1,23 @@
+<section class="portal-noticias">
+  <div class="portal-noticias__container">
+    <h1 class="portal-noticias__title">Noticias</h1>
+    @if (cargando) {
+      <app-spinner></app-spinner>
+    } @else {
+      <div class="portal-noticias__grid">
+        @for (noticia of noticias; track noticia.id) {
+          <article class="portal-noticias__card">
+            <h2 class="portal-noticias__card-titulo">{{ noticia.titulo }}</h2>
+            <time class="portal-noticias__card-fecha" [attr.datetime]="noticia.postedAt">
+              {{ formatearFecha(noticia.postedAt) }}
+            </time>
+            <p class="portal-noticias__card-resumen">{{ noticia.resumen }}</p>
+            <a [routerLink]="['/noticias', noticia.id]" class="portal-noticias__card-link">
+              Leer más
+            </a>
+          </article>
+        }
+      </div>
+    }
+  </div>
+</section>

@@ -1,0 +1,40 @@
+{
+  "id": 1,
+  "titulo": "AADIDESS participó del Congreso FIPS 2026 en Big White, Canadá",
+  "postedAt": "2026-04-16T13:01:00-03:00",
+  "createdAt": "2026-05-03T12:00:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "Entre el 27 de marzo y el 3 de abril AADIDESS fue parte, una vez más, del Congreso FIPS, en esta oportunidad con sede en Big White, Canadá."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "Este encuentro internacional, que se realiza de manera bienal, es un espacio clave para la comunidad de Pisteros Socorristas para el intercambio de conocimientos, buenas prácticas en seguridad y prevención en la montaña, y el conocimiento de nuevos materiales."
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "En representación de AADIDESS asistieron dos referentes de nuestro equipo de formadores, con gran trayectoria tanto a nivel formativo como en el ejercicio de la profesión: Jorge Taricco y Florencia Giménez. Ambos participaron activamente en las instancias técnicas y teóricas, compartiendo con sus pares de distintos países."
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": "Todos los aportes que surgen de este congreso serán volcados y fortalecidos en los cursos dictados por nuestra institución en Argentina, reafirmando nuestro compromiso con la capacitación continua y la mejora permanente en materia de prevención, seguridad y rescate en la montaña."
+    },
+    {
+      "tipo": "texto",
+      "orden": 5,
+      "contenido": "A continuación compartimos el informe final sobre la participación en el Congreso FIPS 2026:"
+    },
+    {
+      "tipo": "link",
+      "orden": 6,
+      "texto": "Informe de Participación",
+      "url": "public/docs/inf.congr_.26.pdf",
+      "esPdf": true
+    }
+  ]
+}

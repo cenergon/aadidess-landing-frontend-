@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "titulo": "AADIDESS participó del Congreso FIPS 2026 en Big White, Canadá",
+    "postedAt": "2026-04-16T13:01:00-03:00",
+    "ruta": "news/AADIDESS-FIPS-2026.json",
+    "resumen": "Entre el 27 de marzo y el 3 de abril AADIDESS participó del Congreso FIPS 2026 en Big White, Canadá, representada por Jorge Taricco y Florencia Giménez. Los conocimientos adquiridos fortalecerán los cursos de la institución."
+  },
+  {
+    "id": 2,
+    "titulo": "Hub Work & Travel busca instructores certificados para trabajar en EE UU",
+    "postedAt": "2026-04-09T09:10:00-03:00",
+    "ruta": "news/Hub-Work-Travel-instructores-EEUU.json",
+    "resumen": "Hub Work & Travel convoca instructores de esquí certificados por AADIDESS para trabajar en centros de esquí de Estados Unidos durante la temporada 2026-2027. Requisitos: certificado, disponibilidad, ser estudiante universitario y nivel de inglés funcional."
+  },
+  {
+    "id": 3,
+    "titulo": "Inscripciones abiertas para actividades académicas en Andorra",
+    "postedAt": "2026-03-10T17:22:00-03:00",
+    "ruta": "news/Inscripciones-abiertas-Andorra.json",
+    "resumen": "Hasta el 20 de marzo están abiertas las inscripciones para exámenes de ingreso a instructorados de esquí y snowboard nivel 1, y reentrenos de todos los niveles, a realizarse en Andorra del 26 al 29 de marzo."
+  }
+]

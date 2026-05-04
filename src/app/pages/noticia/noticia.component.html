@@ -1,0 +1,38 @@
+<section class="noticia-detalle">
+  <div class="noticia-detalle__container">
+    @if (cargando) {
+      <app-spinner></app-spinner>
+    } @else if (error || !noticia) {
+      <p class="noticia-detalle__error">No se pudo cargar la noticia.</p>
+    } @else {
+      <a routerLink="/portal-de-noticias" class="noticia-detalle__volver">← Volver a noticias</a>
+
+      <article class="noticia-detalle__articulo">
+        <h1 class="noticia-detalle__titulo">{{ noticia.titulo }}</h1>
+        <time class="noticia-detalle__fecha" [attr.datetime]="noticia.postedAt">
+          {{ formatearFecha(noticia.postedAt) }}
+        </time>
+
+        <div class="noticia-detalle__contenido">
+          @for (bloque of noticia.bloques; track bloque.orden) {
+            @if (bloque.tipo === 'texto') {
+              <p class="noticia-detalle__parrafo">{{ bloque.contenido }}</p>
+            } @else if (bloque.tipo === 'link') {
+              <div class="noticia-detalle__link-contenedor">
+                @if (bloque.esPdf) {
+                  <a [href]="bloque.url" target="_blank" class="noticia-detalle__link noticia-detalle__link--pdf">
+                    {{ bloque.texto }}
+                  </a>
+                } @else {
+                  <a [href]="bloque.url" target="_blank" class="noticia-detalle__link">
+                    {{ bloque.texto }}
+                  </a>
+                }
+              </div>
+            }
+          }
+        </div>
+      </article>
+    }
+  </div>
+</section>

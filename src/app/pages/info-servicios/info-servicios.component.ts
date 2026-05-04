@@ -40,7 +40,7 @@ export class InfoServiciosComponent implements OnInit, OnDestroy {
       titulo: 'Oferta Educativa',
       descripcion: 'Te brindamos certificaciones oficiales en distintas disciplinas para que puedas formarte y trabajar en la montaña.',
       textoBoton: 'VER NUESTROS CURSOS',
-      link: '/cursos',
+      link: '/academico/cursos',
       colorVar: '--color-cursos',
       iconoLight: 'svgs/cursos-color.svg',
       iconoDark: 'svgs/cursos-aadidess-logo-01.svg'
@@ -49,7 +49,7 @@ export class InfoServiciosComponent implements OnInit, OnDestroy {
       titulo: 'Equipo Argentino de Demostradores',
       descripcion: 'El Argentina Demo Team es el equipo que representa al país en congresos y eventos nacionales e internacionales, como el Interski.',
       textoBoton: 'VER INFO DEL EQUIPO',
-      link: '/institucional/demo-team',
+      link: '/demo-team',
       colorVar: '--color-demo-team',
       iconoLight: 'svgs/demo-team-color.svg',
       iconoDark: 'svgs/demo-team-logo.svg'

@@ -1,0 +1,52 @@
+<section class="hero-banner">
+  <div 
+    class="hero-banner__track"
+    [style.--current-slide]="currentIndex()"
+  >
+    @for (slide of slides; track slide.imagen; let i = $index) {
+      <div 
+        class="hero-banner__slide"
+        [class.hero-banner__slide--active]="i === currentIndex()"
+      >
+        <img 
+          [src]="slide.imagen" 
+          [alt]="slide.titulo"
+          class="hero-banner__imagen"
+          loading="lazy"
+        />
+        <!-- Overlay oscuro para legibilidad del texto -->
+        <div class="hero-banner__overlay"></div>
+        <div class="hero-banner__contenido">
+          <h1 class="hero-banner__titulo">{{ slide.titulo }}</h1>
+          <p class="hero-banner__subtitulo">{{ slide.subtitulo }}</p>
+          <a 
+            [routerLink]="slide.link" 
+            class="hero-banner__boton"
+          >
+            {{ slide.textoBoton }}
+          </a>
+        </div>
+      </div>
+    }
+  </div>
+
+  <!-- Flechas de navegación -->
+  <button class="hero-banner__prev" (click)="prevSlide()" aria-label="Anterior">
+    <span class="material-symbols-outlined">chevron_left</span>
+  </button>
+  <button class="hero-banner__next" (click)="nextSlide()" aria-label="Siguiente">
+    <span class="material-symbols-outlined">chevron_right</span>
+  </button>
+
+  <!-- Dots -->
+  <div class="hero-banner__dots">
+    @for (slide of slides; track slide.imagen; let i = $index) {
+      <button
+        class="hero-banner__dot"
+        [class.hero-banner__dot--active]="i === currentIndex()"
+        (click)="goToSlide(i)"
+        [attr.aria-label]="'Ir al slide ' + (i + 1)"
+      ></button>
+    }
+  </div>
+</section>

@@ -9,9 +9,9 @@ $transition-base: var(--transition-base);
   // --- Barra fija superior ---
   &__sticky-nav {
     position: sticky;
-    top: 40px; /* 25px (TopBar) + 64px (NavBar) */
+    top: 0px;
     z-index: 98;
-    background: rgba(var(--color-bg-elevated-rgb, 255, 255, 255), 0.95);
+    background: rgba(var(--color-bg-elevated, 255, 255, 255), 0.95);
     backdrop-filter: blur(4px);
     border-bottom: 1px solid var(--color-border);
     padding: 1.5rem 0;
@@ -110,7 +110,7 @@ $transition-base: var(--transition-base);
 
     // Hover: borde celeste + fondo y sombra como en Aranceles
     &:hover {
-      border-color: rgba(var(--color-accent-rgb, 96, 208, 241), 0.25);
+      border-color: rgba(var(--color-accent, 96, 208, 241), 0.25);
       background: var(--color-accent-glow);
       transform: translateY(-2px);
       box-shadow: var(--shadow-lg);
@@ -118,7 +118,7 @@ $transition-base: var(--transition-base);
 
     // Expandido: borde celeste más suave, sin desplazamiento
     &--open {
-      border-color: rgba(var(--color-accent-rgb, 96, 208, 241), 0.15);
+      border-color: rgba(var(--color-accent, 96, 208, 241), 0.15);
       box-shadow: var(--shadow-md);
       transform: none;
     }

@@ -1,0 +1,29 @@
+<section class="ultimas-noticias">
+  <div class="ultimas-noticias__container">
+    <header class="ultimas-noticias__header">
+      <h2 class="ultimas-noticias__titulo">Últimas Noticias</h2>
+      <a routerLink="/portal-de-noticias" class="ultimas-noticias__ver-mas">
+        Ver más <span aria-hidden="true">→</span>
+      </a>
+    </header>
+
+    @if (cargando) {
+      <app-spinner></app-spinner>
+    } @else {
+      <div class="ultimas-noticias__grid">
+        @for (noticia of noticias; track noticia.id) {
+          <article class="ultimas-noticias__card">
+            <h3 class="ultimas-noticias__card-titulo">{{ noticia.titulo }}</h3>
+            <time class="ultimas-noticias__card-fecha" [attr.datetime]="noticia.postedAt">
+              {{ formatearFecha(noticia.postedAt) }}
+            </time>
+            <p class="ultimas-noticias__card-resumen">{{ noticia.resumen }}</p>
+            <a [routerLink]="['/noticias', noticia.id]" class="ultimas-noticias__card-link">
+              Leer más
+            </a>
+          </article>
+        }
+      </div>
+    }
+  </div>
+</section>

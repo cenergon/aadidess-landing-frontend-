@@ -1,0 +1,416 @@
+// Variables reutilizables (igual que antes)
+$radius-lg: var(--radius-lg, 12px);
+$radius-md: var(--radius-md, 8px);
+$transition-smooth: var(--transition-base, 0.2s ease);
+
+.demo-team {
+  padding: 2.5rem 1.5rem;
+  background-color: var(--color-bg-primary);
+  transition: background-color $transition-smooth;
+
+    // Chips / acciones rápidas
+  &__chips {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin: 2rem 0;
+  }
+
+  &__chip {
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    cursor: pointer;
+    transition: background-color $transition-smooth, border-color $transition-smooth, transform $transition-smooth;
+    font-family: inherit;
+
+    &:hover {
+      background-color: var(--color-hover-bg);
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+      transform: translateY(-2px);
+    }
+  }
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  // Grid de dos columnas
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 280px; // columna texto flexible, columna imagen fija angosta
+    gap: 2rem;
+    margin-bottom: 2rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  &__text-col {
+    // sin estilos extra, solo el contenido fluye
+  }
+
+  &__staff-col {
+    display: flex;
+    align-items: stretch; // para que la imagen ocupe toda la altura
+  }
+
+  // Staff imagen: ahora dentro de columna derecha, sin float
+  &__staff {
+    width: 100%;
+    border-radius: $radius-lg;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    display: flex;
+  }
+
+  &__staff-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    // Para que la imagen sea más alta, se puede forzar altura mínima,
+    // pero con grid y align-items: stretch, la imagen se estirará verticalmente
+    // si le damos height: 100% y object-fit: cover.
+    // Para que respete proporción pero ocupe toda la altura, usamos:
+    height: 100%;
+    object-fit: cover;
+  }
+
+  // El resto de estilos (title, subtitle, text, evento, video, gallery, mission, modal)
+  // se mantienen exactamente igual que en la versión anterior.
+  // Solo recuerdo que ya están definidos, pero por completitud los incluyo debajo.
+  // (Voy a copiar desde la respuesta anterior pero sin duplicar lo no modificado)
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    transition: color $transition-smooth;
+  }
+
+  &__subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 1.5rem 0 1rem;
+    transition: color $transition-smooth;
+  }
+
+  &__text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--color-text-secondary);
+    margin-bottom: 1rem;
+    transition: color $transition-smooth;
+  }
+
+  &__evento {
+    margin: 2rem 0;
+  }
+
+  &__video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: $radius-lg;
+    margin: 2rem 0;
+    background-color: #000;
+    box-shadow: var(--shadow-md);
+  }
+
+  &__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  &__gallery {
+    margin: 3rem 0;
+  }
+
+  &__carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+  }
+
+  &__carousel-btn {
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--color-text-primary);
+    transition: background-color $transition-smooth, border-color $transition-smooth;
+    flex-shrink: 0;
+
+    &:hover {
+      background-color: var(--color-hover-bg);
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+    }
+
+    .material-symbols-outlined {
+      font-size: 24px;
+    }
+  }
+
+  &__carousel-image-container {
+    flex: 1;
+    max-width: 800px;
+    border-radius: $radius-lg;
+    overflow: hidden;
+    background-color: var(--color-bg-secondary);
+    box-shadow: var(--shadow-md);
+    aspect-ratio: 16 / 9;
+    cursor: pointer;
+  }
+
+  &__carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform $transition-smooth;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  &__dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+
+  &__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--color-text-secondary);
+    border: none;
+    cursor: pointer;
+    transition: background-color $transition-smooth, transform $transition-smooth;
+    padding: 0;
+
+    &--active {
+      background-color: var(--color-accent);
+      transform: scale(1.2);
+    }
+
+    &:hover {
+      background-color: var(--color-accent);
+    }
+  }
+
+  &__mission {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  &__mission-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  // Modal (corregido sin caída)
+  &__modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__modal-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    transition: backdrop-filter $transition-smooth;
+  }
+
+  &__modal-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2001;
+  }
+
+  &__modal-image {
+    max-width: 100%;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: $radius-lg;
+    box-shadow: var(--shadow-lg);
+    background-color: #000;
+  }
+
+  &__modal-close,
+  &__modal-download,
+  &__modal-prev,
+  &__modal-next {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    transition: background-color $transition-smooth, transform $transition-smooth;
+    z-index: 2002;
+  }
+
+  &__modal-close {
+    top: 1rem;
+  }
+
+  &__modal-close {
+    right: 1rem;
+  }
+
+  &__modal-download {
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  &__modal-prev,
+  &__modal-next {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__modal-prev {
+    left: 1rem;
+  }
+
+  &__modal-next {
+    right: 1rem;
+  }
+
+  &__modal-prev:hover,
+  &__modal-next:hover {
+    transform: translateY(-50%) scale(1.05);
+  }
+
+  &__modal-close:hover,
+  &__modal-download:hover {
+    transform: scale(1.05);
+  }
+
+  &__modal-prev .material-symbols-outlined,
+  &__modal-next .material-symbols-outlined,
+  &__modal-close .material-symbols-outlined,
+  &__modal-download .material-symbols-outlined {
+    font-size: 28px;
+    transform: none;
+  }
+
+  // Responsive
+  @media (max-width: 768px) {
+    padding: 1.5rem 1rem;
+
+    &__carousel-btn {
+      width: 32px;
+      height: 32px;
+
+      .material-symbols-outlined {
+        font-size: 20px;
+      }
+    }
+
+    &__carousel-image-container {
+      max-width: 100%;
+    }
+
+    &__title {
+      font-size: 1.75rem;
+    }
+
+    &__subtitle,
+    &__mission-title {
+      font-size: 1.3rem;
+    }
+
+    &__modal-close,
+    &__modal-download,
+    &__modal-prev,
+    &__modal-next {
+      width: 36px;
+      height: 36px;
+
+      .material-symbols-outlined {
+        font-size: 22px;
+      }
+    }
+
+    &__modal-prev {
+      left: 0.5rem;
+    }
+    &__modal-next {
+      right: 0.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__carousel {
+      gap: 0.5rem;
+    }
+
+    &__carousel-btn {
+      width: 28px;
+      height: 28px;
+    }
+
+    .material-symbols-outlined {
+      font-size: 18px;
+    }
+  }
+}

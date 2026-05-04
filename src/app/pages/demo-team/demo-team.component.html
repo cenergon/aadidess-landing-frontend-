@@ -1,0 +1,136 @@
+<section class="demo-team">
+  <div class="demo-team__container">
+    <!-- Grid de dos columnas: texto + foto staff -->
+    <div class="demo-team__grid">
+      <div class="demo-team__text-col">
+        <h1 class="demo-team__title">Demo Team</h1>
+
+        <div class="demo-team__content">
+          <h2 class="demo-team__subtitle">¿Qué es el Demo Team?</h2>
+          <p class="demo-team__text">
+            Es el equipo de demostradores de AADIDESS.
+            Está conformado por los mejores instructores de las disciplinas de esquí alpino y snowboard de Argentina, quienes, tras un proceso de selección de varias instancias que dura dos años, son los elegidos como miembros definitivos del equipo que nos representa a nivel mundial.
+          </p>
+          <p class="demo-team__text">
+            La rigurosa selección evalúa características técnicas, físicas y didáctico–pedagógicas.
+          </p>
+          <p class="demo-team__text">
+            Ser parte de un demo team es a lo más alto a lo que puede aspirar un instructor, ya que este equipo es la máxima expresión técnica de estas disciplinas.
+          </p>
+        </div>
+
+        <div class="demo-team__evento">
+          <p class="demo-team__text">
+            Del 26 al 31 de marzo de 2023 el Argentina Demo Team participó del congreso de Interski 2023 que se realizó en Levi, Finlandia.
+          </p>
+          <p class="demo-team__text">
+            En el evento, los equipos de demostradores de los distintos países asistentes intercambiaron experiencias y conocimientos relacionados a la enseñanza de los deportes de nieve mediante lectures y workshops. Además, cada demo team realizó presentaciones coreográficas plasmando su técnica y creatividad en la pista, mostrando diferentes figuras.
+          </p>
+        </div>
+      </div>
+
+      <div class="demo-team__staff-col">
+        <div class="demo-team__staff">
+          <img
+            [src]="staffFoto"
+            alt="Staff del Demo Team AADIDESS"
+            class="demo-team__staff-img"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Acciones rápidas (chips) -->
+    <div class="demo-team__chips">
+      @for (accion of accionesRapidas; track accion.label) {
+        <button class="demo-team__chip" (click)="onAccionClick(accion)">
+          <span>{{ accion.label }}</span>
+        </button>
+      }
+    </div>
+
+    <!-- Video -->
+    <div class="demo-team__video-wrapper">
+      <iframe
+        class="demo-team__video"
+        src="https://www.youtube.com/embed/HKN9jByKWG4?si=PZrN2mBE46YCGFuX"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <!-- Galería (carrusel) sin título -->
+    <div class="demo-team__gallery">
+      <div class="demo-team__carousel">
+        <button
+          class="demo-team__carousel-btn demo-team__carousel-btn--prev"
+          (click)="prev()"
+          aria-label="Anterior"
+        >
+          <span class="material-symbols-outlined">chevron_left</span>
+        </button>
+
+        <div class="demo-team__carousel-image-container">
+          <img
+            [src]="getFotoUrl(currentFoto)"
+            [alt]="'Demo Team foto ' + (currentIndex() + 1)"
+            class="demo-team__carousel-image"
+            loading="lazy"
+            (click)="openModal(currentIndex())"
+          />
+        </div>
+
+        <button
+          class="demo-team__carousel-btn demo-team__carousel-btn--next"
+          (click)="next()"
+          aria-label="Siguiente"
+        >
+          <span class="material-symbols-outlined">chevron_right</span>
+        </button>
+      </div>
+
+      <div class="demo-team__dots">
+        @for (foto of galeriaFotos(); track foto; let idx = $index) {
+          <button
+            class="demo-team__dot"
+            [class.demo-team__dot--active]="idx === currentIndex()"
+            (click)="goTo(idx)"
+            [attr.aria-label]="'Ir a foto ' + (idx + 1)"
+          ></button>
+        }
+      </div>
+    </div>
+
+    <!-- Misión -->
+    <div class="demo-team__mission">
+      <h2 class="demo-team__mission-title">MISIÓN</h2>
+      <p class="demo-team__text">
+        La misión del Demo Team es representar a Argentina y a la AADIDESS en diferentes congresos y eventos nacionales e internacionales, difundiendo la cultura, los valores y la pasión por los deportes de nieve y la montaña.
+      </p>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="demo-team__modal" *ngIf="modalOpen()" (click)="closeModal()">
+    <div class="demo-team__modal-backdrop"></div>
+    <div class="demo-team__modal-content" (click)="$event.stopPropagation()">
+      <button class="demo-team__modal-close" (click)="closeModal()" aria-label="Cerrar">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <button class="demo-team__modal-download" (click)="downloadCurrentImage()" aria-label="Descargar">
+        <span class="material-symbols-outlined">download</span>
+      </button>
+      <button class="demo-team__modal-prev" (click)="prevModal()" aria-label="Anterior">
+        <span class="material-symbols-outlined">chevron_left</span>
+      </button>
+      <img [src]="galeriaFotos()[modalIndex()]" alt="Demo Team fullscreen" class="demo-team__modal-image" />
+      <button class="demo-team__modal-next" (click)="nextModal()" aria-label="Siguiente">
+        <span class="material-symbols-outlined">chevron_right</span>
+      </button>
+    </div>
+  </div>
+</section>

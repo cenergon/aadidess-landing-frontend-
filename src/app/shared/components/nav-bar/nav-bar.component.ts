@@ -31,7 +31,8 @@ export class NavBarComponent {
         { label: 'Reglamento del Comité Técnico', link: '/institucional/reglamento-comite-tecnico' },
         { label: 'Requisitos para ser Delegado', link: '/institucional/requisitos-delegados' },
         { label: 'Escuelas y Clubes reconocidos', link: '/institucional/escuelas-clubes' },
-        { label: 'Decálogo', link: 'docs/Decalogo-AA.pdf', external: true }
+        { label: 'Decálogo', link: 'docs/Decalogo-AA.pdf', external: true },
+        { label: 'Sponsors', link: '/institucional/sponsors' },
       ]
     },
     {
@@ -59,7 +60,7 @@ export class NavBarComponent {
         { label: 'Formas de Pago', link: '/aranceles-y-formas-de-pago/formas-de-pago' }
       ]
     },
-    { label: 'Noticias', link: '#' },
+    { label: 'Noticias', link: '/portal-de-noticias' },
     { label: 'Tienda', link: '/wip' },
     { label: 'Contacto', link: '/contacto' }
   ];

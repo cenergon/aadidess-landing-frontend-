@@ -1,0 +1,38 @@
+{
+  "id": 3,
+  "titulo": "Inscripciones abiertas para actividades académicas en Andorra",
+  "postedAt": "2026-03-10T17:22:00-03:00",
+  "createdAt": "2026-05-03T15:00:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "Se encuentran abiertas las inscripciones hasta el 20 de marzo para las actividades académicas que estaremos realizando en Andorra. Las mismas, son:"
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "– Exámenes de ingreso del Instructorado de Esquí y del Instructorado de Snowboard nivel 1"
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "– Reentreno de todos los niveles de esquí y snowboard"
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": "Para realizar tu inscripción, completa el formulario"
+    },
+    {
+      "tipo": "texto",
+      "orden": 5,
+      "contenido": "La fecha tentativa de la realización de las actividades es del 26 al 29 de marzo (a confirmar)"
+    },
+    {
+      "tipo": "texto",
+      "orden": 6,
+      "contenido": "Por dudas y consultas puntuales, podés comunicarte al área de cursos a secretaria@aadidess.com"
+    }
+  ]
+}

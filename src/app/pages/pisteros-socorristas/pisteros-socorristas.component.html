@@ -1,0 +1,241 @@
+<section class="pisteros">
+  <div class="pisteros__container">
+
+    <h1 class="pisteros__title">Pisteros Socorristas</h1>
+
+    <!-- ¿Quiénes son los pisteros? -->
+    <div class="pisteros__content">
+      <h2 class="pisteros__subtitle">¿Quiénes son los pisteros?</h2>
+      <p class="pisteros__text">
+        Siendo la actividad deportiva en los centros invernales, como en cualquier otro ambiente, un generador de riesgo potencial, y por el hecho de realizarse dicha práctica en un sitio fuera del alcance de los medios de rescate y/o sanitarios convencionales (bomberos, ambulancias, etc.) resulta imprescindible contar con un sistema de protección y rescate propio, con aptitudes y conocimientos para el desempeño de esta labor en el medio de montaña.
+        Se denomina a los profesionales de esta actividad PISTEROS SOCORRISTAS.
+      </p>
+    </div>
+
+    <!-- Misión -->
+    <div class="pisteros__mission">
+      <h2 class="pisteros__mission-title">MISIÓN</h2>
+      <p class="pisteros__text">
+        A fin de contar con un sistema unificado de formación, trabajo y marco legislativo a nivel nacional,
+        es que AADIDESS está abocado a la capacitación de profesionales en el área de la seguridad en
+        centros de esquí, y al continuo reentrenamiento de dichos profesionales para obtener y mantener el
+        nivel óptimo de capacitación de los mismos.
+      </p>
+    </div>
+
+    <!-- Grupo de capacitación -->
+    <div class="pisteros__grupo">
+      <h2 class="pisteros__subtitle">Grupo de capacitación (EASP)</h2>
+      <p class="pisteros__text">
+        El grupo de capacitación específico para la profesión, son quienes inicialmente comenzaron la actividad y que a partir de 2010 se incorporaron a AADIDESS/ISES para continuar con las formaciones.
+      </p>
+    </div>
+
+    <!-- Personal de capacitación -->
+    <div class="pisteros__personal">
+      <h2 class="pisteros__subtitle">Personal de capacitación</h2>
+      <p class="pisteros__text">
+        La actividad general de instrucción está a cargo de personal titulado como Maestro Pistero, más profesores y auxiliares, en una relación de 10 alumnos máximo por profesor y con los últimos adelantos técnicos y didácticos disponibles.
+        El personal de instrucción general posee sólida experiencia en la actividad, tanto en el país como en el exterior, contando con un mínimo de 10 temporadas como socorristas profesionales y superando en algunos casos las 30 temporadas activas.
+        Los temas específicos están a cargo de profesionales de su área de incumbencia como ser médicos, psicólogos, técnicos, guías de montaña, etc., lo que permite lograr una óptima transmisión de conocimientos a los cursantes.
+      </p>
+    </div>
+
+    <!-- Imagen principal (más chica, centrada) -->
+    <div class="pisteros__hero">
+      <img
+        [src]="imagenPrincipal"
+        alt="Pisteros Socorristas AADIDESS"
+        class="pisteros__hero-img"
+        loading="lazy"
+      />
+    </div>
+
+    <!-- Frase destacada -->
+    <div class="pisteros__frase">
+      <p class="pisteros__frase-text">
+        "Ser pistero socorrista significa abnegación, perseverancia, voluntad, esfuerzo y trabajo en equipo para la seguridad de las personas."
+      </p>
+    </div>
+
+    <!-- Botones (chips) -->
+    <div class="pisteros__chips">
+      @for (btn of botones; track btn.label) {
+        <button class="pisteros__chip" (click)="onBotonesClick(btn)">
+          <span>{{ btn.label }}</span>
+        </button>
+      }
+    </div>
+
+    <!-- Carrera -->
+    <div id="carrera" class="pisteros__carrera">
+      <h2 class="pisteros__subtitle">Carrera</h2>
+      <p class="pisteros__text pisteros__text--bold">Cronología de carrera de Pistero Socorrista</p>
+      <p class="pisteros__text"><strong>Prerrequisitos:</strong> 18 años de edad y título secundario completo.</p>
+      <div class="pisteros__carrera-niveles">
+        <p class="pisteros__text"><strong>Primer nivel:</strong> 200 horas cursadas. (Pistero Socorrista de Primer Grado) Prácticas laborales dirigidas certificadas de 400 horas.</p>
+        <p class="pisteros__text"><strong>Segundo nivel:</strong> 200 horas cursadas. (Pistero Socorrista de Segundo Grado). Prácticas laborales dirigidas certificadas de 400 horas.</p>
+        <p class="pisteros__text"><strong>Tercer nivel:</strong> 200 horas cursadas más tesis final desarrollada en 20 horas. (Pistero Socorrista de Tercer Grado).</p>
+        <p class="pisteros__text"><strong>Total de carrera operativa:</strong> 1420 horas.</p>
+      </div>
+      <div id="titulaciones" class="pisteros__titulaciones">
+        <p class="pisteros__text"><strong>Titulaciones complementarias:</strong></p>
+        <p class="pisteros__text"><strong>Artificiero:</strong> Titulación de Pistero Socorrista, mas 200 horas cursada y práctica metodológica. <a href="#" class="pisteros__link">Más info</a>.</p>
+        <p class="pisteros__text"><strong>Maestro Pistero:</strong> 400 horas de practica tutorizada mas 200 horas de cursada evaluatoria. <a href="#" class="pisteros__link">Más info</a>.</p>
+      </div>
+    </div>
+
+    <!-- Galería 1 - Pisteros -->
+    <div class="pisteros__gallery">
+      <div class="pisteros__carousel">
+        <button
+          class="pisteros__carousel-btn pisteros__carousel-btn--prev"
+          (click)="prevPisteros()"
+          aria-label="Anterior"
+        >
+          <span class="material-symbols-outlined">chevron_left</span>
+        </button>
+
+        <div class="pisteros__carousel-image-container">
+          <img
+            [src]="getFotoUrl(currentFotoPisteros)"
+            [alt]="'Pisteros foto ' + (currentIndexPisteros() + 1)"
+            class="pisteros__carousel-image"
+            loading="lazy"
+            (click)="openModalPisteros(currentIndexPisteros())"
+          />
+        </div>
+
+        <button
+          class="pisteros__carousel-btn pisteros__carousel-btn--next"
+          (click)="nextPisteros()"
+          aria-label="Siguiente"
+        >
+          <span class="material-symbols-outlined">chevron_right</span>
+        </button>
+      </div>
+
+      <div class="pisteros__dots">
+        @for (foto of galeriaPisteros(); track foto; let idx = $index) {
+          <button
+            class="pisteros__dot"
+            [class.pisteros__dot--active]="idx === currentIndexPisteros()"
+            (click)="goToPisteros(idx)"
+            [attr.aria-label]="'Ir a foto ' + (idx + 1)"
+          ></button>
+        }
+      </div>
+    </div>
+
+    <!-- Equipo de formadores -->
+    <div id="formadores" class="pisteros__formadores">
+      <h2 class="pisteros__subtitle">Quiero ser parte del equipo de formadores</h2>
+      <p class="pisteros__text">
+        Se abre la inscripción para interesados en integrar el equipo de formadores de AADIDESS en la modalidad de Pistero Socorrista.
+      </p>
+      <p class="pisteros__text"><strong>Requisitos:</strong></p>
+      <ul class="pisteros__lista">
+        <li class="pisteros__lista-item">Se seleccionara interesados en ser capacitadores, a profesionales que cumplan las siguientes condiciones.</li>
+        <li class="pisteros__lista-item">Titulación como Pistero Socorrista de Segundo Grado o superior.</li>
+        <li class="pisteros__lista-item">Experiencia no inferior a 5 temporadas en la profesión.</li>
+        <li class="pisteros__lista-item">Participación como voluntario en dos cursos completos, en los que será evaluado en actitud, capacidad, integración y compromiso, a fin de integrar el staff como capacitador asistente remunerado en los cursos.</li>
+        <li class="pisteros__lista-item">El capacitador del staff permanente que así lo desee, puede después de dos cursos mas solicitar su evaluación como Maestro Pistero en el curso subsiguiente.</li>
+      </ul>
+      <button class="pisteros__btn-descarga" (click)="onDescargarProtocolo()">
+        <span class="material-symbols-outlined">download</span>
+        Descargar Protocolo
+      </button>
+    </div>
+
+    <!-- FIPS 2019 -->
+    <div class="pisteros__fips">
+      <h2 class="pisteros__subtitle">FIPS 2019 / CONGRESO INTERNACIONAL DE PISTEROS SOCORRISTAS</h2>
+      <p class="pisteros__text">
+        XXII WORLD SKI PATROL CONGRESS. Bariloche, Patagonia Argentina.
+        Del 7 al 14 de septiembre de 2019 celebramos este eventos en nuestro país. Conferencias, workshops, demostraciones e intercambios grupales sobre los distintos aspectos del trabajo de las patrullas de esquí en todo el mundo.
+      </p>
+    </div>
+
+    <!-- Galería 2 - FIPS -->
+    <div class="pisteros__gallery">
+      <div class="pisteros__carousel">
+        <button
+          class="pisteros__carousel-btn pisteros__carousel-btn--prev"
+          (click)="prevFips()"
+          aria-label="Anterior"
+        >
+          <span class="material-symbols-outlined">chevron_left</span>
+        </button>
+
+        <div class="pisteros__carousel-image-container">
+          <img
+            [src]="getFotoUrl(currentFotoFips)"
+            [alt]="'FIPS foto ' + (currentIndexFips() + 1)"
+            class="pisteros__carousel-image"
+            loading="lazy"
+            (click)="openModalFips(currentIndexFips())"
+          />
+        </div>
+
+        <button
+          class="pisteros__carousel-btn pisteros__carousel-btn--next"
+          (click)="nextFips()"
+          aria-label="Siguiente"
+        >
+          <span class="material-symbols-outlined">chevron_right</span>
+        </button>
+      </div>
+
+      <div class="pisteros__dots">
+        @for (foto of galeriaFips(); track foto; let idx = $index) {
+          <button
+            class="pisteros__dot"
+            [class.pisteros__dot--active]="idx === currentIndexFips()"
+            (click)="goToFips(idx)"
+            [attr.aria-label]="'Ir a foto ' + (idx + 1)"
+          ></button>
+        }
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Galería 1 - Pisteros -->
+  <div class="pisteros__modal" *ngIf="modalOpenPisteros()" (click)="closeModalPisteros()">
+    <div class="pisteros__modal-backdrop"></div>
+    <div class="pisteros__modal-content" (click)="$event.stopPropagation()">
+      <button class="pisteros__modal-close" (click)="closeModalPisteros()" aria-label="Cerrar">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <button class="pisteros__modal-download" (click)="downloadCurrentPisteros()" aria-label="Descargar">
+        <span class="material-symbols-outlined">download</span>
+      </button>
+      <button class="pisteros__modal-prev" (click)="prevModalPisteros()" aria-label="Anterior">
+        <span class="material-symbols-outlined">chevron_left</span>
+      </button>
+      <img [src]="galeriaPisteros()[modalIndexPisteros()]" alt="Pisteros fullscreen" class="pisteros__modal-image" />
+      <button class="pisteros__modal-next" (click)="nextModalPisteros()" aria-label="Siguiente">
+        <span class="material-symbols-outlined">chevron_right</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Modal Galería 2 - FIPS -->
+  <div class="pisteros__modal" *ngIf="modalOpenFips()" (click)="closeModalFips()">
+    <div class="pisteros__modal-backdrop"></div>
+    <div class="pisteros__modal-content" (click)="$event.stopPropagation()">
+      <button class="pisteros__modal-close" (click)="closeModalFips()" aria-label="Cerrar">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <button class="pisteros__modal-download" (click)="downloadCurrentFips()" aria-label="Descargar">
+        <span class="material-symbols-outlined">download</span>
+      </button>
+      <button class="pisteros__modal-prev" (click)="prevModalFips()" aria-label="Anterior">
+        <span class="material-symbols-outlined">chevron_left</span>
+      </button>
+      <img [src]="galeriaFips()[modalIndexFips()]" alt="FIPS fullscreen" class="pisteros__modal-image" />
+      <button class="pisteros__modal-next" (click)="nextModalFips()" aria-label="Siguiente">
+        <span class="material-symbols-outlined">chevron_right</span>
+      </button>
+    </div>
+  </div>
+</section>
