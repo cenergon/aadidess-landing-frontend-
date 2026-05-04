@@ -1,0 +1,49 @@
+$logo-height: 40px;
+$gap: 1.5rem;
+
+.sponsor-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;   
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-bg-elevated, #f8f9fa);
+  border-top: 1px solid var(--color-border, #dee2e6);
+  max-width: auto;
+  margin: 0 auto;
+
+  &__title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-text-primary, #212529);
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  &__logos {
+    display: flex;
+    flex-wrap: nowrap;        
+    align-items: center;
+    gap: $gap;
+    overflow-x: auto;         
+  }
+
+  &__logo {
+    height: $logo-height;
+    // $logo-height: 60px;
+    height: $logo-height;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+:host-context([data-theme="dark"]) .sponsor-bar__logo--invert {
+  filter: invert(1);
+}
