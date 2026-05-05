@@ -1,0 +1,210 @@
+// Tokens reutilizables del sistema de diseño
+$radius-lg: var(--radius-lg, 12px);
+$radius-md: var(--radius-md, 8px);
+$transition-smooth: var(--transition-base, 0.2s ease);
+
+.alquileres {
+  padding: 2.5rem 1.5rem;
+  background-color: var(--color-bg-primary);
+  transition: background-color $transition-smooth;
+
+  &__container {
+    max-width: 1000px; // un poco más angosto que la grilla de cursos para cards horizontales
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    transition: color $transition-smooth;
+  }
+
+  // ---- Buscador ----
+  &__search {
+    position: relative;
+    max-width: 480px;
+    margin: 0 auto 2rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__search-icon {
+    position: absolute;
+    left: 0.75rem;
+    font-size: 1.3rem;
+    color: var(--color-text-secondary);
+    pointer-events: none;
+  }
+
+  &__search-input {
+    width: 100%;
+    padding: 0.6rem 1rem 0.6rem 2.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: $radius-md;
+    background-color: var(--color-bg-elevated);
+    color: var(--color-text-primary);
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: border-color $transition-smooth, box-shadow $transition-smooth;
+    outline: none;
+
+    &::placeholder {
+      color: var(--color-text-secondary);
+    }
+
+    &:focus {
+      border-color: var(--color-accent);
+      box-shadow: 0 0 0 3px rgba(96, 208, 241, 0.15);
+    }
+  }
+
+  // ---- Lista ----
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  // ---- Tarjeta horizontal ----
+  &__card {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid var(--color-border);
+    border-radius: $radius-lg;
+    overflow: hidden;
+    background-color: var(--color-bg-elevated);
+    box-shadow: var(--shadow-dropdown, 0 4px 16px rgba(36, 36, 60, 0.06));
+    transition: transform $transition-smooth, box-shadow $transition-smooth, border-color $transition-smooth;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      border-color: var(--color-accent);
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column; // en móviles apila imagen arriba y detalles abajo
+    }
+  }
+
+  &__media {
+    width: 280px;
+    min-height: 200px;
+    background-color: var(--color-bg-secondary, #f1f5f9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      min-height: 180px;
+    }
+  }
+
+  &__foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-hover) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    color: #fff;
+  }
+
+  &__placeholder-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  &__placeholder-text {
+    font-size: 0.85rem;
+    font-weight: 500;
+    opacity: 0.9;
+  }
+
+  // ---- Detalles ----
+  &__details {
+    flex: 1;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin: 0;
+    transition: color $transition-smooth;
+  }
+
+  &__description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--color-text-primary);
+    margin: 0;
+    opacity: 0.85;
+    transition: color $transition-smooth;
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-top: 0.15rem;
+    font-size: 0.85rem;
+    color: var(--color-text-secondary, #64748b);
+    transition: color $transition-smooth;
+  }
+
+  &__location-icon {
+    font-size: 1.1rem;
+    color: var(--color-accent);
+  }
+
+  &__location-text {
+    color: var(--color-text-primary);
+    opacity: 0.8;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+    margin-top: 0.25rem;
+  }
+
+  &__contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: var(--color-accent);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: color $transition-smooth;
+
+    &:hover {
+      color: var(--color-accent-hover-link);
+      text-decoration: underline;
+    }
+  }
+
+  &__contact-icon {
+    font-size: 1.1rem;
+  }
+}

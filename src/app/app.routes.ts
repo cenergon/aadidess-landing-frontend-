@@ -43,6 +43,7 @@ import { NoticiaComponent } from './pages/noticia/noticia.component';
 import { DemoTeamComponent } from './pages/demo-team/demo-team.component';
 import { PisterosSocorristasComponent } from './pages/pisteros-socorristas/pisteros-socorristas.component';
 import { SponsorsComponent } from './pages/sponsors/sponsors.component';
+import { AlquileresParaSociosComponent } from './pages/alquileres-para-socios/alquileres-para-socios.component';
 
 
 export const routes: Routes = [
@@ -59,6 +60,7 @@ export const routes: Routes = [
     { path: 'socios/convenios-y-beneficios', component: ConveniosYBeneficiosComponent },
     { path: 'socios/bolsa-de-trabajo', component: BolsaDeTrabajoComponent },
     { path: 'socios/por-que-ser-socio', component: PorQueSerSocioComponent },
+    { path: 'socios/alquileres-para-socios', component: AlquileresParaSociosComponent },
     { path: 'contacto', component: ContactoComponent },
     { path: 'wip', component: WipComponent },
     { path: 'academico/calendario', component: CalendarioComponent },
@@ -91,8 +93,6 @@ export const routes: Routes = [
     { path: 'demo-team', component: DemoTeamComponent },
     { path: 'pisteros-socorristas', component: PisterosSocorristasComponent },
     { path: 'institucional/sponsors', component: SponsorsComponent },
-
-
 
 
     { path: '', component: HomeComponent },

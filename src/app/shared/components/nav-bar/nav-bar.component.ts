@@ -47,10 +47,11 @@ export class NavBarComponent {
     {
       label: 'Socios',
       children: [
+        { label: '¿Por qué ser socio?', link: '/socios/por-que-ser-socio' },
         { label: 'Convenios y Beneficios', link: '/socios/convenios-y-beneficios' },
         { label: 'Bolsa de Trabajo', link: '/socios/bolsa-de-trabajo' },
-        { label: 'Instructores', link: 'https://qr.aadidess.cipbyte.io/#/home', external: true },
-        { label: '¿Por qué ser socio?', link: '/socios/por-que-ser-socio' }
+        { label: 'Alquileres para Socios', link: '/socios/alquileres-para-socios' },
+        { label: 'Instructores', link: 'https://qr.aadidess.cipbyte.io/#/home', external: true }, 
       ]
     },
     {

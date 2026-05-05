@@ -1,0 +1,63 @@
+<section class="alquileres">
+  <div class="alquileres__container">
+    <h1 class="alquileres__title">Alquileres para Socios</h1>
+
+    <!-- Buscador -->
+    <div class="alquileres__search">
+      <span class="material-symbols-outlined alquileres__search-icon">search</span>
+      <input
+        type="text"
+        class="alquileres__search-input"
+        placeholder="Buscar por título, ubicación o contacto..."
+        [ngModel]="searchTerm()"
+        (ngModelChange)="searchTerm.set($event)"
+        aria-label="Buscar alquiler"
+      />
+    </div>
+
+    <!-- Lista de alquileres -->
+    <div class="alquileres__list">
+      @for (alquiler of filteredAlquileres(); track alquiler.titulo) {
+        <div class="alquileres__card">
+          <!-- Imagen / Placeholder -->
+          <div class="alquileres__media">
+            @if (alquiler.foto) {
+              <img
+                [src]="alquiler.foto"
+                [alt]="alquiler.titulo"
+                class="alquileres__foto"
+                loading="lazy"
+              />
+            } @else {
+              <div class="alquileres__placeholder">
+                <span class="material-symbols-outlined alquileres__placeholder-icon">apartment</span>
+                <span class="alquileres__placeholder-text">Sin foto</span>
+              </div>
+            }
+          </div>
+
+          <!-- Detalles -->
+          <div class="alquileres__details">
+            <h2 class="alquileres__card-title">{{ alquiler.titulo }}</h2>
+            <p class="alquileres__description">{{ alquiler.descripcion }}</p>
+            <div class="alquileres__location">
+              <span class="material-symbols-outlined alquileres__location-icon">location_on</span>
+              <span class="alquileres__location-text">{{ alquiler.ubicacion }}</span>
+            </div>
+            <div class="alquileres__contacts">
+              @for (contacto of alquiler.contactos; track contacto.telefono) {
+                <a
+                  [href]="'tel:' + formatTelefono(contacto.telefono)"
+                  class="alquileres__contact-link"
+                >
+                  <span class="material-symbols-outlined alquileres__contact-icon">call</span>
+                  <span>{{ contacto.nombre }}: {{ contacto.telefono }}</span>
+                </a>
+              }
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
