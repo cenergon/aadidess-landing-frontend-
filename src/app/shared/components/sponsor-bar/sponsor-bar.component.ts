@@ -27,12 +27,12 @@ export class SponsorBarComponent implements OnInit, OnDestroy {
 
   sponsor: Sponsor[] = [
     { imagen: 'images/sponsor/macro2.svg', alt: 'Macro', imagenDark: 'svgs/macro-blanco.svg' },
-    { imagen: 'images/sponsor/marcapais2.svg', alt: 'Argentina', height: 36, escala: 1.2 },
-    { imagen: 'images/sponsor/turkish2.svg', alt: 'Turkish Airlines', imagenDark: 'images/sponsor/turkish-blanco.svg' },
-    { imagen: 'images/sponsor/thonet2.svg', alt: 'Thonet' },
-    { imagen: 'images/sponsor/hubtravel2.png', alt: 'Hub travel', height: 24, escala: 1.3 },
+    { imagen: 'images/sponsor/marcapais2.svg', alt: 'Argentina', height: 70, escala: 1.2 },
+    { imagen: 'svgs/turkish-negro.svg', alt: 'Turkish Airlines', imagenDark: 'svgs/turkish-blanco.svg' },
+    { imagen: 'svgs/thonet-negro.svg', alt: 'Thonet', imagenDark: 'svgs/thonet-blanco.svg', height: 30 },
+    { imagen: 'images/sponsor/hubtravel2.png', alt: 'Hub travel', height: 30, escala: 1.3 },
     { imagen: 'images/sponsor/vola2.png', alt: 'Vola' },
-    { imagen: 'images/sponsor/oakley2.png', alt: 'Oakley' },
+    { imagen: 'images/logos/oakley-negro.png', alt: 'Oakley', imagenDark: 'images/logos/oakley-blanco.png', height: 40, escala: 1.3 },
     { imagen: 'images/sponsor/catedral2.png', alt: 'Catedral' }
   ];
 

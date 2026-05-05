@@ -1,13 +1,6 @@
-@use 'sass:color';
-
-$color-dark: #24243c;
-$color-accent: #60d0f1;
-$color-white: #ffffff;
-$color-border: rgba(36, 36, 60, 0.08);
-$shadow-card: 0 2px 12px rgba(0, 0, 0, 0.04);
-$shadow-hover: 0 6px 20px rgba(36, 36, 60, 0.08);
-$radius-md: 8px;
-$radius-lg: 12px;
+$radius-md: var(--radius-md, 8px);
+$radius-lg: var(--radius-lg, 12px);
+$transition-smooth: var(--transition-base, 0.2s ease);
 
 .beneficios-comerciales {
   max-width: 1100px;
@@ -24,18 +17,18 @@ $radius-lg: 12px;
 
   &__card {
     position: relative;
-    background: --color-bg-accent;
-    border: 1px solid $color-border;
+    background: var(--color-bg-accent);
+    border: 1px solid var(--color-border);
     border-radius: $radius-lg;
     padding: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    transition: box-shadow $transition-smooth, transform $transition-smooth;
 
     &:hover {
-      box-shadow: $shadow-hover;
+      box-shadow: var(--shadow-lg, 0 6px 20px rgba(0,0,0,0.12));
       transform: translateY(-2px);
     }
   }
@@ -64,8 +57,8 @@ $radius-lg: 12px;
     justify-content: center;
     gap: 0.25rem;
     opacity: 0;
-    transition: opacity 0.2s ease;
-    color: $color-white;
+    transition: opacity $transition-smooth;
+    color: #ffffff;
     pointer-events: none;
 
     .beneficios-grid__card:hover & {
@@ -98,16 +91,18 @@ $radius-lg: 12px;
 }
 
 .modal-contenido {
-  background: $color-white;
-  border-radius: $radius-lg;
+  background: var(--color-bg-elevated);
+  border-radius: var(--radius-lg, 12px);
   max-width: 560px;
   width: 100%;
   max-height: 85vh;
   overflow-y: auto;
   padding: 2rem 1.75rem;
   position: relative;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
   animation: slideUp 0.25s ease;
+  color: var(--color-text-primary);
+  transition: background $transition-smooth, color $transition-smooth;
 
   &__cerrar {
     position: absolute;
@@ -116,13 +111,13 @@ $radius-lg: 12px;
     background: none;
     border: none;
     cursor: pointer;
-    color: $color-dark;
+    color: var(--color-text-primary);
     padding: 0.25rem;
     border-radius: 50%;
-    transition: background 0.2s;
+    transition: background $transition-smooth;
 
     &:hover {
-      background: rgba($color-dark, 0.06);
+      background: var(--color-hover-bg);
     }
 
     .material-symbols-outlined {
@@ -139,25 +134,28 @@ $radius-lg: 12px;
   &__titulo {
     font-size: 1.4rem;
     font-weight: 700;
-    color: $color-dark;
+    color: var(--color-text-primary);
     text-align: center;
     margin-bottom: 1rem;
+    transition: color $transition-smooth;
   }
 
   &__descripcion {
     font-size: 0.95rem;
     line-height: 1.65;
-    color: color.adjust($color-dark, $lightness: 15%);
+    color: var(--color-text-primary);
+    opacity: 0.9;
 
     p { margin-bottom: 0.75rem; }
     ul, ol { margin: 0.5rem 0; padding-left: 1.25rem; }
     li { margin-bottom: 0.3rem; }
-    a {
-      color: $color-accent;
-      font-weight: 500;
-      text-decoration: underline;
+
+    strong {
+      font-weight: 700;
+      color: var(--color-text-primary);
     }
-    strong { color: $color-dark; }
+
+    // Ya no ponemos reglas para img/figure aquí porque no afectan al innerHTML
   }
 }
 

@@ -65,3 +65,38 @@ body {
 html, body {
   height: 100%;
 }
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--color-accent-hover);                // se resalta al pasar el mouse
+    text-decoration: none;
+  }
+}
+
+/* ==============================================
+   Estilos para contenido inyectado en modales
+   (innerHTML que no recibe encapsulación)
+   ============================================== */
+
+.modal-contenido__descripcion {
+  figure {
+    margin: 1.25rem auto;
+    max-width: 90%;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1.25rem auto;
+    border-radius: var(--radius-md, 8px);
+    background: var(--color-bg-secondary, #f1f5f9);
+    padding: 0.25rem;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  }
+}
