@@ -23,6 +23,11 @@ interface Alquiler {
   styleUrls: ['./alquileres-para-socios.component.scss']
 })
 export class AlquileresParaSociosComponent {
+
+  // --- Visor de imagen ---
+  modalOpen = signal(false);
+  modalFoto = signal('');
+
   searchTerm = signal('');
 
   alquileres: Alquiler[] = [
@@ -30,7 +35,8 @@ export class AlquileresParaSociosComponent {
       titulo: 'Monoambiente en el centro',
       descripcion: 'Monoambiente máximo 4 personas equipado con 1 sommier de 2 plazas y 2 sommiers de 1 plaza cada uno, con vajilla y todos los electrodomésticos pequeños (pava eléctrica, cafetera, tostadora, microondas). Ropa de cama si desean el servicio se arregla a elección.',
       ubicacion: 'Nueva constitución 130, entre 9 de Julio y Saenz Peña, Centro de Bariloche',
-      contactos: [{ nombre: 'Juan', telefono: '1125247195' }]
+      contactos: [{ nombre: 'Juan', telefono: '1125247195' }],
+      foto: '/images/alquileres/alquiler-monoambiente-4personas.jpeg',
     },
     {
       titulo: 'Temporada de invierno en Villa Los Coihues',
@@ -39,7 +45,8 @@ export class AlquileresParaSociosComponent {
       contactos: [
         { nombre: 'Liliana', telefono: '+5492944580230' },
         { nombre: 'Nahuel', telefono: '+5492944209951' }
-      ]
+      ],
+      foto: '/images/alquileres/alquiler-b-villa-los-coihues.jpg',
     }
   ];
 
@@ -57,5 +64,24 @@ export class AlquileresParaSociosComponent {
   formatTelefono(telefono: string): string {
     // limpia el formato para enlace tel:
     return telefono.replace(/[\s\-\(\)]/g, '');
+  }
+
+  openModal(foto: string): void {
+    this.modalFoto.set(foto);
+    this.modalOpen.set(true);
+    document.body.style.overflow = 'hidden';
+  }
+
+  closeModal(): void {
+    this.modalOpen.set(false);
+    document.body.style.overflow = '';
+  }
+
+  downloadCurrent(): void {
+    const url = this.modalFoto();
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = url.split('/').pop() || 'alquiler-foto';
+    link.click();
   }
 }

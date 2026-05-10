@@ -27,6 +27,8 @@
                 [alt]="alquiler.titulo"
                 class="alquileres__foto"
                 loading="lazy"
+                (click)="alquiler.foto && openModal(alquiler.foto)"
+                style="cursor: pointer;"
               />
             } @else {
               <div class="alquileres__placeholder">
@@ -58,6 +60,19 @@
           </div>
         </div>
       }
+    </div>
+  </div>
+  <!-- Modal visor de imagen -->
+  <div class="alquileres__modal" *ngIf="modalOpen()" (click)="closeModal()">
+    <div class="alquileres__modal-backdrop"></div>
+    <div class="alquileres__modal-content" (click)="$event.stopPropagation()">
+      <button class="alquileres__modal-close" (click)="closeModal()" aria-label="Cerrar">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <button class="alquileres__modal-download" (click)="downloadCurrent()" aria-label="Descargar">
+        <span class="material-symbols-outlined">download</span>
+      </button>
+      <img [src]="modalFoto()" alt="Visor de foto" class="alquileres__modal-image" />
     </div>
   </div>
 </section>

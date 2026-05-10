@@ -207,3 +207,88 @@ $transition-smooth: var(--transition-base, 0.2s ease);
     font-size: 1.1rem;
   }
 }
+
+// ---- Modal visor de imagen ----
+.alquileres {
+  &__modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__modal-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    transition: backdrop-filter $transition-smooth;
+  }
+
+  &__modal-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2001;
+  }
+
+  &__modal-image {
+    max-width: 100%;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: $radius-lg;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    background-color: #000;
+  }
+
+  &__modal-close,
+  &__modal-download {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    transition: background-color $transition-smooth, transform $transition-smooth;
+    z-index: 2002;
+  }
+
+  &__modal-close {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  &__modal-download {
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  &__modal-close:hover,
+  &__modal-download:hover {
+    transform: scale(1.05);
+  }
+
+  &__modal-close .material-symbols-outlined,
+  &__modal-download .material-symbols-outlined {
+    font-size: 28px;
+  }
+}

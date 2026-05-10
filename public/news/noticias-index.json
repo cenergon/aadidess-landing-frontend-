@@ -19,5 +19,12 @@
     "postedAt": "2026-03-10T17:22:00-03:00",
     "ruta": "news/Inscripciones-abiertas-Andorra.json",
     "resumen": "Hasta el 20 de marzo están abiertas las inscripciones para exámenes de ingreso a instructorados de esquí y snowboard nivel 1, y reentrenos de todos los niveles, a realizarse en Andorra del 26 al 29 de marzo."
+  },
+  {
+    "id": 4,
+    "titulo": "Comunicado Oficial: Requisitos para instructores independientes para la temporada 2026",
+    "postedAt": "2026-05-10T12:00:00-03:00",
+    "ruta": "news/Comunicado-Requisitos-Instructores-Independientes-2026.json",
+    "resumen": "A partir de la temporada 2026, los instructores de AADIDESS con Nivel 3 o superior podrán ejercer de forma independiente en Cerro Catedral. Conocé los requisitos de titulación, residencia y documentación a presentar."
   }
 ]
