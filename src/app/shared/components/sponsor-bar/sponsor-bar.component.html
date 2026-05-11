@@ -1,17 +1,22 @@
 @if (!isHidden()) {
   <a [routerLink]="'/institucional/sponsors'" class="sponsor-bar-link">
     <div class="sponsor-bar">
-      <div class="sponsor-bar__logos">
-        @for (sponsor of sponsor; track sponsor.alt) {
-          <img
-            [src]="getImagen(sponsor)"
-            [alt]="sponsor.alt"
-            class="sponsor-bar__logo"
-            loading="lazy"
-            [style.height.px]="sponsor.height || null"
-            [style.transform]="sponsor.escala ? 'scale(' + sponsor.escala + ')' : null"
-          />
-        }
+      <div class="sponsor-bar__carousel">
+        <div
+          class="sponsor-bar__logos"
+          [style.--scroll-duration]="scrollDuration() + 's'"
+        >
+          @for (sponsor of sponsorCarousel(); track $index) {
+            <img
+              [src]="getImagen(sponsor)"
+              [alt]="sponsor.alt"
+              class="sponsor-bar__logo"
+              loading="lazy"
+              [style.height.px]="sponsor.height || null"
+              [style.transform]="sponsor.escala ? 'scale(' + sponsor.escala + ')' : null"
+            />
+          }
+        </div>
       </div>
     </div>
   </a>

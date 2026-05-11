@@ -9,15 +9,23 @@
   font-family: var(--font-family-primary);
   transition: background-color var(--transition-base), color var(--transition-base);
 
+  // Contenedor común para ambas versiones
   &__content {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     align-items: center;
     justify-content: space-evenly;
+
+    // Por defecto: desktop visible, mobile oculto
+    &--desktop {
+      display: flex;
+    }
+
+    &--mobile {
+      display: none;
+    }
   }
 
   &__item {
@@ -37,7 +45,7 @@
   &__link {
     color: inherit;
     text-decoration: none;
-    
+
     &:hover {
       text-decoration: underline;
       color: var(--color-accent-hover-link);
@@ -51,5 +59,45 @@
   &__label {
     font-weight: 400;
     margin-right: 0.15rem;
+  }
+}
+
+// Responsive: cambia a versión compacta en una sola línea
+@media (max-width: 768px) {
+  .top-bar {
+    padding: 0 0.5rem;
+    font-size: 0.72rem;
+
+    &__content {
+      &--desktop {
+        display: none;
+      }
+      &--mobile {
+        display: flex;
+        flex-wrap: nowrap;        // fuerza una sola línea
+        gap: 0.5rem;
+        justify-content: space-between;
+      }
+    }
+
+    &__icon {
+      font-size: 0.9rem;
+      margin-right: 0.1rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .top-bar {
+    font-size: 0.65rem;
+    padding: 0 0.35rem;
+
+    &__content--mobile {
+      gap: 0.35rem;
+    }
+
+    &__icon {
+      font-size: 0.8rem;
+    }
   }
 }

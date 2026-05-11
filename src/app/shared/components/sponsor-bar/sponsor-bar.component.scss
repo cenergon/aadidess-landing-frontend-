@@ -1,10 +1,10 @@
-$logo-height: 32px;          // ligeramente más pequeño
+$logo-height: 32px;
 $gap: 1rem;
 
 .sponsor-bar-link {
   display: block;
   text-decoration: none;
-  color: inherit;            // hereda el color del texto, sin azul
+  color: inherit;
 }
 
 .sponsor-bar {
@@ -14,7 +14,12 @@ $gap: 1rem;
   padding: 0.75rem 1.5rem;
   background-color: var(--color-bg-elevated, #f8f9fa);
   border-top: 1px solid var(--color-border, #dee2e6);
-  overflow: hidden;          // sin scroll vertical
+  overflow: hidden;
+}
+
+.sponsor-bar__carousel {
+  overflow: hidden;
+  width: 100%;
 }
 
 .sponsor-bar__logos {
@@ -22,8 +27,12 @@ $gap: 1rem;
   flex-wrap: nowrap;
   align-items: center;
   gap: $gap;
-  overflow: hidden;          // sin scroll horizontal
-  max-width: 100%;
+  width: max-content;
+
+  // En desktop: sin animación, centrado (el contenedor padre se encarga)
+  @media (max-width: 768px) {
+    animation: scroll var(--scroll-duration, 16s) linear infinite;
+  }
 }
 
 .sponsor-bar__logo {
@@ -36,5 +45,14 @@ $gap: 1rem;
 
   &:hover {
     opacity: 1;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }

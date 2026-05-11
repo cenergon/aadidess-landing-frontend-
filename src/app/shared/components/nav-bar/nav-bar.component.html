@@ -42,9 +42,8 @@
           <!-- Dropdown -->
           <div
             class="navbar__dropdown"
-            (mouseenter)="setActiveDropdown(item.label)"
-            (mouseleave)="setActiveDropdown(null)"
-            (keydown.escape)="setActiveDropdown(null)"
+            (mouseenter)="!isMobile() && setActiveDropdown(item.label)"
+            (mouseleave)="!isMobile() && setActiveDropdown(null)"
           >
             <button
               class="navbar__dropdown-toggle"
@@ -66,7 +65,6 @@
             >
               @for (child of item.children; track child.label) {
                 @if (child.external) {
-                  <!-- Enlace externo en dropdown -->
                   <a
                     href="javascript:void(0)"
                     class="navbar__dropdown-link"
@@ -75,7 +73,6 @@
                     {{ child.label }}
                   </a>
                 } @else {
-                  <!-- Enlace interno en dropdown -->
                   <a
                     [routerLink]="child.link"
                     class="navbar__dropdown-link"
@@ -108,9 +105,11 @@
           }
         }
       }
-    </div>
 
-    <!-- Theme Toggle -->
-    <app-theme-toggle />
+      <!-- Theme Toggle (dentro del menú, visible solo en mobile) -->
+      <div class="navbar__theme-toggle-container">
+        <app-theme-toggle />
+      </div>
+    </div>
   </div>
 </nav>

@@ -1,4 +1,4 @@
-import { Component, signal, OnInit, OnDestroy, inject } from '@angular/core';
+import { Component, signal, computed, OnInit, OnDestroy, inject } from '@angular/core';
 import { RouterLink, Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { Subscription } from 'rxjs';
@@ -22,7 +22,6 @@ export class SponsorBarComponent implements OnInit, OnDestroy {
   private router = inject(Router);
   private routerSub?: Subscription;
 
-  // Señal que indica si estamos en la página de sponsors (se oculta la barra)
   isHidden = signal(false);
 
   sponsor: Sponsor[] = [
@@ -36,10 +35,15 @@ export class SponsorBarComponent implements OnInit, OnDestroy {
     { imagen: 'images/sponsor/catedral2.png', alt: 'Catedral' }
   ];
 
+  // Duplicar para carrusel infinito
+  sponsorCarousel = computed(() => [...this.sponsor, ...this.sponsor]);
+
+  // Duración proporcional a la cantidad de logos (2s por logo)
+  scrollDuration = computed(() => this.sponsor.length * 3);
+
   private currentTheme = signal<'light' | 'dark'>('light');
 
   ngOnInit(): void {
-    // Detectar tema
     const initial = document.documentElement.getAttribute('data-theme') as 'light' | 'dark' | null;
     if (initial === 'dark' || initial === 'light') {
       this.currentTheme.set(initial);
@@ -52,14 +56,12 @@ export class SponsorBarComponent implements OnInit, OnDestroy {
       }
     }) as EventListener);
 
-    // Escuchar navegaciones
     this.routerSub = this.router.events
       .pipe(filter(e => e instanceof NavigationEnd))
       .subscribe(() => {
         this.isHidden.set(this.router.url === '/institucional/sponsors');
       });
 
-    // Verificar estado inicial
     this.isHidden.set(this.router.url === '/institucional/sponsors');
   }
 

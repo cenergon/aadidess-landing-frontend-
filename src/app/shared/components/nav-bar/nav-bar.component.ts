@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, HostListener, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
 import { RouterLink } from '@angular/router';
@@ -17,12 +17,12 @@ interface NavItem {
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.scss']
 })
+export class NavBarComponent implements OnInit {
+  mobileMenuOpen = signal(false);
+  activeDropdown = signal<string | null>(null);
+  isMobile = signal(false);
 
-export class NavBarComponent {
-    mobileMenuOpen = signal(false);
-    activeDropdown = signal<string | null>(null);
-
-    navItems: NavItem[] = [
+      navItems: NavItem[] = [
     {
       label: 'Institucional',
       children: [
@@ -66,6 +66,19 @@ export class NavBarComponent {
     { label: 'Contacto', link: '/contacto' }
   ];
 
+  ngOnInit() {
+    this.checkMobile();
+  }
+
+  @HostListener('window:resize')
+  onResize() {
+    this.checkMobile();
+  }
+
+  checkMobile() {
+    this.isMobile.set(window.innerWidth <= 768);
+  }
+
   toggleMobileMenu() {
     this.mobileMenuOpen.update(open => !open);
   }
@@ -83,3 +96,4 @@ export class NavBarComponent {
     window.open(url, '_blank', 'noopener,noreferrer');
   }
 }
+
