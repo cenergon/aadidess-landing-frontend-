@@ -36,7 +36,7 @@ export class AlquileresParaSociosComponent {
       descripcion: 'Monoambiente máximo 4 personas equipado con 1 sommier de 2 plazas y 2 sommiers de 1 plaza cada uno, con vajilla y todos los electrodomésticos pequeños (pava eléctrica, cafetera, tostadora, microondas). Ropa de cama si desean el servicio se arregla a elección.',
       ubicacion: 'Nueva constitución 130, entre 9 de Julio y Saenz Peña, Centro de Bariloche',
       contactos: [{ nombre: 'Juan', telefono: '1125247195' }],
-      foto: '/images/alquileres/alquiler-monoambiente-4personas.jpeg',
+      foto: 'images/alquileres/alquiler-monoambiente-4personas.jpeg',
     },
     {
       titulo: 'Temporada de invierno en Villa Los Coihues',
@@ -46,7 +46,7 @@ export class AlquileresParaSociosComponent {
         { nombre: 'Liliana', telefono: '+5492944580230' },
         { nombre: 'Nahuel', telefono: '+5492944209951' }
       ],
-      foto: '/images/alquileres/alquiler-b-villa-los-coihues.jpg',
+      foto: 'images/alquileres/alquiler-b-villa-los-coihues.jpg',
     }
   ];
 
