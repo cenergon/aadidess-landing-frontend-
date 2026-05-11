@@ -36,6 +36,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/2026/",
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
