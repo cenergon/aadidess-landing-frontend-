@@ -72,12 +72,6 @@ export class FormasDePagoComponent implements OnInit, OnDestroy {
       descripcion: 'Si sos cliente de Banco Macro podrás abonar con Macro Click con el link de pago generado por AADIDESS y aprovechar así de los beneficios otorgados por esta entidad bancaria a nuestros asociados.',
       badge: '¡NUEVO!'
     },
-    {
-      svg: 'svgs/mercado-pago.svg',
-      titulo: 'Mercado Pago',
-      descripcion: 'Podrás pagar por este medio todas las inscripciones que se realizan a través de nuestra página y campus.',
-      badge: '¡NUEVO!'
-    }
   ];
 
   ngOnInit(): void {
