@@ -1,5 +1,4 @@
 import { Component, computed } from '@angular/core';
-// No imports needed
 
 @Component({
   selector: 'app-top-bar',
