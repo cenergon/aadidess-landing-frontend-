@@ -7,22 +7,25 @@ export interface NoticiaResumen {
   titulo: string;
   postedAt: string;
   ruta: string;
-  resumen: string; // añadido
+  resumen: string;
 }
 
 @Injectable({
   providedIn: 'root'
 })
 export class NoticiasService {
-  private baseUrl = ''; // relativo a public/
+  // No es necesario especificar una base absoluta
+  // private baseUrl = '';
 
   constructor(private http: HttpClient) {}
 
   getIndice(): Observable<NoticiaResumen[]> {
-    return this.http.get<NoticiaResumen[]>(`${this.baseUrl}/news/noticias-index.json`);
+    // Ruta relativa: se basará en el <base href="/2026/">
+    return this.http.get<NoticiaResumen[]>(`news/noticias-index.json`);
   }
 
   getNoticia(ruta: string): Observable<any> {
-    return this.http.get(`${this.baseUrl}/${ruta}`);
+    // Asegúrate de que `ruta` también sea relativa
+    return this.http.get(`${ruta}`);
   }
 }
