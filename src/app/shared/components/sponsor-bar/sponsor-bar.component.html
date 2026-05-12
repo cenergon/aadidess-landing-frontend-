@@ -6,7 +6,7 @@
           class="sponsor-bar__logos"
           [style.--scroll-duration]="scrollDuration() + 's'"
         >
-          @for (sponsor of sponsorCarousel(); track $index) {
+          @for (sponsor of displaySponsors(); track $index) {
             <img
               [src]="getImagen(sponsor)"
               [alt]="sponsor.alt"

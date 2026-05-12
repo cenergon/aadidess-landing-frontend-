@@ -28,10 +28,11 @@ $gap: 1rem;
   align-items: center;
   gap: $gap;
   width: max-content;
+  margin: 0 auto; /* centrado en desktop */
 
-  // En desktop: sin animación, centrado (el contenedor padre se encarga)
   @media (max-width: 768px) {
     animation: scroll var(--scroll-duration, 16s) linear infinite;
+    margin: 0; /* reset del centrado para que el scroll funcione correctamente */
   }
 }
 

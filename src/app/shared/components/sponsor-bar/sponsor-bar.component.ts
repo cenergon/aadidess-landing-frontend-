@@ -35,15 +35,25 @@ export class SponsorBarComponent implements OnInit, OnDestroy {
     { imagen: 'images/sponsor/catedral2.png', alt: 'Catedral' }
   ];
 
-  // Duplicar para carrusel infinito
-  sponsorCarousel = computed(() => [...this.sponsor, ...this.sponsor]);
+  // Nuevo: señal para saber si estamos en mobile (punto de quiebre 768px, mismo que el CSS)
+  private isMobile = signal(typeof window !== 'undefined' ? window.innerWidth <= 768 : false);
 
-  // Duración proporcional a la cantidad de logos (2s por logo)
+  // Sponsors a renderizar: duplicado SOLO en mobile, original en desktop
+  displaySponsors = computed(() => 
+    this.isMobile() ? [...this.sponsor, ...this.sponsor] : this.sponsor
+  );
+
+  // Duración proporcional a la cantidad de logos originales (no cambia)
   scrollDuration = computed(() => this.sponsor.length * 3);
 
   private currentTheme = signal<'light' | 'dark'>('light');
 
+  private resizeListener = () => {
+    this.isMobile.set(window.innerWidth <= 768);
+  };
+
   ngOnInit(): void {
+    // Theme detection
     const initial = document.documentElement.getAttribute('data-theme') as 'light' | 'dark' | null;
     if (initial === 'dark' || initial === 'light') {
       this.currentTheme.set(initial);
@@ -56,6 +66,10 @@ export class SponsorBarComponent implements OnInit, OnDestroy {
       }
     }) as EventListener);
 
+    // Escuchar cambios de tamaño de viewport
+    window.addEventListener('resize', this.resizeListener);
+
+    // Router logic...
     this.routerSub = this.router.events
       .pipe(filter(e => e instanceof NavigationEnd))
       .subscribe(() => {
@@ -69,6 +83,7 @@ export class SponsorBarComponent implements OnInit, OnDestroy {
     if (this.routerSub) {
       this.routerSub.unsubscribe();
     }
+    window.removeEventListener('resize', this.resizeListener);
   }
 
   getImagen(sponsor: Sponsor): string {
