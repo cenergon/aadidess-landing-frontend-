@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
 
 interface Articulo {
   id: number;
@@ -14,7 +15,8 @@ interface Articulo {
   templateUrl: './reglamento-academico.component.html',
   styleUrls: ['./reglamento-academico.component.scss']
 })
-export class ReglamentoAcademicoComponent {
+export class ReglamentoAcademicoComponent implements AfterViewInit {
+
   articulos: Articulo[] = [
     {
       id: 0,
@@ -561,8 +563,18 @@ export class ReglamentoAcademicoComponent {
     }
   ];
 
-  scrollTo(id: number): void {
-    const element = document.getElementById('art-' + id);
+  constructor(private route: ActivatedRoute) {}
+
+  ngAfterViewInit(): void {
+    this.route.fragment.subscribe(fragment => {
+      if (fragment) {
+        setTimeout(() => this.scrollTo(fragment), 100);
+      }
+    });
+  }
+
+  scrollTo(id: string): void {
+    const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }

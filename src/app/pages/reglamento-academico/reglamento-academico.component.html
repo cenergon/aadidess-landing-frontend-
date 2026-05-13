@@ -9,8 +9,8 @@
             <li class="reglamento__nav-item">
               <a
                 class="reglamento__nav-link"
-                (click)="scrollTo(articulo.id)"
-                (keydown.enter)="scrollTo(articulo.id)"
+                (click)="scrollTo('art-' + articulo.id)"
+                (keydown.enter)="scrollTo('art-' + articulo.id)"
                 tabindex="0"
                 role="link"
               >

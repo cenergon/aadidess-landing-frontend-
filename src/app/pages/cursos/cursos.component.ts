@@ -14,6 +14,7 @@ interface AccionRapida {
   link: string;
   icon?: string;
   external?: boolean;
+  fragment?: string;
 }
 
 @Component({
@@ -58,8 +59,8 @@ export class CursosComponent {
     { label: 'Calendario', link: '/academico/calendario', icon: 'calendar_month' },
     { label: 'Ver aranceles', link: '/aranceles-y-formas-de-pago/aranceles', icon: 'payments' },
     { label: 'Reglamento académico', link: '/institucional/reglamento-academico', icon: 'description' },
-    { label: 'Convalidaciones', link: '/academico/convalidaciones', icon: 'compare_arrows' },
-    { label: 'Reentrenamientos', link: '/academico/reentrenamiento', icon: 'refresh' },
+    { label: 'Convalidaciones', link: '/institucional/reglamento-academico', icon: 'compare_arrows', fragment: 'art-33' },
+    { label: 'Reentrenamientos', link: '/institucional/reglamento-academico', icon: 'refresh', fragment: 'art-28' },
     { label: 'Delegaciones', link: '/academico/delegaciones', icon: 'groups' },
     { label: 'Preguntas frecuentes', link: '/academico/FAQ', icon: 'help_outline' }
   ];

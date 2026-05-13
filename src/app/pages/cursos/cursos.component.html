@@ -20,6 +20,7 @@
         } @else {
           <a
             [routerLink]="accion.link"
+            [fragment]="accion.fragment || undefined"
             class="cursos__chip"
           >
             @if (accion.icon) {
