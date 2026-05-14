@@ -1,0 +1,45 @@
+{
+  "id": 9,
+  "titulo": "20/9: Campeonato Argentino de Instructores en La Hoya",
+  "postedAt": "2019-09-12T13:50:00-03:00",
+  "createdAt": "2019-09-12T13:50:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "El viernes 20 de septiembre se llevará a cabo en La Hoya, Esquel, el Campeonato Argentino de Instructores, coincidiendo con las actividades previstas de la Fiesta Nacional del Esquí."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "El mismo es organizado por la Delegación Esquel de AADIDESS, en colaboración con La Hoya Ski Club y Slalom Andino."
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "Si estás interesado en participar, enviá un correo a"
+    },
+    {
+      "tipo": "link",
+      "orden": 4,
+      "texto": "esquelskiclub@gmail.com",
+      "url": "mailto:esquelskiclub@gmail.com",
+      "esPdf": false
+    },
+    {
+      "tipo": "texto",
+      "orden": 5,
+      "contenido": "La inscripción tiene un valor de $500, e incluye el almuerzo. El pase es libre para los corredores."
+    },
+    {
+      "tipo": "texto",
+      "orden": 6,
+      "contenido": "Cronograma de la competencia:\n– 10 hs Reunión en Confitería El Refugio\n– 11 hs Primer corredor primera manga\n– 12.30 hs primer corredor segunda manga\n– 14 hs Almuerzo con premiación en Confitería El Refugio (incluido en la inscripción)"
+    },
+    {
+      "tipo": "texto",
+      "orden": 7,
+      "contenido": "¡Anotate!"
+    }
+  ]
+}

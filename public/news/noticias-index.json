@@ -26,5 +26,61 @@
     "postedAt": "2026-05-10T12:00:00-03:00",
     "ruta": "news/Comunicado-Requisitos-Instructores-Independientes-2026.json",
     "resumen": "A partir de la temporada 2026, los instructores de AADIDESS con Nivel 3 o superior podrán ejercer de forma independiente en Cerro Catedral. Conocé los requisitos de titulación, residencia y documentación a presentar."
+  },
+  {
+    "id": 5,
+    "titulo": "Módulo Técnico de Nivel 2 y 3 de Esquí",
+    "postedAt": "2019-07-25T14:23:00-03:00",
+    "ruta": "news/Modulo-Tecnico-Nivel-2-3-2019.json",
+    "resumen": "Nueva modulación del módulo técnico para Nivel 2 y 3 de esquí. Se divide en bloques de Básicos, Perfeccionamiento y Técnico, con fechas de cursado y evaluaciones. Snowboard en septiembre."
+  },
+  {
+    "id": 6,
+    "titulo": "Llega una nueva edición del Campeonato Sudamericano de Sincro",
+    "postedAt": "2019-08-19T14:53:00-03:00",
+    "ruta": "news/Campeonato-Sudamericano-Sincro-2019.json",
+    "resumen": "En Chapelco se realiza una nueva edición del Campeonato Sudamericano de Sincro. Categorías: Escuela, Clubes y Libre. Consultá el reglamento y formulario de inscripción."
+  },
+  {
+    "id": 7,
+    "titulo": "ISIA Snowboard Test en Pucón, Chile",
+    "postedAt": "2019-08-26T14:52:00-03:00",
+    "ruta": "news/ISIA-Snowboard-Test-Pucon-2019.json",
+    "resumen": "En septiembre se realizará un nuevo ISIA Snowboard Test en el Centro de Esquí y Snowboard Pucón, Chile. Entrenamientos del 1 al 3 de septiembre y carrera los días 4 o 5."
+  },
+  {
+    "id": 8,
+    "titulo": "Del 7 al 14 de septiembre se lleva a cabo el Congreso Internacional de Patrulleros en el Cerro Catedral",
+    "postedAt": "2019-09-02T13:59:00-03:00",
+    "ruta": "news/Congreso-Patrulleros-Catedral-2019.json",
+    "resumen": "Del 7 al 14 de septiembre de 2019 se realiza en Cerro Catedral el XXII Ski World Patrol Congress FIPS, con más de 160 patrulleros de 14 países. Actividades prácticas, talleres médicos, avalanchas y rescates."
+  },
+  {
+    "id": 9,
+    "titulo": "20/9: Campeonato Argentino de Instructores en La Hoya",
+    "postedAt": "2019-09-12T13:50:00-03:00",
+    "ruta": "news/Campeonato-Argentino-Instructores-La-Hoya-2019.json",
+    "resumen": "El viernes 20 de septiembre en La Hoya, Esquel, se realiza el Campeonato Argentino de Instructores. Inscripción $500 con almuerzo incluido. Cronograma desde las 10 hs."
+  },
+  {
+    "id": 10,
+    "titulo": "ISIA Speed Test Ski Alpine Nation Giant Slalom - Men/Women",
+    "postedAt": "2019-09-19T13:47:00-03:00",
+    "ruta": "news/ISIA-Speed-Test-Chapelco-2019.json",
+    "resumen": "Carrera ISIA Speed Test en Cerro Chapelco el 28 de septiembre de 2019. Inscripciones hasta el 25/9 a central@aadidess.com. Costo 30 Euros. Datos bancarios y reglamento ISIA disponible."
+  },
+  {
+    "id": 11,
+    "titulo": "ISIA Speed Test Snowboard Bordercross - hombres/mujeres",
+    "postedAt": "2019-09-19T13:49:00-03:00",
+    "ruta": "news/ISIA-Speed-Test-Snowboard-Bordercross-Cerro-Castor-2019.json",
+    "resumen": "Carrera ISIA Snowboard Bordercross en Cerro Castor, Ushuaia, los días 28 y 29 de septiembre de 2019. Inscripciones hasta el 25/9 a central@aadidess.com. Costo €30. Datos bancarios y reglamento ISIA disponible."
+  },
+  {
+    "id": 12,
+    "titulo": "Resultados del Memorial Quito Astete y Campeonato Argentino de Instructores 2019",
+    "postedAt": "2019-10-01T13:43:00-03:00",
+    "ruta": "news/Resultados-Memorial-Quito-Astete-CAI-2019.json",
+    "resumen": "El sábado 28 de septiembre en Cerro Chapelco se disputaron el Campeonato Argentino de Instructores y el Memorial Quito Astete. Clasificación completa por categorías: Damas A/B, Caballeros A/B/C/D, Paralelo y General."
   }
 ]

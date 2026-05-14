@@ -41,7 +41,9 @@ export class NavBarComponent implements OnInit {
         { label: 'Cursos', link: '/academico/cursos' },
         { label: 'Calendario', link: '/academico/calendario' },
         { label: 'Campus Virtual', link: 'https://aadidess.cipbyte.io/web/#/profile-authentication', external: true },
-        { label: 'Reglamento del Académico', link: '/institucional/reglamento-academico' },
+        { label: 'Delegaciones', link: '/academico/delegaciones' },
+        { label: 'Reglamento Académico', link: '/institucional/reglamento-academico' },
+        { label: 'Preguntas Frecuentes', link: '/academico/FAQ' },
       ]
     },
     {

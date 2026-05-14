@@ -1,0 +1,67 @@
+<section class="faq">
+  <div class="faq__layout">
+    <!-- Sidebar de navegación -->
+    <aside class="faq__sidebar">
+      <nav class="faq__nav">
+        <h2 class="faq__nav-title">Índice</h2>
+        <ul class="faq__nav-list">
+          @for (section of filteredSections(); track section.titulo) {
+            <li class="faq__nav-item">
+              <a
+                class="faq__nav-link"
+                (click)="scrollTo(getSectionId(section.titulo))"
+                (keydown.enter)="scrollTo(getSectionId(section.titulo))"
+                tabindex="0"
+                role="link"
+              >
+                {{ section.titulo }}
+              </a>
+            </li>
+          }
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <div class="faq__content">
+      <h1 class="faq__title">Preguntas Frecuentes</h1>
+
+      <!-- Buscador -->
+      <div class="faq__search">
+        <span class="material-symbols-outlined faq__search-icon">search</span>
+        <input
+          type="text"
+          class="faq__search-input"
+          placeholder="Buscar pregunta..."
+          [ngModel]="searchTerm()"
+          (ngModelChange)="searchTerm.set($event)"
+          aria-label="Buscar en preguntas frecuentes"
+        />
+      </div>
+
+      <!-- Secciones de FAQ -->
+      @for (section of filteredSections(); track section.titulo) {
+        <div
+          class="faq__section"
+          [id]="getSectionId(section.titulo)"
+        >
+          <h2 class="faq__section-title">{{ section.titulo }}</h2>
+
+          @for (cat of section.categorias; track cat.titulo) {
+            <div class="faq__category">
+              <h3 class="faq__category-title">{{ cat.titulo }}</h3>
+              <div class="faq__items">
+                @for (item of cat.items; track item.pregunta) {
+                  <div class="faq__item">
+                    <h4 class="faq__item-question">{{ item.pregunta }}</h4>
+                    <p class="faq__item-answer">{{ item.respuesta }}</p>
+                  </div>
+                }
+              </div>
+            </div>
+          }
+        </div>
+      }
+    </div>
+  </div>
+</section>

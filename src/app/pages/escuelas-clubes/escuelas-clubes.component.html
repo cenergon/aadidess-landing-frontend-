@@ -37,7 +37,14 @@
                   @if (e.email) {
                     <p class="dato">
                       <span class="material-symbols-outlined icono">mail</span>
-                      <span [innerHTML]="e.email.replace('/', '/<br>')"></span>
+                      <span class="dato__links">
+                        @for (addr of getEmailsArray(e.email); track addr; let last = $last) {
+                          <a [href]="'mailto:' + addr">{{ addr }}</a>
+                          @if (!last) {
+                            <span class="dato__separator">/</span>
+                          }
+                        }
+                      </span>
                     </p>
                   }
                   @if (e.web) {
@@ -49,7 +56,7 @@
                   @if (e.telefono) {
                     <p class="dato">
                       <span class="material-symbols-outlined icono">call</span>
-                      {{ e.telefono }}
+                      <a [href]="getTelefonoHref(e.telefono)" class="dato__telefono">{{ e.telefono }}</a>
                     </p>
                   }
                 </div>
@@ -65,25 +72,31 @@
         <p class="escuelas-clubes__aviso">
           A partir del 2025 AADIDESS reconocerá solo a aquellas escuelas que además de cumplir con los requisitos establecidos, tengan un plantel mínimo de 10 instructores que deberá contar con Instructores de los niveles 1, 2 y 3.
         </p>
-        <details class="escuelas-clubes__acordeon">
-          <summary>Plan Nacional de Profesionalización de la Enseñanza - Requisitos para Escuelas y Clubes Adheridos</summary>
-          <ol>
-            <li>Contar con un plantel de 10 instructores como mínimo.</li>
-            <li>Los eventuales deberán ser autorizados por AADIDESS por períodos no mayores a 15 días.</li>
-            <li>Los cursantes o socios que infrinjan las competencias de su capacitación serán sancionados con la suspensión temporaria de participación en cursos.</li>
-            <li>Las PP deberán ser realizadas en escuelas reconocidas o adheridas.</li>
-            <li>Poseer habilitación para funcionar como tal dentro de un centro de esquí del territorio nacional, otorgado por la autoridad competente.</li>
-            <li>Que el Director de la Escuela de Esquí Alpino y Snowboard o del Club Deportivo sea un Instructor Nivel 3 o superior, socio de esta asociación.</li>
-            <li>Que el plantel de Instructores esté conformado por, como mínimo, un 20% de Instructores Nivel 3 o superior, argentinos, socios de AADIDESS, con título vigente.</li>
-            <li>Que el porcentaje de Instructores de nacionalidad extranjera con título validado no supere el 20%.</li>
-            <li>Que la totalidad del plantel tenga título válido para AADIDESS en un plazo de 3 años.</li>
-            <li>Que la enseñanza oficial sea la determinada por AADIDESS.</li>
-            <li>Que no se contrate a personas sin habilitación AADIDESS.</li>
-            <li>La CD podrá hacer excepciones en áreas de desarrollo.</li>
-            <li>Adherir al Plan Nacional de Profesionalización a partir del 2025.</li>
-            <li>El resto corre a partir de este año.</li>
-          </ol>
-        </details>
+
+        <div class="escuelas-clubes__acordeon" [class.escuelas-clubes__acordeon--open]="requisitosAbierto()">
+          <button class="escuelas-clubes__acordeon-summary" (click)="toggleRequisitos()">
+            <span>Plan Nacional de Profesionalización de la Enseñanza - Requisitos para Escuelas y Clubes Adheridos</span>
+            <span class="material-symbols-outlined escuelas-clubes__acordeon-chevron">expand_more</span>
+          </button>
+          <div class="escuelas-clubes__acordeon-contenido">
+            <ol>
+              <li>Contar con un plantel de 10 instructores como mínimo.</li>
+              <li>Los eventuales deberán ser autorizados por AADIDESS por períodos no mayores a 15 días.</li>
+              <li>Los cursantes o socios que infrinjan las competencias de su capacitación serán sancionados con la suspensión temporaria de participación en cursos.</li>
+              <li>Las PP deberán ser realizadas en escuelas reconocidas o adheridas.</li>
+              <li>Poseer habilitación para funcionar como tal dentro de un centro de esquí del territorio nacional, otorgado por la autoridad competente.</li>
+              <li>Que el Director de la Escuela de Esquí Alpino y Snowboard o del Club Deportivo sea un Instructor Nivel 3 o superior, socio de esta asociación.</li>
+              <li>Que el plantel de Instructores esté conformado por, como mínimo, un 20% de Instructores Nivel 3 o superior, argentinos, socios de AADIDESS, con título vigente.</li>
+              <li>Que el porcentaje de Instructores de nacionalidad extranjera con título validado no supere el 20%.</li>
+              <li>Que la totalidad del plantel tenga título válido para AADIDESS en un plazo de 3 años.</li>
+              <li>Que la enseñanza oficial sea la determinada por AADIDESS.</li>
+              <li>Que no se contrate a personas sin habilitación AADIDESS.</li>
+              <li>La CD podrá hacer excepciones en áreas de desarrollo.</li>
+              <li>Adherir al Plan Nacional de Profesionalización a partir del 2025.</li>
+              <li>El resto corre a partir de este año.</li>
+            </ol>
+          </div>
+        </div>
       </div>
     </div>
   </div>

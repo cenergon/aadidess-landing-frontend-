@@ -1,0 +1,35 @@
+{
+  "id": 7,
+  "titulo": "ISIA Snowboard Test en Pucón, Chile",
+  "postedAt": "2019-08-26T14:52:00-03:00",
+  "createdAt": "2019-08-26T14:52:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "En septiembre próximo se llevará a cabo un nuevo ISIA Snowboard Test, en el Centro de Esquí y Snowboard PUCON, en Chile."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "Es una gran oportunidad para hacerlo, junto a colegas del país vecino, y organizado por la Escuela Nacional de Chile."
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "Plan de Entrenamiento y Carreras:\n\n• 1 - 2 y 3 de Septiembre ENTRENAMIENTOS 9:00-14:00\n• Día 3 REUNIÓN DE CARRERA 18:00 en Hotel Pucon\n• Días 4 o 5 CARRERA (la fecha dependerá de la cantidad de inscriptos y las condiciones climáticas)."
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": "Para más información e inscripciones, los interesados deben contactarse vía email a:"
+    },
+    {
+      "tipo": "link",
+      "orden": 5,
+      "texto": "contacto@escuelanacional.cl",
+      "url": "mailto:contacto@escuelanacional.cl",
+      "esPdf": false
+    }
+  ]
+}

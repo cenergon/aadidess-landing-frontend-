@@ -1,0 +1,49 @@
+{
+  "id": 6,
+  "titulo": "Llega una nueva edición del Campeonato Sudamericano de Sincro",
+  "postedAt": "2019-08-19T14:53:00-03:00",
+  "createdAt": "2019-08-19T14:53:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "Chapelco, San Martín de los Andes. Esta actividad ya se convirtió en un clásico de cada temporada, donde esquiadores y snowboarders realizan presentaciones en equipo, demostrando su gran técnica, sincronicidad y originalidad."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "Las categorías en las que es posible participar en la edición 2019, son:\n\nCategoría Escuela\nCategoría Clubes (entrenadores y niños)\nCategoría Libre"
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "Si estás interesado en participar con tu equipo, podés consultar el reglamento de la competencia y/o inscribirte a través de los siguientes enlaces:"
+    },
+    {
+      "tipo": "link",
+      "orden": 4,
+      "texto": "Reglamento del Campeonato Sudamericano de Sincro",
+      "url": "https://drive.google.com/file/d/1h-gdi9WQPq4HoujWfa9kj3WFGuuJUVRw/view?usp=sharing",
+      "esPdf": false
+    },
+    {
+      "tipo": "link",
+      "orden": 5,
+      "texto": "Formulario de inscripción",
+      "url": "https://docs.google.com/forms/d/1ihVLaC0O8xGofpWS01Qh1aYQhclZgAXilbxO8Aprv68/edit?usp=sharing",
+      "esPdf": false
+    },
+    {
+      "tipo": "texto",
+      "orden": 6,
+      "contenido": "Para más información, enviá un email a"
+    },
+    {
+      "tipo": "link",
+      "orden": 7,
+      "texto": "administracion@aadidess.com",
+      "url": "mailto:administracion@aadidess.com",
+      "esPdf": false
+    }
+  ]
+}

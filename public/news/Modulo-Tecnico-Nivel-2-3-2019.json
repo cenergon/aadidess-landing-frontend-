@@ -1,0 +1,77 @@
+{
+  "id": 5,
+  "titulo": "Módulo Técnico de Nivel 2 y 3 de Esquí",
+  "postedAt": "2019-07-25T14:23:00-03:00",
+  "createdAt": "2019-07-25T14:23:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "*Snowboard: cursado en septiembre"
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "Nueva modulación: el modulo en pista se dividirá en 3 bloques"
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "Bloque Básicos (4 días) Nivel 2: Encadenamientos Básicos\n\nNivel 3: Encadenamientos Básicos, Vuelta en Cuña, Vuelta Elemental"
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": "Bloque Perfeccionamiento (5 días) Nivel 2 y Nivel 3: Súper, Corto"
+    },
+    {
+      "tipo": "texto",
+      "orden": 5,
+      "contenido": "Bloque Técnico (5 días) Nivel 2 y Nivel 3: Bumps, Fuera de pista"
+    },
+    {
+      "tipo": "texto",
+      "orden": 6,
+      "contenido": "Bloque teóricas: una fecha en septiembre con las materias teóricas de cada nivel para todas las disciplinas"
+    },
+    {
+      "tipo": "texto",
+      "orden": 7,
+      "contenido": "Durante el mes de Agosto y Septiembre los cursantes podrán inscribirse a rendir cada uno de los módulos en alguna de las fechas propuestas en el calendario (3 fechas por cada módulo), de esta manera podrán organizar sus tiempos de trabajo durante la temporada."
+    },
+    {
+      "tipo": "texto",
+      "orden": 8,
+      "contenido": "Inscripciones:\nla inscripción al módulo podrá ser general (abonando el valor completo del módulo) y elegir las fechas donde cursará cada uno de los bloques o se podrá inscribir y abonar por cada bloque a medida que se curse (respetando las fechas límites de inscripción para cada uno)"
+    },
+    {
+      "tipo": "texto",
+      "orden": 9,
+      "contenido": "Cursado en pista:\ncada bloque tiene una duración entre 4 y 5 días, al final de cada uno se evaluaran los gestos cursados y de no aprobarlos se rendirán en fecha de recuperatorio a fin de temporada, aquellos cursantes que no aprueben y quieran podrán recursar el bloque desaprobado (abonando su arancel y si hubiera una fecha disponible)"
+    },
+    {
+      "tipo": "texto",
+      "orden": 10,
+      "contenido": "Importante:\nEl alumno que se inscriba a un bloque y no se presente, se considerara ausente y deberá inscribirse, abonar y cursar en otra fecha disponible."
+    },
+    {
+      "tipo": "texto",
+      "orden": 11,
+      "contenido": "Inscripciones para cada bloque: hasta el martes anterior a cada fecha."
+    },
+    {
+      "tipo": "link",
+      "orden": 12,
+      "texto": "CALENDARIO NIVEL 2",
+      "url": "academico/calendario",
+      "esPdf": false
+    },
+    {
+      "tipo": "link",
+      "orden": 13,
+      "texto": "CALENDARIO NIVEL 3",
+      "url": "academico/calendario",
+      "esPdf": false
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": 12,
+  "titulo": "Resultados del Memorial Quito Astete y Campeonato Argentino de Instructores 2019",
+  "postedAt": "2019-10-01T13:43:00-03:00",
+  "createdAt": "2019-10-01T13:43:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "El sábado 28 de septiembre se llevaron a cabo en Cerro Chapelco el Campeonato Argentino de Instructores 2019 y el Memorial Quito Astete. A continuación detallamos la clasificación general de ambas carreras:"
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "Posiciones Memorial Quito Astete/CAI\n\nDamas A:\n1. Gastaldi Nicol\n2. Roncallo\n3. Koller Luciana\n\nDamas B:\n1. Tomaghelli\n2. Rondina\n\nCaballeros A:\n1. Coco Evia\n2. Tomas Soleño\n3. Matias Sopelana\n\nCaballeros B:\n1. Demian Lasry\n2. Martin Rodríguez\n3. Juan Manuel Faccio\n\nCaballeros C:\n1. Jesus Ibañez\n\nCaballeros D:\n1. Justy Olivieri"
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "Posiciones Paralelo:\n\nDamas:\n1. Parisi\n2. Roncallo\n3. Gastaldi\n\nCaballeros:\n1. Evia\n2. Lasry\n3. Sopelana"
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": "Clasificación General:\n\n1 Nicol Gastaldi\n1 Coco Evia"
+    }
+  ]
+}

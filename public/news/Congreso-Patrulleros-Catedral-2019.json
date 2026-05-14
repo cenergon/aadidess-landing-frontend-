@@ -1,0 +1,43 @@
+{
+  "id": 8,
+  "titulo": "Del 7 al 14 de septiembre se lleva a cabo el Congreso Internacional de Patrulleros en el Cerro Catedral",
+  "postedAt": "2019-09-02T13:59:00-03:00",
+  "createdAt": "2019-09-02T13:59:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "Diferentes actividades prácticas, talleres sobre aspectos médicos, avalanchas, nuevos materiales y mucho más, serán las temáticas a trabajar en el XXII Ski World Patrol Congress FIPS. Más de 230 patrulleros de más de 10 países del mundo llegarán a Catedral del 7 al 14 de septiembre."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "El jueves 29 de agosto se llevó a cabo en Living Gold un desayuno de prensa en el marco de la presentación del XXII Ski World Patrol Congress FIPS 2019, el evento internacional más importante de patrullas de esquí que en esta edición se realizará en Cerro Catedral del 7 al 14 de septiembre próximo. AADIDESS (Asoc. Argentina de Instructores de Esquí, Snowboard y Pisteros Socorristas) y Catedral Alta Patagonia S.A., a cargo de la organización, realizaron esta convocatoria donde comentaron las novedades del congreso."
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "Más de 160 asistentes de distintos países llegarán a Bariloche para capacitarse sobre las últimas actualizaciones del trabajo de patrullas de esquí y el perfeccionamiento de las técnicas de prevención y rescate en la montaña. Las actividades se realizarán tanto en pista como puertas adentro, e incluirán talleres y workshops de distintas temáticas vinculadas a rescates, aspectos médicos, RCP y primeros auxilios, avalanchas y evacuación de personas con discapacidad, entre otros."
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": "Helgamaria Salvatelli, Coordinadora General de Catedral Alta Patagonia destacó: \"El Congreso Internacional de Patrulleros es una gran oportunidad para mostrar el trabajo que hacemos en la región. Poder reunir a más de 150 referentes de diferentes especialidades en lo que a la seguridad de montaña se refiere es un momento único que debemos aprovechar. Desde Catedral trabajamos junto con AADIDESS para lograr ser sede del Congreso, y estamos a días de que suceda, estamos muy contentos y esperamos que todos aprovechen al máximo estos días de intercambio y capacitación\"."
+    },
+    {
+      "tipo": "texto",
+      "orden": 5,
+      "contenido": "\"Es un orgullo para AADIDESS como institución haber obtenido esta sede y estar a días de concretar un sueño que refleja el compromiso de nuestra asociación en la formación y el perfeccionamiento permanente de los pisteros socorristas. Deseamos brindar a los colegas de todo el mundo que nos estarán visitando un congreso de primer nivel y que puedan también conocer nuestro lugar y el trabajo arduo de los patrulleros locales. El objetivo es la excelencia, siempre y agradecemos a todas las personas y empresas que lo hacen posible, incluyendo a las autoridades de FIPS\" — Martín Bacer, Presidente de AADIDESS."
+    },
+    {
+      "tipo": "texto",
+      "orden": 6,
+      "contenido": "Entre los inscriptos figuran profesionales de Argentina, Australia, Canadá, Chile, Corea, EE UU, Francia, Italia, Nueva Zelanda, Reino Unido, Rumania, Rusia, Suecia y Suiza."
+    },
+    {
+      "tipo": "texto",
+      "orden": 7,
+      "contenido": "Las marcas, instituciones y empresas que acompañan a los organizadores del XXII Ski World Patrol Congress FIPS 2019 son: FIPS, EASP, Recco, Hub Travel, Club Hotel Catedral, Allu Argentina, Scandinavian, Bariloche White Store, Lockers Catedral, Samsara, Punta Princesa, Café Las Terrazas, Municipalidad de Bariloche, Gobierno de Río Negro y Ministerio de Cultura, Turismo y Deporte de Río Negro."
+    }
+  ]
+}

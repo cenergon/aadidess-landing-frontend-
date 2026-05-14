@@ -1,4 +1,5 @@
 $radius-md: 8px;
+$radius-sm: 6px;
 $transition-base: var(--transition-base);
 
 .escuelas-clubes {
@@ -54,7 +55,7 @@ $transition-base: var(--transition-base);
     font-family: inherit;
 
     &:hover {
-      background: var(--color-accent-glow);
+      background: var(--color-hover-bg);
       border-color: var(--color-accent);
     }
 
@@ -81,7 +82,7 @@ $transition-base: var(--transition-base);
       align-items: center;
       gap: 0.5rem;
       margin-bottom: 1.5rem;
-      scroll-margin-top: 170px; /* 89px navbar + altura aprox sticky + margen */
+      scroll-margin-top: 170px;
       transition: color var(--transition-base);
 
       .material-symbols-outlined {
@@ -108,19 +109,38 @@ $transition-base: var(--transition-base);
                 background 0.2s,
                 border-color 0.2s;
 
-    // Hover: borde celeste + fondo y sombra como en Aranceles
+    // Hover: fondo sutil, borde acento con opacidad 25% mediante color-mix
     &:hover {
-      border-color: rgba(var(--color-accent, 96, 208, 241), 0.25);
-      background: var(--color-accent-glow);
+      background: var(--color-hover-bg);
+      border-color: color-mix(in srgb, var(--color-accent) 25%, transparent);
+      // Fallback para navegadores que no soporten color-mix (opcional)
+      @supports not (border-color: color-mix(in srgb, var(--color-accent) 25%, transparent)) {
+        border-color: var(--color-accent);
+        opacity: 0.8;
+      }
       transform: translateY(-2px);
-      box-shadow: var(--shadow-lg);
+      box-shadow: var(--shadow-dropdown);
     }
 
-    // Expandido: borde celeste más suave, sin desplazamiento
+    // Expandido: borde acento más suave (15%)
     &--open {
-      border-color: rgba(var(--color-accent, 96, 208, 241), 0.15);
-      box-shadow: var(--shadow-md);
+      border-color: color-mix(in srgb, var(--color-accent) 15%, transparent);
+      @supports not (border-color: color-mix(in srgb, var(--color-accent) 15%, transparent)) {
+        border-color: var(--color-accent);
+        opacity: 0.6;
+      }
+      box-shadow: var(--shadow-dropdown);
       transform: none;
+
+      // Mantener el hover aunque esté abierto
+      &:hover {
+        background: var(--color-hover-bg);
+        border-color: color-mix(in srgb, var(--color-accent) 25%, transparent);
+        @supports not (border-color: color-mix(in srgb, var(--color-accent) 25%, transparent)) {
+          border-color: var(--color-accent);
+          opacity: 0.8;
+        }
+      }
     }
 
     &-header {
@@ -139,7 +159,7 @@ $transition-base: var(--transition-base);
       transition: background 0.2s, color var(--transition-base);
 
       &:hover {
-        background: var(--color-accent-glow);
+        background: var(--color-hover-bg);
       }
 
       .chevron {
@@ -209,20 +229,98 @@ $transition-base: var(--transition-base);
   &__acordeon {
     border: 1px solid var(--color-border);
     border-radius: $radius-md;
-    padding: 1rem;
-    transition: border-color var(--transition-base);
+    overflow: hidden;
+    transition: border-color var(--transition-base),
+                box-shadow var(--transition-base);
 
-    summary {
-      font-weight: 600;
-      cursor: pointer;
-      color: var(--color-text-primary);
-      transition: color var(--transition-base);
+    &:hover {
+      border-color: var(--color-accent);
     }
 
-    ol {
-      margin-top: 1rem;
-      padding-left: 1.2rem;
-      li { margin-bottom: 0.5rem; }
+    &--open {
+      border-color: var(--color-accent);
+      box-shadow: var(--shadow-dropdown);
+    }
+
+    &-summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 1rem 1.25rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--color-text-primary);
+      cursor: pointer;
+      background: var(--color-bg-elevated);
+      border: none;
+      font-family: inherit;
+      transition: background-color var(--transition-base);
+
+      &:hover {
+        background: var(--color-hover-bg);
+      }
+    }
+
+    &-chevron {
+      font-size: 1.3rem;
+      color: var(--color-text-secondary);
+      transition: transform 0.25s ease;
+      flex-shrink: 0;
+    }
+
+    &--open &-chevron {
+      transform: rotate(180deg);
+    }
+
+    &-contenido {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, background-color var(--transition-base);
+      background: var(--color-bg-primary);
+      border-top: 0px solid transparent;
+
+      .escuelas-clubes__acordeon--open & {
+        max-height: 700px;
+        border-top: 1px solid var(--color-border);
+      }
+
+      ol {
+        margin: 0;
+        padding: 0.5rem 1.25rem 1.25rem 2.5rem;
+
+        li {
+          font-size: 0.9rem;
+          color: var(--color-text-primary);
+          margin-bottom: 0.5rem;
+          line-height: 1.5;
+          transition: color var(--transition-base);
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .dato__links {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.2rem;
+  }
+
+  .dato__separator {
+    color: var(--color-text-secondary);
+    margin: 0 0.1rem;
+  }
+
+  .dato__telefono {
+    color: var(--color-accent);
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
     }
   }
 }

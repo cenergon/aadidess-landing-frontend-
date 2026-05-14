@@ -24,6 +24,7 @@ interface Localidad {
 export class EscuelasClubesComponent implements AfterViewInit {
   localidadActiva = signal<string | null>(null);
   escuelaAbierta = signal<string | null>(null);
+  requisitosAbierto = signal(false);
 
   private stickyTop = 0;      // altura del top de la barra fija (ej. 40px)
   private stickyHeight = 0;   // altura real de la barra de navegación
@@ -160,4 +161,19 @@ export class EscuelasClubesComponent implements AfterViewInit {
   toggleEscuela(nombre: string) {
     this.escuelaAbierta.set(this.escuelaAbierta() === nombre ? null : nombre);
   }
+
+  getEmailsArray(email: string): string[] {
+    return email.split('/').map(e => e.trim()).filter(e => e.length > 0);
+  }
+
+  getTelefonoHref(telefono: string): string {
+    // Extrae solo dígitos y el signo + al inicio
+    const limpio = telefono.replace(/[^\d+]/g, '');
+    return `tel:${limpio}`;
+  }
+
+  toggleRequisitos() {
+    this.requisitosAbierto.update(v => !v);
+  }
+  
 }

@@ -1,0 +1,84 @@
+{
+  "id": 10,
+  "titulo": "ISIA Speed Test Ski Alpine Nation Giant Slalom – Men/Women",
+  "postedAt": "2019-09-19T13:47:00-03:00",
+  "createdAt": "2019-09-19T13:47:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "Evento: Cerro Chapelco, San Martín de los Andes"
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "Fecha: Carrera: 28 septiembre 2019\nEntrenamiento: 27 septiembre 2019"
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "Organizador: Asociación Argentina de Instructores de Esquí Snowboard y Pisteros Socorristas"
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": "Inscripciones a:"
+    },
+    {
+      "tipo": "link",
+      "orden": 5,
+      "texto": "central@aadidess.com",
+      "url": "mailto:central@aadidess.com",
+      "esPdf": false
+    },
+    {
+      "tipo": "texto",
+      "orden": 6,
+      "contenido": "Fecha límite de Inscripción: 25 septiembre 2019"
+    },
+    {
+      "tipo": "texto",
+      "orden": 7,
+      "contenido": "Payments:\nCosto Inscripción: 30 Euros\nCosto Entrenamiento: free\nFecha límite de Pago: 25 septiembre 2019"
+    },
+    {
+      "tipo": "texto",
+      "orden": 8,
+      "contenido": "Datos para transferencia bancaria\n\nBanco Patagonia\nCuenta Corriente en pesos Nº:255-122873547-000\nCBU: 03402551 00122873547001\nCUIT AADIDESS: 30-65656626-0\n\nBanco HSBC\nCuenta Corriente en pesos N°:6813210203\nCBU:15006815-00068132102032\nCUIT AADIDESS: 30-65656626-0\nSucursal Bariloche\n\nEn la oficina de Bariloche podrá abonar con efectivo, Cheques personales, Tarjeta de débito o Tarjeta de Crédito Visa o Mastercard."
+    },
+    {
+      "tipo": "texto",
+      "orden": 9,
+      "contenido": "Importante:\nEn la oficina de San Martín de los Andes no se acepta efectivo, solo tarjeta de débito o tarjeta de crédito\n\nEs fundamental que al faxear o escanear el cupón de depósito o transferencia bancaria sea legible el número de operación caso contrario será rechazada la misma, (puede estar marcado con birome). El comprobante de depósito enviado por fax debe tener el sello de pago y número de comprobante visible."
+    },
+    {
+      "tipo": "texto",
+      "orden": 10,
+      "contenido": "Pista: Los Italianos, Cerro Chapelco\n\nCondiciones: ISIA Minimum Standard for the ISIA Stamp and ISIA Card"
+    },
+    {
+      "tipo": "link",
+      "orden": 11,
+      "texto": "Reglamento ISIA Standard (PDF)",
+      "url": "http://www.isiaski.org/download/rules/Minimumstandard_en.pdf",
+      "esPdf": false
+    },
+    {
+      "tipo": "texto",
+      "orden": 12,
+      "contenido": "Información Importante\n\nPases de medios de elevación y dorsales, se entregarán en la oficina de AADIDESS: Av San Martin 461, (galería del Montañés) San Martin de los Andes. el dia 27 de septiembre de 18 a 19 hs\nIntermonti Hotel, Villegas 711. Tel: +54 2972 427454\n$ 800 por persona en base dobles y triples con desayuno incluido.\nRECORDAR QUE NO SE ENTREGARÁN PASES EL DÍA DE LA COMPETENCIA\n\nSolicitamos a los competidores realizar las inscripciones en tiempo y forma para no perderse el evento.\n\nEstar atentos a los eventuales cambios en página de AADIDESS y redes sociales"
+    },
+    {
+      "tipo": "link",
+      "orden": 13,
+      "texto": "www.aadidess.com",
+      "url": "https://www.aadidess.com",
+      "esPdf": false
+    },
+    {
+      "tipo": "texto",
+      "orden": 14,
+      "contenido": "¡Gracias a todos!\n\nAADIDESS"
+    }
+  ]
+}

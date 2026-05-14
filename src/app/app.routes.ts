@@ -44,6 +44,8 @@ import { DemoTeamComponent } from './pages/demo-team/demo-team.component';
 import { PisterosSocorristasComponent } from './pages/pisteros-socorristas/pisteros-socorristas.component';
 import { SponsorsComponent } from './pages/sponsors/sponsors.component';
 import { AlquileresParaSociosComponent } from './pages/alquileres-para-socios/alquileres-para-socios.component';
+import { FAQComponent } from './pages/FAQ/FAQ.component';
+import { DelegacionesComponent } from './pages/delegaciones/delegaciones.component';
 
 
 export const routes: Routes = [
@@ -93,6 +95,8 @@ export const routes: Routes = [
     { path: 'demo-team', component: DemoTeamComponent },
     { path: 'pisteros-socorristas', component: PisterosSocorristasComponent },
     { path: 'institucional/sponsors', component: SponsorsComponent },
+    { path: 'academico/FAQ', component: FAQComponent },
+    { path: 'academico/delegaciones', component: DelegacionesComponent},
 
 
     { path: '', component: HomeComponent },

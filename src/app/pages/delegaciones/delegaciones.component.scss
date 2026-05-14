@@ -1,0 +1,159 @@
+$radius-lg: var(--radius-lg, 12px);
+$radius-md: var(--radius-md, 8px);
+$transition-smooth: var(--transition-base, 0.2s ease);
+
+.delegaciones {
+  padding: 2.5rem 1.5rem;
+  background-color: var(--color-bg-primary);
+  transition: background-color $transition-smooth;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    transition: color $transition-smooth;
+  }
+
+  // ---- Buscador ----
+  &__search {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto 2rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__search-icon {
+    position: absolute;
+    left: 0.75rem;
+    font-size: 1.3rem;
+    color: var(--color-text-secondary);
+    pointer-events: none;
+  }
+
+  &__search-input {
+    width: 100%;
+    padding: 0.6rem 1rem 0.6rem 2.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: $radius-md;
+    background-color: var(--color-bg-elevated);
+    color: var(--color-text-primary);
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: border-color $transition-smooth, box-shadow $transition-smooth;
+    outline: none;
+
+    &::placeholder {
+      color: var(--color-text-secondary);
+    }
+
+    &:focus {
+      border-color: var(--color-accent);
+      box-shadow: 0 0 0 3px rgba(96, 208, 241, 0.15);
+    }
+  }
+
+  // ---- Grid ----
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 576px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  // ---- Tarjeta ----
+  &__card {
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: $radius-lg;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: transform $transition-smooth, box-shadow $transition-smooth, border-color $transition-smooth;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--color-accent);
+    }
+  }
+
+  &__card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 1.25rem;
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-hover) 100%);
+    color: #fff;
+  }
+
+  &__card-icon {
+    font-size: 1.5rem;
+  }
+
+  &__card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 0.3px;
+  }
+
+  &__card-body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  // ---- Info ----
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--color-text-primary);
+    transition: color $transition-smooth;
+  }
+
+  &__info-icon {
+    font-size: 1.2rem;
+    color: var(--color-accent);
+    flex-shrink: 0;
+  }
+
+  &__info-text {
+    line-height: 1.4;
+  }
+
+  &__link {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--color-accent-hover);
+      text-decoration: underline;
+    }
+  }
+
+  // ---- Ícono de WhatsApp ----
+  &__whatsapp-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    fill: var(--color-accent);
+    flex-shrink: 0;
+  }
+}
