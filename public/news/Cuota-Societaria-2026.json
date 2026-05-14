@@ -1,0 +1,25 @@
+{
+  "id": 25,
+  "titulo": "Cuota Societaria 2026",
+  "postedAt": "2025-12-29T14:44:00-03:00",
+  "createdAt": "2025-12-29T14:44:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "Informamos a nuestros socios que la cuota anual societaria 2026 es de $150.000, y la cuota Pistero Socorrista es de $75.000."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "La misma puede ser abonada con un descuento del 15% hasta el 30/6/26 inclusive. Una vez realizado el pago, por favor enviar el comprobante a la siguiente dirección de correo electrónico:"
+    },
+    {
+      "tipo": "link",
+      "orden": 3,
+      "texto": "central@aadidess.com",
+      "url": "mailto:central@aadidess.com",
+      "esPdf": false
+    }
+  ]
+}

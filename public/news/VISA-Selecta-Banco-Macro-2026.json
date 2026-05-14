@@ -1,0 +1,44 @@
+{
+  "id": 23,
+  "titulo": "VISA Selecta (Banco Macro)",
+  "postedAt": "2026-05-14T10:00:00-03:00",
+  "createdAt": "2026-05-14T10:00:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "Hasta 12 cuotas sin interés abonando con tu tarjeta de crédito VISA Selecta del Banco Macro. Válido del 01/06/2026 al 30/09/2026 únicamente para pagos de forma presencial con tu tarjeta física en nuestra oficina central."
+    },
+    {
+      "tipo": "link",
+      "orden": 2,
+      "texto": "Morales 483, PB, S.C. de Bariloche",
+      "url": "https://maps.app.goo.gl/iXJ4aW5uWAtaQ5Zh7",
+      "esPdf": false
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "o por teléfono de lunes a viernes de 10 a 14 hs."
+    },
+    {
+      "tipo": "link",
+      "orden": 4,
+      "texto": "(+54) 294 442-8789",
+      "url": "tel:+542944428789",
+      "esPdf": false
+    },
+    {
+      "tipo": "link",
+      "orden": 5,
+      "texto": "(+54) 294 443-6072",
+      "url": "tel:+542944436072",
+      "esPdf": false
+    },
+    {
+      "tipo": "texto",
+      "orden": 6,
+      "contenido": "Gracias, Saludos!"
+    }
+  ]
+}

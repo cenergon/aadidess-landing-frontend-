@@ -1,0 +1,35 @@
+{
+  "id": 14,
+  "titulo": "Simposio teórico-técnico de Esquí N5 y Snowboard N4 y N5 en Cerro Catedral",
+  "postedAt": "2019-10-04T19:09:00-03:00",
+  "createdAt": "2019-10-04T19:09:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "A partir del 7 de octubre próximo se llevará a cabo en Cerro Catedral un nuevo Simposio Teórico-Técnico de Esquí N5 y de Snowboard N4 y N5 organizado por AADIDESS. El mismo está destinado a los profesores que dictan cursos en las distintas delegaciones que conforman la asociación, con el objetivo de unificar los criterios en los procesos de enseñanza-aprendizaje con los cursantes."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "El simposio, para ambas disciplinas, es de carácter obligatorio y está planteado como un reentrenamiento de carácter técnico. Se entregará certificado de asistencia con concurrencia a la totalidad de las actividades."
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "AADIDESS asume los costos de viáticos, traslados, almuerzos y alojamiento en el hotel designado por la asociación para profesores provenientes de otras delegaciones que hayan estado activos en el dictado de cursos 2019, al igual que los almuerzos para todos los profesores activos este año, incluyendo Delegación Catedral."
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": "Por favor, confirmar inscripciones vía email a"
+    },
+    {
+      "tipo": "link",
+      "orden": 5,
+      "texto": "administracion@aadidess.com",
+      "url": "mailto:administracion@aadidess.com",
+      "esPdf": false
+    }
+  ]
+}

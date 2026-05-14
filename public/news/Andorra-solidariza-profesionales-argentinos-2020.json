@@ -1,0 +1,33 @@
+{
+  "id": 18,
+  "titulo": "Andorra se solidariza con profesionales argentinos que se encuentran trabajando en sus centros de esquí",
+  "postedAt": "2020-03-15T18:58:00-03:00",
+  "createdAt": "2020-03-15T18:58:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "El presidente de Ski Andorra, Joan Villadomat, comunicó oficialmente a AADIDESS lo dispuesto junto con las autoridades de dicho país para los profesionales argentinos que se encontraban trabajando en Pas de la Casa, Grau Roig y Ordino Arcalis hasta el momento en el que, para evitar la propagación del coronavirus, fueron cerrados, poniéndole fin a la temporada invernal en dicho país."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "Al respecto, Villadomat expresó: \"A partir de mañana comenzaremos a liquidar los contratos hasta el 31 de marzo inclusive. Todos pueden permanecer en los alojamientos de las estaciones de esquí, donde contamos con aprovisionamientos y la comida necesaria para que no les falte nada. La frontera se está regulando junto al estado español y al francés para que no entren turistas, pero sí hay acceso de provisiones para quienes permanecerán aquí. Además, quiero reiterar que lo importante es el aislamiento, ya que al ser factores principalmente de transmisión del virus, no se los puede exponer a ellos ni al resto de la población\"."
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "En relación a cómo será el regreso de los profesionales a la Argentina, señaló que \"despacio se irá organizando el procedimiento con la Embajada Argentina y con el Gobierno de Andorra con calma para que quienes quieran puedan ir volviendo, o cambiar las fechas de sus vuelos a quienes tengan pasajes en fechas que han sido ya canceladas. Se los ayudará para que, dentro de las restricciones vigentes, puedan resolver su situación personal con el apoyo de las autoridades andorranas y desde las estaciones de esquí también estamos a disposición para colaborar absolutamente con todos ellos\"."
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": "Se espera que a la brevedad esta disposición se establezca también para los profesionales que se encuentran trabajando en los centros administrados por la otra firma concesionaria.\n\nCabe señalar que el Vice Ministro de Andorra destacó en las últimas horas que van a contemplar la situación de los trabajadores temporales que se encuentran allí varados por esta situación de fuerza mayor que se vive a nivel mundial, ya que son considerados como factores de gran valor para la economía y para la sociedad de esa región."
+    },
+    {
+      "tipo": "texto",
+      "orden": 5,
+      "contenido": "Desde AADIDESS agradecemos inmensamente este gesto y la solidaridad manifestada tanto por Ski Andorra como por las autoridades públicas para colaborar con nuestros socios en este difícil momento."
+    }
+  ]
+}

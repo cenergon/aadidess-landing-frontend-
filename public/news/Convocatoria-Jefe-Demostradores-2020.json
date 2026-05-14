@@ -1,0 +1,52 @@
+{
+  "id": 17,
+  "titulo": "Convocatoria abierta para Jefe de Demostradores (Esquí y Snowboard)",
+  "postedAt": "2020-02-27T19:06:00-03:00",
+  "createdAt": "2020-02-27T19:06:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "Ya se encuentra abierta la convocatoria para Jefe de Demostradores, quien estará a cargo del Argentina Demo Team de cara al próximo Interski que se realizará en 2023 en Levi, Finlandia. Los puestos a cubrir son dos: Jefe de Demostradores de Esquí y Jefe de Demostradores de Snowboard, y la fecha límite de inscripción es el 15 de mayo de 2020."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "Los requisitos para postularse son:\n. Ser profesor Nivel 5.\n. Haber asistido por lo menos a 1 Interski.\n. Capacidad de liderazgo. Capacidad de negociación y resolución de conflictos.\n. Capacidad técnica y coreográfica.\n. Presentación del Plan de Trabajo.\n. Conocer el Reglamento de Demostradores y Estatuto de la AADIDESS, si te interesa postularte y no estás al tanto de esto, solicitalos a:"
+    },
+    {
+      "tipo": "link",
+      "orden": 3,
+      "texto": "administracion@aadidess.com",
+      "url": "mailto:administracion@aadidess.com",
+      "esPdf": false
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": ". Estudios Secundarios Completos.\n. Manejo de 1 o más Idiomas (además del español nativo)."
+    },
+    {
+      "tipo": "texto",
+      "orden": 5,
+      "contenido": "Tareas a realizar por el Jefe de Demo:\n· Formular, planificar, coordinar, administrar y controlar conjuntamente con la Comisión Directiva de AADIDESS el proceso de selección del equipo de demostradores de Argentina de acuerdo al Reglamento de Demostradores.\n· Desarrollar y ejecutar los entrenamientos y actividades con el fin de garantizar el buen desempeño del equipo en instancias previas, durante y posteriores al Interski.\n· Proponer el plan general del Equipo de Demostradores en función al Reglamento vigente.\n· Establecer contacto directo, efectivo y permanente con los Seleccionados, logrando un sentido de pertenencia de estos hacia el equipo y la Asociación.\n· Desarrollar, formular e implementar el plan de trabajo. Desarrollar, formular y proponer los workshops prácticos y teóricos a presentar.\n· Emitir Informes a la Comisión Directiva de los avances del equipo. Coordinar y Controlar las tareas del equipo de trabajo a su cargo.\n· Trabajar conjuntamente con la Comisión Directiva en la búsqueda de sponsors y toda actividad relacionada a la búsqueda de recursos para el equipo. (demostraciones, eventos, contacto con posibles sponsors y marcas interesadas en ser representadas por el equipo de demostradores)"
+    },
+    {
+      "tipo": "texto",
+      "orden": 6,
+      "contenido": "Los requisitos son EXCLUYENTES."
+    },
+    {
+      "tipo": "texto",
+      "orden": 7,
+      "contenido": "Si estás interesado en postularte, enviá tu CV a:"
+    },
+    {
+      "tipo": "link",
+      "orden": 8,
+      "texto": "administracion@aadidess.com",
+      "url": "mailto:administracion@aadidess.com",
+      "esPdf": false
+    }
+  ]
+}

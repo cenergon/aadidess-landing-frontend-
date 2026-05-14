@@ -1,0 +1,25 @@
+{
+  "id": 24,
+  "titulo": "Gestiones 2025",
+  "postedAt": "2025-12-30T16:08:00-03:00",
+  "createdAt": "2025-12-30T16:08:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "Durante el presente año, nuestra asociación llevó adelante numerosas gestiones que requirieron el trabajo articulado de sus distintas áreas, abordando de manera integral los diversos temas que forman parte de nuestra misión institucional."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "A continuación, compartimos un informe que sintetiza algunas de las acciones desarrolladas, las cuales reflejan el firme compromiso de nuestra institución con la formación continua, el desarrollo profesional y el crecimiento sostenido de los instructores de esquí, snowboard y pisteros socorristas de la Argentina."
+    },
+    {
+      "tipo": "link",
+      "orden": 3,
+      "texto": "Ver Informe",
+      "url": "docs/AA-INFORME-GESTION-2025.pdf",
+      "esPdf": true
+    }
+  ]
+}

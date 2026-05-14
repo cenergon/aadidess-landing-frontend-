@@ -1,0 +1,27 @@
+{
+  "id": 26,
+  "titulo": "Pases 2026: Información oficial de Catedral Alta Patagonia S.A. para instructores independientes y de escuelas",
+  "postedAt": "2025-12-02T14:37:00-03:00",
+  "createdAt": "2025-12-02T14:37:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "Comunicamos a los instructores independientes y a las escuelas la información oficial de Catedral Alta Patagonia S.A. para la adquisición de los pases para la Temporada 2026."
+    },
+    {
+      "tipo": "link",
+      "orden": 2,
+      "texto": "Pase instructor independiente 2026",
+      "url": "docs/Pase-instructor-INDEPENDIENTES-2026.pdf",
+      "esPdf": true
+    },
+    {
+      "tipo": "link",
+      "orden": 3,
+      "texto": "Pase instructor escuela 2026",
+      "url": "docs/Pase-instructor-Escuela-2026.pdf",
+      "esPdf": true
+    }
+  ]
+}

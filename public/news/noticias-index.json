@@ -78,9 +78,107 @@
   },
   {
     "id": 12,
-    "titulo": "Resultados del Memorial Quito Astete y Campeonato Argentino de Instructores 2019",
+    "titulo": "Quito Astete",
     "postedAt": "2019-10-01T13:43:00-03:00",
     "ruta": "news/Resultados-Memorial-Quito-Astete-CAI-2019.json",
-    "resumen": "El sábado 28 de septiembre en Cerro Chapelco se disputaron el Campeonato Argentino de Instructores y el Memorial Quito Astete. Clasificación completa por categorías: Damas A/B, Caballeros A/B/C/D, Paralelo y General."
+    "resumen": "Resultados del Campeonato Argentino de Instructores 2019 y el Memorial Quito Astete, disputados el 28 de septiembre en Cerro Chapelco. Clasificación por categorías."
+  },
+  {
+    "id": 13,
+    "titulo": "Resultados del Campeonato Sudamericano de Sincro 2019",
+    "postedAt": "2019-10-01T13:45:00-03:00",
+    "ruta": "news/Resultados-Sudamericano-Sincro-2019.json",
+    "resumen": "El sábado 28 de septiembre en Cerro Chapelco se realizó el Campeonato Sudamericano de Sincro 2019. Ski MAX se consagró campeón. También se premiaron figuras obligatoria, técnica y show. Lista de agradecimientos."
+  },
+  {
+    "id": 14,
+    "titulo": "Simposio teórico-técnico de Esquí N5 y Snowboard N4 y N5 en Cerro Catedral",
+    "postedAt": "2019-10-04T19:09:00-03:00",
+    "ruta": "news/Simposio-Teórico-Técnico-N5-N4-N5-2019.json",
+    "resumen": "Del 7 de octubre en Cerro Catedral, simposio obligatorio para profesores de Esquí N5 y Snowboard N4/N5. AADIDESS cubre viáticos y alojamiento para profesores de otras delegaciones. Inscripciones vía email."
+  },
+  {
+    "id": 15,
+    "titulo": "Solicitud de Homologación Certificado Profesional para Instructores de Esquí (EFPEM-Andorra)",
+    "postedAt": "2019-11-10T19:08:00-03:00",
+    "ruta": "news/Homologacion-Certificado-Profesional-EFPEM-Andorra-2019.json",
+    "resumen": "La EFPEM informa que los instructores ya pueden solicitar el reconocimiento profesional en Andorra mediante trámite online. Descargá el formulario y completá tu solicitud."
+  },
+  {
+    "id": 16,
+    "titulo": "Ya están disponibles las estampillas ISIA 2020",
+    "postedAt": "2020-02-20T19:07:00-03:00",
+    "ruta": "news/Estampillas-ISIA-2020.json",
+    "resumen": "Instructores Nivel 3 o superior con cuota al día pueden solicitar la estampilla ISIA 2020, que avala internacionalmente su nivel. Enviar email a administracion@aadidess.com."
+  },
+  {
+    "id": 17,
+    "titulo": "Convocatoria abierta para Jefe de Demostradores (Esquí y Snowboard)",
+    "postedAt": "2020-02-27T19:06:00-03:00",
+    "ruta": "news/Convocatoria-Jefe-Demostradores-2020.json",
+    "resumen": "Se busca Jefe de Demostradores de Esquí y Snowboard para el Argentina Demo Team rumbo al Interski 2023 en Finlandia. Requisitos: Nivel 5, haber asistido a un Interski, capacidad técnica y de liderazgo. Inscripción hasta el 15/5/2020."
+  },
+  {
+    "id": 18,
+    "titulo": "Andorra se solidariza con profesionales argentinos que se encuentran trabajando en sus centros de esquí",
+    "postedAt": "2020-03-15T18:58:00-03:00",
+    "ruta": "news/Andorra-solidariza-profesionales-argentinos-2020.json",
+    "resumen": "Ante el cierre de estaciones por coronavirus, Ski Andorra liquidará contratos hasta el 31/3, garantizará alojamiento y comida, y organizará el regreso con ayuda de embajada y gobierno. AADIDESS agradece la solidaridad."
+  },
+  {
+    "id": 19,
+    "titulo": "Comunicado Institucional - Coronavirus (COVID-19)",
+    "postedAt": "2020-03-18T18:57:00-03:00",
+    "ruta": "news/Comunicado-Institucional-Coronavirus-2020.json",
+    "resumen": "AADIDESS informa que está procediendo según indican las autoridades nacionales ante la pandemia. Se solicita denunciar incumplimientos de cuarentena, y se evaluarán sanciones a socios que no cumplan."
+  },
+  {
+    "id": 20,
+    "titulo": "Información Importante para socios AADIDESS en EEUU y Canadá",
+    "postedAt": "2020-03-22T18:53:00-03:00",
+    "ruta": "news/Informacion-Importante-EEUU-Canada-2020.json",
+    "resumen": "El Gobierno Argentino habilitó vuelos de repatriación. Se informan links a cancillería, consulado en Toronto, ministerio de salud y OMS. Contacto vía email a administracion@aadidess.com."
+  },
+  {
+    "id": 21,
+    "titulo": "Convocatoria Para Postulantes al Cargo de Delegado Político de la Asociación",
+    "postedAt": "2026-03-02T08:00:00-03:00",
+    "ruta": "news/Convocatoria-Delegado-Politico-2026.json",
+    "resumen": "Elección de Delegados Políticos por nuevo término de cuatro años. La votación será el 17/04/2026 en Bariloche. Postulaciones vía email hasta el 10/04/2026. Requisitos según Artículos 23 y 24 del Estatuto."
+  },
+  {
+    "id": 22,
+    "titulo": "Información importante sobre actividades académicas en Andorra",
+    "postedAt": "2026-01-20T18:33:00-03:00",
+    "ruta": "news/Actividades-academicas-Andorra-2026.json",
+    "resumen": "Inscripciones abiertas del 9 al 20 de marzo vía Campus Virtual. Exámenes de ingreso nivel 1 y reentrenos de esquí y snowboard. Fecha tentativa: 26 al 29 de marzo."
+  },
+  {
+    "id": 23,
+    "titulo": "VISA Selecta (Banco Macro)",
+    "postedAt": "2026-05-14T10:00:00-03:00",
+    "ruta": "news/VISA-Selecta-Banco-Macro-2026.json",
+    "resumen": "Hasta 12 cuotas sin interés con tarjeta VISA Selecta del Banco Macro, vigente del 01/06/2026 al 30/09/2026 en oficina central de Bariloche o por teléfono."
+  },
+  {
+    "id": 24,
+    "titulo": "Gestiones 2025",
+    "postedAt": "2025-12-30T16:08:00-03:00",
+    "ruta": "news/Gestiones-2025.json",
+    "resumen": "AADIDESS presenta un informe con las principales gestiones realizadas durante 2025, destacando el trabajo en formación, desarrollo profesional y crecimiento institucional."
+  },
+  {
+    "id": 25,
+    "titulo": "Cuota Societaria 2026",
+    "postedAt": "2025-12-29T14:44:00-03:00",
+    "ruta": "news/Cuota-Societaria-2026.json",
+    "resumen": "Cuota anual 2026: $150.000 (socios) y $75.000 (pisteros socorristas). Descuento del 15% por pago hasta el 30/6/26. Enviar comprobante a central@aadidess.com."
+  },
+  {
+    "id": 26,
+    "titulo": "Pases 2026: Información oficial de Catedral Alta Patagonia S.A. para instructores independientes y de escuelas",
+    "postedAt": "2025-12-02T14:37:00-03:00",
+    "ruta": "news/Pases-2026-Instructores-Independientes-Escuelas.json",
+    "resumen": "Catedral Alta Patagonia S.A. publicó la información para la adquisición de pases de temporada 2026 para instructores independientes y escuelas. Descargá los documentos adjuntos."
   }
 ]

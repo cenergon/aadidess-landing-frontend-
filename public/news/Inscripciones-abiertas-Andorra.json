@@ -32,7 +32,14 @@
     {
       "tipo": "texto",
       "orden": 6,
-      "contenido": "Por dudas y consultas puntuales, podés comunicarte al área de cursos a secretaria@aadidess.com"
+      "contenido": "Por dudas y consultas puntuales, podés comunicarte al área de cursos."
+    },
+    {
+      "tipo": "link",
+      "orden": 7,
+      "texto": "secretaria@aadidess.com",
+      "url": "mailto:secretaria@aadidess.com",
+      "esPdf": false
     }
   ]
 }

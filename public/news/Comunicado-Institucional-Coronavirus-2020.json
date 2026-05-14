@@ -1,0 +1,28 @@
+{
+  "id": 19,
+  "titulo": "Comunicado Institucional – Coronavirus (COVID-19)",
+  "postedAt": "2020-03-18T18:57:00-03:00",
+  "createdAt": "2020-03-18T18:57:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "Frente a la situación del coronavirus (COVID-19) que se está viviendo a nivel mundial, desde AADIDESS se está procediendo tal como las autoridades nacionales competentes nos indicaron, notificando a socios que están afuera, haciéndoles llegar todas las recomendaciones, realizando las denuncias como corresponde en los casos que lo ameritan."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "Entendemos que estamos cumpliendo con lo que corresponde y que, además, todos como ciudadanos tenemos el deber cívico de denunciar con el respaldo de información fehaciente de manera personal aquellos casos en los que tengamos la certeza que no están cumpliendo con la cuarentena, y poniendo en riesgo al resto de la sociedad."
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "Una vez realizada la denuncia correspondiente ante las autoridades nacionales competentes, quien desee puede notificarlo también a nuestra asociación, para que, llegado el caso de que se compruebe el incumplimiento de algún socio a lo solicitado por el estado, desde AADIDESS se evalúe la sanción correspondiente."
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": "La colaboración de todos (autoridades públicas, instituciones, ciudadanos) es fundamental para revertir esta situación. La consciencia social en estos momentos es fundamental. Todos queremos lo mejor. Desde nuestro lugar, seguiremos trabajando en este sentido."
+    }
+  ]
+}

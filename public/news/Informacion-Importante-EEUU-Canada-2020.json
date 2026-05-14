@@ -1,0 +1,88 @@
+{
+  "id": 20,
+  "titulo": "Información Importante para socios AADIDESS en EEUU y Canadá",
+  "postedAt": "2020-03-22T18:53:00-03:00",
+  "createdAt": "2020-03-22T18:53:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "Desde AADIDESS comunicamos a nuestros socios que el Gobierno Argentino dispuso la habilitación de vuelos puntuales de Aerolíneas Argentinas y de otras empresas para repatriar a los más de 20.000 argentinos que se encuentran en el exterior."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "Quienes se encuentren en esta situación, pueden acceder a los siguientes links donde encontrarán información oficial al respecto. En ambos sitios encontrarán formularios de contacto y demás datos valiosos para notificar su situación y que las autoridades nacionales puedan asistirlos en cada caso."
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "Además, si todavía no lo hicieron, pueden enviar un correo indicando en qué lugar se encuentran, datos de contacto y qué fecha tenían prevista para su regreso a Argentina."
+    },
+    {
+      "tipo": "link",
+      "orden": 4,
+      "texto": "administracion@aadidess.com",
+      "url": "mailto:administracion@aadidess.com",
+      "esPdf": false
+    },
+    {
+      "tipo": "texto",
+      "orden": 5,
+      "contenido": "Desde nuestra institución transmitiremos estos datos a las autoridades públicas correspondientes, tal como se nos ha solicitado, ya que ellos son quienes dan seguimiento a cada caso para resolver la situación."
+    },
+    {
+      "tipo": "texto",
+      "orden": 6,
+      "contenido": "Toda la información de los procedimientos, la información necesaria para la crisis causada por el coronavirus en Estados Unidos y la respuesta de los consulados argentinos puede ser consultada en este link:"
+    },
+    {
+      "tipo": "link",
+      "orden": 7,
+      "texto": "Representaciones de la Cancillería Argentina",
+      "url": "https://cancilleria.gob.ar/es/representaciones",
+      "esPdf": false
+    },
+    {
+      "tipo": "texto",
+      "orden": 8,
+      "contenido": "Quienes se encuentren en Canadá, pueden chequear toda la información correspondiente al coronavirus en el Consulado General de Toronto, accediendo al siguiente link:"
+    },
+    {
+      "tipo": "link",
+      "orden": 9,
+      "texto": "Consulado General de Argentina en Toronto",
+      "url": "https://ctoro.cancilleria.gob.ar/",
+      "esPdf": false
+    },
+    {
+      "tipo": "texto",
+      "orden": 10,
+      "contenido": "Solicitamos también que lean en el siguiente link la información oficial del Ministerio de Salud de la Nación sobre coronavirus a tener en cuenta y que respeten de manera estricta el aislamiento y demás indicaciones una vez que logren llegar a Argentina para evitar el contagio del virus:"
+    },
+    {
+      "tipo": "link",
+      "orden": 11,
+      "texto": "Preguntas frecuentes - Ministerio de Salud de la Nación",
+      "url": "https://www.argentina.gob.ar/salud/coronavirus/preguntasfrecuentes",
+      "esPdf": false
+    },
+    {
+      "tipo": "texto",
+      "orden": 12,
+      "contenido": "También pueden acceder a la información oficial de la Organización Mundial de la Salud sobre coronavirus haciendo click en el siguiente link:"
+    },
+    {
+      "tipo": "link",
+      "orden": 13,
+      "texto": "Recomendaciones de la OMS para el público",
+      "url": "https://www.who.int/es/emergencies/diseases/novel-coronavirus-2019/advice-for-public",
+      "esPdf": false
+    },
+    {
+      "tipo": "texto",
+      "orden": 14,
+      "contenido": "La salud es lo primero. Nos cuidamos entre todos."
+    }
+  ]
+}

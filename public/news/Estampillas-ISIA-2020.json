@@ -1,0 +1,30 @@
+{
+  "id": 16,
+  "titulo": "Ya están disponibles las estampillas ISIA 2020",
+  "postedAt": "2020-02-20T19:07:00-03:00",
+  "createdAt": "2020-02-20T19:07:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "Como cada año, ya están disponibles las estampillas ISIA 2020 para Instructores N3 o superior que tengan su cuota al día."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "Es importante contar con ella ya que de esa manera la International Ski Instructor Association avala internacionalmente tu nivel."
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "Para solicitar la tuya, enviá un correo a:"
+    },
+    {
+      "tipo": "link",
+      "orden": 4,
+      "texto": "administracion@aadidess.com",
+      "url": "mailto:administracion@aadidess.com",
+      "esPdf": false
+    }
+  ]
+}

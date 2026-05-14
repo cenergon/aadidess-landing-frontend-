@@ -1,0 +1,40 @@
+{
+  "id": 21,
+  "titulo": "Convocatoria Para Postulantes al Cargo de Delegado Político de la Asociación",
+  "postedAt": "2026-03-02T08:00:00-03:00",
+  "createdAt": "2026-03-02T08:00:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "La Comisión Directiva de AADIDESS (Asociación Argentina de Instructores de Esquí, Snowboard y Pisteros Socorristas) comunica a sus asociados la realización de la elección de Delegados Políticos por un nuevo término de cuatro ejercicios, por vencimiento de mandato de los actuales, conforme al Artículo 16 y concordantes de su Estatuto Social, que tendrá lugar en la sede de la Asociación ubicada en calle Morales N°483 de la ciudad de San Carlos de Bariloche el día 17/04/2026."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "Quienes estén interesados en postularse deberán hacerlo vía mail a administracion@aadidess.com a partir de la fecha y hasta el 10/04/2026 a las 12 hs (del mediodía), sin excepción, teniendo en cuenta los requisitos que se detallan a continuación."
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "Requisitos para ser Delegado\n\nARTÍCULO 23: Para ser delegado se debe reunir los siguientes requisitos:\n\na) Ser socio activo (Diplomado) de la Asociación nivel Nacional, Nivel 3 o superior, y contar como mínimo con tres (3) años de antigüedad como tal, o reunir la condición de socio vitalicio u honorario de corresponder.\n\nb) Estar debidamente habilitado por este Estatuto para ocupar cargos directivos.\n\nd) No contar con una sanción disciplinaria en cumplimiento, situación que suspende automáticamente la representatividad, ni antecedentes penales.\n\ne) No mantener deudas pendientes de pago (atrasadas) con la Asociación.\n\nf) Estar al día en el pago de las cuotas sociales.\n\ng) No encontrarse desempeñando cargos en otra asociación vinculada y/o afín a la enseñanza del esquí, snowboard o pisteros socorristas.\n\nEn el caso del inciso a), para el supuesto en el cual una delegación contase con una baja registración de instructores, por decisión fundada de la comisión directiva se le podrá otorgar excepcionalmente la representación a quien posea un año de antigüedad, como así también la podrá asignarle la representación a un miembro perteneciente a la delegación más cerca de aquella que posea baja registración."
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": "ARTÍCULO 24: No pueden ser miembros Delegados e integrar los cuadros directivos las siguientes personas:\n\na) Los fallidos por quiebra, culpable o fraudulenta, hasta 10 años después de su rehabilitación.\n\nb) Los fallidos por quiebra casual o los concursados hasta cinco años después de su rehabilitación.\n\nc) Los Directores o Administradores de sociedades cuya conducta se calificara de culpable o fraudulenta hasta 10 años después de su rehabilitación.\n\nd) Los condenados con accesoria de inhabilitación de ejercer cargos públicos, hasta diez años después de cumplir la condena.\n\ne) Los condenados por hurto, robo, defraudación, cohecho, emisión de cheques sin fondos, delitos contra la fe pública, hasta 10 años después de cumplida la condena.\n\nf) Los condenados por delitos cometidos en la institución, funcionamiento y liquidación de sociedades, hasta diez años después de cumplida la condena."
+    },
+    {
+      "tipo": "texto",
+      "orden": 5,
+      "contenido": "Instamos a los interesados en participar de la presente convocatoria a leer nuestro Estatuto, a fin de informarse detalladamente sobre los requisitos de participación, las condiciones de elegibilidad y demás disposiciones aplicables en el marco de este proceso."
+    },
+    {
+      "tipo": "link",
+      "orden": 6,
+      "texto": "Estatuto Vigente AADIDESS 2026",
+      "url": "public/docs/estatuto-vigente-2026.pdf",
+      "esPdf": true
+    }
+  ]
+}

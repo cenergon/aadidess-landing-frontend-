@@ -1,0 +1,30 @@
+{
+  "id": 15,
+  "titulo": "Solicitud de Homologación Certificado Profesional para Instructores de Esquí (EFPEM-Andorra)",
+  "postedAt": "2019-11-10T19:08:00-03:00",
+  "createdAt": "2019-11-10T19:08:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "La EFPEM informa a través de AADIDESS que los instructores que necesiten obtener el reconocimiento profesional en Andorra ya pueden realizar el trámite online."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "Descargá el formulario y completá tu solicitud."
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "Para más información ingresá en:"
+    },
+    {
+      "tipo": "link",
+      "orden": 4,
+      "texto": "www.efpem.ad",
+      "url": "https://www.efpem.ad",
+      "esPdf": false
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": 13,
+  "titulo": "Resultados del Campeonato Sudamericano de Sincro 2019",
+  "postedAt": "2019-10-01T13:45:00-03:00",
+  "createdAt": "2019-10-01T13:45:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "El sábado 28 de septiembre se llevó a cabo en Cerro Chapelco el Campeonato Sudamericano de Sincro 2019."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "Compartimos a continuación la clasificación general por equipo e individuales por figura:\n\n1° Puesto: Ski MAX \"Campeón Sudamericano de Sincro\"\n2° Puesto: Outsiders\n3° Puesto: Fire On Ice\n4° Puesto: Chapelco Demo Team\n\n1° Puesto Figura Obligatoria: Outsiders\n1° Puesto Figura Técnica: Ski Max\n1° Puesto Figura Show: Fire On Ice"
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "Agradecimientos:\n\n– Cerro Chapelco y todo su equipo, y en especial a Agustín Neiman, Gerente General Nieves del Chapelco.\n– Club Lacar: Ramon Villalba, Martin Carnaghi, Marcelo Sosinowicz, Charly, Anibal, Lorenzo Cruz y equipo (¡tremendo equipo!)\n– Delegación Chapelco: Mauro Agüero y Mariana.\n– Sebastián Botanelli por acompañar con la logística y organización local.\n– Todos los Corredores y equipos que participaron del evento y ayudaron llevando material, derrapando, paleando, etc.\n– Justy Olivieri: Veedor Isia y miembro de Comisión Directiva\n– Billy Davies: Jefe del evento Sincro y miembro de Comisión Directiva\n– Carola Callelo: Secretaria Previa.\n– Sponsors: Hub Travel y AADIDESS por el aporte de los premios.\n– Pacetters: Nicol Gastaldi y Coco Evia.\n– Voluntarios en general."
+    }
+  ]
+}
