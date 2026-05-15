@@ -41,16 +41,20 @@
       </p>
     </div>
 
-    <!-- Destacados (Macro Click, Mercado Pago) -->
+    <!-- Destacados -->
     <div class="formas-pago__destacados">
       @for (destacado of destacados; track destacado.titulo) {
         <div class="formas-pago__destacado">
           <div class="formas-pago__destacado-header">
             <img [src]="getDestacadoSvg(destacado)" [alt]="destacado.titulo" class="formas-pago__destacado-logo" />
-            <span class="formas-pago__badge">¡NUEVO!</span>
+            <span class="formas-pago__badge">{{ destacado.badge }}</span>
           </div>
           <h2 class="formas-pago__subtitulo">{{ destacado.titulo }}</h2>
-          <p>{{ destacado.descripcion }}</p>
+          @if (destacado.descripcionHtml) {
+            <p [innerHTML]="getSafeHtml(destacado.descripcionHtml)"></p>
+          } @else {
+            <p>{{ destacado.descripcion }}</p>
+          }
         </div>
       }
     </div>

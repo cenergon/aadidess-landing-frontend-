@@ -1,5 +1,6 @@
-import { Component, signal, OnInit, OnDestroy } from '@angular/core';
+import { Component, signal, OnInit, OnDestroy, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 interface Banco {
   banco: string;
@@ -14,6 +15,7 @@ interface Destacado {
   svg: string;
   titulo: string;
   descripcion: string;
+  descripcionHtml?: string;
   badge: string;
 }
 
@@ -25,9 +27,10 @@ interface Destacado {
   styleUrls: ['./formas-de-pago.component.scss']
 })
 export class FormasDePagoComponent implements OnInit, OnDestroy {
+  private sanitizer = inject(DomSanitizer);
 
   copiadoId = signal<string | null>(null);
-  currentTheme = signal<string>('light'); // 'light' o 'dark'
+  currentTheme = signal<string>('light');
 
   private themeListener: (e: Event) => void;
 
@@ -72,10 +75,16 @@ export class FormasDePagoComponent implements OnInit, OnDestroy {
       descripcion: 'Si sos cliente de Banco Macro podrás abonar con Macro Click con el link de pago generado por AADIDESS y aprovechar así de los beneficios otorgados por esta entidad bancaria a nuestros asociados.',
       badge: '¡NUEVO!'
     },
+    {
+      svg: 'svgs/banco-macro.svg',
+      titulo: 'VISA Selecta (Banco Macro)',
+      descripcion: 'Hasta 12 cuotas sin interés abonando con tu tarjeta de crédito VISA Selecta del Banco Macro. Válido del 01/06/2026 al 30/09/2026 únicamente para pagos de forma presencial con tu tarjeta física en nuestra oficina central (Morales 483, PB, S.C. de Bariloche), o por teléfono al (+54) 294 442-8789 o al 294 443-6072, de lunes a viernes de 10 a 14 hs.',
+      descripcionHtml: 'Hasta 12 cuotas sin interés abonando con tu tarjeta de crédito VISA Selecta del Banco Macro. Válido del 01/06/2026 al 30/09/2026 únicamente para pagos de forma presencial con tu tarjeta física en nuestra oficina central (<a href="https://maps.app.goo.gl/iXJ4aW5uWAtaQ5Zh7" target="_blank" rel="noopener noreferrer">Morales 483, PB, S.C. de Bariloche</a>), o por teléfono al <a href="tel:+542944428789">(+54) 294 442-8789</a> o al <a href="tel:+542944436072">(+54) 294 443-6072</a>, de lunes a viernes de 10 a 14 hs.',
+      badge: '¡NUEVO!'
+    }
   ];
 
   ngOnInit(): void {
-    // Tomar el valor inicial del atributo data-theme
     const initial = document.documentElement.getAttribute('data-theme') || 'light';
     this.currentTheme.set(initial);
     window.addEventListener('theme-changed', this.themeListener);
@@ -96,7 +105,14 @@ export class FormasDePagoComponent implements OnInit, OnDestroy {
     if (this.currentTheme() === 'dark' && destacado.titulo === 'Macro Click') {
       return 'svgs/macro-blanco.svg';
     }
+    if (this.currentTheme() === 'dark' && destacado.titulo === 'VISA Selecta (Banco Macro)') {
+      return 'svgs/macro-blanco.svg';
+    }
     return destacado.svg;
+  }
+
+  getSafeHtml(html: string): SafeHtml {
+    return this.sanitizer.bypassSecurityTrustHtml(html);
   }
 
   async copiarTexto(texto: string, id: string): Promise<void> {
