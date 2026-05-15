@@ -26,20 +26,21 @@ export class SponsorBarComponent implements OnInit, OnDestroy {
 
   sponsor: Sponsor[] = [
     { imagen: 'images/sponsor/macro2.svg', alt: 'Macro', imagenDark: 'svgs/macro-blanco.svg' },
-    { imagen: 'images/sponsor/marcapais2.svg', alt: 'Argentina', height: 70, escala: 1.2 },
+    { imagen: 'images/sponsor/marcapais2.svg', alt: 'Argentina', height: 100 },
     { imagen: 'svgs/turkish-negro.svg', alt: 'Turkish Airlines', imagenDark: 'svgs/turkish-blanco.svg' },
     { imagen: 'svgs/thonet-negro.svg', alt: 'Thonet', imagenDark: 'svgs/thonet-blanco.svg', height: 30 },
-    { imagen: 'images/sponsor/hubtravel2.png', alt: 'Hub travel', height: 30, escala: 1.3 },
+    { imagen: 'images/sponsor/hubtravel2.png', alt: 'Hub travel', height: 50 },
     { imagen: 'images/sponsor/vola2.png', alt: 'Vola' },
-    { imagen: 'images/logos/oakley-negro.png', alt: 'Oakley', imagenDark: 'images/logos/oakley-blanco.png', height: 40, escala: 1.3 },
+    { imagen: 'images/logos/oakley-negro.png', alt: 'Oakley', imagenDark: 'images/logos/oakley-blanco.png', height: 55 },
     { imagen: 'images/sponsor/catedral2.png', alt: 'Catedral' }
   ];
 
-  // Nuevo: señal para saber si estamos en mobile (punto de quiebre 768px, mismo que el CSS)
-  private isMobile = signal(typeof window !== 'undefined' ? window.innerWidth <= 768 : false);
+  // Mobile detection sincronizada con la media query del CSS
+  private mobileQuery = window.matchMedia('(max-width: 768px)');
+  public isMobile = signal(this.mobileQuery.matches);
 
   // Sponsors a renderizar: duplicado SOLO en mobile, original en desktop
-  displaySponsors = computed(() => 
+  displaySponsors = computed(() =>
     this.isMobile() ? [...this.sponsor, ...this.sponsor] : this.sponsor
   );
 
@@ -48,8 +49,8 @@ export class SponsorBarComponent implements OnInit, OnDestroy {
 
   private currentTheme = signal<'light' | 'dark'>('light');
 
-  private resizeListener = () => {
-    this.isMobile.set(window.innerWidth <= 768);
+  private mobileQueryListener = (e: MediaQueryListEvent) => {
+    this.isMobile.set(e.matches);
   };
 
   ngOnInit(): void {
@@ -66,10 +67,10 @@ export class SponsorBarComponent implements OnInit, OnDestroy {
       }
     }) as EventListener);
 
-    // Escuchar cambios de tamaño de viewport
-    window.addEventListener('resize', this.resizeListener);
+    // Escuchar cambios de viewport exactamente con la misma media query que CSS
+    this.mobileQuery.addEventListener('change', this.mobileQueryListener);
 
-    // Router logic...
+    // Router logic
     this.routerSub = this.router.events
       .pipe(filter(e => e instanceof NavigationEnd))
       .subscribe(() => {
@@ -83,7 +84,7 @@ export class SponsorBarComponent implements OnInit, OnDestroy {
     if (this.routerSub) {
       this.routerSub.unsubscribe();
     }
-    window.removeEventListener('resize', this.resizeListener);
+    this.mobileQuery.removeEventListener('change', this.mobileQueryListener);
   }
 
   getImagen(sponsor: Sponsor): string {
