@@ -23,8 +23,8 @@ export class SponsorsComponent implements OnInit, OnDestroy {
     {
       nombre: 'Macro',
       link: 'https://www.macro.com.ar',
-      logoLight: 'svgs/banco-macro.svg',
-      logoDark: 'svgs/macro-blanco.svg'
+      logoLight: 'images/logos/macro-azul.png',
+      logoDark: 'images/logos/macro-blanco.png'
     },
     {
       nombre: 'Turkish Airlines',
@@ -36,7 +36,8 @@ export class SponsorsComponent implements OnInit, OnDestroy {
     {
       nombre: 'Thonet & Vander',
       link: 'https://www.thonet-vander.com',
-      logoLight: 'svgs/thonet.svg'
+      logoLight: 'svgs/thonet-negro.svg',
+      logoDark: 'svgs/thonet-blanco.svg'
     },
     {
       nombre: 'Marca País Argentina',

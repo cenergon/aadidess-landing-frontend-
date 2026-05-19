@@ -106,10 +106,19 @@
         }
       }
 
-      <!-- Theme Toggle (dentro del menú, visible solo en mobile) -->
+      <!-- Theme Toggle dentro del menú (solo mobile) -->
+      @if (isMobile()) {
+        <div class="navbar__theme-toggle-container">
+          <app-theme-toggle />
+        </div>
+      }
+    </div>
+
+    <!-- Theme Toggle en la barra (solo desktop) -->
+    @if (!isMobile()) {
       <div class="navbar__theme-toggle-container">
         <app-theme-toggle />
       </div>
-    </div>
+    }
   </div>
 </nav>

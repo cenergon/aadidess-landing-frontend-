@@ -7,58 +7,78 @@
     {
       "tipo": "texto",
       "orden": 1,
-      "contenido": "Desde AADIDESS recordamos que a partir de esta temporada invernal 2026 en Cerro Catedral se habilitará la posibilidad de desempeñarse como instructor/a independiente, exclusivamente para quienes cuenten con certificación Nivel 3 o superior otorgada por AADIDESS, vigente y con cuota societaria al día."
+      "contenido": "Si bien los detallados a continuación fueron los **requisitos informados por la Municipalidad de San Carlos de Bariloche en septiembre de 2025** para su implementación durante la temporada 2026, y encontrándonos actualmente dentro de los plazos acordados para el inicio de los trámites ante el inminente comienzo de la temporada, la Municipalidad aún **NO ha ratificado oficialmente dichos requisitos** ni ha respondido a ninguno de los intentos de comunicación realizados por AADIDESS."
     },
     {
       "tipo": "texto",
       "orden": 2,
-      "contenido": "Para acceder a esta modalidad será indispensable cumplir con los siguientes requisitos:"
+      "contenido": "Por este motivo, **AADIDESS otorgará el certificado de instructor**, a los fines de iniciar el trámite, **a todas aquellas personas que lo soliciten y que cuenten con título habilitante y cuota vigente**."
     },
     {
       "tipo": "texto",
       "orden": 3,
-      "contenido": "1. Acreditación de titulación: ser Instructor/a Nivel 3 o superior de AADIDESS, con título vigente y cuota societaria al día."
+      "contenido": "**IMPORTANTE:** La emisión de este certificado por parte de AADIDESS **NO implica ni garantiza** que la Municipalidad de San Carlos de Bariloche habilite posteriormente a la persona para trabajar."
     },
     {
       "tipo": "texto",
       "orden": 4,
-      "contenido": "2. Residencia permanente en San Carlos de Bariloche: acreditar una antigüedad mínima de cinco (5) años.\n(A tal efecto, únicamente se aceptará la presentación de: Servicios municipales, agua, luz o gas a nombre del interesado, Certificación de desempeño como instructor/a independiente en Cerro Catedral por al menos cinco (5) años)"
-    },
-    {
-      "tipo": "texto",
-      "orden": 5,
-      "contenido": "3. Documentación requerida por la Municipalidad de San Carlos de Bariloche: se recibirá desde el 2 de Mayo de 2026 hasta el 10 de junio de 2026 a fin de expedir el certificado correspondiente."
+      "contenido": "Por tal motivo, **sugerimos a cada interesado comunicarse directamente con la Municipalidad de San Carlos de Bariloche** para confirmar los requisitos y condiciones de habilitación vigentes."
     },
     {
       "tipo": "texto",
       "orden": 6,
-      "contenido": "• La documentación presentada será revisada y verificada con el proveedor del servicio indicado.\n• En caso de detectarse que el documento presentado es falsificado, se dará lugar a la intervención del Tribunal de Honor de AADIDESS, pudiendo aplicar sanciones que van desde la suspensión hasta la expulsión definitiva de la Asociación.\n• Toda solicitud ingresada con posterioridad a la fecha indicada será tramitada administrativamente y contestada en un plazo mínimo de 20 días hábiles."
+      "contenido": "Desde AADIDESS recordamos que a partir de esta temporada invernal 2026 en Cerro Catedral se habilitará la posibilidad de desempeñarse como instructor/a independiente, exclusivamente para quienes cuenten con certificación Nivel 3 o superior otorgada por AADIDESS, vigente y con cuota societaria al día."
     },
     {
       "tipo": "texto",
       "orden": 7,
-      "contenido": "El ejercicio independiente en la montaña estará sujeto a las reglamentaciones vigentes y a los controles establecidos dentro del centro de esquí."
+      "contenido": "Para acceder a esta modalidad será indispensable cumplir con los siguientes requisitos:"
     },
     {
       "tipo": "texto",
       "orden": 8,
-      "contenido": "Se recomienda a los interesados iniciar con la debida anticipación la presentación de la documentación, a fin de garantizar el cumplimiento de los plazos establecidos."
+      "contenido": "1. Acreditación de titulación: ser Instructor/a Nivel 3 o superior de AADIDESS, con título vigente y cuota societaria al día."
     },
     {
       "tipo": "texto",
       "orden": 9,
+      "contenido": "2. Residencia permanente en San Carlos de Bariloche: acreditar una antigüedad mínima de cinco (5) años.\n(A tal efecto, únicamente se aceptará la presentación de: Servicios municipales, agua, luz o gas a nombre del interesado, Certificación de desempeño como instructor/a independiente en Cerro Catedral por al menos cinco (5) años)"
+    },
+    {
+      "tipo": "texto",
+      "orden": 10,
+      "contenido": "3. Documentación requerida por la Municipalidad de San Carlos de Bariloche: se recibirá desde el 2 de Mayo de 2026 hasta el 10 de junio de 2026 a fin de expedir el certificado correspondiente."
+    },
+    {
+      "tipo": "texto",
+      "orden": 11,
+      "contenido": "• La documentación presentada será revisada y verificada con el proveedor del servicio indicado.\n• En caso de detectarse que el documento presentado es falsificado, se dará lugar a la intervención del Tribunal de Honor de AADIDESS, pudiendo aplicar sanciones que van desde la suspensión hasta la expulsión definitiva de la Asociación.\n• Toda solicitud ingresada con posterioridad a la fecha indicada será tramitada administrativamente y contestada en un plazo mínimo de 20 días hábiles."
+    },
+    {
+      "tipo": "texto",
+      "orden": 12,
+      "contenido": "El ejercicio independiente en la montaña estará sujeto a las reglamentaciones vigentes y a los controles establecidos dentro del centro de esquí."
+    },
+    {
+      "tipo": "texto",
+      "orden": 13,
+      "contenido": "Se recomienda a los interesados iniciar con la debida anticipación la presentación de la documentación, a fin de garantizar el cumplimiento de los plazos establecidos."
+    },
+    {
+      "tipo": "texto",
+      "orden": 14,
       "contenido": "Por este tema deben contactarse únicamente vía mail a:"
     },
     {
       "tipo": "link",
-      "orden": 10,
+      "orden": 15,
       "texto": "administracion@aadidess.com",
       "url": "mailto:administracion@aadidess.com",
       "esPdf": false
     },
     {
       "tipo": "texto",
-      "orden": 11,
+      "orden": 16,
       "contenido": "Atentamente,\nAdministración AADIDESS"
     }
   ]

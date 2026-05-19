@@ -7,6 +7,7 @@ interface Sponsor {
   imagen: string;
   alt: string;
   height?: number;
+  heightDark?: number;
   escala?: number;
   imagenDark?: string;
 }
@@ -25,9 +26,9 @@ export class SponsorBarComponent implements OnInit, OnDestroy {
   isHidden = signal(false);
 
   sponsor: Sponsor[] = [
-    { imagen: 'images/sponsor/macro2.svg', alt: 'Macro', imagenDark: 'svgs/macro-blanco.svg' },
+    { imagen: 'images/logos/macro-azul.png', alt: 'Macro', imagenDark: 'images/logos/macro-blanco.png', height:70, heightDark:50 },
     { imagen: 'images/sponsor/marcapais2.svg', alt: 'Argentina', height: 100 },
-    { imagen: 'svgs/turkish-negro.svg', alt: 'Turkish Airlines', imagenDark: 'svgs/turkish-blanco.svg' },
+    { imagen: 'svgs/turkish-negro.svg', alt: 'Turkish Airlines', imagenDark: 'svgs/turkish-blanco.svg', heightDark:40 },
     { imagen: 'svgs/thonet-negro.svg', alt: 'Thonet', imagenDark: 'svgs/thonet-blanco.svg', height: 30 },
     { imagen: 'images/sponsor/hubtravel2.png', alt: 'Hub travel', height: 50 },
     { imagen: 'images/sponsor/vola2.png', alt: 'Vola' },
@@ -47,7 +48,7 @@ export class SponsorBarComponent implements OnInit, OnDestroy {
   // Duración proporcional a la cantidad de logos originales (no cambia)
   scrollDuration = computed(() => this.sponsor.length * 3);
 
-  private currentTheme = signal<'light' | 'dark'>('light');
+  public currentTheme = signal<'light' | 'dark'>('light');
 
   private mobileQueryListener = (e: MediaQueryListEvent) => {
     this.isMobile.set(e.matches);
@@ -92,5 +93,17 @@ export class SponsorBarComponent implements OnInit, OnDestroy {
       return sponsor.imagenDark;
     }
     return sponsor.imagen;
+  }
+
+  /**
+   * Devuelve la altura en px que corresponde según el tema actual,
+   * usando heightDark si está definido para dark, o el height base.
+   * Si no hay ninguno, devuelve 32.
+   */
+  getSponsorHeight(sponsor: Sponsor): number {
+    const baseHeight = (this.currentTheme() === 'dark' && sponsor.heightDark != null)
+      ? sponsor.heightDark
+      : (sponsor.height ?? 32);
+    return baseHeight;
   }
 }

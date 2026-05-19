@@ -14,19 +14,52 @@
         </time>
 
         <div class="noticia-detalle__contenido">
-          @for (bloque of noticia.bloques; track bloque.orden) {
-            @if (bloque.tipo === 'texto') {
-              <p class="noticia-detalle__parrafo">{{ bloque.contenido }}</p>
-            } @else if (bloque.tipo === 'link') {
+          @for (seccion of secciones; track $index) {
+            @if (seccion.tipo === 'texto') {
+              <p
+                class="noticia-detalle__parrafo"
+                [innerHTML]="procesarTexto(seccion.contenido)"
+              ></p>
+            } @else if (seccion.tipo === 'link') {
               <div class="noticia-detalle__link-contenedor">
-                @if (bloque.esPdf) {
-                  <a [href]="bloque.url" target="_blank" class="noticia-detalle__link noticia-detalle__link--pdf">
-                    {{ bloque.texto }}
+                @if (seccion.bloque.esPdf) {
+                  <a
+                    [href]="seccion.bloque.url"
+                    target="_blank"
+                    class="noticia-detalle__link noticia-detalle__link--pdf"
+                  >
+                    {{ seccion.bloque.texto }}
                   </a>
                 } @else {
-                  <a [href]="bloque.url" target="_blank" class="noticia-detalle__link">
-                    {{ bloque.texto }}
+                  <a
+                    [href]="seccion.bloque.url"
+                    target="_blank"
+                    class="noticia-detalle__link"
+                  >
+                    {{ seccion.bloque.texto }}
                   </a>
+                }
+              </div>
+            } @else if (seccion.tipo === 'link-group') {
+              <div class="noticia-detalle__links-agrupados">
+                @for (link of seccion.links; track link.orden) {
+                  @if (link.esPdf) {
+                    <a
+                      [href]="link.url"
+                      target="_blank"
+                      class="noticia-detalle__link noticia-detalle__link--pdf"
+                    >
+                      {{ link.texto }}
+                    </a>
+                  } @else {
+                    <a
+                      [href]="link.url"
+                      target="_blank"
+                      class="noticia-detalle__link"
+                    >
+                      {{ link.texto }}
+                    </a>
+                  }
                 }
               </div>
             }

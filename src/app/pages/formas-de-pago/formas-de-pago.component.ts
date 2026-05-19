@@ -48,7 +48,7 @@ export class FormasDePagoComponent implements OnInit, OnDestroy {
       cbu: '2850662930094217735951',
       cuit: '30-65656626-0',
       alias: 'aadidess.macro',
-      svg: 'svgs/banco-macro.svg'
+      svg: 'images/logos/macro-azul.png'
     },
     {
       banco: 'Banco Galicia',
@@ -70,13 +70,13 @@ export class FormasDePagoComponent implements OnInit, OnDestroy {
 
   destacados: Destacado[] = [
     {
-      svg: 'svgs/banco-macro.svg',
+      svg: 'images/logos/macro-azul.png',
       titulo: 'Macro Click',
       descripcion: 'Si sos cliente de Banco Macro podrás abonar con Macro Click con el link de pago generado por AADIDESS y aprovechar así de los beneficios otorgados por esta entidad bancaria a nuestros asociados.',
       badge: '¡NUEVO!'
     },
     {
-      svg: 'svgs/banco-macro.svg',
+      svg: 'images/logos/macroselecta-negro.png',
       titulo: 'VISA Selecta (Banco Macro)',
       descripcion: 'Hasta 12 cuotas sin interés abonando con tu tarjeta de crédito VISA Selecta del Banco Macro. Válido del 01/06/2026 al 30/09/2026 únicamente para pagos de forma presencial con tu tarjeta física en nuestra oficina central (Morales 483, PB, S.C. de Bariloche), o por teléfono al (+54) 294 442-8789 o al 294 443-6072, de lunes a viernes de 10 a 14 hs.',
       descripcionHtml: 'Hasta 12 cuotas sin interés abonando con tu tarjeta de crédito VISA Selecta del Banco Macro. Válido del 01/06/2026 al 30/09/2026 únicamente para pagos de forma presencial con tu tarjeta física en nuestra oficina central (<a href="https://maps.app.goo.gl/iXJ4aW5uWAtaQ5Zh7" target="_blank" rel="noopener noreferrer">Morales 483, PB, S.C. de Bariloche</a>), o por teléfono al <a href="tel:+542944428789">(+54) 294 442-8789</a> o al <a href="tel:+542944436072">(+54) 294 443-6072</a>, de lunes a viernes de 10 a 14 hs.',
@@ -96,17 +96,17 @@ export class FormasDePagoComponent implements OnInit, OnDestroy {
 
   getBancoLogoSrc(banco: Banco): string {
     if (this.currentTheme() === 'dark' && banco.banco === 'Banco Macro') {
-      return 'svgs/macro-blanco.svg';
+      return 'images/logos/macro-blanco.png';
     }
     return banco.svg;
   }
 
   getDestacadoSvg(destacado: Destacado): string {
     if (this.currentTheme() === 'dark' && destacado.titulo === 'Macro Click') {
-      return 'svgs/macro-blanco.svg';
+      return 'images/logos/macro-blanco.png';
     }
     if (this.currentTheme() === 'dark' && destacado.titulo === 'VISA Selecta (Banco Macro)') {
-      return 'svgs/macro-blanco.svg';
+      return 'images/logos/macroselecta-blanco.png';
     }
     return destacado.svg;
   }

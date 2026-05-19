@@ -258,4 +258,13 @@ $transition-base: var(--transition-base, 0.2s ease);
   :host-context([data-theme="dark"]) &__logo-img {
     filter: brightness(0) invert(0.9);
   }
+
+  // ---- Theme Toggle (compartido por desktop y mobile) ----
+  &__theme-toggle-container {
+    display: flex;
+    align-items: center;
+    // En desktop, gracias al justify-content: space-between del contenedor padre,
+    // este elemento se alinea a la derecha.
+    // En mobile, está dentro del menú (flex column), por lo que aparece al final.
+  }
 }

@@ -11,8 +11,9 @@
               [src]="getImagen(sponsor)"
               [alt]="sponsor.alt"
               class="sponsor-bar__logo"
-              loading="lazy"
-              [style.height.px]="(sponsor.height ?? 32) / (isMobile() ? 2 : 1)"
+              loading="eager"
+              decoding="async"
+              [style.height.px]="getSponsorHeight(sponsor) / (isMobile() ? 2 : 1)"
               [style.transform]="sponsor.escala ? 'scale(' + sponsor.escala + ')' : null"
             />
           }

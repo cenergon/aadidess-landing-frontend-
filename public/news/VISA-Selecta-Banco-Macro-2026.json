@@ -7,38 +7,38 @@
     {
       "tipo": "texto",
       "orden": 1,
-      "contenido": "Hasta 12 cuotas sin interés abonando con tu tarjeta de crédito VISA Selecta del Banco Macro. Válido del 01/06/2026 al 30/09/2026 únicamente para pagos de forma presencial con tu tarjeta física en nuestra oficina central."
+      "contenido": "**Pagá hasta en 12 cuotas sin interés con Banco Macro**"
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "Si contás con tarjetas VISA Signature Macro Selecta, entre el 01/06/2026 y el 30/09/2026 podés abonar tu curso hasta en 12 cuotas sin interés con tu tarjeta de crédito. Este beneficio es válido para pagos de forma presencial con tu tarjeta física en nuestra oficina central (Morales 483, PB,S.C. de Bariloche)"
     },
     {
       "tipo": "link",
-      "orden": 2,
+      "orden": 3,
       "texto": "Morales 483, PB, S.C. de Bariloche",
       "url": "https://maps.app.goo.gl/iXJ4aW5uWAtaQ5Zh7",
       "esPdf": false
     },
     {
       "tipo": "texto",
-      "orden": 3,
-      "contenido": "o por teléfono de lunes a viernes de 10 a 14 hs."
+      "orden": 4,
+      "contenido": "o por teléfono al (+54) 294 442-8789 o al 294 443-6072, de lunes a viernes de 10 a 14 hs."
     },
     {
       "tipo": "link",
-      "orden": 4,
+      "orden": 5,
       "texto": "(+54) 294 442-8789",
       "url": "tel:+542944428789",
       "esPdf": false
     },
     {
       "tipo": "link",
-      "orden": 5,
-      "texto": "(+54) 294 443-6072",
+      "orden": 6,
+      "texto": "294 443-6072",
       "url": "tel:+542944436072",
       "esPdf": false
-    },
-    {
-      "tipo": "texto",
-      "orden": 6,
-      "contenido": "Gracias, Saludos!"
     }
   ]
 }

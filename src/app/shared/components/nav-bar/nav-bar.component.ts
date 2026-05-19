@@ -22,7 +22,7 @@ export class NavBarComponent implements OnInit {
   activeDropdown = signal<string | null>(null);
   isMobile = signal(false);
 
-      navItems: NavItem[] = [
+  navItems: NavItem[] = [
     {
       label: 'Institucional',
       children: [
@@ -98,4 +98,3 @@ export class NavBarComponent implements OnInit {
     window.open(url, '_blank', 'noopener,noreferrer');
   }
 }
-
