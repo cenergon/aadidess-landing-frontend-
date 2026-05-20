@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 // Variables locales de diseño
 $tsej-radius: var(--radius-lg, 12px);
 $tsej-transition: var(--transition-base, 0.2s ease);
@@ -84,7 +86,7 @@ $subtitle-dark: #e4e6e5;
   &__button {
     --btn-bg: #{$title-light};
     --btn-text: #ffffff;
-    --btn-hover-bg: #{darken(#073c60, 8%)};
+    --btn-hover-bg: #{color.adjust(#073c60, $lightness: -8%)};
 
     display: inline-flex;
     align-items: center;
@@ -110,7 +112,7 @@ $subtitle-dark: #e4e6e5;
   :host-context([data-theme='dark']) &__button {
     --btn-bg: #{$subtitle-dark};
     --btn-text: #{$title-light};   // texto oscuro sobre fondo claro
-    --btn-hover-bg: #{darken(#e4e6e5, 6%)};
+    --btn-hover-bg: #{color.adjust(#e4e6e5, $lightness: -6%)};
   }
 
   // Responsive: apilado vertical en pantallas pequeñas
