@@ -1,0 +1,136 @@
+// Variables locales de diseño
+$tsej-radius: var(--radius-lg, 12px);
+$tsej-transition: var(--transition-base, 0.2s ease);
+
+// Colores fijos de la revista (no dependen de nuestro theme)
+$title-light: #222;
+$subtitle-light: #073c60;
+$title-dark: #ffffff;
+$subtitle-dark: #e4e6e5;
+
+.tsej-banner {
+  border: 1px solid var(--color-border);
+  padding: 1.5rem;
+  transition: background-color $tsej-transition, border-color $tsej-transition;
+  padding-bottom: 25px;
+  padding-top: 25px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  // Logos: solo uno visible según tema
+  &__logo {
+    height: 60px;
+    width: auto;
+    flex-shrink: 0;
+    display: none;
+
+    &--light {
+      display: block; // visible por defecto (tema claro)
+    }
+
+    &--dark {
+      display: none;
+    }
+  }
+
+  // En tema oscuro, invertimos visibilidad
+  :host-context([data-theme='dark']) &__logo {
+    &--light {
+      display: none;
+    }
+    &--dark {
+      display: block;
+    }
+  }
+
+  &__content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__title {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $title-light;
+    margin: 0 0 0.25rem;
+    transition: color $tsej-transition;
+  }
+
+  &__subtitle {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: $subtitle-light;
+    margin: 0;
+    transition: color $tsej-transition;
+  }
+
+  // Tema oscuro: colores invertidos
+  :host-context([data-theme='dark']) &__title {
+    color: $title-dark;
+  }
+  :host-context([data-theme='dark']) &__subtitle {
+    color: $subtitle-dark;
+  }
+
+  // Botón con colores propios de la revista
+  &__button {
+    --btn-bg: #{$title-light};
+    --btn-text: #ffffff;
+    --btn-hover-bg: #{darken(#073c60, 8%)};
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.5rem;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    cursor: pointer;
+    transition: background-color $tsej-transition, opacity $tsej-transition;
+
+    &:hover {
+      background-color: var(--btn-hover-bg);
+      opacity: 0.95;
+    }
+  }
+
+  :host-context([data-theme='dark']) &__button {
+    --btn-bg: #{$subtitle-dark};
+    --btn-text: #{$title-light};   // texto oscuro sobre fondo claro
+    --btn-hover-bg: #{darken(#e4e6e5, 6%)};
+  }
+
+  // Responsive: apilado vertical en pantallas pequeñas
+  @media (max-width: 600px) {
+    &__container {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+    }
+
+    &__logo {
+      height: 50px;
+    }
+
+    &__title {
+      font-size: 1.25rem;
+    }
+
+    &__button {
+      width: 100%;
+    }
+  }
+}

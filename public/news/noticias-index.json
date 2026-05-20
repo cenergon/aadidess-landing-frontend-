@@ -180,5 +180,12 @@
     "postedAt": "2025-12-02T14:37:00-03:00",
     "ruta": "news/Pases-2026-Instructores-Independientes-Escuelas.json",
     "resumen": "Catedral Alta Patagonia S.A. publicó la información para la adquisición de pases de temporada 2026 para instructores independientes y escuelas. Descargá los documentos adjuntos."
+  },
+  {
+    "id": 27,
+    "titulo": "Nivel 2: Acta compromiso para horas Pedagógicas de Práctica",
+    "postedAt": "2026-05-20T18:20:00-03:00",
+    "ruta": "news/Acta-Compromiso-Horas-Pedagogicas-Nivel2.json",
+    "resumen": "Los cursantes de Nivel 2 egresados entre fines de 2024 y la temporada 2025 podrán firmar un acta de compromiso para acreditar las Horas Pedagógicas de Práctica antes de finalizar el ciclo lectivo."
   }
 ]

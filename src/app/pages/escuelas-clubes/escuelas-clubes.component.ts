@@ -114,7 +114,8 @@ export class EscuelasClubesComponent implements AfterViewInit {
       nombre: 'El Bolsón',
       slug: 'el-bolson',
       escuelas: [
-        { nombre: 'Escuela Perito Moreno Club Andino Piltriquitron', email: 'escuela@laderas.com.ar', web: 'www.laderas.com.ar', telefono: '0294-4498492 / 0294-4492600' }
+        { nombre: 'Escuela Perito Moreno', email: 'escuela@laderas.com.ar', web: 'www.laderas.com.ar', telefono: '0294-4498492 / 0294-4492600' },
+        { nombre: 'Club Andino Piltriquitron', email: 'info@clubandinopiltri.com.ar', web: 'https://clubandinopiltriquitron.com.ar/', telefono: '+54 9 2944 34-1789' }
       ]
     },
     {
