@@ -1,0 +1,37 @@
+{
+  "id": 30,
+  "titulo": "Homologación de titulaciones EFPEM (Andorra)",
+  "postedAt": "2025-10-30T15:38:00-03:00",
+  "createdAt": "2025-10-30T15:38:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "Informamos a nuestros socios que a partir de la semana que viene AADIDESS estará enviando los listados de profesionales a la **EFPEM** para que puedan **convalidar las titulaciones** a quienes vayan a trabajar en dicho destino la próxima temporada. Para realizar la homologación ante la EFPEM, se debe completar el formulario correspondiente en **www.efpem.ad** y presentar el **certificado de AADIDESS en formato digital**."
+    },
+    {
+      "tipo": "link",
+      "orden": 2,
+      "texto": "www.efpem.ad",
+      "url": "https://www.efpem.ad",
+      "esPdf": false
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "El mismo, posteriormente, deberá ser entregado también en una **copia impresa** (no es necesario que sea una copia de AADIDESS, en este caso es suficiente con que sea una copia impresa normal)."
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": "**Importante:** Para figurar en los listados de AADIDESS para las convalidaciones, se debe tener el **reentreno y cuota al día**. Por dudas o consultas puntuales, comunicarse a **central@aadidess.com**"
+    },
+    {
+      "tipo": "link",
+      "orden": 5,
+      "texto": "central@aadidess.com",
+      "url": "mailto:central@aadidess.com",
+      "esPdf": false
+    }
+  ]
+}

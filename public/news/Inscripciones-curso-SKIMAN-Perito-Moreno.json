@@ -1,0 +1,35 @@
+{
+  "id": 34,
+  "titulo": "Inscripciones para el curso de SKIMAN en Perito Moreno",
+  "postedAt": "2025-09-04T09:18:00-03:00",
+  "createdAt": "2025-09-04T09:18:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "Están abiertas las inscripciones para la edición del curso de **SKIMAN** que se realizará en la delegación **Perito Moreno**, los días **10, 11 y 12 de septiembre**."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "El curso está destinado a quienes quieran aprender a **reparar y mantener su propio material** desde una base sólida, y a quienes quieran **actualizar conocimientos**."
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "El objetivo es capacitar al alumno para que conozca los **fundamentos básicos** de los **métodos y las tecnologías actuales** de la preparación, reparación y mantenimiento básico, con la utilización de **herramientas manuales** de esquís y snowboard."
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": "**INSCRIPCIONES:** hasta el **8 de septiembre a las 16 hs**, sin excepción de nuestro **Campus Virtual**."
+    },
+    {
+      "tipo": "link",
+      "orden": 5,
+      "texto": "Campus Virtual",
+      "url": "https://aadidess.cipbyte.io/web/#/profile-authentication/login",
+      "esPdf": false
+    }
+  ]
+}

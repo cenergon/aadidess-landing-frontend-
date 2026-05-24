@@ -1,0 +1,75 @@
+{
+  "id": 32,
+  "titulo": "Anticipo de vuelo exclusivo para la Temporada 2025/2026",
+  "postedAt": "2025-09-22T14:05:00-03:00",
+  "createdAt": "2025-09-22T14:05:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "Atención futuros empleados de **Grandvalira Saetde/Secnoa**."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "Desde AADIDESS informamos que grupo Saetde, a través de **Hub Travel**, creó un beneficio exclusivo para los profesionales que vayan a realizar temporada en **Grandvalira - Ordino Arcalis**."
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "El mismo consiste en un **adelanto de un porcentaje del costo del pasaje aéreo**, que se descontará durante el periodo de trabajo con la empresa durante la temporada."
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": "Para hacer uso del beneficio, es imprescindible contar con la **confirmación de SAETDE/SECNOA** para la temporada de invierno 2025/2026. Esto se verificará antes de la aprobación."
+    },
+    {
+      "tipo": "texto",
+      "orden": 5,
+      "contenido": "**Condiciones del beneficio:**"
+    },
+    {
+      "tipo": "texto",
+      "orden": 6,
+      "contenido": "• Solo para empleados de la temporada de invierno SAETDE/SECNOA"
+    },
+    {
+      "tipo": "texto",
+      "orden": 7,
+      "contenido": "• Vuelos round trip (ida y vuelta) de Buenos Aires o Santiago de Chile a Europa"
+    },
+    {
+      "tipo": "texto",
+      "orden": 8,
+      "contenido": "• Vuelos one way bajo responsabilidad de la persona trabajadora en caso de incidencia en las aduanas"
+    },
+    {
+      "tipo": "texto",
+      "orden": 9,
+      "contenido": "• Exclusivo a través de Hub Travel"
+    },
+    {
+      "tipo": "texto",
+      "orden": 10,
+      "contenido": "Vuelos round trip, anticipo de hasta máximo **USD 1.000**\n\nVuelos one way, anticipo máximo **USD 700**\n\nTarifas en USD"
+    },
+    {
+      "tipo": "texto",
+      "orden": 11,
+      "contenido": "SAETDE o SECNOA no se hacen responsables de las incidencias que puedan suceder con los vuelos ni de los pasajes del país de entrada a Europa hacia Andorra."
+    },
+    {
+      "tipo": "texto",
+      "orden": 12,
+      "contenido": "Envia un correo adjuntando la carta de confirmación de trabajo con SAETDE o SECNOA, y solicita tu anticipo a Hub Travel: **aereosweb@hubtravel.com.ar**"
+    },
+    {
+      "tipo": "link",
+      "orden": 13,
+      "texto": "aereosweb@hubtravel.com.ar",
+      "url": "mailto:aereosweb@hubtravel.com.ar",
+      "esPdf": false
+    }
+  ]
+}

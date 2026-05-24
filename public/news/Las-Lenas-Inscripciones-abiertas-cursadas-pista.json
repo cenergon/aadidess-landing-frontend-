@@ -1,0 +1,62 @@
+{
+  "id": 35,
+  "titulo": "Las Leñas: Inscripciones abiertas para cursadas en pista",
+  "postedAt": "2025-08-19T20:16:00-03:00",
+  "createdAt": "2025-08-19T20:16:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "A través de nuestro **Campus Virtual** se encuentran abiertas las inscripciones para cursar el módulo Pista en **Las Leñas**:"
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "• Instructorado de Snowboard Nivel 1 (cierre de inscripciones **22 de agosto**)"
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "• Instructorado de Snowboard Niveles 2 y 3 (cierre de inscripciones **29 de agosto a las 16 h**)"
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": "• Instructorado de Esquí Niveles 1, 2 y 3 (cierre de inscripciones **27 de agosto**)"
+    },
+    {
+      "tipo": "texto",
+      "orden": 5,
+      "contenido": "Podés ver más detalle sobre las fechas de cursada en el calendario en nuestra web **Calendario**"
+    },
+    {
+      "tipo": "texto",
+      "orden": 6,
+      "contenido": "Los cupos son limitados. ¡No te quedes afuera!"
+    },
+    {
+      "tipo": "texto",
+      "orden": 7,
+      "contenido": "Para inscribirte, ingresa a nuestro **Campus Virtual**"
+    },
+    {
+      "tipo": "link",
+      "orden": 8,
+      "texto": "Campus Virtual",
+      "url": "https://aadidess.cipbyte.io/web/#/profile-authentication/login",
+      "esPdf": false
+    },
+    {
+      "tipo": "texto",
+      "orden": 9,
+      "contenido": "Por consultas, escribinos a **secretaria@aadidess.com**"
+    },
+    {
+      "tipo": "link",
+      "orden": 10,
+      "texto": "secretaria@aadidess.com",
+      "url": "mailto:secretaria@aadidess.com",
+      "esPdf": false
+    }
+  ]
+}

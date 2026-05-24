@@ -1,0 +1,35 @@
+{
+  "id": 29,
+  "titulo": "Sitio web como canal principal de información institucional 2026",
+  "postedAt": "2025-11-13T09:29:00-03:00",
+  "createdAt": "2025-11-13T09:29:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "Con el objetivo de optimizar la comunicación institucional y centralizar todas las novedades, informamos que a partir del año **2026**, la **página web oficial de AADIDESS** (www.aadidess.com) será **canal prioritario de información** destinado a nuestros socios."
+    },
+    {
+      "tipo": "link",
+      "orden": 2,
+      "texto": "www.aadidess.com",
+      "url": "https://www.aadidess.com",
+      "esPdf": false
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "De esta manera, invitamos a todos los miembros a visitar con frecuencia la **sección de Noticias** de nuestro sitio, donde se publicarán los **comunicados, novedades y anuncios más relevantes** de la asociación."
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": "Recordamos que nuestro sitio web es la **plataforma oficial** donde se puede acceder a toda la información vinculada al **aspecto societario**, así como también a los **cursos y actividades académicas** que AADIDESS ofrece cada año."
+    },
+    {
+      "tipo": "texto",
+      "orden": 5,
+      "contenido": "Los animamos a mantenerse informados y a utilizar este espacio digital como punto de referencia para todas las novedades institucionales."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": 28,
+  "titulo": "Obtené tu credencial digital en el Campus Virtual",
+  "postedAt": "2025-12-02T09:05:00-03:00",
+  "createdAt": "2025-12-02T09:05:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "Informamos a nuestros socios que ya se encuentra disponible en nuestro **Campus Virtual** la opción de generar la **credencial digital**, como así también poder **descargarla en pdf**."
+    },
+    {
+      "tipo": "link",
+      "orden": 2,
+      "texto": "Campus Virtual",
+      "url": "https://aadidess.cipbyte.io/web/#/profile-authentication/login",
+      "esPdf": false
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "A continuación te brindamos el **paso a paso** para realizarlo ya sea accediendo desde tu **computadora/notebook**, o desde tu **celular**."
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": "En el caso de que no cuentes con tu **foto** subida a tu perfil de la plataforma, podrás hacerlo en esta instancia."
+    }
+  ]
+}

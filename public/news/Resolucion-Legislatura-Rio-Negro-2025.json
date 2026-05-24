@@ -1,0 +1,20 @@
+{
+  "id": 38,
+  "titulo": "Resolución de la Legislatura de la Provincia de Río Negro",
+  "postedAt": "2025-06-19T14:22:00-03:00",
+  "createdAt": "2025-06-19T14:22:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "Desde AADIDESS replicamos la **comunicación oficial nº 73/2025** de la **Legislatura de la Provincia de Río Negro**, de la resolución que compartimos a continuación, la cual fue **aprobada en general y en particular** por este organismo de forma **unánime**."
+    },
+    {
+      "tipo": "link",
+      "orden": 2,
+      "texto": "Resolución Nº 73/2025",
+      "url": "/docs/C00073-2025.pdf",
+      "esPdf": true
+    }
+  ]
+}

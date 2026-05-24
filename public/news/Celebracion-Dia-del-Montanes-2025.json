@@ -1,0 +1,23 @@
+{
+  "id": 36,
+  "titulo": "Celebración por el Día del Montañés 2025",
+  "postedAt": "2025-07-17T10:04:00-03:00",
+  "createdAt": "2025-07-17T10:04:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "El día **domingo 03 de agosto** se llevará a cabo en **Bariloche** el **Desfile del Día del Montañés**."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "Este año, el **Club Andino Bariloche**, a cargo de la organización del evento, junto con la **Municipalidad de San Carlos de Bariloche**, realizarán el tradicional desfile en la base del **Cerro Catedral** acompañados por la banda de la **Escuela Militar de Montaña**."
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "**Horario desfile: 14:30 hs.**"
+    }
+  ]
+}

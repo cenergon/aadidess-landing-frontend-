@@ -1,0 +1,62 @@
+{
+  "id": 33,
+  "titulo": "Condiciones de Certificación del Cerro Chapelco – Temporada Invernal 2026",
+  "postedAt": "2025-09-19T09:03:00-03:00",
+  "createdAt": "2025-09-19T09:03:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "Todos los instructores que no hayan **regularizado sus certificaciones** o no hayan iniciado dicho proceso en la **temporada 2025** deberán cumplir con este requisito sin excepción. Quienes no lo hagan no recibirán el **certificado habilitante** y, en consecuencia, no podrán acceder a los **pases de medios de elevación**, de acuerdo con la disposición de la empresa concesionaria."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "Para regularizar su situación, deberán ponerse en contacto con la **Sede Central de AADIDESS** a través del correo: **central@aadidess.com**, donde recibirán la información correspondiente según su caso particular."
+    },
+    {
+      "tipo": "link",
+      "orden": 3,
+      "texto": "central@aadidess.com",
+      "url": "mailto:central@aadidess.com",
+      "esPdf": false
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": "Los instructores que hayan iniciado la regularización en 2025 pero no hayan cumplido con el pago del compromiso asumido deberán:"
+    },
+    {
+      "tipo": "texto",
+      "orden": 5,
+      "contenido": "• Abonar el costo del **reentrenamiento** y las **cuotas societarias** al valor vigente en **2026**."
+    },
+    {
+      "tipo": "texto",
+      "orden": 6,
+      "contenido": "• Completar el proceso de regularización dentro de las **fechas de cursada** establecidas para dicho año."
+    },
+    {
+      "tipo": "texto",
+      "orden": 7,
+      "contenido": "El incumplimiento de estas obligaciones tendrá como consecuencia la **imposibilidad de obtener la certificación habilitante**."
+    },
+    {
+      "tipo": "texto",
+      "orden": 8,
+      "contenido": "El proceso de inscripción y pago se realizará únicamente a través de la **página oficial**: **www.aadidess.com**. No se admitirán gestiones por otros medios."
+    },
+    {
+      "tipo": "link",
+      "orden": 9,
+      "texto": "www.aadidess.com",
+      "url": "https://www.aadidess.com",
+      "esPdf": false
+    },
+    {
+      "tipo": "texto",
+      "orden": 10,
+      "contenido": "Agradecemos su atención y solicitamos a cada uno la responsabilidad de cumplir con estas condiciones para garantizar la continuidad de su ejercicio profesional."
+    }
+  ]
+}

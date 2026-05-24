@@ -1,0 +1,30 @@
+{
+  "id": 37,
+  "titulo": "Información Importante de Catedral Alta Patagonia S.A. para residentes",
+  "postedAt": "2025-06-29T10:07:00-03:00",
+  "createdAt": "2025-06-29T10:07:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "Desde **Catedral Alta Patagonia S.A.** se está impulsando una iniciativa ante el ente regulador para que los **residentes** puedan acceder al centro de montaña desde las **9 am**."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "Este proceso de cambio incluye la **renovación inmediata de los medios de elevación** y condiciones de acceso acordes al derecho de quienes habitan esta comunidad todo el año."
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "Para conocer toda la info y ser parte del cambio, accedé a este link:"
+    },
+    {
+      "tipo": "link",
+      "orden": 4,
+      "texto": "Catedral para Residentes",
+      "url": "https://catedralaltapatagonia.com/novedades/catedralpararesidentes/",
+      "esPdf": false
+    }
+  ]
+}

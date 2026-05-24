@@ -187,5 +187,75 @@
     "postedAt": "2026-05-20T18:20:00-03:00",
     "ruta": "news/Acta-Compromiso-Horas-Pedagogicas-Nivel2.json",
     "resumen": "Los cursantes de Nivel 2 egresados entre fines de 2024 y la temporada 2025 podrán firmar un acta de compromiso para acreditar las Horas Pedagógicas de Práctica antes de finalizar el ciclo lectivo."
+  },
+  {
+    "id": 28,
+    "titulo": "Obtené tu credencial digital en el Campus Virtual",
+    "postedAt": "2025-12-02T09:05:00-03:00",
+    "ruta": "news/Obtene-tu-credencial-digital-Campus-Virtual.json",
+    "resumen": "Ya está disponible en el Campus Virtual la opción de generar la credencial digital y descargarla en PDF. Conocé el paso a paso para obtenerla desde tu computadora o celular."
+  },
+  {
+    "id": 29,
+    "titulo": "Sitio web como canal principal de información institucional 2026",
+    "postedAt": "2025-11-13T09:29:00-03:00",
+    "ruta": "news/Sitio-web-canal-principal-informacion-institucional-2026.json",
+    "resumen": "A partir de 2026, la web oficial (www.aadidess.com) será el canal prioritario de comunicación. Toda la información societaria, cursos y novedades se centralizarán en la sección Noticias."
+  },
+  {
+    "id": 30,
+    "titulo": "Homologación de titulaciones EFPEM (Andorra)",
+    "postedAt": "2025-10-30T15:38:00-03:00",
+    "ruta": "news/Homologacion-titulaciones-EFPEM-Andorra.json",
+    "resumen": "AADIDESS enviará los listados a la EFPEM para convalidar titulaciones. Completá el formulario en www.efpem.ad y presentá el certificado digital. Requisitos: reentreno y cuota al día. Consultas a central@aadidess.com."
+  },
+  {
+    "id": 32,
+    "titulo": "Anticipo de vuelo exclusivo para la Temporada 2025/2026",
+    "postedAt": "2025-09-22T14:05:00-03:00",
+    "ruta": "news/Anticipo-vuelo-exclusivo-Temporada-2025-2026.json",
+    "resumen": "Beneficio exclusivo para empleados de Grandvalira Saetde/Secnoa: anticipo de pasaje aéreo de hasta USD 1.000 (round trip) o USD 700 (one way) a través de Hub Travel. Solicitudes a aereosweb@hubtravel.com.ar con carta de confirmación."
+  },
+  {
+    "id": 33,
+    "titulo": "Condiciones de Certificación del Cerro Chapelco - Temporada Invernal 2026",
+    "postedAt": "2025-09-19T09:03:00-03:00",
+    "ruta": "news/Condiciones-Certificacion-Cerro-Chapelco-Temporada-Invernal-2026.json",
+    "resumen": "Todos los instructores deben regularizar sus certificaciones para la temporada 2026 en Chapelco. Requisitos: reentrenamiento, cuotas al día e inscripción en www.aadidess.com. Contacto: central@aadidess.com."
+  },
+  {
+    "id": 34,
+    "titulo": "Inscripciones para el curso de SKIMAN en Perito Moreno",
+    "postedAt": "2025-09-04T09:18:00-03:00",
+    "ruta": "news/Inscripciones-curso-SKIMAN-Perito-Moreno.json",
+    "resumen": "Del 10 al 12 de septiembre, curso de SKIMAN en Perito Moreno para aprender reparación y mantenimiento de esquís y snowboard. Inscripciones hasta el 8/9 a las 16 hs en el Campus Virtual."
+  },
+  {
+    "id": 35,
+    "titulo": "Las Leñas: Inscripciones abiertas para cursadas en pista",
+    "postedAt": "2025-08-19T20:16:00-03:00",
+    "ruta": "news/Las-Lenas-Inscripciones-abiertas-cursadas-pista.json",
+    "resumen": "Inscripciones abiertas para Instructorado de Esquí y Snowboard en Las Leñas. Nivel 1 cierra 22/8, Niveles 2 y 3 el 29/8 y 27/8 respectivamente. Inscripción en Campus Virtual. Consultas: secretaria@aadidess.com."
+  },
+  {
+    "id": 36,
+    "titulo": "Celebración por el Día del Montañés 2025",
+    "postedAt": "2025-07-17T10:04:00-03:00",
+    "ruta": "news/Celebracion-Dia-del-Montanes-2025.json",
+    "resumen": "El domingo 3 de agosto se realizará en la base del Cerro Catedral el tradicional Desfile del Día del Montañés, organizado por el Club Andino Bariloche y la Municipalidad. Horario: 14:30 hs."
+  },
+  {
+    "id": 37,
+    "titulo": "Información Importante de Catedral Alta Patagonia S.A. para residentes",
+    "postedAt": "2025-06-29T10:07:00-03:00",
+    "ruta": "news/Informacion-Importante-Catedral-Alta-Patagonia-Residentes.json",
+    "resumen": "Catedral Alta Patagonia impulsa una iniciativa para que residentes accedan al cerro desde las 9 am, con renovación de medios de elevación. Más info en el link de la nota."
+  },
+  {
+    "id": 38,
+    "titulo": "Resolución de la Legislatura de la Provincia de Río Negro",
+    "postedAt": "2025-06-19T14:22:00-03:00",
+    "ruta": "news/Resolucion-Legislatura-Rio-Negro-2025.json",
+    "resumen": "La Legislatura de Río Negro aprobó por unanimidad la resolución de la comunicación oficial Nº 73/2025. Compartimos el documento completo."
   }
 ]

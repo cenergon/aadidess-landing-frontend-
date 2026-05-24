@@ -24,34 +24,6 @@ export class BolsaDeTrabajoComponent {
 
   ofertasArgentina: OfertaLaboral[] = [
     {
-      titulo: 'Escuela de Ski Bariloche (ESB)',
-      descripcion: 'Busca instructores de Esquí y Snowboard.',
-      delegacion: 'Catedral',
-      localidad: 'San Carlos de Bariloche',
-      imagen: 'bdt-2026-ESB.jpg'
-    },
-    {
-      titulo: 'La Base',
-      descripcion: 'Busca ayudantes para la escuela infantil.',
-      delegacion: 'Catedral',
-      localidad: 'San Carlos de Bariloche',
-      imagen: 'bdt-2026-LaBase.jpg'
-    },
-    {
-      titulo: 'Laderas',
-      descripcion: 'Busca instructores de Esquí y Snowboard.',
-      delegacion: 'Cerro Perito Moreno',
-      localidad: 'El Bolsón',
-      imagen: 'bdt-2026-Laderas.jpg'
-    },
-    {
-      titulo: 'Laderas',
-      descripcion: 'Busca Pisteros Socorristas.',
-      delegacion: 'Cerro Perito Moreno',
-      localidad: 'El Bolsón',
-      imagen: 'bdt-2026-Laderas2.jpg'
-    },
-    {
       titulo: 'Cavla',
       descripcion: 'Busca instructores de esquí.',
       delegacion: 'Cerro Bayo',
@@ -64,10 +36,53 @@ export class BolsaDeTrabajoComponent {
       delegacion: 'Catedral',
       localidad: 'San Carlos de Bariloche',
       imagen: 'bdt-2026-BW.jpg'
+    },
+    {
+      titulo: 'La Base',
+      descripcion: 'Busca ayudantes para la escuela infantil.',
+      delegacion: 'Catedral',
+      localidad: 'San Carlos de Bariloche',
+      imagen: 'bdt-2026-LaBase.jpg'
+    },
+    {
+      titulo: 'Laderas',
+      descripcion: 'Busca Pisteros Socorristas.',
+      delegacion: 'Cerro Perito Moreno',
+      localidad: 'El Bolsón',
+      imagen: 'bdt-2026-Laderas2.jpg'
+    },
+    {
+      titulo: 'Laderas',
+      descripcion: 'Busca instructores de Esquí y Snowboard.',
+      delegacion: 'Cerro Perito Moreno',
+      localidad: 'El Bolsón',
+      imagen: 'bdt-2026-Laderas.jpg'
+    },
+    {
+      titulo: 'Escuela de Ski Bariloche (ESB)',
+      descripcion: 'Busca instructores de Esquí y Snowboard.',
+      delegacion: 'Catedral',
+      localidad: 'San Carlos de Bariloche',
+      imagen: 'bdt-2026-ESB.jpg'
+    },
+    {
+      titulo: 'La Hoya',
+      descripcion: 'Busca Pisteros Socorristas. Se valora experiencia en manejo de explosivos.',
+      delegacion: 'La Hoya',
+      localidad: 'Esquel, Chubut',
+      imagen: 'bdt-2026-LaHoya.jpg'
     }
   ];
 
-  ofertasExterior: OfertaLaboral[] = [];
+  ofertasExterior: OfertaLaboral[] = [
+    {
+      titulo: 'Hub Work & Travel',
+      descripcion: 'Busca instructores de snowboard para Stratton Mountain (programa J1).',
+      delegacion: 'Stratton Mountain',
+      localidad: 'Stratton, Vermont, EE.UU.',
+      imagen: 'bdt-2026-HubTravel.jpg'
+    }
+  ];
 
   // Filtros
   searchTerm = signal('');
@@ -82,16 +97,15 @@ export class BolsaDeTrabajoComponent {
 
   // Ofertas filtradas para Argentina
   ofertasArgentinaFiltradas = computed(() => {
-    return this.ofertasArgentina.filter(oferta =>
-      this.cumpleFiltros(oferta)
-    );
+    return this.ofertasArgentina
+      .filter(oferta => this.cumpleFiltros(oferta))
+      .reverse();
   });
 
-  // Ofertas filtradas para Exterior
   ofertasExteriorFiltradas = computed(() => {
-    return this.ofertasExterior.filter(oferta =>
-      this.cumpleFiltros(oferta)
-    );
+    return this.ofertasExterior
+      .filter(oferta => this.cumpleFiltros(oferta))
+      .reverse();
   });
 
   private cumpleFiltros(oferta: OfertaLaboral): boolean {
