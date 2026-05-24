@@ -1,0 +1,118 @@
+{
+  "id": 44,
+  "titulo": "Información importante: Modificaciones para los Cursos 2025",
+  "postedAt": "2025-04-21T10:26:00-03:00",
+  "createdAt": "2025-04-21T10:26:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "Informamos que para la cursada de algunos de nuestros cursos hemos realizado modificaciones descriptas a continuación."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "Por favor, leer detenidamente para conocer los cambios que correspondan a la formación que desees realizar, y de esta forma estar al tanto de antemano sobre cada detalle."
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "**INGRESO NIVEL 2 ESQUÍ Y SNOWBOARD**"
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": "Tendrán que rendir ingreso aquellos instructores que hayan cursado el nivel 1 con **más de 3 temporadas de anterioridad**."
+    },
+    {
+      "tipo": "texto",
+      "orden": 5,
+      "contenido": "Ejemplo: para cursar nivel 2 durante la temporada 2025 sin rendir ingreso el instructor tuvo que haber cursado su nivel 1 en la temporada **2022, 2023 o 2024**. El instructor que cursó en **2021 o antes** debe rendir el examen de ingreso correspondiente."
+    },
+    {
+      "tipo": "texto",
+      "orden": 6,
+      "contenido": "**EXAMEN DE INGRESO ESQUÍ:** se rendirá super y corto de egreso de nivel 1, se debe aprobar con **50 puntos o más**."
+    },
+    {
+      "tipo": "texto",
+      "orden": 7,
+      "contenido": "**EXAMEN DE INGRESO SNOWBOARD:** 3 hs de surfeo general. El examen constará en realizar diferentes bajadas en diferentes condiciones de pista y nieve. Se evaluará la capacidad técnica del alumno para adaptarse a los diferentes tipos de vueltas, velocidades y terrenos."
+    },
+    {
+      "tipo": "texto",
+      "orden": 8,
+      "contenido": "**CURSADA NIVEL 2 ESQUÍ**"
+    },
+    {
+      "tipo": "texto",
+      "orden": 9,
+      "contenido": "Cambios en las maniobras (gestos) de cursada:"
+    },
+    {
+      "tipo": "texto",
+      "orden": 10,
+      "contenido": "• No se dictará más la maniobra **\"encadenamientos básicos\"**. Todos los cursantes del sistema anterior que adeuden esa maniobra tendrán las oportunidades correspondientes de la cursada original para aprobarlo; de no aprobarlo al momento de recursar el bloque de gestos deberá hacerlo con la maniobra nueva."
+    },
+    {
+      "tipo": "texto",
+      "orden": 11,
+      "contenido": "• Se incorpora nueva maniobra: en el bloque de maniobras básicas se incorpora la **VUELTA INTERMEDIA BÁSICA**."
+    },
+    {
+      "tipo": "texto",
+      "orden": 12,
+      "contenido": "**MANIOBRAS PARA LA CURSADA DE NIVEL 2 A PARTIR DE 2025**\nBÁSICAS: vuelta intermedia básica\nPERFECCIONAMIENTO: super, corto\nTÉCNICAS: bumps, fuera de pista"
+    },
+    {
+      "tipo": "texto",
+      "orden": 13,
+      "contenido": "**INGRESO NIVEL 3 ESQUÍ**"
+    },
+    {
+      "tipo": "texto",
+      "orden": 14,
+      "contenido": "Cambios en las maniobras (gestos) del ingreso:"
+    },
+    {
+      "tipo": "texto",
+      "orden": 15,
+      "contenido": "• No se pedirá más la maniobra **ENCADENAMIENTOS BÁSICOS**. Todos los cursantes del sistema anterior que adeuden esa maniobra tendrán la temporada 2025 para aprobar el ingreso; de no aprobarlo al momento de rendir nuevamente el examen deberá hacerlo con la maniobra nueva."
+    },
+    {
+      "tipo": "texto",
+      "orden": 16,
+      "contenido": "• Se incorpora nueva maniobra: **VUELTA INTERMEDIA BÁSICA**."
+    },
+    {
+      "tipo": "texto",
+      "orden": 17,
+      "contenido": "**INGRESO NIVEL 3 SNOWBOARD**"
+    },
+    {
+      "tipo": "texto",
+      "orden": 18,
+      "contenido": "Cambios en las maniobras (gestos) del ingreso:"
+    },
+    {
+      "tipo": "texto",
+      "orden": 19,
+      "contenido": "• No se pedirá más la maniobra **CORTO**. Todos los cursantes del sistema anterior que adeuden esa maniobra tendrán la temporada 2025 para aprobar el ingreso; de no aprobarlo al momento de rendir nuevamente el examen deberá hacerlo con la maniobra nueva."
+    },
+    {
+      "tipo": "texto",
+      "orden": 20,
+      "contenido": "• Se incorpora en el examen de ingreso a nivel 3 la maniobra **CORTO BÁSICO**."
+    },
+    {
+      "tipo": "texto",
+      "orden": 21,
+      "contenido": "**MANIOBRAS PARA INGRESO A NIVEL 3 A PARTIR DE 2025**\nSuper, Super básico de switch, corto básico"
+    },
+    {
+      "tipo": "texto",
+      "orden": 22,
+      "contenido": "**IMPORTANTE:** se puede rendir el ingreso a nivel 3, teniendo aprobado pista de nivel 2 (no importa que no tenga aprobado teóricas), pero **no puede cursar nivel 3** hasta que no se haya recibido de nivel 2."
+    }
+  ]
+}

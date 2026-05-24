@@ -1,0 +1,69 @@
+{
+  "id": 42,
+  "titulo": "Si sos Instructor de Esquí de AADIDESS, ¡esta oportunidad puede llevar tu profesión al próximo nivel!",
+  "postedAt": "2025-05-13T13:33:00-03:00",
+  "createdAt": "2025-05-13T13:33:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "Debido al éxito del programa de **Hub Work & Travel** que articula con nuestra asociación, **Hub Travel** en colaboración con **USE Argentina** abren esta búsqueda de **Instructores de esquí** que quieran trabajar en **ASPEN** por primera vez."
+    },
+    {
+      "tipo": "link",
+      "orden": 2,
+      "texto": "Hub Travel",
+      "url": "https://www.instagram.com/hubworkandtravel/",
+      "esPdf": false
+    },
+    {
+      "tipo": "link",
+      "orden": 3,
+      "texto": "USE Argentina",
+      "url": "https://www.instagram.com/useargentina?igsh=NHdxc3U4Y2VqZm9m",
+      "esPdf": false
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": "**Requisitos:**"
+    },
+    {
+      "tipo": "texto",
+      "orden": 5,
+      "contenido": "• Estar cursando tu carrera todo el año"
+    },
+    {
+      "tipo": "texto",
+      "orden": 6,
+      "contenido": "• Tener menos de **27 años**"
+    },
+    {
+      "tipo": "texto",
+      "orden": 7,
+      "contenido": "• Tener al menos **Nivel 1 de AADIDESS**"
+    },
+    {
+      "tipo": "texto",
+      "orden": 8,
+      "contenido": "• **200 hs de clases dictadas certificadas**"
+    },
+    {
+      "tipo": "texto",
+      "orden": 9,
+      "contenido": "• Disponibilidad mínima del **8 de diciembre de 2025 al 20 de marzo de 2026**"
+    },
+    {
+      "tipo": "texto",
+      "orden": 10,
+      "contenido": "Contactarse antes del **viernes 16 de mayo** por Whatsapp **+54 9 11 3151-6000**"
+    },
+    {
+      "tipo": "link",
+      "orden": 11,
+      "texto": "+54 9 11 3151-6000",
+      "url": "https://wa.me/5491131516000",
+      "esPdf": false
+    }
+  ]
+}

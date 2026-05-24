@@ -1,0 +1,28 @@
+{
+  "id": 43,
+  "titulo": "Información importante TEMPORADA 2025 para los socios AADIDESS con titulación nivel 3 o superior",
+  "postedAt": "2025-05-08T09:36:00-03:00",
+  "createdAt": "2025-05-08T09:36:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "La comisión directiva de la AADIDESS informa a los socios con titulación **nivel 3 o superior** que no posean residencia en la ciudad de **San Carlos de Bariloche** que, oportunamente, la Delegación Bariloche denunció y formuló un pedido en orden a la problemática surgida como consecuencia de la migración de instructores de esquí y snowboard de otros centros de esquí al Centro de esquí Catedral para realizar la temporada invernal bajo la modalidad de instructor independiente, como así también la falta absoluta de reciprocidad con los restantes centros de esquí para la misma modalidad, lo que afecta de forma sustancial la capacidad laboral local (produciendo una merma considerable), es que en la reunión de directorio de fecha **7 de mayo** del corriente, se ha resuelto lo siguiente:"
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "**1.** Determinar la **no autorización** para la temporada invernal de aquellos pedidos de instructores que no posean una **residencia permanente** en la ciudad de San Carlos de Bariloche, la cual en su caso deberá ser fehacientemente acreditada con el domicilio que conste en el último ejemplar del **Documento Nacional de Identidad**, con una antigüedad mayor a **tres años**, y una constancia de tributación local, u otra demostración idónea de residencia."
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "**2.** Que sí podrán desempeñarse aquellos instructores nivel 3 o superior que pretendan ejercer la profesión dentro del ejido municipal bajo la modalidad de un **contrato de trabajo** en alguna de las **escuelas o clubes de esquí** reconocidos por la asociación."
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": "**3.** Que también se habilita la modalidad del **instructor independiente itinerante**, esto es aquellos instructores que vienen al centro de esquí Catedral con algún cliente específico ya previamente contratado y por un lapso breve de tiempo, que no supere prudentemente los **7 días**, en cuyo caso deberán acreditar dicha circunstancia y solicitar la autorización a la administración de la AADIDESS."
+    }
+  ]
+}

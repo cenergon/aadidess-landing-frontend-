@@ -1,0 +1,45 @@
+{
+  "id": 48,
+  "titulo": "CAPSA S.A. informa: Pase instructores de escuelas o independientes",
+  "postedAt": "2024-12-05T16:05:00-03:00",
+  "createdAt": "2024-12-05T16:05:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "Los instructores de esquí y snowboard, tanto pertenecientes a escuelas como independientes, que se encuentren habilitados conforme a la normativa municipal vigente, podrán acceder a un **pase especial de temporada**."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "Conforme previsiones del artículo 5ª de la prórroga contractual aprobada por la Ordenanza 2929-CM-18, el mismo tendrá un valor equivalente a **10,5 pases diarios en temporada alta**, sin restricción de fechas ni horarios. El pago de dicho pase deberá realizarse hasta el **31 de diciembre de 2024**, inclusive, previo al inicio de la temporada. El costo es de **$1.207.500**."
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "Si el pago se efectúa durante el transcurso del año de vigencia, el monto a abonar será el equivalente a **10,5 pases diarios de temporada alta al valor vigente en ese momento**."
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": "Debe realizarse mediante **transferencia bancaria** a la cuenta:"
+    },
+    {
+      "tipo": "texto",
+      "orden": 5,
+      "contenido": "• **BANCO:** HSBC\n• **TIPO DE CUENTA:** CTA CTE EN PESOS\n• **NRO DE CUENTA:** 3003-47300-2\n• **CBU:** 1500054100030034730028\n• **ALIAS:** CHINA.TORNO.MUSICO\n• **CUIT:** 30-71029743-2"
+    },
+    {
+      "tipo": "texto",
+      "orden": 6,
+      "contenido": "Enviar comprobante, constancia de habilitación municipal vigente y foto del DNI (frente y dorso) al siguiente mail: **administracion@catedralaltapatagonia.com**"
+    },
+    {
+      "tipo": "link",
+      "orden": 7,
+      "texto": "administracion@catedralaltapatagonia.com",
+      "url": "mailto:administracion@catedralaltapatagonia.com",
+      "esPdf": false
+    }
+  ]
+}

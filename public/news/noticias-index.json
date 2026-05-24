@@ -257,5 +257,75 @@
     "postedAt": "2025-06-19T14:22:00-03:00",
     "ruta": "news/Resolucion-Legislatura-Rio-Negro-2025.json",
     "resumen": "La Legislatura de Río Negro aprobó por unanimidad la resolución de la comunicación oficial Nº 73/2025. Compartimos el documento completo."
+  },
+  {
+    "id": 39,
+    "titulo": "Charla: El rol de la fuerza y la planificación en los deportes de invierno",
+    "postedAt": "2025-06-10T09:44:00-03:00",
+    "ruta": "news/Charla-Fuerza-Planificacion-Deportes-Invierno.json",
+    "resumen": "El 14 de junio, charla gratuita para socios sobre entrenamiento de fuerza en deportes de invierno, a cargo del Prof. Martín Ramos. 18 hs por ZOOM. Inscripciones y cupos limitados."
+  },
+  {
+    "id": 40,
+    "titulo": "El reconocimiento de instructores, presente en la agenda presidencial",
+    "postedAt": "2025-06-09T09:46:00-03:00",
+    "ruta": "news/Reconocimiento-Instructores-Agenda-Presidencial.json",
+    "resumen": "En el encuentro entre los presidentes Milei y Meloni se abordó el reconocimiento internacional de instructores argentinos. AADIDESS celebra el acuerdo que restableció el ejercicio profesional en Italia y reafirma su compromiso con la calidad."
+  },
+  {
+    "id": 41,
+    "titulo": "Oficina Central: Nuevo horario de atención a partir de junio",
+    "postedAt": "2025-05-30T11:50:00-03:00",
+    "ruta": "news/Oficina-Central-Nuevo-Horario-Atención-Junio-2025.json",
+    "resumen": "Nuevo horario en Bariloche: lunes a viernes de 16 a 20 hs. Consultas académicas: secretaria@aadidess.com; socios: central@aadidess.com; instructores independientes y pagos: administracion@aadidess.com."
+  },
+  {
+    "id": 42,
+    "titulo": "Si sos Instructor de Esquí de AADIDESS, ¡esta oportunidad puede llevar tu profesión al próximo nivel!",
+    "postedAt": "2025-05-13T13:33:00-03:00",
+    "ruta": "news/Instructores-esqui-oportunidad-Aspen-2025.json",
+    "resumen": "Hub Travel y USE Argentina buscan instructores de esquí para trabajar en ASPEN. Requisitos: Nivel 1 AADIDESS, 200 hs de clases, disponibilidad del 8/12 al 20/3. Contacto por WhatsApp hasta el 16/5."
+  },
+  {
+    "id": 43,
+    "titulo": "Información importante TEMPORADA 2025 para los socios AADIDESS con titulación nivel 3 o superior",
+    "postedAt": "2025-05-08T09:36:00-03:00",
+    "ruta": "news/Informacion-Importante-Temporada-2025-Nivel-3-Superior.json",
+    "resumen": "La comisión directiva resolvió no autorizar instructores independientes sin residencia permanente en Bariloche (mínimo 3 años en DNI), habilitando contratos en escuelas y la modalidad itinerante por hasta 7 días."
+  },
+  {
+    "id": 44,
+    "titulo": "Información importante: Modificaciones para los Cursos 2025",
+    "postedAt": "2025-04-21T10:26:00-03:00",
+    "ruta": "news/Modificaciones-Cursos-2025.json",
+    "resumen": "Se anuncian cambios en los ingresos y cursadas de Nivel 2 y 3 de Esquí y Snowboard: nuevas maniobras, requisitos de ingreso según antigüedad, y evaluaciones actualizadas. Leer detenidamente."
+  },
+  {
+    "id": 45,
+    "titulo": "Hub Work & Travel - Búsquedas abiertas",
+    "postedAt": "2025-04-16T09:17:00-03:00",
+    "ruta": "news/Hub-Work-Travel-Busquedas-abiertas.json",
+    "resumen": "Oportunidad para trabajar en el exterior con Hub Work & Travel. Requisitos: nivel 1 AADIDESS, inglés, entre 18 y 28 años, alumno regular. Postulate a workandtravel@hubtravel.com.ar o al +54 9 11 2845-1200."
+  },
+  {
+    "id": 46,
+    "titulo": "Inscripciones - Actividades académicas en Andorra 2025",
+    "postedAt": "2025-03-10T11:29:00-03:00",
+    "ruta": "news/Inscripciones-Actividades-academicas-Andorra-2025.json",
+    "resumen": "Exámenes y reentrenos de esquí y snowboard en Ordino Arcalis, Andorra, entre el 2 y el 6 de abril. Inscripciones hasta el 20/3 a las 14 hs mediante formulario."
+  },
+  {
+    "id": 47,
+    "titulo": "Actividades académicas en Aspen (esquí)",
+    "postedAt": "2025-02-24T16:00:00-03:00",
+    "ruta": "news/Actividades-academicas-Aspen-esqui.json",
+    "resumen": "Inscripciones abiertas para clínica preparatoria, exámenes, reentrenamiento y clínica de bumps en Aspen del 2 al 6 de marzo. Inscripciones hasta el 26/2. Consultas: secretariaacademica@aadidess.com."
+  },
+  {
+    "id": 48,
+    "titulo": "CAPSA S.A. informa: Pase instructores de escuelas o independientes",
+    "postedAt": "2024-12-05T16:05:00-03:00",
+    "ruta": "news/CAPSA-Informa-Pase-Instructores-2024.json",
+    "resumen": "Pase especial de temporada para instructores habilitados: valor equivalente a 10,5 pases diarios en temporada alta ($1.207.500). Pago hasta el 31/12/2024 por transferencia. Enviar comprobante a administracion@catedralaltapatagonia.com."
   }
 ]

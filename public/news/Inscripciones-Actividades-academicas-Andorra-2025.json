@@ -1,0 +1,40 @@
+{
+  "id": 46,
+  "titulo": "Inscripciones - Actividades académicas en Andorra 2025",
+  "postedAt": "2025-03-10T11:29:00-03:00",
+  "createdAt": "2025-03-10T11:29:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "**ESQUÍ:**\nExámenes de ingreso a nivel 1 y 3, y examen de egreso a nivel 1, 2 y 3 y recuperatorios: **5 y 6 de abril**\nReentrenamiento: **3 de abril**"
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "**SNOWBOARD:**\nExámenes de ingreso a nivel 1 y 3, y examen de egreso a nivel 1, 2 y 3 y recuperatorios: **2 y 3 de abril**\nReentrenamiento: **a confirmar**"
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "**Lugar:** Ordino Arcalis"
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": "Las inscripciones se realizan, sin excepción, hasta el **20 de marzo a las 14 hs** (hora argentina) completando este formulario:"
+    },
+    {
+      "tipo": "link",
+      "orden": 5,
+      "texto": "Formulario de Inscripción",
+      "url": "https://forms.gle/WqPjAAq1kKK9CRbd8",
+      "esPdf": false
+    },
+    {
+      "tipo": "texto",
+      "orden": 6,
+      "contenido": "Una vez completado el formulario se enviarán los datos para poder abonar la actividad y finalizar la inscripción."
+    }
+  ]
+}

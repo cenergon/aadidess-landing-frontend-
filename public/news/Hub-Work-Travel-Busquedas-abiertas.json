@@ -1,0 +1,62 @@
+{
+  "id": 45,
+  "titulo": "Hub Work & Travel - Búsquedas abiertas",
+  "postedAt": "2025-04-16T09:17:00-03:00",
+  "createdAt": "2025-04-16T09:17:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "Si estás interesado/a en expandir tu carrera profesional en el exterior, esta oportunidad de **Hub Work & Travel** te puede interesar."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "**Requisitos para aplicar:**"
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "• Ser alumno regular universitario o terciario."
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": "• Tener buen nivel de **inglés**."
+    },
+    {
+      "tipo": "texto",
+      "orden": 5,
+      "contenido": "• Tener entre **18 y 28 años**."
+    },
+    {
+      "tipo": "texto",
+      "orden": 6,
+      "contenido": "• Tener como mínimo certificación **NIVEL 1 de AADIDESS**, con **cuota al día**."
+    },
+    {
+      "tipo": "texto",
+      "orden": 7,
+      "contenido": "Viví una temporada única en la nieve y trabajá en lo que más te gusta."
+    },
+    {
+      "tipo": "texto",
+      "orden": 8,
+      "contenido": "¡Postulate ahora y empezá tu aventura!"
+    },
+    {
+      "tipo": "link",
+      "orden": 10,
+      "texto": "workandtravel@hubtravel.com.ar",
+      "url": "mailto:workandtravel@hubtravel.com.ar",
+      "esPdf": false
+    },
+    {
+      "tipo": "link",
+      "orden": 12,
+      "texto": "+54 9 11 2845-1200",
+      "url": "https://wa.me/5491128451200",
+      "esPdf": false
+    }
+  ]
+}

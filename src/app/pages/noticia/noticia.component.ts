@@ -136,7 +136,9 @@ export class NoticiaComponent implements OnInit {
       /\*\*(.*?)\*\*/g,
       '<strong class="negrita-accent">$1</strong>'
     );
-    // 3. Devolver como HTML seguro
-    return this.sanitizer.bypassSecurityTrustHtml(conNegrita);
+    // 3. Convertir saltos de línea en <br> para que respeten los \n del JSON
+    const conSaltos = conNegrita.replace(/\n/g, '<br>');
+    // 4. Devolver como HTML seguro
+    return this.sanitizer.bypassSecurityTrustHtml(conSaltos);
   }
 }

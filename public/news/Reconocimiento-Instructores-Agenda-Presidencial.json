@@ -1,0 +1,33 @@
+{
+  "id": 40,
+  "titulo": "El reconocimiento de instructores, presente en la agenda presidencial",
+  "postedAt": "2025-06-09T09:46:00-03:00",
+  "createdAt": "2025-06-09T09:46:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "Durante el reciente encuentro bilateral entre los presidentes **Javier Milei** y **Giorgia Meloni**, uno de los temas abordados con especial atención fue el **reconocimiento internacional de los instructores argentinos**, y en particular el de **Italia**, una temática clave para el desarrollo profesional del sector."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "Desde AADIDESS celebramos que este tema haya llegado al más alto nivel institucional, ya que está directamente relacionado con el **acuerdo** que nuestra asociación logró meses atrás con las autoridades italianas. Gracias a estas gestiones, se restableció el **reconocimiento oficial** de los instructores formados por AADIDESS para poder ejercer en las principales estaciones de esquí de Italia."
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "Este avance representa no solo una conquista para nuestros profesionales, sino también un respaldo a la **calidad y el prestigio** de la formación que ofrecemos. AADIDESS mantiene un compromiso constante con los más altos **estándares internacionales**, lo que nos posiciona como una institución de referencia en el ámbito de la enseñanza de los deportes de invierno."
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": "Nuestros instructores se distinguen por su **nivel técnico y pedagógico**, por encima de otras organizaciones del sector, y son reconocidos como una verdadera **élite** en los destinos más exclusivos del mundo."
+    },
+    {
+      "tipo": "texto",
+      "orden": 5,
+      "contenido": "En este contexto, reafirmamos la importancia de que también a nivel nacional se priorice una mirada más exigente sobre los **criterios de reconocimiento profesional**, alineados con los estándares internacionales."
+    }
+  ]
+}

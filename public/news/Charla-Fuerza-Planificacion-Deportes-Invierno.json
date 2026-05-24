@@ -1,0 +1,60 @@
+{
+  "id": 39,
+  "titulo": "Charla: El rol de la fuerza y la planificación en los deportes de invierno",
+  "postedAt": "2025-06-10T09:44:00-03:00",
+  "createdAt": "2025-06-10T09:44:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "El **14 de junio** próximo brindaremos una **charla gratuita** (exclusiva para socios de AADIDESS), a cargo del profesor **Martín Ramos**: **Planificación y programación de la fuerza en los deportes de invierno**."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "El objetivo de la misma es concientizar sobre la importancia del **entrenamiento de fuerza** y su correcta **planificación y periodicidad** para mejorar el rendimiento y **prevenir lesiones** en deportes de montaña."
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "**Info:**"
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": "• **14 de junio**"
+    },
+    {
+      "tipo": "texto",
+      "orden": 5,
+      "contenido": "• **18 hs**"
+    },
+    {
+      "tipo": "texto",
+      "orden": 6,
+      "contenido": "• Vía **ZOOM**"
+    },
+    {
+      "tipo": "texto",
+      "orden": 7,
+      "contenido": "• Cupos limitados"
+    },
+    {
+      "tipo": "texto",
+      "orden": 8,
+      "contenido": "Inscripciones a través de este link:"
+    },
+    {
+      "tipo": "link",
+      "orden": 9,
+      "texto": "Formulario de Inscripción",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScKm_18FHW2Lcf9Ybu2C5pbS0-y-73mDKjr9tsq0mXNqs-3Jw/viewform?fbclid=PAZXh0bgNhZW0CMTEAAadhvgJ8I1mCAoDC84JetivE0hQvg_Sm6TZaHN_Voi2iDlSnnySmtE1eRU4cJw_aem_0_qZK_6Wc5O0YvIZNsbfNw",
+      "esPdf": false
+    },
+    {
+      "tipo": "texto",
+      "orden": 10,
+      "contenido": "Días previos a la charla estarás recibiendo el link de acceso a ZOOM. ¡Estate atento/a!"
+    }
+  ]
+}
