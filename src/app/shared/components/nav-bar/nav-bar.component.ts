@@ -54,7 +54,7 @@ export class NavBarComponent implements OnInit {
         { label: 'Bolsa de Trabajo', link: '/socios/bolsa-de-trabajo' },
         { label: 'Alquileres para Socios', link: '/socios/alquileres-para-socios' },
         { label: 'Instructores', link: 'https://qr.aadidess.cipbyte.io/#/home', external: true },
-        { label: 'Hub Travel - Vuelos', link: '/wip' }, 
+        { label: 'Hub Travel - Vuelos', link: '/socios/hub-travel-vuelos' }, 
       ]
     },
     {
