@@ -54,7 +54,9 @@ export class NavBarComponent implements OnInit {
         { label: 'Bolsa de Trabajo', link: '/socios/bolsa-de-trabajo' },
         { label: 'Alquileres para Socios', link: '/socios/alquileres-para-socios' },
         { label: 'Instructores', link: 'https://qr.aadidess.cipbyte.io/#/home', external: true },
-        { label: 'Hub Travel - Vuelos', link: '/socios/hub-travel-vuelos' }, 
+        { label: 'Hub Travel - Vuelos', link: '/wip' },
+        // dejo /wip ahora hasta que este solucionada la ruta
+        // /socios/hub-travel-vuelos es la ruta que muestra el componente HubTravelVuelosComponent, que a su vez carga el script externo de Aereos.
       ]
     },
     {
