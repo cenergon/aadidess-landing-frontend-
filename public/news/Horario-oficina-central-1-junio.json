@@ -1,0 +1,56 @@
+{
+  "id": 49,
+  "titulo": "Horario de la oficina central a partir del 1 de Junio",
+  "postedAt": "2026-05-28T18:00:00-03:00",
+  "createdAt": "2026-05-28T18:00:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "A partir del **1 de Junio** la oficina central en **Bariloche** atenderá de **Lunes a Viernes de 16 a 20 hs**.\n\nRecordamos nuestros emails de contacto:"
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "- Para consultas **académicas** (cursos, inscripciones, convalidaciones, reentrenos, etc) **secretaria@aadidess.com** / **secretariaacademica@aadidess.com**"
+    },
+    {
+      "tipo": "link",
+      "orden": 3,
+      "texto": "secretaria@aadidess.com",
+      "url": "mailto:secretaria@aadidess.com",
+      "esPdf": false
+    },
+    {
+      "tipo": "link",
+      "orden": 4,
+      "texto": "secretariaacademica@aadidess.com",
+      "url": "mailto:secretariaacademica@aadidess.com",
+      "esPdf": false
+    },
+    {
+      "tipo": "texto",
+      "orden": 5,
+      "contenido": "- Para consultas sobre temas generales de **socios** **central@aadidess.com**"
+    },
+    {
+      "tipo": "link",
+      "orden": 6,
+      "texto": "central@aadidess.com",
+      "url": "mailto:central@aadidess.com",
+      "esPdf": false
+    },
+    {
+      "tipo": "texto",
+      "orden": 7,
+      "contenido": "- Para consultas de **instructores independientes de Bariloche** y dudas sobre **pagos** **administracion@aadidess.com**"
+    },
+    {
+      "tipo": "link",
+      "orden": 8,
+      "texto": "administracion@aadidess.com",
+      "url": "mailto:administracion@aadidess.com",
+      "esPdf": false
+    }
+  ]
+}

@@ -327,5 +327,12 @@
     "postedAt": "2024-12-05T16:05:00-03:00",
     "ruta": "news/CAPSA-Informa-Pase-Instructores-2024.json",
     "resumen": "Pase especial de temporada para instructores habilitados: valor equivalente a 10,5 pases diarios en temporada alta ($1.207.500). Pago hasta el 31/12/2024 por transferencia. Enviar comprobante a administracion@catedralaltapatagonia.com."
+  },
+  {
+    "id": 49,
+    "titulo": "Horario de la oficina central a partir del 1 de junio",
+    "postedAt": "2026-05-28T18:00:00-03:00",
+    "ruta": "news/Horario-oficina-central-1-junio.json",
+    "resumen": "A partir del 1 de junio la oficina central de Bariloche atenderá de lunes a viernes de 16 a 20 hs. Repasamos los correos de contacto para cada tipo de consulta."
   }
 ]
