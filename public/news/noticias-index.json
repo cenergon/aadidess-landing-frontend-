@@ -334,5 +334,12 @@
     "postedAt": "2026-05-28T18:00:00-03:00",
     "ruta": "news/Horario-oficina-central-1-junio.json",
     "resumen": "A partir del 1 de junio la oficina central de Bariloche atenderá de lunes a viernes de 16 a 20 hs. Repasamos los correos de contacto para cada tipo de consulta."
+  },
+  {
+    "id": 50,
+    "titulo": "Nuevo curso de Instructor de Club en convenio con FASA",
+    "postedAt": "2026-05-30T21:00:00-03:00",
+    "ruta": "news/Nuevo-curso-Instructor-de-Club-FASA.json",
+    "resumen": "AADIDESS y FASA presentan el Curso de Instructor de Club, una capacitación virtual y presencial para profesionalizar la enseñanza en clubes afiliados. Inscripciones del 29/5 al 10/6."
   }
 ]

@@ -1,0 +1,60 @@
+{
+  "id": 50,
+  "titulo": "Nuevo curso de Instructor de Club en convenio con FASA",
+  "postedAt": "2026-05-30T21:00:00-03:00",
+  "createdAt": "2026-05-30T21:00:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "**AADIDESS y FASA** presentan una nueva capacitación destinada a profesionalizar y unificar líneas de trabajo para quienes se desempeñan cada temporada invernal en los clubes de ski y snowboard afiliados a FASA.\n\nEl Curso de Instructor de Club está pensado y diseñado especialmente para quienes trabajan en los clubes con grupos estables de niños y jóvenes a lo largo de toda la temporada, que a diferencia de las escuelas comerciales, necesitan una estrategia muy diferente de planificación, vínculo pedagógico y de herramientas.\n\nEs una formación con una parte virtual asincrónica de 100 horas reloj, que constituye el tronco común multidisciplinario para todas las disciplinas de invierno. El egresado luego accede al Módulo Específico de la disciplina en la que se desempeña (ski alpino, ski de fondo, snowboard o freeski) para completar su habilitación como instructor de club.\n\nLa formación se estructura sobre **cinco ejes**:\n\n- **Pedagogía y didáctica general**\n- **Psicología del desarrollo y del deporte**\n- **Anatomía funcional**\n- **Desarrollo y aprendizaje motriz**\n- **Seguridad en montaña**"
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "Se organiza en 8 materias que incluyen, entre otros temas: fundamentos pedagógicos, teorías del aprendizaje, psicología del deporte aplicada a niños, anatomía funcional, recreación y manejo de grupos, fundamentos biomecánicos del gesto deportivo en nieve, seguridad en montaña, primeros auxilios, meteorología, y organización institucional del club.\n\nAdemás, se los capacita para desarrollar una base técnica personal sólida en las maniobras del Sistema Argentino de Enseñanza e integrar en la práctica real los conocimientos pedagógicos y técnicos adquiridos."
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "**Quiénes pueden inscribirse**\n\nEl curso es **exclusivo para postulantes avalados institucionalmente por un club afiliado a FASA**. No se admitirán inscripciones individuales.\n\n**Requisitos**:\n\n- **Ser mayor de 18 años**\n- **Estar avalado formalmente por un club** (nota firmada por autoridades)\n- **Contar con nivel de ski o snowboard mínimo equivalente a Intermedios 4 del Sistema Argentino de Enseñanza**. En este sentido, consideramos fundamental que cada club refiera personas con experiencia previa y un nivel técnico adecuado para afrontar la formación y la evaluación final\n- **Presentar documentación personal, ficha médica y obra social o seguro personal de accidentes**"
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": "**Fechas clave**\n\n- **Inscripciones:** del 29 de mayo al 10 de junio\n- **Inicio de cursada online (habilitación del material):** 15 de junio\n- **Modalidad:** virtual asincrónica\n- **Duración estimada:** 3 a 4 semanas\n- **Inicio de cursada pista:** a confirmar en cada delegación\n- **Duración pista:** 5 días"
+    },
+    {
+      "tipo": "texto",
+      "orden": 5,
+      "contenido": "**Valor del curso**\n\n- **$600.000** por cursante. Los detalles sobre formas de pago y la documentación necesaria les llegarán por separado al confirmar el interés de su club."
+    },
+    {
+      "tipo": "texto",
+      "orden": 6,
+      "contenido": "**Próximos pasos**\n\nLes pedimos que, a la brevedad, comiencen a identificar dentro de su institución a los candidatos que postularían para esta primera capacitación. Una vez que contemos con dichos listados, cada club deberá solicitar a los interesados que realicen la inscripción de manera personal a través del Campus Virtual de AADIDESS. Cualquier consulta previa pueden enviarla a **info@fasa.org.ar** y la respondemos."
+    },
+    {
+      "tipo": "link",
+      "orden": 7,
+      "texto": "info@fasa.org.ar",
+      "url": "mailto:info@fasa.org.ar",
+      "esPdf": false
+    },
+    {
+      "tipo": "texto",
+      "orden": 8,
+      "contenido": "Esta primera edición es un paso clave para construir una base común y federal en la formación de instructores de club. Contamos con el acompañamiento de todos ustedes para que sea un éxito."
+    },
+    {
+      "tipo": "texto",
+      "orden": 9,
+      "contenido": "**Los instructores de club no convalidan titulaciones en el extranjero. La certificación tiene validez e incumbencia exclusivamente dentro de clubes de ski y snowboard de Argentina.**"
+    },
+    {
+      "tipo": "texto",
+      "orden": 10,
+      "contenido": "Un saludo cordial,\n\nComisión Directiva — FASA Federación Argentina de Ski y Andinismo\n\nComisión Directiva — AADIDESS Asociación Argentina de Instructores de Esquí, Snowboard y Pisteros Socorristas"
+    }
+  ]
+}
