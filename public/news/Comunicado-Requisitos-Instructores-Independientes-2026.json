@@ -22,7 +22,14 @@
     {
       "tipo": "texto",
       "orden": 4,
-      "contenido": "Por tal motivo, **sugerimos a cada interesado comunicarse directamente con la Municipalidad de San Carlos de Bariloche** para confirmar los requisitos y condiciones de habilitación vigentes."
+      "contenido": "Por tal motivo, sugerimos a cada interesado **comunicarse directamente con la Municipalidad de San Carlos de Bariloche** para confirmar los requisitos y condiciones de habilitación vigentes, al siguiente email:"
+    },
+    {
+      "tipo": "link",
+      "orden": 5,
+      "texto": "habilitacionesmscb@gmail.com",
+      "url": "mailto:habilitacionesmscb@gmail.com",
+      "esPdf": false
     },
     {
       "tipo": "texto",
