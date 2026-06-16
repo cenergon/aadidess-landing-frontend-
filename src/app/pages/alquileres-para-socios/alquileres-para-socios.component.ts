@@ -47,6 +47,24 @@ export class AlquileresParaSociosComponent {
         { nombre: 'Nahuel', telefono: '+5492944209951' }
       ],
       foto: 'images/alquileres/alquiler-b-villa-los-coihues.jpg',
+    },
+    {
+      titulo: 'Departamento para 1pax o una pareja',
+      descripcion: 'Precio por mes 800 U$S con todos los gastos incluidos.',
+      ubicacion: '',
+      contactos: [
+        { nombre: 'viviolivieri@gmail', telefono: '2944353515' }
+      ],
+      foto: 'images/alquileres/depto-1-pax-1-pareja.jpeg',
+    },
+    {
+      titulo: 'Departamento de 35m2 con entrada para auto. A un km del cruce a Catedral',
+      descripcion: 'Capacidad para 2 personas. Equipado con cocina, heladera. Ambiente amplio, 1 baño, 2 camas una plaza o 1 de 2 plazas. Servicios incluidos: Electricidad, Agua, Gas, Tv cable (no cuenta con wifi)',
+      ubicacion: 'Av. Bustillo 7542',
+      contactos: [
+        { nombre: '', telefono: '2944589688' }
+      ],
+      foto: '',
     }
   ];
 
