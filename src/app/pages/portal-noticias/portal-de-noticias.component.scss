@@ -16,12 +16,88 @@
     transition: color var(--transition-base);
   }
 
-  &__cargando {
-    text-align: center;
-    color: var(--color-text-secondary);
-    font-size: 1.1rem;
+  // ---------- BUSCADOR ----------
+  &__buscador-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--color-bg-primary); // Asegúrate de tener esta variable en tu tema
+    padding: 0.5rem 0 1rem;
+    margin-bottom: 1rem;
+    // Sombra sutil para separarlo del contenido al hacer scroll
+    box-shadow: 0 4px 6px -6px rgba(0, 0, 0, 0.1);
   }
 
+  &__buscador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  &__buscador-input {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    min-width: 240px;
+    background-color: var(--color-bg-elevated);
+    color: var(--color-text-primary);
+    transition: border-color var(--transition-base), box-shadow var(--transition-base);
+
+    &:focus {
+      outline: none;
+      border-color: var(--color-accent);
+      box-shadow: 0 0 0 2px rgba(var(--color-accent-rgb), 0.2);
+    }
+
+    &::placeholder {
+      color: var(--color-text-secondary);
+    }
+  }
+
+  &__buscador-indice {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    min-width: 60px;
+    text-align: center;
+  }
+
+  &__buscador-flecha {
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    font-size: 1rem;
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+    color: var(--color-text-primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color var(--transition-base), border-color var(--transition-base);
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    &:not(:disabled):hover {
+      background-color: var(--color-accent);
+      border-color: var(--color-accent);
+      color: #fff;
+
+      .material-symbols-outlined {
+        color: #fff;
+      }
+    }
+
+    .material-symbols-outlined {
+      font-size: 1.25rem;
+      line-height: 1;
+    }
+  }
+
+  // ---------- GRID ----------
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -54,6 +130,12 @@
       box-shadow: var(--shadow-lg);
       border-color: var(--color-accent);
     }
+
+    // Resaltado de la tarjeta activa en la búsqueda
+    &--active {
+      border-color: var(--color-accent) !important;
+      box-shadow: 0 0 0 3px rgba(var(--color-accent-rgb), 0.3), var(--shadow-lg);
+    }
   }
 
   &__card-titulo {
@@ -73,7 +155,7 @@
     font-size: 0.9rem;
     color: var(--color-text-secondary);
     margin: 0 0 1rem;
-    flex-grow: 1; // para que el enlace quede abajo alineado
+    flex-grow: 1;
   }
 
   &__card-link {

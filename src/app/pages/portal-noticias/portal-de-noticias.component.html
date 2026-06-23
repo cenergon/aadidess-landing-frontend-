@@ -1,12 +1,52 @@
 <section class="portal-noticias">
   <div class="portal-noticias__container">
     <h1 class="portal-noticias__title">Noticias</h1>
+
     @if (cargando) {
       <app-spinner></app-spinner>
     } @else {
+      <!-- Buscador sticky -->
+      <div class="portal-noticias__buscador-wrapper">
+        <div class="portal-noticias__buscador">
+          <input
+            type="text"
+            class="portal-noticias__buscador-input"
+            placeholder="Buscar por título..."
+            [(ngModel)]="searchText"
+            (input)="performSearch()"
+            (keydown.enter)="nextResult()"
+          />
+          @if (searchResults.length > 0) {
+            <span class="portal-noticias__buscador-indice">
+              {{ currentResultIndex + 1 }} de {{ searchResults.length }}
+            </span>
+          }
+          <button
+            class="portal-noticias__buscador-flecha"
+            [disabled]="searchResults.length === 0"
+            (click)="previousResult()"
+            aria-label="Resultado anterior"
+          >
+            <span class="material-symbols-outlined">arrow_drop_up</span>
+          </button>
+          <button
+            class="portal-noticias__buscador-flecha"
+            [disabled]="searchResults.length === 0"
+            (click)="nextResult()"
+            aria-label="Resultado siguiente"
+          >
+            <span class="material-symbols-outlined">arrow_drop_down</span>
+          </button>
+        </div>
+      </div>
+
       <div class="portal-noticias__grid">
         @for (noticia of noticias; track noticia.id) {
-          <article class="portal-noticias__card">
+          <article
+            #cardElement
+            class="portal-noticias__card"
+            [class.portal-noticias__card--active]="activeNoticiaId === noticia.id"
+          >
             <h2 class="portal-noticias__card-titulo">{{ noticia.titulo }}</h2>
             <time class="portal-noticias__card-fecha" [attr.datetime]="noticia.postedAt">
               {{ formatearFecha(noticia.postedAt) }}
