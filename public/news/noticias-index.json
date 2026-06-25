@@ -341,5 +341,12 @@
     "postedAt": "2026-05-30T21:00:00-03:00",
     "ruta": "news/Nuevo-curso-Instructor-de-Club-FASA.json",
     "resumen": "AADIDESS y FASA presentan el Curso de Instructor de Club, una capacitación virtual y presencial para profesionalizar la enseñanza en clubes afiliados. Inscripciones del 29/5 al 10/6."
+  },
+  {
+    "id": 51,
+    "titulo": "Convocatoria Abierta - Postulación - Comité Técnico de Esquí Alpino AADIDESS",
+    "postedAt": "2026-06-25T18:00:00-03:00",
+    "ruta": "news/Convocatoria-Comite-Tecnico-Esqui-Alpino.json",
+    "resumen": "AADIDESS abre la convocatoria para integrar el nuevo Comité Técnico de Esquí Alpino. Requisitos: ser socio activo, Nivel 5 y actualización vigente. Postulaciones a director@aadidess.com hasta el 30 de junio."
   }
 ]

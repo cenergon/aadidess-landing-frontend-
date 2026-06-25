@@ -1,0 +1,50 @@
+{
+  "id": 51,
+  "titulo": "Convocatoria Abierta - Postulación - Comité Técnico de Esquí Alpino AADIDESS",
+  "postedAt": "2026-06-25T18:00:00-03:00",
+  "createdAt": "2026-06-25T18:00:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "La Asociación Argentina de Instructores de Esquí, Snowboard y Pisteros Socorristas (AADIDESS), informa la apertura de la convocatoria para la presentación de postulantes interesados en integrar el nuevo Comité Técnico de Esquí Alpino."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "En el marco de la actualización y fortalecimiento institucional de las áreas técnicas, se llevará adelante la conformación del nuevo Comité Técnico de Esquí Alpino, órgano asesor dependiente del Consejo Académico, cuya función principal será colaborar en el desarrollo, actualización y definición de los estándares técnicos de la disciplina.\n\nDe acuerdo con el reglamento vigente, el Comité estará integrado por seis (6) miembros, designados por la Comisión Directiva a propuesta del Consejo Académico."
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "Se procurará, en la medida de las posibilidades y de las postulaciones recibidas, que la conformación del Comité contemple representación de diferentes centros de esquí, regiones geográficas y perfiles profesionales, con el objetivo de favorecer una visión amplia, diversa y federal del desarrollo técnico de la disciplina."
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": "**Requisitos generales**\n\nLos postulantes deberán cumplir con los requisitos establecidos en el Reglamento del Comité Técnico, entre ellos:\n\n* Ser socio activo de AADIDESS con cuota al día.\n* Poseer titulación Nivel 5.\n* Contar con actualización técnica vigente.\n* Tener disponibilidad para participar activamente en reuniones, grupos de trabajo y proyectos técnicos institucionales."
+    },
+    {
+      "tipo": "texto",
+      "orden": 5,
+      "contenido": "**Presentación de postulaciones**\n\nLas postulaciones deberán enviarse por correo electrónico a:\n\n**director@aadidess.com**"
+    },
+    {
+      "tipo": "link",
+      "orden": 6,
+      "texto": "director@aadidess.com",
+      "url": "mailto:director@aadidess.com",
+      "esPdf": false
+    },
+    {
+      "tipo": "texto",
+      "orden": 7,
+      "contenido": "**Fecha límite de presentación:** **Martes 30 de junio - 20:00 hs**\n\nLa presentación deberá incluir:\n\n* Nombre y apellido.\n* Número de socio.\n* Centro de esquí donde desarrolla su actividad principal.\n* Breve currículum o reseña profesional.\n* Carta de motivación indicando los motivos por los cuales desea integrar el Comité Técnico."
+    },
+    {
+      "tipo": "texto",
+      "orden": 8,
+      "contenido": "Una vez finalizado el período de recepción, el Consejo Académico evaluará las postulaciones recibidas y elevará a la Comisión Directiva la propuesta de designación correspondiente.\n\nAADIDESS agradece el compromiso permanente de sus profesionales y valora especialmente la participación de quienes contribuyen al crecimiento y fortalecimiento técnico de nuestra institución."
+    }
+  ]
+}
