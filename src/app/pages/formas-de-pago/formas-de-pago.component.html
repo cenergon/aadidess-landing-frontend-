@@ -80,6 +80,20 @@
             </div>
             <div class="formas-pago__banco-datos">
               <p><strong>Tipo:</strong> {{ banco.tipoCuenta }}</p>
+              @if (banco.numeroCuenta) {
+                <p><strong>N° de Cuenta:</strong>
+                  <span
+                    class="formas-pago__copiar"
+                    [class.formas-pago__copiar--activo]="copiadoId() === 'banco-' + i + '-nrocta'"
+                    (click)="copiarTexto(banco.numeroCuenta, 'banco-' + i + '-nrocta')"
+                  >
+                    {{ banco.numeroCuenta }}
+                    @if (copiadoId() === 'banco-' + i + '-nrocta') {
+                      <span class="copiado-tooltip">¡Copiado!</span>
+                    }
+                  </span>
+                </p>
+              }
               <p><strong>CBU:</strong> 
                 <span
                   class="formas-pago__copiar"

@@ -5,6 +5,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 interface Banco {
   banco: string;
   tipoCuenta: string;
+  numeroCuenta?: string;
   cbu: string;
   cuit: string;
   alias: string;
@@ -53,6 +54,7 @@ export class FormasDePagoComponent implements OnInit, OnDestroy {
     {
       banco: 'Banco Galicia',
       tipoCuenta: 'Cuenta Corriente en pesos',
+      numeroCuenta: '7384-6 031-6',
       cbu: '0070031320000007384664',
       cuit: '30-65656626-0',
       alias: 'aadidess.galicia',
@@ -61,6 +63,7 @@ export class FormasDePagoComponent implements OnInit, OnDestroy {
     {
       banco: 'Banco Patagonia',
       tipoCuenta: 'Cuenta Corriente en pesos',
+      numeroCuenta: '255-122873547-000',
       cbu: '0340255100122873547001',
       cuit: '30-65656626-0',
       alias: 'aadidess',
