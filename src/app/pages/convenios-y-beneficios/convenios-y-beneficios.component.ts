@@ -1,5 +1,4 @@
 import { Component, signal, ElementRef, ViewChildren, QueryList } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { BeneficiosComercialesComponent } from '../beneficios-comerciales/beneficios-comerciales.component';
 
 interface AcordeonItem {
@@ -10,7 +9,7 @@ interface AcordeonItem {
 @Component({
   selector: 'app-convenios-y-beneficios',
   standalone: true,
-  imports: [CommonModule, BeneficiosComercialesComponent],
+  imports: [BeneficiosComercialesComponent],
   templateUrl: './convenios-y-beneficios.component.html',
   styleUrls: ['./convenios-y-beneficios.component.scss']
 })

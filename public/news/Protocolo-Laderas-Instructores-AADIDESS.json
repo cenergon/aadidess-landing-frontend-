@@ -1,0 +1,25 @@
+{
+  "id": 52,
+  "titulo": "Protocolo de Laderas para instructores AADIDESS de todo el país",
+  "postedAt": "2026-07-01T12:00:00-03:00",
+  "createdAt": "2026-07-01T12:00:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "Con el objetivo de fomentar el desarrollo del esquí y snowboard en Argentina, generar nuevas oportunidades para los profesionales de la enseñanza y dar a conocer el Centro de Esquí Laderas Cerro Perito Moreno a visitantes de todo el país, la empresa Laderas (Cerro Perito Moreno) establece el siguiente protocolo para instructores independientes afiliados a AADIDESS."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "Se solicita su lectura atenta y la aplicación de las pautas aquí establecidas en el desarrollo de las actividades, a fin de asegurar su cumplimiento alineado con los lineamientos vigentes."
+    },
+    {
+      "tipo": "link",
+      "orden": 3,
+      "texto": "Ver protocolo completo",
+      "url": "docs/Protocolo-Instructores-Independientes.pdf",
+      "esPdf": true
+    }
+  ]
+}
