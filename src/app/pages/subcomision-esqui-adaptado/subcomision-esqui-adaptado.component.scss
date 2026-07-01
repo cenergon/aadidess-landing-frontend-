@@ -1,0 +1,42 @@
+$radius-lg: 12px;
+$radius-md: 8px;
+$transition-smooth: var(--transition-base, 0.2s ease);
+
+.subcomision {
+  padding: 3rem 1.5rem;
+  background-color: var(--color-bg-primary);
+  transition: background-color $transition-smooth, color $transition-smooth;
+
+  &__container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: 2rem;
+    transition: color $transition-smooth;
+  }
+
+  &__text {
+    font-size: 1.05rem;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    transition: color $transition-smooth;
+  }
+
+  &__link {
+    color: var(--color-accent);
+    text-decoration: underline;
+    font-weight: 500;
+    transition: color $transition-smooth;
+
+    &:hover {
+      color: var(--color-accent-hover);
+    }
+  }
+}

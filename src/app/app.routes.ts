@@ -38,6 +38,8 @@ import { SkimanComponent } from './pages/skiman/skiman.component';
 import { RcpComponent } from './pages/rcp/rcp.component';
 import { AuxiliarCentroEsquiComponent } from './pages/auxiliar-centro-esqui/auxiliar-centro-esqui.component';
 import { TelemarkComponent } from './pages/telemark/telemark.component';
+import { InstructoresDeClubComponent } from './pages/instructores-de-club/instructores-de-club.component';
+import { SubcomisionEsquiAdaptadoComponent } from './pages/subcomision-esqui-adaptado/subcomision-esqui-adaptado.component';
 import { PortalDeNoticiasComponent } from './pages/portal-noticias/portal-de-noticias.component';
 import { NoticiaComponent } from './pages/noticia/noticia.component';
 import { DemoTeamComponent } from './pages/demo-team/demo-team.component';
@@ -92,6 +94,8 @@ export const routes: Routes = [
     { path: 'academico/cursos/rcp', component: RcpComponent },
     { path: 'academico/cursos/auxiliar-centro-esqui', component: AuxiliarCentroEsquiComponent },
     { path: 'academico/cursos/telemark', component: TelemarkComponent },
+    { path: 'academico/cursos/instructores-de-club', component: InstructoresDeClubComponent },
+    { path: 'subcomision-esqui-adaptado', component: SubcomisionEsquiAdaptadoComponent },
     { path: 'portal-de-noticias', component: PortalDeNoticiasComponent },
     { path: 'noticias/:id', component: NoticiaComponent },
     { path: 'demo-team', component: DemoTeamComponent },

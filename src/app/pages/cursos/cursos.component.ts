@@ -50,7 +50,8 @@ export class CursosComponent {
     { nombre: 'Skiman', foto: 'images/cursos/Skiman.jpeg.jpg', link: '/academico/cursos/skiman' },
     { nombre: 'RCP', foto: 'images/cursos/RCP-1.jpg', link: '/academico/cursos/rcp' },
     { nombre: 'Auxiliar de Centro de Esquí', foto: 'images/cursos/auxuliar.jpg', link: '/academico/cursos/auxiliar-centro-esqui' },
-    { nombre: 'Telemark', foto: 'images/cursos/Telemark.jpeg.jpg', link: '/academico/cursos/telemark' }
+    { nombre: 'Telemark', foto: 'images/cursos/Telemark.jpeg.jpg', link: '/academico/cursos/telemark' },
+    { nombre: 'Instructores de Club', foto: null, link: '/academico/cursos/instructores-de-club' }
   ];
 
   accionesRapidas: AccionRapida[] = [

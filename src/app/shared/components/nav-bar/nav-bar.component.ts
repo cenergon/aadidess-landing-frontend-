@@ -33,6 +33,7 @@ export class NavBarComponent implements OnInit {
         { label: 'Escuelas y Clubes reconocidos', link: '/institucional/escuelas-clubes' },
         { label: 'Decálogo', link: 'docs/Decalogo-AA.pdf', external: true },
         { label: 'Sponsors', link: '/institucional/sponsors' },
+        { label: 'Subcomisión de Esquí Adaptado', link: '/subcomision-esqui-adaptado' },
       ]
     },
     {
