@@ -1,0 +1,47 @@
+<div class="app-download-banner">
+  <div class="app-download-banner__container">
+    <div class="app-download-banner__content">
+      <h2 class="app-download-banner__title">
+        Descargá la aplicación de AADIDESS
+      </h2>
+      <p class="app-download-banner__subtitle">
+        Accedé a todos los servicios desde tu celular, estés donde estés.
+      </p>
+    </div>
+
+    <div class="app-download-banner__badges">
+      @if (showAppStore()) {
+        <a
+          [href]="appStoreLink"
+          class="app-download-banner__badge"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Descargar en App Store"
+        >
+          <img
+            [src]="appStoreBadge"
+            alt="Descargar en App Store"
+            class="app-download-banner__badge-img"
+            loading="lazy"
+          />
+        </a>
+      }
+      @if (showPlayStore()) {
+        <a
+          [href]="playStoreLink"
+          class="app-download-banner__badge"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Disponible en Google Play"
+        >
+          <img
+            [src]="playStoreBadge"
+            alt="Disponible en Google Play"
+            class="app-download-banner__badge-img"
+            loading="lazy"
+          />
+        </a>
+      }
+    </div>
+  </div>
+</div>

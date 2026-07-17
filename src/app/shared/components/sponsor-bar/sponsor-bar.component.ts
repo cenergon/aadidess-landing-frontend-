@@ -17,7 +17,7 @@ interface Sponsor {
   standalone: true,
   imports: [RouterLink],
   templateUrl: './sponsor-bar.component.html',
-  styleUrls: ['./sponsor-bar.component.scss']
+  styleUrls: ['./sponsor-bar.component.scss'],
 })
 export class SponsorBarComponent implements OnInit, OnDestroy {
   private router = inject(Router);
@@ -26,14 +26,17 @@ export class SponsorBarComponent implements OnInit, OnDestroy {
   isHidden = signal(false);
 
   sponsor: Sponsor[] = [
-    { imagen: 'images/logos/macro-azul.png', alt: 'Macro', imagenDark: 'images/logos/macro-blanco.png', height:70, heightDark:50 },
+    {
+      imagen: 'images/logos/macro-azul.png',
+      alt: 'Macro',
+      imagenDark: 'images/logos/macro-blanco.png',
+      height: 70,
+      heightDark: 50,
+    },
     { imagen: 'images/sponsor/marcapais2.svg', alt: 'Argentina', height: 100 },
-    { imagen: 'svgs/turkish-negro.svg', alt: 'Turkish Airlines', imagenDark: 'svgs/turkish-blanco.svg', heightDark:40 },
-    { imagen: 'svgs/thonet-negro.svg', alt: 'Thonet', imagenDark: 'svgs/thonet-blanco.svg', height: 30 },
     { imagen: 'images/sponsor/hubtravel2.png', alt: 'Hub travel', height: 50 },
     { imagen: 'images/sponsor/vola2.png', alt: 'Vola' },
-    { imagen: 'images/logos/oakley-negro.png', alt: 'Oakley', imagenDark: 'images/logos/oakley-blanco.png', height: 55 },
-    { imagen: 'images/sponsor/catedral2.png', alt: 'Catedral' }
+    { imagen: 'images/sponsor/catedral2.png', alt: 'Catedral' },
   ];
 
   // Mobile detection sincronizada con la media query del CSS
@@ -42,7 +45,7 @@ export class SponsorBarComponent implements OnInit, OnDestroy {
 
   // Sponsors a renderizar: duplicado SOLO en mobile, original en desktop
   displaySponsors = computed(() =>
-    this.isMobile() ? [...this.sponsor, ...this.sponsor] : this.sponsor
+    this.isMobile() ? [...this.sponsor, ...this.sponsor] : this.sponsor,
   );
 
   // Duración proporcional a la cantidad de logos originales (no cambia)
@@ -73,7 +76,7 @@ export class SponsorBarComponent implements OnInit, OnDestroy {
 
     // Router logic
     this.routerSub = this.router.events
-      .pipe(filter(e => e instanceof NavigationEnd))
+      .pipe(filter((e) => e instanceof NavigationEnd))
       .subscribe(() => {
         this.isHidden.set(this.router.url === '/institucional/sponsors');
       });
@@ -101,9 +104,10 @@ export class SponsorBarComponent implements OnInit, OnDestroy {
    * Si no hay ninguno, devuelve 32.
    */
   getSponsorHeight(sponsor: Sponsor): number {
-    const baseHeight = (this.currentTheme() === 'dark' && sponsor.heightDark != null)
-      ? sponsor.heightDark
-      : (sponsor.height ?? 32);
+    const baseHeight =
+      this.currentTheme() === 'dark' && sponsor.heightDark != null
+        ? sponsor.heightDark
+        : (sponsor.height ?? 32);
     return baseHeight;
   }
 }

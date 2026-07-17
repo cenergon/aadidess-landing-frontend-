@@ -4,15 +4,15 @@ import { DOCUMENT } from '@angular/common';
 interface Sponsor {
   nombre: string;
   link: string;
-  logoLight: string;   // ruta para modo claro
-  logoDark?: string;    // si no se define, usa logoLight en ambos
+  logoLight: string; // ruta para modo claro
+  logoDark?: string; // si no se define, usa logoLight en ambos
 }
 
 @Component({
   selector: 'app-sponsors',
   standalone: true,
   templateUrl: './sponsors.component.html',
-  styleUrls: ['./sponsors.component.scss']
+  styleUrls: ['./sponsors.component.scss'],
 })
 export class SponsorsComponent implements OnInit, OnDestroy {
   modoOscuro = signal(false);
@@ -24,42 +24,23 @@ export class SponsorsComponent implements OnInit, OnDestroy {
       nombre: 'Macro',
       link: 'https://www.macro.com.ar',
       logoLight: 'images/logos/macro-azul.png',
-      logoDark: 'images/logos/macro-blanco.png'
-    },
-    {
-      nombre: 'Turkish Airlines',
-      link: 'https://www.turkishairlines.com',
-      logoLight: 'svgs/turkish-airlines.svg',
-      logoDark: 'svgs/turkish-blanco.svg'
-      // mismo en ambos temas
-    },
-    {
-      nombre: 'Thonet & Vander',
-      link: 'https://www.thonet-vander.com',
-      logoLight: 'svgs/thonet-negro.svg',
-      logoDark: 'svgs/thonet-blanco.svg'
+      logoDark: 'images/logos/macro-blanco.png',
     },
     {
       nombre: 'Marca País Argentina',
       link: 'https://www.argentina.gob.ar/marca-pais',
-      logoLight: 'svgs/marca-pais-argentina.svg'
+      logoLight: 'svgs/marca-pais-argentina.svg',
     },
     {
       nombre: 'Hub Travel',
       link: 'https://hubtravel.com.ar',
-      logoLight: 'images/logos/hub-travel.png'
-    },
-    {
-      nombre: 'Oakley',
-      link: 'https://www.oakley.com',
-      logoLight: 'images/logos/oakley-negro.png',
-      logoDark: 'images/logos/oakley-blanco.png'
+      logoLight: 'images/logos/hub-travel.png',
     },
     {
       nombre: 'Catedral Alta Patagonia',
       link: 'https://catedralaltapatagonia.com',
-      logoLight: 'images/logos/catedral-logo.png'
-    }
+      logoLight: 'images/logos/catedral-logo.png',
+    },
   ];
 
   getLogoSrc(sponsor: Sponsor): string {

@@ -1,0 +1,115 @@
+@use 'sass:color';
+
+$banner-radius: var(--radius-lg, 12px);
+$banner-transition: var(--transition-base, 0.2s ease);
+
+$title-light: #24243c;
+$subtitle-light: #475569;
+$title-dark: #f1f5f9;
+$subtitle-dark: #cbd5e1;
+
+.app-download-banner {
+  padding: 2rem 1.5rem;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.75rem 2rem;
+    background: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: $banner-radius;
+    box-shadow: var(--shadow-md);
+    transition:
+      background-color $banner-transition,
+      border-color $banner-transition;
+  }
+
+  &__content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__title {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: $title-light;
+    margin: 0 0 0.5rem;
+    transition: color $banner-transition;
+  }
+
+  &__subtitle {
+    font-size: 1rem;
+    font-weight: 400;
+    color: $subtitle-light;
+    margin: 0;
+    transition: color $banner-transition;
+  }
+
+  &__badges {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+  }
+
+  &__badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 0.75rem;
+    background: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: $banner-radius;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    transition:
+      transform $banner-transition,
+      box-shadow $banner-transition,
+      border-color $banner-transition;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-color: var(--color-accent);
+    }
+  }
+
+  &__badge-img {
+    height: 42px;
+    width: auto;
+    display: block;
+  }
+
+  :host-context([data-theme='dark']) &__title {
+    color: $title-dark;
+  }
+  :host-context([data-theme='dark']) &__subtitle {
+    color: $subtitle-dark;
+  }
+  :host-context([data-theme='dark']) &__badge {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+
+    &:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  @media (max-width: 600px) {
+    &__container {
+      flex-direction: column;
+      text-align: center;
+      gap: 1.25rem;
+      padding: 1.5rem;
+    }
+
+    &__title {
+      font-size: 1.2rem;
+    }
+
+    &__badges {
+      justify-content: center;
+    }
+  }
+}
