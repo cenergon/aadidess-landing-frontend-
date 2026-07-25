@@ -1,0 +1,28 @@
+{
+  "id": 53,
+  "titulo": "Charla TEA en la nieve",
+  "postedAt": "2026-07-25T08:00:00-03:00",
+  "createdAt": "2026-07-25T08:00:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "El pasado 22 de julio se llevó a cabo la charla abierta \"TEA en la nieve\", un encuentro orientado a la divulgación de información específica sobre el manejo de clases para niños dentro del espectro autista, tanto en situaciones en las que las familias cuentan con un diagnóstico como en aquellas en las que aún no lo conocen."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "La charla fue desarrollada por Martín Saccomano y Mariana Neira, con el aporte y la revisión de la psicóloga Eleonora Gitelli, además de la colaboración de un grupo de profesionales de esquí adaptado que participaron en la discusión y definición de los temas abordados, entre ellos Santiago Pinedo y Lulú Mathis."
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "El interés generado reunió a 94 participantes en el webinar en vivo. Como cierre del encuentro, se invitó a los participantes a sumarse a las experiencias que desarrollan las fundaciones de los distintos centros de esquí, colaborando como voluntarios y asistentes. Además, se los convocó a inscribirse en el Curso de Auxiliar de Esquí Adaptado, que se dictará en septiembre en la ciudad de Bariloche."
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": "A nivel institucional, esta iniciativa refleja el compromiso de acercar información de calidad que facilite la inclusión y el acceso al conocimiento sobre el acompañamiento de niños dentro del espectro autista. Al mismo tiempo, constituye una herramienta para fortalecer el vínculo con los socios y con toda la comunidad de la nieve, reafirmando el carácter formativo y el compromiso de la asociación con la capacitación, la inclusión y el desarrollo profesional."
+    }
+  ]
+}

@@ -355,5 +355,12 @@
     "postedAt": "2026-07-01T12:00:00-03:00",
     "ruta": "news/Protocolo-Laderas-Instructores-AADIDESS.json",
     "resumen": "La empresa Laderas (Cerro Perito Moreno) establece un protocolo para instructores independientes afiliados a AADIDESS, con pautas para el desarrollo de actividades en el centro de esquí. Descargá el documento completo."
+  },
+  {
+    "id": 53,
+    "titulo": "Charla TEA en la nieve",
+    "postedAt": "2026-07-25T08:00:00-03:00",
+    "ruta": "news/Charla-TEA-en-la-nieve.json",
+    "resumen": "El 22 de julio se realizó la charla abierta sobre manejo de clases para niños dentro del espectro autista, con 94 participantes. La iniciativa refuerza el compromiso de AADIDESS con la inclusión, la capacitación y el desarrollo profesional."
   }
 ]
