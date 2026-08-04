@@ -109,11 +109,9 @@ $transition-base: var(--transition-base);
                 background 0.2s,
                 border-color 0.2s;
 
-    // Hover: fondo sutil, borde acento con opacidad 25% mediante color-mix
+    // Hover: sombra y borde acento con opacidad 25% (sin fondo, para no tapar el header)
     &:hover {
-      background: var(--color-hover-bg);
       border-color: color-mix(in srgb, var(--color-accent) 25%, transparent);
-      // Fallback para navegadores que no soporten color-mix (opcional)
       @supports not (border-color: color-mix(in srgb, var(--color-accent) 25%, transparent)) {
         border-color: var(--color-accent);
         opacity: 0.8;
@@ -132,9 +130,7 @@ $transition-base: var(--transition-base);
       box-shadow: var(--shadow-dropdown);
       transform: none;
 
-      // Mantener el hover aunque esté abierto
       &:hover {
-        background: var(--color-hover-bg);
         border-color: color-mix(in srgb, var(--color-accent) 25%, transparent);
         @supports not (border-color: color-mix(in srgb, var(--color-accent) 25%, transparent)) {
           border-color: var(--color-accent);

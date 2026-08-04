@@ -64,7 +64,9 @@ export class EscuelasClubesComponent implements AfterViewInit {
         { nombre: 'SnowMatch Bariloche', email: 'office@snowmatch.pro', web: 'www.snowmatch.pro', telefono: '' },
         { nombre: 'Fundación Desafío Bariloche', email: 'fundaciondesafiobariloche@gmail.com', web: '', telefono: '294-4304714' },
         { nombre: 'Cumbre Andina', email: 'cumbreandina.bariloche@gmail.com', web: '', telefono: '+54 9 294 492-1556' },
-        { nombre: 'Escuela Ski Bariloche', email: 'info@escuelaskibariloche.com', web: 'www.escuelaskibariloche.com', telefono: '+5492944304010' }
+        { nombre: 'Escuela Ski Bariloche', email: 'info@escuelaskibariloche.com', web: 'www.escuelaskibariloche.com', telefono: '+5492944304010' },
+        { nombre: 'Club de la Nieve', email: 'clubdelanieveoficial@gmail.com', web: '', telefono: '' },
+        { nombre: 'Snowsur', email: 'snowsurschool@gmail.com', web: '', telefono: '' }
       ]
     },
     {
