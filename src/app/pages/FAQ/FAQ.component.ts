@@ -474,7 +474,7 @@ export class FAQComponent implements AfterViewInit {
           titulo: 'Aranceles',
           items: [
             { pregunta: '¿Dónde y cómo tengo que abonar el arancel correspondiente al examen de ingreso?', respuesta: 'El arancel del curso se abona una vez que aprobaste el ingreso.' },
-            { pregunta: '¿El arancel incluye el pase de los medios, alojamiento, equipos, traslados o comidas?', respuesta: 'El arancel incluye únicamente las horas cátedra de cada módulo, los exámenes, el pase para los medios de elevación y el manual de estudio.' },
+            { pregunta: '¿El arancel incluye el pase de los medios, alojamiento, equipos, traslados o comidas?', respuesta: 'El arancel incluye únicamente las horas cátedra de cada módulo, los exámenes y el manual de estudio.' },
             { pregunta: 'Si no apruebo ¿me devuelven el dinero del arancel abonado?', respuesta: 'No, es parte de los gastos de organización del examen de ingreso.' },
             { pregunta: '¿Si apruebo el ingreso, el arancel del curso se paga aparte del arancel del examen de ingreso?', respuesta: 'Si.' }
           ]

@@ -84,13 +84,6 @@ export class DelegacionesComponent {
       horario: 'a partir de 18 hs'
     },
     {
-      nombre: 'Penitentes',
-      delegado: 'Nicolás Cicchitti',
-      contacto: '0261155713149',
-      tipoContacto: 'Teléfono',
-      email: 'nicocic230@hotmail.com'
-    },
-    {
       nombre: 'Los Puquios',
       delegado: 'Eduardo Soler',
       contacto: '0261156392757',
