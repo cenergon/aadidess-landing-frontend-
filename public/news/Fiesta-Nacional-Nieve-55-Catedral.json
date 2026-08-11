@@ -1,0 +1,33 @@
+{
+  "id": 54,
+  "titulo": "55.ª Fiesta Nacional de la Nieve en Cerro Catedral",
+  "postedAt": "2026-08-11T08:00:00-03:00",
+  "createdAt": "2026-08-11T08:00:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "La tradicional Bajada de Antorchas volverá a iluminar las pistas de Cerro Catedral, dando inicio oficial a la 55.ª edición de la Fiesta Nacional de la Nieve. El evento se realizará luego de varios días de intensas nevadas que pintaron de blanco la ciudad y los cerros."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "Martín Bacer, uno de los referentes más reconocidos del esquí argentino, presidente de AADIDESS y vicepresidente por América de la International Ski Instructors Association (ISIA), participa y organiza esta ceremonia desde sus inicios. Para él, la Bajada representa mucho más que un descenso nocturno:"
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "\"Ser parte de la Bajada de Antorchas es un orgullo y una enorme responsabilidad. No es solo un descenso iluminado; es un homenaje a quienes construyeron la historia del esquí en Cerro Catedral y una forma de mantener vivo ese legado. Cada instructor que participa representa a generaciones que hicieron de la enseñanza, el compañerismo y el respeto por la montaña los pilares de nuestra profesión\"."
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": "Bacer destaca que el verdadero corazón de la tradición está en el encuentro entre generaciones: los instructores con experiencia transmiten valores y conocimientos, mientras las nuevas camadas aportan energía y nuevas miradas. \"Me gustaría que nunca pierda su espíritu de comunidad, el respeto por la montaña y el reconocimiento al trabajo de quienes la hacen posible cada día\", expresa."
+    },
+    {
+      "tipo": "texto",
+      "orden": 5,
+      "contenido": "La cita es el jueves 13 a las 19 horas en Cerro Catedral. La comunidad está invitada a ser parte de este símbolo del invierno barilochense."
+    }
+  ]
+}
