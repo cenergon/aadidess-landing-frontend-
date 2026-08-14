@@ -1,0 +1,23 @@
+{
+  "id": 55,
+  "titulo": "Nieve, luces y fuego: la Bajada de Antorchas abrió la 55ª Fiesta Nacional de la Nieve",
+  "postedAt": "2026-08-14T08:00:00-03:00",
+  "createdAt": "2026-08-14T08:00:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "La tradicional Bajada de Antorchas volvió a iluminar el Cerro Catedral y unió a tres generaciones, en el marco de la 55ª Fiesta Nacional de la Nieve. La cita reunió a cerca de 600 participantes entre instructores de esquí y snowboard de AADIDESS y alumnos de diversos clubes."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "El descenso se realizó en dos etapas. Primero, por la ladera central, bajaron los más pequeños junto a sus instructores, con luces LED, y también se sumó la participación de esquí adaptado. Luego, mientras caían suaves copos de nieve, descendieron por la ladera norte portando las clásicas antorchas de fuego, liderados por Martín Bacer, presidente de AADIDESS."
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "El público se desplazó de una ladera a la otra para recibir a los participantes con aplausos y fotos. El evento cerró con música en la plaza, en una noche que volvió a demostrar por qué esta ceremonia sigue siendo uno de los momentos más emotivos del invierno en el centro de esquí más importante de Latinoamérica."
+    }
+  ]
+}

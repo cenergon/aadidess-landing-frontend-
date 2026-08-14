@@ -1,0 +1,33 @@
+{
+  "id": 56,
+  "titulo": "Nota de agradecimiento",
+  "postedAt": "2026-08-14T14:00:00-03:00",
+  "createdAt": "2026-08-14T14:00:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "La Asociación Argentina de Instructores de Esquí, Snowboard y Pisteros Socorristas quiere realizar un especial agradecimiento a todos nuestros instructores, escuelas y clubes que se acercaron ayer a participar de la Bajada de Antorchas en el Cerro Catedral."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "Hacemos un reconocimiento destacado a los chicos de Esquí Escolar, Los Antiguos, Fundación Challenge Argentina, Fundación Desafío Bariloche y Escuela Militar de Montaña, por acompañarnos en la maravillosa jornada."
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "Mantener viva la magia de la Bajada de Antorchas es un esfuerzo colectivo que refleja la unión de nuestras instituciones y la pasión compartida por el deporte y la montaña."
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": "**GRACIAS POR HACER POSIBLE LA BAJADA DE ANTORCHAS**"
+    },
+    {
+      "tipo": "texto",
+      "orden": 5,
+      "contenido": "Nos vemos en la próxima edición"
+    }
+  ]
+}

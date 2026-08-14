@@ -369,5 +369,19 @@
     "postedAt": "2026-08-11T08:00:00-03:00",
     "ruta": "news/Fiesta-Nacional-Nieve-55-Catedral.json",
     "resumen": "La tradicional Bajada de Antorchas dará inicio a la 55.ª Fiesta Nacional de la Nieve en Cerro Catedral. Martín Bacer, presidente de AADIDESS, destaca el valor de esta ceremonia como legado de generaciones de instructores. La cita es el Jueves 13 a las 19:00 horas."
+  },
+  {
+    "id": 55,
+    "titulo": "Nieve, luces y fuego: la Bajada de Antorchas abrió la 55ª Fiesta Nacional de la Nieve",
+    "postedAt": "2026-08-14T08:00:00-03:00",
+    "ruta": "news/Bajada-de-Antorchas-55-Fiesta-Nacional.json",
+    "resumen": "La tradicional Bajada de Antorchas reunió a cerca de 600 participantes en el marco de la 55ª Fiesta Nacional de la Nieve. El descenso, liderado por Martín Bacer, unió a tres generaciones entre instructores, alumnos y esquí adaptado."
+  },
+  {
+    "id": 56,
+    "titulo": "Nota de agradecimiento",
+    "postedAt": "2026-08-14T14:00:00-03:00",
+    "ruta": "news/Nota-Agradecimiento-Bajada-Antorchas.json",
+    "resumen": "AADIDESS agradece a instructores, escuelas y clubes que participaron de la Bajada de Antorchas en Cerro Catedral, con especial reconocimiento a Esquí Escolar, Fundación Challenge Argentina, Fundación Desafío Bariloche y Escuela Militar de Montaña."
   }
 ]
