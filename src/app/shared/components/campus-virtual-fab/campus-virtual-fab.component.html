@@ -1,0 +1,21 @@
+<div class="fab" [class.fab--open]="open()">
+  <div class="fab__card">
+    <h2 class="fab__card-title">Visita nuestro campus virtual</h2>
+    <p class="fab__card-subtitle">
+      Accedé a tus cursos, calendario e información académica desde un solo lugar.
+    </p>
+    <a [href]="campusUrl" class="fab__card-button" target="_blank" rel="noopener noreferrer">
+      Ir al Campus Virtual
+    </a>
+  </div>
+
+  <button
+    type="button"
+    class="fab__button"
+    [attr.aria-expanded]="open()"
+    aria-label="Campus Virtual"
+    (click)="toggle()"
+  >
+    <span class="material-symbols-outlined" aria-hidden="true">school</span>
+  </button>
+</div>

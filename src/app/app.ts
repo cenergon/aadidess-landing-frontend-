@@ -2,16 +2,25 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { TopBarComponent } from './shared/components/top-bar/top-bar.component';
 import { NavBarComponent } from './shared/components/nav-bar/nav-bar.component';
-import { FooterComponent } from "./shared/components/footer/footer.component";
-import { BottomBarComponent } from "./shared/components/bottom-bar/bottom-bar.component";
+import { FooterComponent } from './shared/components/footer/footer.component';
+import { BottomBarComponent } from './shared/components/bottom-bar/bottom-bar.component';
 import { SponsorBarComponent } from './shared/components/sponsor-bar/sponsor-bar.component';
+import { CampusVirtualFabComponent } from './shared/components/campus-virtual-fab/campus-virtual-fab.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TopBarComponent, NavBarComponent, FooterComponent, BottomBarComponent, SponsorBarComponent],
+  imports: [
+    RouterOutlet,
+    TopBarComponent,
+    NavBarComponent,
+    FooterComponent,
+    BottomBarComponent,
+    SponsorBarComponent,
+    CampusVirtualFabComponent,
+  ],
 
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
 })
 export class App {
   protected readonly title = signal('aadidess-web-frontend');

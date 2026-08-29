@@ -15,7 +15,7 @@ interface NavItem {
   standalone: true,
   imports: [CommonModule, ThemeToggleComponent, RouterLink],
   templateUrl: './nav-bar.component.html',
-  styleUrls: ['./nav-bar.component.scss']
+  styleUrls: ['./nav-bar.component.scss'],
 })
 export class NavBarComponent implements OnInit {
   mobileMenuOpen = signal(false);
@@ -28,24 +28,26 @@ export class NavBarComponent implements OnInit {
       children: [
         { label: 'Autoridades', link: '/institucional/autoridades' },
         { label: 'Estatuto', link: '/institucional/estatuto' },
-        { label: 'Reglamento del Comité Técnico', link: '/institucional/reglamento-comite-tecnico' },
+        {
+          label: 'Reglamento del Comité Técnico',
+          link: '/institucional/reglamento-comite-tecnico',
+        },
         { label: 'Requisitos para ser Delegado', link: '/institucional/requisitos-delegados' },
         { label: 'Escuelas y Clubes reconocidos', link: '/institucional/escuelas-clubes' },
         { label: 'Decálogo', link: 'docs/Decalogo-AA.pdf', external: true },
         { label: 'Sponsors', link: '/institucional/sponsors' },
         { label: 'Subcomisión de Esquí Adaptado', link: '/subcomision-esqui-adaptado' },
-      ]
+      ],
     },
     {
       label: 'Académico',
       children: [
         { label: 'Cursos', link: '/academico/cursos' },
         { label: 'Calendario', link: '/academico/calendario' },
-        { label: 'Campus Virtual', link: 'https://aadidess.cipbyte.io/web/#/profile-authentication', external: true },
         { label: 'Delegaciones', link: '/academico/delegaciones' },
         { label: 'Reglamento Académico', link: '/institucional/reglamento-academico' },
         { label: 'Preguntas Frecuentes', link: '/academico/FAQ' },
-      ]
+      ],
     },
     {
       label: 'Socios',
@@ -58,18 +60,22 @@ export class NavBarComponent implements OnInit {
         { label: 'Hub Travel - Vuelos', link: '/wip' },
         // dejo /wip ahora hasta que este solucionada la ruta
         // /socios/hub-travel-vuelos es la ruta que muestra el componente HubTravelVuelosComponent, que a su vez carga el script externo de Aereos.
-      ]
+      ],
     },
     {
       label: 'Aranceles y Formas de Pago',
       children: [
         { label: 'Aranceles', link: '/aranceles-y-formas-de-pago/aranceles' },
-        { label: 'Formas de Pago', link: '/aranceles-y-formas-de-pago/formas-de-pago' }
-      ]
+        { label: 'Formas de Pago', link: '/aranceles-y-formas-de-pago/formas-de-pago' },
+      ],
     },
     { label: 'Noticias', link: '/portal-de-noticias' },
-    { label: 'Tienda', link: '/wip' },
-    { label: 'Contacto', link: '/contacto' }
+    {
+      label: 'Campus Virtual',
+      link: 'https://aadidess.cipbyte.io/web/#/profile-authentication',
+      external: true,
+    },
+    { label: 'Contacto', link: '/contacto' },
   ];
 
   ngOnInit() {
@@ -86,7 +92,7 @@ export class NavBarComponent implements OnInit {
   }
 
   toggleMobileMenu() {
-    this.mobileMenuOpen.update(open => !open);
+    this.mobileMenuOpen.update((open) => !open);
   }
 
   setActiveDropdown(label: string | null) {

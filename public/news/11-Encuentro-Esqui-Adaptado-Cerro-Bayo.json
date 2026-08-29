@@ -1,0 +1,48 @@
+{
+  "id": 57,
+  "titulo": "11° Encuentro de Esquí Adaptado",
+  "postedAt": "2026-08-24T08:00:00-03:00",
+  "createdAt": "2026-08-24T08:00:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "**Cerro Bayo albergará el 11° Encuentro de Esquí Adaptado**\nOrganizado conjuntamente por la Fundación Todos Podemos y Cerro Bayo, el próximo sábado 5 de septiembre el centro de esquí será sede de una jornada de integración, deporte de alta montaña y camaradería."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "La montaña se prepara para recibir una nueva edición de uno de los eventos inclusivos más destacados de la cordillera patagónica. El próximo sábado 5 de septiembre, Cerro Bayo abrirá sus pistas para la realización del 11° Encuentro de Esquí Adaptado, una iniciativa impulsada conjuntamente por la Fundación Todos Podemos y el centro de esquí Cerro Bayo."
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "El encuentro está destinado a personas con discapacidad, esquiadores adaptados, instructores y entrenadores de la disciplina provenientes de distintos centros del país. La jornada busca no solo fomentar la práctica deportiva accesible en la nieve, sino también fortalecer los lazos comunitarios y promover el intercambio de experiencias técnicas y humanas entre profesionales y atletas."
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": "**Desafíos en la nieve: Competencia y Recreación**\nEntre las actividades centrales del evento, se llevarán a cabo dos competencias adaptadas a las diferentes habilidades e intereses de los participantes:\n• Carrera Trazado Slalom Gigante: destinada a medir técnica y velocidad en pista.\n• Carrera Trazado Recreativo: enfocada en la integración, el disfrute y la participación activa en un ambiente festivo."
+    },
+    {
+      "tipo": "texto",
+      "orden": 5,
+      "contenido": "Posterior a las pruebas en la nieve, los asistentes compartirán un almuerzo en la montaña y participarán de una charla de intercambio profesional entre esquiadores e instructores de los distintos centros de esquí invitados, cerrando el evento con la habitual entrega de premios y diplomas."
+    },
+    {
+      "tipo": "texto",
+      "orden": 6,
+      "contenido": "**Cronograma de Actividades (Sábado 05/09)**\n09:30 hs – Recepción en la Base de Cerro Bayo: acreditación y entrega de pases (requiere inscripción previa).\n11:00 hs – Inicio de Carreras: punto de encuentro en el Restaurant Tronador (Cota 1500) para las modalidades Slalom Gigante y Trazado Recreativo.\n14:00 hs – Almuerzo de Camaradería: en el Restaurant Tronador, con un menú a tarifa especial para los participantes del encuentro.\n15:00 hs – Cierre y Premiación: charla e intercambio de experiencias entre esquiadores e instructores de distintos centros de esquí, seguido de la entrega de premios y diplomas."
+    },
+    {
+      "tipo": "texto",
+      "orden": 7,
+      "contenido": "**Informes e Inscripción**\nRequisito: inscripción previa obligatoria.\nCorreo electrónico: esquiadaptado@cerrobayo.com.ar\nTeléfono / WhatsApp: 0294 154592217"
+    },
+    {
+      "tipo": "texto",
+      "orden": 8,
+      "contenido": "Organizan: Fundación Todos Podemos & Cerro Bayo Ski Boutique."
+    }
+  ]
+}

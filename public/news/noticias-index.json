@@ -383,5 +383,12 @@
     "postedAt": "2026-08-14T14:00:00-03:00",
     "ruta": "news/Nota-Agradecimiento-Bajada-Antorchas.json",
     "resumen": "AADIDESS agradece a instructores, escuelas y clubes que participaron de la Bajada de Antorchas en Cerro Catedral, con especial reconocimiento a Esquí Escolar, Fundación Challenge Argentina, Fundación Desafío Bariloche y Escuela Militar de Montaña."
+  },
+  {
+    "id": 57,
+    "titulo": "11° Encuentro de Esquí Adaptado",
+    "postedAt": "2026-08-24T08:00:00-03:00",
+    "ruta": "news/11-Encuentro-Esqui-Adaptado-Cerro-Bayo.json",
+    "resumen": "Cerro Bayo albergará el sábado 5 de septiembre el 11° Encuentro de Esquí Adaptado, una jornada de integración organizada por la Fundación Todos Podemos y Cerro Bayo, con competencias, cronograma de actividades, informes e inscripción."
   }
 ]

@@ -1,0 +1,126 @@
+$fab-size: 56px;
+$fab-text: #0f172a;
+$morph-ease: cubic-bezier(0.16, 1, 0.3, 1);
+
+.fab {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 90;
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: $fab-size;
+    height: $fab-size;
+    padding: 0;
+    background-color: var(--color-accent);
+    color: $fab-text;
+    border: none;
+    border-radius: 50%;
+    box-shadow: var(--shadow-dropdown);
+    cursor: pointer;
+    transition:
+      background-color var(--transition-base),
+      opacity 0.28s ease,
+      transform 0.28s $morph-ease,
+      visibility 0.28s ease;
+
+    .material-symbols-outlined {
+      font-size: 28px;
+    }
+
+    &:hover {
+      background-color: var(--color-accent-hover);
+    }
+  }
+
+  &__card {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 300px;
+    padding: 1.5rem;
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-dropdown);
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(12px) scale(0.5);
+    transform-origin: bottom right;
+    transition:
+      opacity 0.28s ease,
+      transform 0.28s $morph-ease,
+      visibility 0.28s ease,
+      background-color var(--transition-base),
+      border-color var(--transition-base);
+  }
+
+  &--open &__card {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  &--open &__button {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.4);
+  }
+
+  &__card-title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    transition: color var(--transition-base);
+  }
+
+  &__card-subtitle {
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-text-primary);
+    opacity: 0.75;
+    transition: color var(--transition-base);
+  }
+
+  &__card-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: var(--color-accent);
+    color: $fab-text;
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition:
+      background-color var(--transition-base),
+      opacity var(--transition-base);
+
+    &:hover {
+      background-color: var(--color-accent-hover);
+      opacity: 0.95;
+    }
+  }
+
+  @media (max-width: 480px) {
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 84px);
+    right: 16px;
+
+    &__card {
+      width: 240px;
+    }
+  }
+}
