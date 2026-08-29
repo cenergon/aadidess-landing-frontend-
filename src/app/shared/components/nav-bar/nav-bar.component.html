@@ -2,11 +2,7 @@
   <div class="navbar__container">
     <!-- Logo como imagen SVG -->
     <a href="/" class="navbar__brand" aria-label="Ir al inicio">
-      <img
-        src="svgs/logo-aadidess.svg"
-        alt="AADIDESS"
-        class="navbar__logo-img"
-      />
+      <img src="svgs/logo-aadidess.svg" alt="AADIDESS" class="navbar__logo-img" />
     </a>
 
     <!-- Botón hamburguesa (mobile) -->
@@ -24,19 +20,11 @@
 
     <!-- Overlay para cerrar menú mobile -->
     @if (mobileMenuOpen()) {
-      <div
-        class="navbar__overlay"
-        (click)="toggleMobileMenu()"
-        aria-hidden="true"
-      ></div>
+      <div class="navbar__overlay" (click)="toggleMobileMenu()" aria-hidden="true"></div>
     }
 
     <!-- Menú principal -->
-    <div
-      id="main-menu"
-      class="navbar__menu"
-      [class.navbar__menu--open]="mobileMenuOpen()"
-    >
+    <div id="main-menu" class="navbar__menu" [class.navbar__menu--open]="mobileMenuOpen()">
       @for (item of navItems; track item.label) {
         @if (item.children && item.children.length) {
           <!-- Dropdown -->
@@ -52,10 +40,7 @@
               (click)="setActiveDropdown(isDropdownOpen(item.label) ? null : item.label)"
             >
               <span>{{ item.label }}</span>
-              <span
-                class="material-symbols-outlined navbar__chevron"
-                aria-hidden="true"
-              >
+              <span class="material-symbols-outlined navbar__chevron" aria-hidden="true">
                 expand_more
               </span>
             </button>
@@ -87,11 +72,7 @@
         } @else {
           <!-- Enlace simple -->
           @if (item.external) {
-            <a
-              href="javascript:void(0)"
-              class="navbar__link"
-              (click)="openExternal(item.link!)"
-            >
+            <a href="javascript:void(0)" class="navbar__link" (click)="openExternal(item.link!)">
               {{ item.label }}
             </a>
           } @else {
@@ -106,6 +87,16 @@
         }
       }
 
+      <!-- Campus Virtual (mobile) dentro del menú -->
+      @if (isMobile()) {
+        <a href="javascript:void(0)" class="navbar__campus" (click)="openExternal(campusUrl)">
+          <span class="material-symbols-outlined navbar__campus-icon" aria-hidden="true">
+            school
+          </span>
+          Campus Virtual
+        </a>
+      }
+
       <!-- Theme Toggle dentro del menú (solo mobile) -->
       @if (isMobile()) {
         <div class="navbar__theme-toggle-container">
@@ -113,6 +104,16 @@
         </div>
       }
     </div>
+
+    <!-- Campus Virtual (desktop) fuera del menú -->
+    @if (!isMobile()) {
+      <a href="javascript:void(0)" class="navbar__campus" (click)="openExternal(campusUrl)">
+        <span class="material-symbols-outlined navbar__campus-icon" aria-hidden="true">
+          school
+        </span>
+        Campus Virtual
+      </a>
+    }
 
     <!-- Theme Toggle en la barra (solo desktop) -->
     @if (!isMobile()) {

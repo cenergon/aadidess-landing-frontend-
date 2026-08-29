@@ -70,13 +70,10 @@ export class NavBarComponent implements OnInit {
       ],
     },
     { label: 'Noticias', link: '/portal-de-noticias' },
-    {
-      label: 'Campus Virtual',
-      link: 'https://aadidess.cipbyte.io/web/#/profile-authentication',
-      external: true,
-    },
     { label: 'Contacto', link: '/contacto' },
   ];
+
+  readonly campusUrl = 'https://aadidess.cipbyte.io/web/#/profile-authentication';
 
   ngOnInit() {
     this.checkMobile();
