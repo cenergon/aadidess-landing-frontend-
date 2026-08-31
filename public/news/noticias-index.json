@@ -390,5 +390,12 @@
     "postedAt": "2026-08-24T08:00:00-03:00",
     "ruta": "news/11-Encuentro-Esqui-Adaptado-Cerro-Bayo.json",
     "resumen": "Cerro Bayo albergará el sábado 5 de septiembre el 11° Encuentro de Esquí Adaptado, una jornada de integración organizada por la Fundación Todos Podemos y Cerro Bayo, con competencias, cronograma de actividades, informes e inscripción."
+  },
+  {
+    "id": 58,
+    "titulo": "El Bolsón: Cerro Perito Moreno Extiende su Temporada de Nieve Hasta Octubre",
+    "postedAt": "2026-08-31T08:00:00-03:00",
+    "ruta": "news/Extiende-Temporada-Cerro-Perito-Moreno.json",
+    "resumen": "Cerro Perito Moreno, en El Bolsón, extiende su temporada hasta el 12 de octubre con tarifa de temporada baja en septiembre y beneficios para residentes de la Comarca Andina y las provincias de Río Negro, Chubut y Neuquén."
   }
 ]

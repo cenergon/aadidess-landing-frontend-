@@ -1,0 +1,23 @@
+{
+  "id": 58,
+  "titulo": "El Bolsón: Cerro Perito Moreno Extiende su Temporada de Nieve Hasta Octubre",
+  "postedAt": "2026-08-31T08:00:00-03:00",
+  "createdAt": "2026-08-31T08:00:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "Gracias a las excelentes condiciones de acumulación de nieve y con pronósticos de nuevas precipitaciones, Laderas Cerro Perito Moreno ratificó el éxito de su temporada invernal y confirmó que mantendrá sus medios de elevación y pistas plenamente operativos hasta el fin de semana largo del 12 de octubre."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "Para incentivar la visita en la antesala de la primavera, el centro de esquí mantendrá durante todo septiembre la **tarifa de temporada baja** e implementó una serie de **beneficios inmediatos para residentes**:\n• **Residentes de la Comarca Andina**: **25% de descuento** en tarifas de media y baja temporada.\n• **Residentes regionales (Río Negro, Chubut y Neuquén)**: **20% de descuento** en tarifas de media y baja temporada."
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "Con estas medidas, Cerro Perito Moreno se posiciona como una de las alternativas más competitivas del país para disfrutar de los deportes invernales."
+    }
+  ]
+}
