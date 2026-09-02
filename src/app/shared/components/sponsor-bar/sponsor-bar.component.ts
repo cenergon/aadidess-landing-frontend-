@@ -36,7 +36,12 @@ export class SponsorBarComponent implements OnInit, OnDestroy {
     { imagen: 'images/sponsor/marcapais2.svg', alt: 'Argentina', height: 100 },
     { imagen: 'images/sponsor/hubtravel2.png', alt: 'Hub travel', height: 50 },
     { imagen: 'images/sponsor/vola2.png', alt: 'Vola' },
-    { imagen: 'images/sponsor/catedral2.png', alt: 'Catedral' },
+    {
+      imagen: 'images/logos/catedral-hd-negro.png',
+      alt: 'Catedral',
+      imagenDark: 'images/logos/catedral-hd-blanco.png',
+      height: 80
+    },
   ];
 
   // Mobile detection sincronizada con la media query del CSS

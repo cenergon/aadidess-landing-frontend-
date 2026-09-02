@@ -39,7 +39,8 @@ export class SponsorsComponent implements OnInit, OnDestroy {
     {
       nombre: 'Catedral Alta Patagonia',
       link: 'https://catedralaltapatagonia.com',
-      logoLight: 'images/logos/catedral-logo.png',
+      logoLight: 'images/logos/catedral-hd-negro.png',
+      logoDark: 'images/logos/catedral-hd-blanco.png',
     },
   ];
 
