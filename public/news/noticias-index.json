@@ -397,5 +397,12 @@
     "postedAt": "2026-08-31T08:00:00-03:00",
     "ruta": "news/Extiende-Temporada-Cerro-Perito-Moreno.json",
     "resumen": "Cerro Perito Moreno, en El Bolsón, extiende su temporada hasta el 12 de octubre con tarifa de temporada baja en septiembre y beneficios para residentes de la Comarca Andina y las provincias de Río Negro, Chubut y Neuquén."
+  },
+  {
+    "id": 59,
+    "titulo": "COMUNICADO OFICIAL - ISIA TEST 2026",
+    "postedAt": "2026-09-02T11:00:00-03:00",
+    "ruta": "news/ISIA-Test-2026.json",
+    "resumen": "El ISIA Test 2026 se realizará el lunes 14 de septiembre en la pista Patagónico del Cerro Catedral. La inscripción cierra el jueves 10 de septiembre a las 19:00 hs."
   }
 ]

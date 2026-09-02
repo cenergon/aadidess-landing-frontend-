@@ -1,0 +1,42 @@
+{
+  "id": 59,
+  "titulo": "COMUNICADO OFICIAL - ISIA TEST 2026",
+  "postedAt": "2026-09-02T11:00:00-03:00",
+  "createdAt": "2026-09-02T11:00:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "Se informa a todos los interesados que la fecha del ISIA Test se llevará a cabo el día lunes 14 de septiembre de 2026 en la pista Patagónico del Cerro Catedral."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "El plazo para la inscripción finaliza el jueves 10 de septiembre a las 19:00 horas."
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "El formulario de inscripción se encuentra disponible a través del siguiente enlace:"
+    },
+    {
+      "tipo": "link",
+      "orden": 4,
+      "texto": "Formulario de inscripción ISIA Test 2026",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfq7Dq8zn6ClXhWRZ2dor79WIZHVBlgRg1nUClkZJmgS8RTkg/viewform",
+      "esPdf": false
+    },
+    {
+      "tipo": "texto",
+      "orden": 5,
+      "contenido": "Ante cualquier consulta, comunicarse con secretaria."
+    },
+    {
+      "tipo": "link",
+      "orden": 6,
+      "texto": "secretaria@aadidess.com",
+      "url": "mailto:secretaria@aadidess.com",
+      "esPdf": false
+    }
+  ]
+}
