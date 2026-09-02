@@ -29,13 +29,20 @@
     {
       "tipo": "texto",
       "orden": 5,
-      "contenido": "Ante cualquier consulta, comunicarse con secretaria."
+      "contenido": "Ante cualquier consulta, comunicarse a:"
     },
     {
       "tipo": "link",
       "orden": 6,
-      "texto": "secretaria@aadidess.com",
-      "url": "mailto:secretaria@aadidess.com",
+      "texto": "central@aadidess.com",
+      "url": "mailto:central@aadidess.com",
+      "esPdf": false
+    },
+    {
+      "tipo": "link",
+      "orden": 7,
+      "texto": "administración@aadidess.com",
+      "url": "mailto:administración@aadidess.com",
       "esPdf": false
     }
   ]
