@@ -48,7 +48,7 @@ export class ArancelesComponent {
         { descripcion: 'Entrenador de Club', precio: 'A confirmar' },
         { descripcion: 'Entrenador Nacional', precio: 'A confirmar' },
         { descripcion: 'Fondo Nivel 1', precio: 'A confirmar' },
-        { descripcion: 'Adaptado Nivel 1', precio: 'A confirmar' },
+        { descripcion: 'Adaptado Nivel 1', precio: '$ 1.873.000,00' },
         { descripcion: 'Auxiliar de centro de esquí', precio: '$ 206.300,00' },
       ]
     },

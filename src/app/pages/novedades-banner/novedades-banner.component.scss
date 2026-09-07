@@ -1,0 +1,133 @@
+.novedades-banner {
+  padding: 3rem 1.5rem;
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base);
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+  }
+
+  &__titulo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 0;
+    transition: color var(--transition-base);
+  }
+
+  &__ver-mas {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-accent);
+    transition: color var(--transition-base);
+
+    &:hover {
+      color: var(--color-accent-hover);
+    }
+  }
+
+  &__strip {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--color-border);
+      border-radius: var(--radius-sm);
+    }
+  }
+
+  &__card {
+    flex: 0 0 auto;
+    width: 240px;
+    scroll-snap-align: start;
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-dropdown);
+    color: inherit;
+    text-decoration: none;
+    transition:
+      transform var(--transition-base),
+      border-color var(--transition-base);
+
+    &:hover {
+      transform: translateY(-4px);
+      border-color: var(--color-accent);
+    }
+  }
+
+  &__card--placeholder {
+    cursor: default;
+    border-style: dashed;
+    box-shadow: none;
+    background: transparent;
+
+    &:hover {
+      transform: none;
+      border-color: var(--color-border);
+    }
+  }
+
+  &__placeholder {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--color-text-primary);
+    opacity: 0.55;
+  }
+
+  &__placeholder-icon {
+    font-size: 1.5rem;
+    color: var(--color-accent);
+  }
+
+  &__placeholder-texto {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  &__imagen-wrapper {
+    width: 100%;
+    aspect-ratio: 3 / 4; /* mismo ratio que bolsa-de-trabajo: 1080×1440 */
+    overflow: hidden;
+    background-color: var(--color-bg-accent);
+  }
+
+  &__imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__card-titulo {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 0;
+    padding: 0.9rem 1rem;
+    transition: color var(--transition-base);
+  }
+}

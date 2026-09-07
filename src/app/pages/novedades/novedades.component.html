@@ -1,0 +1,44 @@
+<section class="novedades">
+  <div class="novedades__container">
+    <h1 class="novedades__title">{{ titulo }}</h1>
+    <p class="novedades__descripcion">{{ descripcion }}</p>
+
+    <div class="novedades__buscador">
+      <input
+        type="text"
+        class="novedades__search"
+        placeholder="Buscar novedades..."
+        [value]="query()"
+        (input)="query.set($any($event.target).value)"
+      />
+    </div>
+
+    @if (resultados().length > 0) {
+      <div class="novedades__grid">
+        @for (novedad of resultados(); track novedad.id) {
+          <a
+            class="novedades__card"
+            [href]="novedad.link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="novedades__imagen-wrapper">
+              <img
+                [src]="novedad.imagen"
+                [alt]="novedad.titulo"
+                class="novedades__imagen"
+                loading="lazy"
+              />
+            </div>
+            <div class="novedades__info">
+              <h2 class="novedades__card-titulo">{{ novedad.titulo }}</h2>
+              <p class="novedades__card-resumen">{{ novedad.resumen }}</p>
+            </div>
+          </a>
+        }
+      </div>
+    } @else {
+      <p class="novedades__sin-resultados">No se encontraron novedades para "{{ query() }}".</p>
+    }
+  </div>
+</section>

@@ -49,6 +49,7 @@ import { AlquileresParaSociosComponent } from './pages/alquileres-para-socios/al
 import { FAQComponent } from './pages/FAQ/FAQ.component';
 import { DelegacionesComponent } from './pages/delegaciones/delegaciones.component';
 import { HubTravelVuelosComponent } from './pages/hub-travel-vuelos/hub-travel-vuelos.component';
+import { NovedadesComponent } from './pages/novedades/novedades.component';
 
 
 export const routes: Routes = [
@@ -103,6 +104,7 @@ export const routes: Routes = [
     { path: 'institucional/sponsors', component: SponsorsComponent },
     { path: 'academico/FAQ', component: FAQComponent },
     { path: 'academico/delegaciones', component: DelegacionesComponent},
+    { path: 'novedades', component: NovedadesComponent },
 
 
     { path: '', component: HomeComponent },

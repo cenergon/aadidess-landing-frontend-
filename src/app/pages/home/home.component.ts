@@ -4,6 +4,7 @@ import { UltimasNoticiasComponent } from '../ultimas-noticias/ultimas-noticias.c
 import { HeroBannerHomeComponent } from '../hero-banner-home/hero-banner-home.component';
 import { TsejBannerComponent } from '../tsej-banner/tsej-banner.component';
 import { AppDownloadBannerComponent } from '../app-download-banner/app-download-banner.component';
+import { NovedadesBannerComponent } from '../novedades-banner/novedades-banner.component';
 
 @Component({
   selector: 'app-footer',
@@ -16,6 +17,7 @@ import { AppDownloadBannerComponent } from '../app-download-banner/app-download-
     HeroBannerHomeComponent,
     TsejBannerComponent,
     AppDownloadBannerComponent,
+    NovedadesBannerComponent,
   ],
 })
 export class HomeComponent {}

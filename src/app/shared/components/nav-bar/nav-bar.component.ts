@@ -69,7 +69,13 @@ export class NavBarComponent implements OnInit {
         { label: 'Formas de Pago', link: '/aranceles-y-formas-de-pago/formas-de-pago' },
       ],
     },
-    { label: 'Noticias', link: '/portal-de-noticias' },
+    {
+      label: 'Noticias y Novedades',
+      children: [
+        { label: 'Noticias', link: '/portal-de-noticias' },
+        { label: 'Novedades', link: '/novedades' },
+      ],
+    },
     { label: 'Contacto', link: '/contacto' },
   ];
 

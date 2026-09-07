@@ -1,0 +1,40 @@
+<section class="novedades-banner">
+  <div class="novedades-banner__container">
+    <header class="novedades-banner__header">
+      <h2 class="novedades-banner__titulo">Novedades</h2>
+      <a routerLink="/novedades" class="novedades-banner__ver-mas">
+        Ver más <span aria-hidden="true">→</span>
+      </a>
+    </header>
+
+    <div class="novedades-banner__strip">
+      @for (novedad of novedades; track novedad.id) {
+        <a
+          class="novedades-banner__card"
+          [href]="novedad.link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="novedades-banner__imagen-wrapper">
+            <img
+              [src]="novedad.imagen"
+              [alt]="novedad.titulo"
+              class="novedades-banner__imagen"
+              loading="lazy"
+            />
+          </div>
+          <h3 class="novedades-banner__card-titulo">{{ novedad.titulo }}</h3>
+        </a>
+      }
+
+      @for (placeholder of placeholders; track placeholder) {
+        <div class="novedades-banner__card novedades-banner__card--placeholder" aria-hidden="true">
+          <div class="novedades-banner__placeholder">
+            <span class="novedades-banner__placeholder-icon">✦</span>
+            <span class="novedades-banner__placeholder-texto">Próximamente…</span>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
