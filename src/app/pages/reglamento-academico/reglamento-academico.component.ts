@@ -133,13 +133,14 @@ export class ReglamentoAcademicoComponent implements AfterViewInit {
     },
     {
       id: 11,
-      titulo: 'Artículo 11: Períodos Lectivos',
+      titulo: 'Artículo 11: Períodos Lectivos y Certificaciones',
       contenidoHtml: `
-        <p>El año académico inicia el 1 de junio y termina el 15 de octubre de cada año calendario.</p>
-        <p>Todas las fechas y cantidad de horas preestablecidas, tanto para el comienzo y desarrollo de los cursos como para exámenes y/o recuperatorios, están sujetas a modificación por cuestiones climáticas, condiciones de nieve o cierre de los medios de elevación, siendo facultad del Consejo Académico la modificación de las mismas.</p>
-        <p>Los horarios para las materias prácticas y teóricas son determinados por la dirección de cursos y comunicada a través del Calendario correspondiente.</p>
-        <p>Las cursadas teóricas son con modalidad en línea (Online) o presencial, siendo facultad de la Dirección o del Consejo Académico la modificación de las mismas.</p>
-        <p>Cada cursante debe verificar sus calificaciones en el sitio web del Instituto o en la Secretaría Académica.</p>
+        <p>El año académico inicia el 1 de junio y finaliza el 15 de octubre de cada año calendario.</p>
+        <p>Todas las fechas y la cantidad de horas preestablecidas, tanto para el inicio y desarrollo de los cursos como para exámenes y/o recuperatorios, podrán ser modificadas por cuestiones climáticas, condiciones de nieve o cierre de los medios de elevación, siendo facultad del Consejo Académico disponer dichas modificaciones.</p>
+        <p>Los horarios correspondientes a las materias prácticas y teóricas serán determinados por la Dirección de Cursos y comunicados a través del calendario correspondiente.</p>
+        <p>Las cursadas teóricas podrán desarrollarse bajo modalidad en línea (online) o presencial, siendo facultad de la Dirección o del Consejo Académico modificar dicha modalidad cuando las circunstancias así lo requieran.</p>
+        <p>Cada cursante deberá verificar sus calificaciones a través del sitio web del Instituto o ante la Secretaría Académica.</p>
+        <p>Las certificaciones correspondientes a todos los cursos dictados durante el año académico comenzarán a emitirse una vez finalizado el ciclo lectivo, es decir, a partir del 15 de octubre de cada año.</p>
       `
     },
     {
