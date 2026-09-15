@@ -1,0 +1,20 @@
+{
+  "id": 60,
+  "titulo": "ISIA Test 2026: ya están disponibles los resultados",
+  "postedAt": "2026-09-15T10:00:00-03:00",
+  "createdAt": "2026-09-15T10:00:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "Ya están disponibles los resultados del ISIA Test 2026."
+    },
+    {
+      "tipo": "link",
+      "orden": 2,
+      "texto": "ISIA Test 2026 – Resultados",
+      "url": "docs/isia-test-tiempos-2026.pdf",
+      "esPdf": true
+    }
+  ]
+}

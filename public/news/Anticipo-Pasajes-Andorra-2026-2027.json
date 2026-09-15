@@ -1,0 +1,42 @@
+{
+  "id": 61,
+  "titulo": "Beneficio de anticipo de pasajes para trabajadores de la temporada 2026-2027 en Andorra",
+  "postedAt": "2026-09-15T12:00:00-03:00",
+  "createdAt": "2026-09-15T12:00:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "El **Grupo SAETDE / SECNOA** anunció una nueva ayuda financiera destinada a facilitar la llegada de su personal contratado para la próxima temporada invernal en Andorra. A través del programa **\"Anticipo de Vuelo Exclusivo\"**, la empresa adelantará parte del costo de los pasajes de avión para asegurar la incorporación a tiempo de sus empleados."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "**Detalles del beneficio**\n\n- **Monto:** Anticipo de hasta un máximo de 1.000 USD para pasajes de ida y vuelta (round trip).\n- **Modalidad de pago:** El dinero adelantado será descontado posteriormente del salario del trabajador durante su periodo de contratación.\n- **Gestión:** La reserva y emisión de los pasajes se realiza de manera exclusiva a través de HUB TRAVEL (contacto: mileidy@hubtravel.com.ar / WhatsApp: +54 11 5219 1414)."
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "**Requisitos e instrucciones de solicitud**\n\n1. **Carta de confirmación:** Es un requisito imprescindible contar con la carta formal de contratación firmada por SAETDE o SECNOA, la cual será verificada antes de aprobar el beneficio.\n2. **Solicitud por correo:** El postulante deberá enviar su carta de confirmación adjunta vía email a HUB TRAVEL para coordinar la emisión del pasaje."
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": "**Advertencia migratoria clave para los viajeros**\n\nEl grupo empresarial recuerda que **Andorra no pertenece al espacio Schengen**.\n\nPara obtener tu permiso de trabajo deberás encontrarte en situación regular dentro del espacio Schengen, es decir, no haber superado el límite de 90 días de permanencia dentro de los últimos 180 días. Si viajaste recientemente por Europa, revisá tus fechas de ingreso y salida antes de confirmar tu pasaje."
+    },
+    {
+      "tipo": "link",
+      "orden": 5,
+      "texto": "mileidy@hubtravel.com.ar",
+      "url": "mailto:mileidy@hubtravel.com.ar",
+      "esPdf": false
+    },
+    {
+      "tipo": "link",
+      "orden": 6,
+      "texto": "+54 11 5219 1414",
+      "url": "https://wa.me/5491152191414",
+      "esPdf": false
+    }
+  ]
+}

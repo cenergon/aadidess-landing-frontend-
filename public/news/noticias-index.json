@@ -404,5 +404,19 @@
     "postedAt": "2026-09-02T11:00:00-03:00",
     "ruta": "news/ISIA-Test-2026.json",
     "resumen": "El ISIA Test 2026 se realizará el lunes 14 de septiembre en la pista Patagónico del Cerro Catedral. La inscripción cierra el jueves 10 de septiembre a las 19:00 hs."
+  },
+  {
+    "id": 60,
+    "titulo": "ISIA Test 2026: ya están disponibles los resultados",
+    "postedAt": "2026-09-15T10:00:00-03:00",
+    "ruta": "news/ISIA-Test-2026-Tiempos.json",
+    "resumen": "Ya están disponibles los resultados del ISIA Test 2026. Consultá la planilla completa."
+  },
+  {
+    "id": 61,
+    "titulo": "Beneficio de anticipo de pasajes para trabajadores de la temporada 2026-2027 en Andorra",
+    "postedAt": "2026-09-15T12:00:00-03:00",
+    "ruta": "news/Anticipo-Pasajes-Andorra-2026-2027.json",
+    "resumen": "El Grupo SAETDE / SECNOA ofrece un anticipo de hasta USD 1.000 para los pasajes de ida y vuelta de su personal contratado para la temporada 2026-2027 en Andorra. La gestión se realiza exclusivamente a través de Hub Travel."
   }
 ]
