@@ -418,5 +418,12 @@
     "postedAt": "2026-09-15T12:00:00-03:00",
     "ruta": "news/Anticipo-Pasajes-Andorra-2026-2027.json",
     "resumen": "El Grupo SAETDE / SECNOA ofrece un anticipo de hasta USD 1.000 para los pasajes de ida y vuelta de su personal contratado para la temporada 2026-2027 en Andorra. La gestión se realiza exclusivamente a través de Hub Travel."
+  },
+  {
+    "id": 62,
+    "titulo": "Campeonatos nacionales de esquí alpino en Laderas Cerro Perito Moreno",
+    "postedAt": "2026-09-19T10:00:00-03:00",
+    "ruta": "news/Campeonatos-Nacionales-Esqui-Alpino-Laderas.json",
+    "resumen": "Laderas Cerro Perito Moreno fue sede por primera vez de los campeonatos nacionales de Slalom y Slalom Gigante, con corredores de Francia, Suiza, Canadá y España. Francesca Baruzzi y Tiziano Gravier se consagraron campeones argentinos de Gigante."
   }
 ]

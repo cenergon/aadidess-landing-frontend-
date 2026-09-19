@@ -1,0 +1,58 @@
+{
+  "id": 62,
+  "titulo": "Campeonatos nacionales de esquí alpino en Laderas Cerro Perito Moreno",
+  "postedAt": "2026-09-19T10:00:00-03:00",
+  "createdAt": "2026-09-19T10:00:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "**Laderas Cerro Perito Moreno** se convirtió en sede de competencias de alto nivel al recibir por primera vez los **campeonatos nacionales de Slalom y Slalom Gigante**, las dos disciplinas que tienen alto grado de complejidad técnica en el esquí alpino. En el evento participaron corredores de Francia, Suiza, Canadá y España."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "La primera prueba fue de **Slalom Gigante**, con un nivel técnico muy exigente. Los dos esquiadores más experimentados del equipo nacional argentino se quedaron con los títulos. **Francesca Baruzzi** y **Tiziano Gravier** se coronaron como campeones argentinos de la especialidad."
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "En la categoría femenina, **Baruzzi** encabezó el podio, seguida por su compatriota **Nicole Begué**, subcampeona argentina y, a su vez, campeona nacional junior, la tercera posición fue para la francesa **Camille Salaris**."
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": "**Francesca Baruzzi**, oriunda de Bariloche y quien en febrero pasado finalizó 29.ª en la misma prueba en los Juegos Olímpicos de Invierno de Milano-Cortina, destacó las condiciones de la pista al cruzar la meta: “Es la primera vez que competía en el Cerro Perito Moreno y me sorprendieron las pistas, que aguantaron muy bien pese a que la temperatura estuvo un poco alta”."
+    },
+    {
+      "tipo": "texto",
+      "orden": 5,
+      "contenido": "En la competencia de varones, el desenlace fue más cerrado, hasta que finalmente **Gravier** se impuso, seguido por el francés **Evan Stoliar** y el suizo **Luc Roduit**, segundo y tercero respectivamente."
+    },
+    {
+      "tipo": "texto",
+      "orden": 6,
+      "contenido": "El ganador, quien este año también integró la delegación olímpica argentina y llega de un histórico 28.° puesto en Super Gigante, celebró la organización del evento en la localidad: “Estamos muy contentos de haber hecho este año el campeonato nacional en El Bolsón, vinieron muchos argentinos y también muchos extranjeros a correr estas pruebas, así que muy satisfechos con el nivel”."
+    },
+    {
+      "tipo": "texto",
+      "orden": 7,
+      "contenido": "Al día siguiente se disputó el **Campeonato Nacional de Slalom** en las laderas del Cerro Perito Moreno, con una destacada presencia europea que marcó ambos podios."
+    },
+    {
+      "tipo": "texto",
+      "orden": 8,
+      "contenido": "En la categoría femenina, el podio fue completamente francés: **Coline Bourgeois** se impuso, seguida por **Cleo Chalamel** y **Elisa Boric**. La mejor argentina fue **Bianca Ricau**, sexta en la general, posición que le permitió consagrarse campeona nacional de la especialidad."
+    },
+    {
+      "tipo": "texto",
+      "orden": 9,
+      "contenido": "En el caso de los varones, la situación no mostró variaciones: el podio también fue francés, con **Leo Llorach** en el primer lugar, **Axel Gravier** segundo y **Adrian Lafont** tercero. **Felipe Eiras** finalizó cuarto y, como el argentino mejor ubicado, se quedó con el título nacional de Slalom."
+    },
+    {
+      "tipo": "texto",
+      "orden": 10,
+      "contenido": "Los campeonatos nacionales fueron organizados por el **Club Andino Piltriquitrón**, junto con la **Federación Argentina de Ski y Andinismo (FASA)** y **Laderas**."
+    }
+  ]
+}
