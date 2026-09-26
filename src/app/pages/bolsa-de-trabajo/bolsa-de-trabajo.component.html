@@ -30,13 +30,19 @@
       <div class="bolsa-trabajo__grid">
         @for (oferta of ofertasArgentinaFiltradas(); track oferta.titulo) {
           <div class="bolsa-trabajo__card">
-            <div class="bolsa-trabajo__imagen-wrapper" (click)="abrirImagen(oferta.imagen)">
+            <div
+              class="bolsa-trabajo__imagen-wrapper"
+              (click)="abrirImagen(oferta)"
+            >
               <img
                 [src]="'images/bolsa-de-trabajo/' + oferta.imagen"
                 [alt]="oferta.titulo"
                 class="bolsa-trabajo__imagen"
                 loading="lazy"
               />
+              @if (oferta.imagenDetalle) {
+                <span class="bolsa-trabajo__badge">Ver requisitos</span>
+              }
             </div>
             <div class="bolsa-trabajo__info">
               <h3 class="bolsa-trabajo__titulo-oferta">{{ oferta.titulo }}</h3>
@@ -57,13 +63,19 @@
       <div class="bolsa-trabajo__grid">
         @for (oferta of ofertasExteriorFiltradas(); track oferta.titulo) {
           <div class="bolsa-trabajo__card">
-            <div class="bolsa-trabajo__imagen-wrapper" (click)="abrirImagen(oferta.imagen)">
+            <div
+              class="bolsa-trabajo__imagen-wrapper"
+              (click)="abrirImagen(oferta)"
+            >
               <img
                 [src]="'images/bolsa-de-trabajo/' + oferta.imagen"
                 [alt]="oferta.titulo"
                 class="bolsa-trabajo__imagen"
                 loading="lazy"
               />
+              @if (oferta.imagenDetalle) {
+                <span class="bolsa-trabajo__badge">Ver requisitos</span>
+              }
             </div>
             <div class="bolsa-trabajo__info">
               <h3 class="bolsa-trabajo__titulo-oferta">{{ oferta.titulo }}</h3>
@@ -79,13 +91,15 @@
     }
 
     <!-- Modal para imagen maximizada -->
-    @if (imagenAmpliada) {
+    @if (imagenesAmpliadas.length > 0) {
       <div class="bolsa-trabajo__modal-backdrop" (click)="cerrarImagen()">
-        <div class="bolsa-trabajo__modal-content">
+        <div class="bolsa-trabajo__modal-content" (click)="$event.stopPropagation()">
           <button class="bolsa-trabajo__modal-close" (click)="cerrarImagen()" aria-label="Cerrar imagen">
             &times;
           </button>
-          <img [src]="imagenAmpliada" class="bolsa-trabajo__modal-imagen" alt="Imagen ampliada" />
+          @for (imagen of imagenesAmpliadas; track imagen) {
+            <img [src]="imagen" class="bolsa-trabajo__modal-imagen" alt="Imagen ampliada" />
+          }
         </div>
       </div>
     }

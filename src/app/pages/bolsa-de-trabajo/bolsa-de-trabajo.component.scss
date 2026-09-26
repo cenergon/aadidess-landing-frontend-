@@ -69,11 +69,26 @@ $transition-smooth: var(--transition-base);
   }
 
   &__imagen-wrapper {
+    position: relative;
     width: 100%;
     aspect-ratio: 3 / 4; /* 1080×1440 → 3:4 */
     overflow: hidden;
     background-color: var(--color-bg-secondary);
     cursor: pointer;
+  }
+
+  &__badge {
+    position: absolute;
+    bottom: 0.75rem;
+    left: 0.75rem;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    background-color: rgba(0, 0, 0, 0.65);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    pointer-events: none;
   }
 
   &__imagen {
@@ -137,10 +152,14 @@ $transition-smooth: var(--transition-base);
   &__modal-content {
     position: relative;
     max-width: 90vw;
-    max-height: 90vh;
+    max-height: 92vh;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    gap: 1rem;
+    overflow: auto;
+    padding: 0.5rem;
   }
 
   &__modal-close {
@@ -163,8 +182,9 @@ $transition-smooth: var(--transition-base);
   }
 
   &__modal-imagen {
+    min-width: 0;
     max-width: 100%;
-    max-height: 90vh;
+    max-height: 84vh;
     object-fit: contain;
     border-radius: 4px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);

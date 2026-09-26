@@ -7,6 +7,7 @@ interface OfertaLaboral {
   delegacion: string;
   localidad: string;
   imagen: string;
+  imagenDetalle?: string;
 }
 
 @Component({
@@ -20,7 +21,7 @@ export class BolsaDeTrabajoComponent {
   titulo = 'Bolsa de Trabajo';
   descripcion = 'En esta sección encontrarás oportunidades laborales de terceros, tanto de Argentina como del exterior, que son difundidas por nuestra asociación. ¡Encontrá el aviso acorde a tu perfil y postulate!';
 
-  imagenAmpliada: string | null = null;
+  imagenesAmpliadas: string[] = [];
 
   ofertasArgentina: OfertaLaboral[] = [
     {
@@ -81,6 +82,23 @@ export class BolsaDeTrabajoComponent {
       delegacion: 'Stratton Mountain',
       localidad: 'Stratton, Vermont, EE.UU.',
       imagen: 'bdt-2026-HubTravel.jpg'
+    },
+    {
+      titulo: 'Cero Grados',
+      descripcion:
+        'Busca personal (instructores de esquí, rental y más) para Sierra Nevada y Baqueira Beret. Temporada 2026/27.',
+      delegacion: 'Sierra Nevada y Baqueira Beret',
+      localidad: 'España',
+      imagen: 'cerogrados-1-2026.jpeg',
+      imagenDetalle: 'cerogrados-2-2026.jpeg'
+    },
+    {
+      titulo: 'Ski Life',
+      descripcion: 'Escuela de esquí en Baqueira Beret. Busca instructores de esquí. Temporada 2026/27.',
+      delegacion: 'Baqueira Beret',
+      localidad: 'España',
+      imagen: 'skiLife-1-2026.jpeg',
+      imagenDetalle: 'skiLife-2-2026.jpeg'
     }
   ];
 
@@ -126,11 +144,12 @@ export class BolsaDeTrabajoComponent {
     return texto.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   }
 
-  abrirImagen(ruta: string): void {
-    this.imagenAmpliada = 'images/bolsa-de-trabajo/' + ruta;
+  abrirImagen(oferta: OfertaLaboral): void {
+    const rutas = oferta.imagenDetalle ? [oferta.imagen, oferta.imagenDetalle] : [oferta.imagen];
+    this.imagenesAmpliadas = rutas.map(ruta => 'images/bolsa-de-trabajo/' + ruta);
   }
 
   cerrarImagen(): void {
-    this.imagenAmpliada = null;
+    this.imagenesAmpliadas = [];
   }
 }
