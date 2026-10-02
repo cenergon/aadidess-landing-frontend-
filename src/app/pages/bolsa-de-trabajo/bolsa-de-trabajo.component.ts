@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 interface OfertaLaboral {
   titulo: string;
   descripcion: string;
-  delegacion: string;
+  delegaciones: string[];
   localidad: string;
   imagen: string;
   imagenDetalle?: string;
@@ -27,49 +27,49 @@ export class BolsaDeTrabajoComponent {
     {
       titulo: 'Cavla',
       descripcion: 'Busca instructores de esquí.',
-      delegacion: 'Cerro Bayo',
+      delegaciones: ['Cerro Bayo'],
       localidad: 'Villa la Angostura',
       imagen: 'bdt-2026-CAVLA.jpg'
     },
     {
       titulo: 'Bariloche White',
       descripcion: 'Busca secretarias con conocimiento de idioma portugués (excluyente).',
-      delegacion: 'Catedral',
+      delegaciones: ['Catedral'],
       localidad: 'San Carlos de Bariloche',
       imagen: 'bdt-2026-BW.jpg'
     },
     {
       titulo: 'La Base',
       descripcion: 'Busca ayudantes para la escuela infantil.',
-      delegacion: 'Catedral',
+      delegaciones: ['Catedral'],
       localidad: 'San Carlos de Bariloche',
       imagen: 'bdt-2026-LaBase.jpg'
     },
     {
       titulo: 'Laderas',
       descripcion: 'Busca Pisteros Socorristas.',
-      delegacion: 'Cerro Perito Moreno',
+      delegaciones: ['Cerro Perito Moreno'],
       localidad: 'El Bolsón',
       imagen: 'bdt-2026-Laderas2.jpg'
     },
     {
       titulo: 'Laderas',
       descripcion: 'Busca instructores de Esquí y Snowboard.',
-      delegacion: 'Cerro Perito Moreno',
+      delegaciones: ['Cerro Perito Moreno'],
       localidad: 'El Bolsón',
       imagen: 'bdt-2026-Laderas.jpg'
     },
     {
       titulo: 'Escuela de Ski Bariloche (ESB)',
       descripcion: 'Busca instructores de Esquí y Snowboard.',
-      delegacion: 'Catedral',
+      delegaciones: ['Catedral'],
       localidad: 'San Carlos de Bariloche',
       imagen: 'bdt-2026-ESB.jpg'
     },
     {
       titulo: 'La Hoya',
       descripcion: 'Busca Pisteros Socorristas. Se valora experiencia en manejo de explosivos.',
-      delegacion: 'La Hoya',
+      delegaciones: ['La Hoya'],
       localidad: 'Esquel, Chubut',
       imagen: 'bdt-2026-LaHoya.jpg'
     }
@@ -79,7 +79,7 @@ export class BolsaDeTrabajoComponent {
     {
       titulo: 'Hub Work & Travel',
       descripcion: 'Busca instructores de snowboard para Stratton Mountain (programa J1).',
-      delegacion: 'Stratton Mountain',
+      delegaciones: ['Stratton Mountain'],
       localidad: 'Stratton, Vermont, EE.UU.',
       imagen: 'bdt-2026-HubTravel.jpg'
     },
@@ -87,7 +87,7 @@ export class BolsaDeTrabajoComponent {
       titulo: 'Cero Grados',
       descripcion:
         'Busca personal (instructores de esquí, rental y más) para Sierra Nevada y Baqueira Beret. Temporada 2026/27.',
-      delegacion: 'Sierra Nevada y Baqueira Beret',
+      delegaciones: ['Sierra Nevada', 'Baqueira Beret'],
       localidad: 'España',
       imagen: 'cerogrados-1-2026.jpeg',
       imagenDetalle: 'cerogrados-2-2026.jpeg'
@@ -95,7 +95,7 @@ export class BolsaDeTrabajoComponent {
     {
       titulo: 'Ski Life',
       descripcion: 'Escuela de esquí en Baqueira Beret. Busca instructores de esquí. Temporada 2026/27.',
-      delegacion: 'Baqueira Beret',
+      delegaciones: ['Baqueira Beret'],
       localidad: 'España',
       imagen: 'skiLife-1-2026.jpeg',
       imagenDetalle: 'skiLife-2-2026.jpeg'
@@ -109,7 +109,7 @@ export class BolsaDeTrabajoComponent {
   // Lista de delegaciones únicas (de ambos grupos)
   delegaciones = computed(() => {
     const todas = [...this.ofertasArgentina, ...this.ofertasExterior];
-    const delegs = todas.map(o => o.delegacion);
+    const delegs = todas.flatMap(o => o.delegaciones);
     return [...new Set(delegs)].sort();
   });
 
@@ -131,11 +131,11 @@ export class BolsaDeTrabajoComponent {
     const deleg = this.delegacionSeleccionada();
 
     const textoCompleto = this.quitarAcentos(
-      `${oferta.titulo} ${oferta.descripcion} ${oferta.delegacion} ${oferta.localidad}`.toLowerCase()
+      `${oferta.titulo} ${oferta.descripcion} ${oferta.delegaciones.join(' ')} ${oferta.localidad}`.toLowerCase()
     );
 
     const coincideTexto = term === '' || textoCompleto.includes(term);
-    const coincideDelegacion = deleg === '' || oferta.delegacion === deleg;
+    const coincideDelegacion = deleg === '' || oferta.delegaciones.includes(deleg);
 
     return coincideTexto && coincideDelegacion;
   }

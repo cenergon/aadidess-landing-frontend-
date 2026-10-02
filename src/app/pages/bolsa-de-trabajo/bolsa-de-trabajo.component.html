@@ -47,7 +47,7 @@
             <div class="bolsa-trabajo__info">
               <h3 class="bolsa-trabajo__titulo-oferta">{{ oferta.titulo }}</h3>
               <p class="bolsa-trabajo__descripcion-oferta">{{ oferta.descripcion }}</p>
-              <p class="bolsa-trabajo__delegacion">{{ oferta.delegacion }}</p>
+              <p class="bolsa-trabajo__delegacion">{{ oferta.delegaciones.join(' · ') }}</p>
               <p class="bolsa-trabajo__localidad">{{ oferta.localidad }}</p>
             </div>
           </div>
@@ -80,7 +80,7 @@
             <div class="bolsa-trabajo__info">
               <h3 class="bolsa-trabajo__titulo-oferta">{{ oferta.titulo }}</h3>
               <p class="bolsa-trabajo__descripcion-oferta">{{ oferta.descripcion }}</p>
-              <p class="bolsa-trabajo__delegacion">{{ oferta.delegacion }}</p>
+              <p class="bolsa-trabajo__delegacion">{{ oferta.delegaciones.join(' · ') }}</p>
               <p class="bolsa-trabajo__localidad">{{ oferta.localidad }}</p>
             </div>
           </div>

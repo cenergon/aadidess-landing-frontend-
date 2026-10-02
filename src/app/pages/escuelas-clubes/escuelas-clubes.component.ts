@@ -214,6 +214,14 @@ export class EscuelasClubesComponent implements AfterViewInit {
           web: 'www.lagohermososki.com.ar',
           telefono: '2944 12 7208',
         },
+        {
+          nombre: 'Las Pendientes Ski and Snowboard',
+          email: 'escuelalaspendientes2025@gmail.com',
+          web: 'www.instagram.com/laspendientesskiandsnowboard',
+          telefono: '+5492944539488',
+          director: 'Leonardo Pinalli',
+          direccion: 'Las Pendientes Ski Village, Cerro Chapelco, San Martín de los Andes',
+        },
       ],
     },
     {
