@@ -5,6 +5,7 @@ import { HeroBannerHomeComponent } from '../hero-banner-home/hero-banner-home.co
 import { TsejBannerComponent } from '../tsej-banner/tsej-banner.component';
 import { AppDownloadBannerComponent } from '../app-download-banner/app-download-banner.component';
 import { NovedadesBannerComponent } from '../novedades-banner/novedades-banner.component';
+import { ExpoWinterShowBannerComponent } from '../expo-winter-show-banner/expo-winter-show-banner.component';
 
 @Component({
   selector: 'app-footer',
@@ -18,6 +19,7 @@ import { NovedadesBannerComponent } from '../novedades-banner/novedades-banner.c
     TsejBannerComponent,
     AppDownloadBannerComponent,
     NovedadesBannerComponent,
+    ExpoWinterShowBannerComponent,
   ],
 })
 export class HomeComponent {}

@@ -1,0 +1,173 @@
+@use 'sass:color';
+
+// Variables locales de diseño
+$expo-transition: var(--transition-base, 0.2s ease);
+
+// Colores de marca Expo Winter Show (no dependen de nuestro theme)
+$title-light: #243c6c;
+$subtitle-light: #045cb4;
+$meta-light: #334155;
+$title-dark: #ffffff;
+$subtitle-dark: #e4fcfc;
+$meta-dark: #cce4fc;
+
+.expo-banner {
+  border: 1px solid var(--color-border);
+  padding: 1.5rem;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  transition:
+    background-color $expo-transition,
+    border-color $expo-transition;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  // Logos: solo uno visible según tema
+  &__logo {
+    height: 72px;
+    width: auto;
+    flex-shrink: 0;
+    display: none;
+
+    &--light {
+      display: block; // visible por defecto (tema claro)
+    }
+
+    &--dark {
+      display: none;
+    }
+  }
+
+  // En tema oscuro, invertimos visibilidad
+  :host-context([data-theme='dark']) &__logo {
+    &--light {
+      display: none;
+    }
+    &--dark {
+      display: block;
+    }
+  }
+
+  &__content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__title {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    color: $title-light;
+    margin: 0 0 0.25rem;
+    transition: color $expo-transition;
+  }
+
+  &__subtitle {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: $subtitle-light;
+    margin: 0 0 0.2rem;
+    transition: color $expo-transition;
+  }
+
+  &__meta {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: $meta-light;
+    margin: 0;
+    transition: color $expo-transition;
+  }
+
+  &__meta-link {
+    color: $subtitle-light;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition:
+      color $expo-transition,
+      opacity $expo-transition;
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+
+  // Tema oscuro: colores de marca sobre fondo oscuro
+  :host-context([data-theme='dark']) &__title {
+    color: $title-dark;
+  }
+  :host-context([data-theme='dark']) &__subtitle {
+    color: $subtitle-dark;
+  }
+  :host-context([data-theme='dark']) &__meta {
+    color: $meta-dark;
+  }
+  :host-context([data-theme='dark']) &__meta-link {
+    color: $subtitle-dark;
+  }
+
+  // Botón con colores propios de la Expo
+  &__button {
+    --btn-bg: #0c6ccc;
+    --btn-text: #ffffff;
+    --btn-hover-bg: #{color.adjust(#045cb4, $lightness: -4%)};
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.5rem;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    cursor: pointer;
+    transition:
+      background-color $expo-transition,
+      opacity $expo-transition;
+
+    &:hover {
+      background-color: var(--btn-hover-bg);
+      opacity: 0.95;
+    }
+  }
+
+  :host-context([data-theme='dark']) &__button {
+    --btn-bg: #{$subtitle-dark};
+    --btn-text: #{$title-light}; // texto navy sobre fondo claro
+    --btn-hover-bg: #{color.adjust(#cce4fc, $lightness: -6%)};
+  }
+
+  // Responsive: apilado vertical en pantallas pequeñas
+  @media (max-width: 600px) {
+    &__container {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+    }
+
+    &__logo {
+      height: 60px;
+    }
+
+    &__title {
+      font-size: 1.25rem;
+    }
+
+    &__button {
+      width: 100%;
+    }
+  }
+}

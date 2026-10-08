@@ -1,0 +1,43 @@
+<div class="expo-banner">
+  <div class="expo-banner__container">
+    <!-- Logo: se muestra uno u otro según el tema vía CSS -->
+    <img
+      src="images/expowinter/LOGO_EXPO_WINTER_27.png"
+      alt="EXPO WINTER SHOW 2027"
+      class="expo-banner__logo expo-banner__logo--light"
+      loading="lazy"
+    />
+    <img
+      src="images/expowinter/logo_positivo_expo_winter.png"
+      alt="EXPO WINTER SHOW 2027"
+      class="expo-banner__logo expo-banner__logo--dark"
+      loading="lazy"
+    />
+
+    <!-- Textos -->
+    <div class="expo-banner__content">
+      <h2 class="expo-banner__title">EXPO WINTER SHOW 2027</h2>
+      <p class="expo-banner__subtitle">Todo el invierno argentino en un solo lugar</p>
+      <p class="expo-banner__meta">
+        Turismo · Deporte · Aventura · 28 al 30 de mayo de 2027 ·
+        <a
+          [href]="mapsUrl"
+          class="expo-banner__meta-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          >BA Ferial</a
+        >
+      </p>
+    </div>
+
+    <!-- Botón -->
+    <a
+      [href]="siteUrl"
+      class="expo-banner__button"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Conocé más
+    </a>
+  </div>
+</div>
