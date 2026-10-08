@@ -88,3 +88,12 @@
     font-size: 1.1rem !important;
   }
 }
+
+// En el menú mobile (footer), el dropdown abre hacia arriba y centrado
+:host-context(.navbar__menu-footer) .theme-toggle__menu {
+  top: auto;
+  bottom: calc(100% + 0.4rem);
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+}
