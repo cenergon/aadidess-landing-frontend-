@@ -99,6 +99,20 @@ export class BolsaDeTrabajoComponent {
       localidad: 'España',
       imagen: 'skiLife-1-2026.jpeg',
       imagenDetalle: 'skiLife-2-2026.jpeg'
+    },
+    {
+      titulo: 'Snowport',
+      descripcion: 'Busca instructores de esquí y snowboard, con pasaporte de la UE. Temporada en Grecia.',
+      delegaciones: ['Monte Parnaso'],
+      localidad: 'Grecia',
+      imagen: 'snowport-2026-1.jpeg'
+    },
+    {
+      titulo: 'Scuola Italiana Sci Fanano - Cimoncino',
+      descripcion: 'Busca instructores de esquí (Nivel 3 obligatorio). Temporada de mediados de diciembre a Semana Santa.',
+      delegaciones: ['Monte Cimone'],
+      localidad: 'Fanano, Módena, Italia',
+      imagen: 'SCI-2026-1.jpeg'
     }
   ];
 
