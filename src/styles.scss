@@ -105,3 +105,13 @@ a {
   font-weight: bold;
   color: var(--color-accent);
 }
+
+/* Interacción táctil: sin resaltado cuadrado por defecto; foco visible accesible */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}

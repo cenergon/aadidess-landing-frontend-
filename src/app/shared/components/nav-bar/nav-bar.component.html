@@ -11,96 +11,113 @@
       (click)="toggleMobileMenu()"
       [attr.aria-expanded]="mobileMenuOpen()"
       aria-controls="main-menu"
-      aria-label="Abrir menú"
+      [attr.aria-label]="mobileMenuOpen() ? 'Cerrar menú' : 'Abrir menú'"
     >
       <span class="material-symbols-outlined">
         {{ mobileMenuOpen() ? 'close' : 'menu' }}
       </span>
     </button>
 
-    <!-- Overlay para cerrar menú mobile -->
-    @if (mobileMenuOpen()) {
-      <div class="navbar__overlay" (click)="toggleMobileMenu()" aria-hidden="true"></div>
-    }
-
     <!-- Menú principal -->
     <div id="main-menu" class="navbar__menu" [class.navbar__menu--open]="mobileMenuOpen()">
-      @for (item of navItems; track item.label) {
-        @if (item.children && item.children.length) {
-          <!-- Dropdown -->
-          <div
-            class="navbar__dropdown"
-            (mouseenter)="!isMobile() && setActiveDropdown(item.label)"
-            (mouseleave)="!isMobile() && setActiveDropdown(null)"
+      <!-- Header del menú (solo mobile) -->
+      @if (isMobile()) {
+        <div class="navbar__menu-header">
+          <img src="svgs/logo-aadidess.svg" alt="AADIDESS" class="navbar__logo-img" />
+          <button
+            type="button"
+            class="navbar__menu-close"
+            (click)="closeMobileMenu()"
+            aria-label="Cerrar menú"
           >
-            <button
-              class="navbar__dropdown-toggle"
-              [attr.aria-expanded]="isDropdownOpen(item.label)"
-              aria-haspopup="true"
-              (click)="setActiveDropdown(isDropdownOpen(item.label) ? null : item.label)"
-            >
-              <span>{{ item.label }}</span>
-              <span class="material-symbols-outlined navbar__chevron" aria-hidden="true">
-                expand_more
-              </span>
-            </button>
+            <span class="material-symbols-outlined" aria-hidden="true">close</span>
+          </button>
+        </div>
+      }
+
+      <div class="navbar__menu-body">
+        @for (item of navItems; track item.label) {
+          @if (item.children && item.children.length) {
+            <!-- Dropdown / acordeón -->
             <div
-              class="navbar__dropdown-panel"
-              [class.navbar__dropdown-panel--open]="isDropdownOpen(item.label)"
+              class="navbar__dropdown"
+              (mouseenter)="!isMobile() && setActiveDropdown(item.label)"
+              (mouseleave)="!isMobile() && setActiveDropdown(null)"
             >
-              @for (child of item.children; track child.label) {
-                @if (child.external) {
-                  <a
-                    href="javascript:void(0)"
-                    class="navbar__dropdown-link"
-                    (click)="openExternal(child.link!)"
-                  >
-                    {{ child.label }}
-                  </a>
-                } @else {
-                  <a
-                    [routerLink]="child.link"
-                    class="navbar__dropdown-link"
-                    (click)="mobileMenuOpen.set(false); activeDropdown.set(null)"
-                  >
-                    {{ child.label }}
-                  </a>
-                }
-              }
+              <button
+                class="navbar__dropdown-toggle"
+                [attr.aria-expanded]="isDropdownOpen(item.label)"
+                aria-haspopup="true"
+                (click)="setActiveDropdown(isDropdownOpen(item.label) ? null : item.label)"
+              >
+                <span>{{ item.label }}</span>
+                <span class="material-symbols-outlined navbar__chevron" aria-hidden="true">
+                  expand_more
+                </span>
+              </button>
+              <div
+                class="navbar__dropdown-panel"
+                [class.navbar__dropdown-panel--open]="isDropdownOpen(item.label)"
+              >
+                <div class="navbar__dropdown-panel-inner">
+                  @for (child of item.children; track child.label) {
+                    @if (child.external) {
+                      <a
+                        href="javascript:void(0)"
+                        class="navbar__dropdown-link"
+                        (click)="openExternal(child.link!); closeMobileMenu()"
+                      >
+                        {{ child.label }}
+                      </a>
+                    } @else {
+                      <a
+                        [routerLink]="child.link"
+                        class="navbar__dropdown-link"
+                        (click)="closeMobileMenu()"
+                      >
+                        {{ child.label }}
+                      </a>
+                    }
+                  }
+                </div>
+              </div>
             </div>
-          </div>
-        } @else {
-          <!-- Enlace simple -->
-          @if (item.external) {
-            <a href="javascript:void(0)" class="navbar__link" (click)="openExternal(item.link!)">
-              {{ item.label }}
-            </a>
           } @else {
-            <a
-              [routerLink]="item.link"
-              class="navbar__link"
-              (click)="mobileMenuOpen.set(false); activeDropdown.set(null)"
-            >
-              {{ item.label }}
-            </a>
+            <!-- Enlace simple -->
+            @if (item.external) {
+              <a
+                href="javascript:void(0)"
+                class="navbar__link"
+                (click)="openExternal(item.link!); closeMobileMenu()"
+              >
+                {{ item.label }}
+              </a>
+            } @else {
+              <a [routerLink]="item.link" class="navbar__link" (click)="closeMobileMenu()">
+                {{ item.label }}
+              </a>
+            }
           }
         }
-      }
+      </div>
 
-      <!-- Campus Virtual (mobile) dentro del menú -->
+      <!-- Footer del menú (solo mobile): acciones terciarias ancladas al pie -->
       @if (isMobile()) {
-        <a href="javascript:void(0)" class="navbar__campus" (click)="openExternal(campusUrl)">
-          <span class="material-symbols-outlined navbar__campus-icon" aria-hidden="true">
-            school
-          </span>
-          Campus Virtual
-        </a>
-      }
+        <div class="navbar__menu-footer">
+          <a
+            href="javascript:void(0)"
+            class="navbar__campus"
+            (click)="openExternal(campusUrl); closeMobileMenu()"
+          >
+            <span class="material-symbols-outlined navbar__campus-icon" aria-hidden="true">
+              school
+            </span>
+            Campus Virtual
+          </a>
 
-      <!-- Theme Toggle dentro del menú (solo mobile) -->
-      @if (isMobile()) {
-        <div class="navbar__theme-toggle-container">
-          <app-theme-toggle />
+          <div class="navbar__theme-toggle-container">
+            <app-theme-toggle />
+          </div>
         </div>
       }
     </div>

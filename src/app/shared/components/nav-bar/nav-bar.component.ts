@@ -90,12 +90,41 @@ export class NavBarComponent implements OnInit {
     this.checkMobile();
   }
 
+  @HostListener('document:keydown.escape')
+  onEscape() {
+    this.closeMobileMenu();
+  }
+
   checkMobile() {
-    this.isMobile.set(window.innerWidth <= 768);
+    const mobile = window.innerWidth <= 768;
+    this.isMobile.set(mobile);
+
+    // Si pasamos a desktop con el menú abierto, lo cerramos y liberamos el scroll
+    if (!mobile && this.mobileMenuOpen()) {
+      this.mobileMenuOpen.set(false);
+      this.setBodyScrollLock(false);
+    }
   }
 
   toggleMobileMenu() {
-    this.mobileMenuOpen.update((open) => !open);
+    this.mobileMenuOpen.update((open) => {
+      const next = !open;
+      this.setBodyScrollLock(next);
+      return next;
+    });
+  }
+
+  closeMobileMenu() {
+    this.mobileMenuOpen.set(false);
+    this.activeDropdown.set(null);
+    this.setBodyScrollLock(false);
+  }
+
+  private setBodyScrollLock(lock: boolean): void {
+    if (typeof document === 'undefined') {
+      return;
+    }
+    document.body.style.overflow = lock ? 'hidden' : '';
   }
 
   setActiveDropdown(label: string | null) {
