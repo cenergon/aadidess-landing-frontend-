@@ -1,0 +1,65 @@
+{
+  "id": 63,
+  "titulo": "Información sobre la emisión de títulos y certificaciones académicas 2026",
+  "postedAt": "2026-10-08T12:00:00-03:00",
+  "createdAt": "2026-10-08T12:00:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "De acuerdo con lo establecido en el **Artículo 11** del Reglamento Académico vigente, el ciclo lectivo comienza el **1 de junio** y finaliza el **15 de octubre** de cada año."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "La confección y emisión de los títulos y certificaciones correspondientes a los distintos cursos y niveles de formación comienza una vez finalizado el ciclo lectivo. En esta etapa se realiza el cierre académico y administrativo de las actividades desarrolladas en las diferentes delegaciones."
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "La aprobación de las evaluaciones o la finalización individual de un curso no implica la emisión inmediata del título correspondiente, ya que el proceso de certificación se encuentra sujeto al calendario académico institucional y a la verificación de los requisitos correspondientes."
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": "**Plazos de emisión y entrega**"
+    },
+    {
+      "tipo": "texto",
+      "orden": 5,
+      "contenido": "Una vez finalizado el ciclo lectivo, la **Secretaría Académica** iniciará la confección de los títulos y certificaciones, de acuerdo con los tiempos administrativos necesarios para consolidar las calificaciones, verificar la documentación y completar el proceso de emisión."
+    },
+    {
+      "tipo": "texto",
+      "orden": 6,
+      "contenido": "Los títulos y certificaciones serán enviados por correo electrónico a cada alumno, a la dirección registrada en la institución, a medida que se encuentren confeccionados y disponibles."
+    },
+    {
+      "tipo": "texto",
+      "orden": 7,
+      "contenido": "Por lo tanto, el **15 de octubre** corresponde a la fecha de finalización del ciclo lectivo y no a una fecha de entrega inmediata de las certificaciones."
+    },
+    {
+      "tipo": "texto",
+      "orden": 8,
+      "contenido": "**Reglamento Académico**"
+    },
+    {
+      "tipo": "texto",
+      "orden": 9,
+      "contenido": "El Reglamento Académico se encuentra publicado y a disposición de todos los alumnos e instructores. Sus disposiciones son de aplicación general para todos los cursantes."
+    },
+    {
+      "tipo": "texto",
+      "orden": 10,
+      "contenido": "**Dirección Académica**\n**AADIDESS – ISES**"
+    },
+    {
+      "tipo": "link",
+      "orden": 11,
+      "texto": "Consultar Reglamento Académico 2026",
+      "url": "institucional/reglamento-academico",
+      "esPdf": false
+    }
+  ]
+}
