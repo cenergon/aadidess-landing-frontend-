@@ -432,5 +432,12 @@
     "postedAt": "2026-10-08T12:00:00-03:00",
     "ruta": "news/Emision-Titulos-Certificaciones-Academicas-2026.json",
     "resumen": "El ciclo lectivo 2026 finaliza el 15 de octubre. La emisión de títulos y certificaciones comienza después del cierre académico y se envía por correo electrónico a los alumnos a medida que están disponibles. El 15 de octubre no es fecha de entrega."
+  },
+  {
+    "id": 64,
+    "titulo": "Información y proceso de validación de titulaciones argentinas",
+    "postedAt": "2026-10-10T10:00:00-03:00",
+    "ruta": "news/Validacion-Titulaciones-Argentinas.json",
+    "resumen": "AADIDESS abre el proceso de validación de sus titulaciones para la homologación y habilitación profesional en Andorra. La recepción de formularios comienza el 4 de noviembre. Para figurar en la nómina de titulaciones vigentes hay que tener cuota y título al día."
   }
 ]
