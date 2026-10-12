@@ -439,5 +439,12 @@
     "postedAt": "2026-10-10T10:00:00-03:00",
     "ruta": "news/Validacion-Titulaciones-Argentinas.json",
     "resumen": "AADIDESS abre el proceso de validación de sus titulaciones para la homologación y habilitación profesional en Andorra. La recepción de formularios comienza el 4 de noviembre. Para figurar en la nómina de titulaciones vigentes hay que tener cuota y título al día."
+  },
+  {
+    "id": 65,
+    "titulo": "Convocatoria a Asamblea General Ordinaria fuera de término",
+    "postedAt": "2026-10-06T10:00:00-03:00",
+    "ruta": "news/Asamblea-General-Ordinaria-Fuera-de-Termino.json",
+    "resumen": "La Comisión Directiva de AADIDESS convoca a Asamblea General Ordinaria fuera de término para el 6 de noviembre a las 14:00 hs, de forma presencial y virtual por Zoom. Incluye el orden del día con 9 puntos."
   }
 ]

@@ -1,0 +1,92 @@
+{
+  "id": 65,
+  "titulo": "Convocatoria a Asamblea General Ordinaria fuera de término",
+  "postedAt": "2026-10-06T10:00:00-03:00",
+  "createdAt": "2026-10-06T10:00:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "La Comisión Directiva de la Asociación Argentina de Instructores de Esquí, Snowboard y Pisteros Socorristas convoca a **Asamblea General Ordinaria fuera de término**, a celebrarse de forma **presencial y virtual** con sistema Zoom al link"
+    },
+    {
+      "tipo": "link",
+      "orden": 2,
+      "texto": "Unirse por Zoom",
+      "url": "https://us02web.zoom.us/j/86357332333",
+      "esPdf": false
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "o comunicando su asistencia al correo electrónico:"
+    },
+    {
+      "tipo": "link",
+      "orden": 4,
+      "texto": "administracion@aadidess.com",
+      "url": "mailto:administracion@aadidess.com",
+      "esPdf": false
+    },
+    {
+      "tipo": "texto",
+      "orden": 5,
+      "contenido": "donde se le enviará el link de conexión para sesionar, el día **6 de Noviembre a las 14:00 hs.** para tratar el siguiente"
+    },
+    {
+      "tipo": "texto",
+      "orden": 6,
+      "contenido": "**ORDEN DEL DÍA**"
+    },
+    {
+      "tipo": "texto",
+      "orden": 7,
+      "contenido": "1º. **Designación de dos Asambleistas** para firmar conjuntamente con el Presidente y Secretario el Acta de Asamblea."
+    },
+    {
+      "tipo": "texto",
+      "orden": 8,
+      "contenido": "2º. **Consideración de las razones** que motivaron la convocatoria fuera de término."
+    },
+    {
+      "tipo": "texto",
+      "orden": 9,
+      "contenido": "3º. **Tratamiento de la Memoria, Balance General, Cuadro de Recursos y Gastos, Inventario, Informe del Auditor Externo e Informe de la Comisión Revisora de Cuentas**, correspondientes al ejercicio cerrado el **31 de Mayo de 2026**."
+    },
+    {
+      "tipo": "texto",
+      "orden": 10,
+      "contenido": "4º. **Consideración del resultado del ejercicio**, los resultados acumulados y su destino."
+    },
+    {
+      "tipo": "texto",
+      "orden": 11,
+      "contenido": "5º. **Consideración de la gestión** de la Comisión Directiva y Revisora de Cuentas."
+    },
+    {
+      "tipo": "texto",
+      "orden": 12,
+      "contenido": "6º. **Tratamiento y fijación de la cuota social**."
+    },
+    {
+      "tipo": "texto",
+      "orden": 13,
+      "contenido": "7º. **Tratamiento y fijación de las multas** a que se refiere el punto 4 inciso f) del Art. 67 del Estatuto Social."
+    },
+    {
+      "tipo": "texto",
+      "orden": 14,
+      "contenido": "8º. **Elección** de 1 revisor de cuentas titular, 1 revisor de cuenta suplente, 6 vocales titulares, 3 vocales suplentes, 1 presidente tribunal de honor, 1 vicepresidente tribunal de honor y 1 vocal tribunal de honor, 1 Presidente, 1 secretario y 1 tesorero."
+    },
+    {
+      "tipo": "texto",
+      "orden": 15,
+      "contenido": "9º. **Nombramiento de socios honorarios**."
+    },
+    {
+      "tipo": "texto",
+      "orden": 16,
+      "contenido": "**Martín Bacer**, Presidente - **Rodolfo Longo**, Secretario.-"
+    }
+  ]
+}
