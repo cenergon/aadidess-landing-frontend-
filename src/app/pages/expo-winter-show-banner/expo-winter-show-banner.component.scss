@@ -30,7 +30,7 @@ $meta-dark: #cce4fc;
 
   // Logos: solo uno visible según tema
   &__logo {
-    height: 72px;
+    height: 56px;
     width: auto;
     flex-shrink: 0;
     display: none;
@@ -159,7 +159,7 @@ $meta-dark: #cce4fc;
     }
 
     &__logo {
-      height: 60px;
+      height: 40px;
     }
 
     &__title {
