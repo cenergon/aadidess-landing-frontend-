@@ -37,6 +37,7 @@ export class NavBarComponent implements OnInit {
         { label: 'Decálogo', link: 'docs/Decalogo-AA.pdf', external: true },
         { label: 'Sponsors', link: '/institucional/sponsors' },
         { label: 'Subcomisión de Esquí Adaptado', link: '/subcomision-esqui-adaptado' },
+        { label: 'Fundación Challenge', link: '/challenge' },
       ],
     },
     {
