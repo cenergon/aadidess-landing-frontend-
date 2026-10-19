@@ -25,7 +25,9 @@
 
     <div class="challenge__portada-acciones">
       @for (accion of acciones; track accion) {
-        <a href="#sumate" class="challenge__btn">{{ accion }}</a>
+        <button type="button" class="challenge__btn" (click)="irAContacto()">
+          {{ accion }}
+        </button>
       }
     </div>
   </div>
@@ -180,7 +182,7 @@
   </div>
 </section>
 
-<!-- CIERRE -->
+<!-- CIERRE + CONTACTO -->
 <section class="challenge__cierre" id="sumate">
   <div class="challenge__contenedor challenge__cierre-contenido">
     <p class="challenge__cierre-frase">
@@ -189,8 +191,31 @@
     </p>
     <h2 class="challenge__cierre-titulo">Hay una montaña esperándote.</h2>
     <p class="challenge__cierre-bajada">Vení a vivirla.</p>
-    <a routerLink="/contacto" class="challenge__btn challenge__btn--claro">
-      Quiero sumarme a Challenge
-    </a>
+
+    <!-- Contacto: se completa cuando estén los datos de Challenge (sin formulario, landing estática) -->
+    @if (contacto) {
+      <div class="challenge__contacto" id="contacto">
+        @if (contacto.email) {
+          <a [href]="'mailto:' + contacto.email" class="challenge__btn challenge__btn--claro">
+            {{ contacto.email }}
+          </a>
+        }
+        @if (contacto.whatsapp) {
+          <a
+            [href]="'https://wa.me/' + contacto.whatsapp"
+            class="challenge__btn challenge__btn--claro"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp
+          </a>
+        }
+        @if (contacto.telefono) {
+          <a [href]="'tel:' + contacto.telefono" class="challenge__btn challenge__btn--claro">
+            {{ contacto.telefono }}
+          </a>
+        }
+      </div>
+    }
   </div>
 </section>

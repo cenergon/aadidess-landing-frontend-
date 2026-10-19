@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
 
 interface Disciplina {
   icono: string;
@@ -13,10 +12,15 @@ interface Clip {
   titulo: string;
 }
 
+interface ContactoChallenge {
+  email?: string;
+  whatsapp?: string;
+  telefono?: string;
+}
+
 @Component({
   selector: 'app-challenge',
   standalone: true,
-  imports: [RouterLink],
   templateUrl: './challenge.component.html',
   styleUrls: ['./challenge.component.scss'],
 })
@@ -59,6 +63,19 @@ export class ChallengeComponent {
   ];
 
   readonly presentacionUrl = 'docs/presentacion-fundacion-challenge.pdf';
+
+  /**
+   * PENDIENTE: reemplazar por los datos reales de Fundación Challenge.
+   * Placeholder visible hasta que contesten; sin formulario (landing estática).
+   */
+  readonly contacto: ContactoChallenge | null = {
+    email: 'ejemplo@challenge.com',
+  };
+
+  /** Scrollea a la sección de contacto del final sin pasar por el router. */
+  irAContacto(): void {
+    document.getElementById('sumate')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 
   readonly clips: Clip[] = [
     {
