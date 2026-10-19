@@ -1,12 +1,15 @@
 $radius-lg: 12px;
 $transition-smooth: var(--transition-base);
+$logo-size: 48px;
 
 .footer {
-  padding: 1.5rem 1.5rem;
+  padding: 2.5rem 1.5rem 1.75rem;
   background-color: var(--color-bg-elevated);
   border-top: 1px solid var(--color-border);
   color: var(--color-text-primary);
-  transition: background-color var(--transition-base), border-color var(--transition-base);
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base);
 
   &__container {
     max-width: 1200px;
@@ -15,57 +18,114 @@ $transition-smooth: var(--transition-base);
 
   &__grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
+    grid-template-columns: 1.6fr repeat(3, 1fr) 1.2fr;
+    gap: 2.5rem;
     align-items: start;
 
-    @media (max-width: 992px) {
-      grid-template-columns: 1fr 1fr;
+    @media (max-width: 1100px) {
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 2rem;
     }
-    @media (max-width: 600px) {
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem 1.5rem;
+    }
+
+    @media (max-width: 560px) {
       grid-template-columns: 1fr;
-      gap: 1.5rem;
+      gap: 1.75rem;
     }
   }
 
-  &__col {
-    // placeholder para posibles ajustes
+  // ---------- Marca ----------
+  &__marca {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  &__marca-link {
+    display: inline-block;
+    line-height: 0;
+  }
+
+  &__marca-logo {
+    height: 44px;
+    width: auto;
+    display: block;
   }
 
   &__asociacion {
-    font-size: 0.9rem;
-    color: var(--color-text-secondary);
-    line-height: 1.5;
     margin: 0;
+    max-width: 34ch;
+    font-size: 0.85rem;
+    line-height: 1.55;
+    color: var(--color-text-secondary);
     transition: color var(--transition-base);
   }
 
+  // ---------- Columnas de navegación ----------
+  &__titulo {
+    margin: 0 0 0.75rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+  }
+
+  &__links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__link {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: color var(--transition-base);
+
+    &:hover {
+      color: var(--color-accent-hover-link);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    &--contacto {
+      display: inline-block;
+      margin-top: 0.85rem;
+      font-weight: 600;
+      color: var(--color-accent);
+    }
+  }
+
+  // ---------- Contactos ----------
   &__contactos {
     display: flex;
     flex-direction: column;
-    gap: 0.2rem;
-  }
-
-  &__contactos-titulo {
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: var(--color-accent);
-    margin: 0 0 0.25rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
   }
 
   &__sede,
   &__direccion,
   &__localidad {
-    font-size: 0.85rem;
-    color: var(--color-text-secondary);
     margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.55;
+    color: var(--color-text-secondary);
     transition: color var(--transition-base);
   }
 
+  &__sede {
+    font-weight: 600;
+  }
+
   &__telefonos {
-    margin-top: 0.25rem;
+    margin-top: 0.4rem;
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
@@ -83,33 +143,45 @@ $transition-smooth: var(--transition-base);
     user-select: none;
   }
 
-  &__logos {
+  // ---------- Instituciones ----------
+  &__instituciones {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.75rem;
+    gap: 3.5rem;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
 
-    @media (max-width: 992px) {
-      justify-content: flex-start;
+    @media (max-width: 768px) {
+      gap: 2rem;
+      margin-top: 2rem;
     }
   }
 
   &__logo-link {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     border-radius: $radius-lg;
-    overflow: hidden;
-    transition: transform var(--transition-base);
     cursor: pointer;
+    transition:
+      opacity var(--transition-base),
+      transform var(--transition-base);
 
     &:hover {
       transform: scale(1.05);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-accent);
+      outline-offset: 3px;
     }
   }
 
   &__logo {
     width: auto;
-    height: 40px;
+    height: $logo-size;
     object-fit: contain;
     display: block;
   }

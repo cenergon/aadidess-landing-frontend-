@@ -1,39 +1,60 @@
 <footer class="footer">
   <div class="footer__container">
     <div class="footer__grid">
-      <!-- Asociación -->
-      <div class="footer__col">
+      <!-- Marca -->
+      <div class="footer__marca">
+        <a routerLink="/" class="footer__marca-link" aria-label="AADIDESS — Inicio">
+          <img src="svgs/logo-aadidess.svg" alt="AADIDESS" class="footer__marca-logo" />
+        </a>
         <p class="footer__asociacion">{{ asociacion }}</p>
       </div>
 
-      <!-- Contactos -->
-      <div class="footer__col">
-        <div class="footer__contactos">
-          <h3 class="footer__contactos-titulo">{{ contactos.titulo }}</h3>
-          <p class="footer__sede">{{ contactos.sede }}</p>
-          <p class="footer__direccion">{{ contactos.direccion }}</p>
-          <p class="footer__localidad">{{ contactos.localidad }}</p>
-          <div class="footer__telefonos">
-            @for (tel of contactos.telefonos; track tel; let last = $last) {
-              <span class="footer__telefono">{{ tel }}</span>
-              @if (!last) { <span class="footer__telefono-sep">·</span> }
+      <!-- Navegación -->
+      @for (grupo of navegacion; track grupo.titulo) {
+        <nav class="footer__col" [attr.aria-label]="grupo.titulo">
+          <h3 class="footer__titulo">{{ grupo.titulo }}</h3>
+          <ul class="footer__links">
+            @for (item of grupo.links; track item.link) {
+              <li>
+                <a [routerLink]="item.link" class="footer__link">{{ item.label }}</a>
+              </li>
             }
-          </div>
-        </div>
-      </div>
+          </ul>
+        </nav>
+      }
 
-      <!-- Logos -->
-      <div class="footer__col footer__logos">
-        @for (logo of logos; track logo.alt) {
-          <a
-            (click)="abrirEnlace(logo.url)"
-            class="footer__logo-link"
-            [attr.aria-label]="logo.alt"
-          >
-            <img [src]="logo.imagen" [alt]="logo.alt" class="footer__logo" loading="lazy" />
-          </a>
-        }
+      <!-- Contactos -->
+      <div class="footer__col footer__contactos">
+        <h3 class="footer__titulo">{{ contactos.titulo }}</h3>
+        <p class="footer__sede">{{ contactos.sede }}</p>
+        <p class="footer__direccion">{{ contactos.direccion }}</p>
+        <p class="footer__localidad">{{ contactos.localidad }}</p>
+        <div class="footer__telefonos">
+          @for (tel of contactos.telefonos; track tel; let last = $last) {
+            <span class="footer__telefono">{{ tel }}</span>
+            @if (!last) {
+              <span class="footer__telefono-sep">·</span>
+            }
+          }
+        </div>
+        <a routerLink="/contacto" class="footer__link footer__link--contacto">Contacto</a>
       </div>
+    </div>
+
+    <!-- Instituciones -->
+    <div class="footer__instituciones">
+      @for (logo of logos; track logo.alt) {
+        <a
+          (click)="abrirEnlace(logo.url)"
+          (keydown.enter)="abrirEnlace(logo.url)"
+          class="footer__logo-link"
+          [attr.aria-label]="logo.alt"
+          tabindex="0"
+          role="link"
+        >
+          <img [src]="logo.imagen" [alt]="logo.alt" class="footer__logo" loading="lazy" />
+        </a>
+      }
     </div>
   </div>
 </footer>
