@@ -37,6 +37,9 @@ $gap: 6rem;
   @media (min-width: 769px) {
     margin: 0 auto;
     justify-content: center;
+    // Si el conjunto no entra a lo ancho, que pase a otra línea en vez de recortarse
+    flex-wrap: wrap;
+    row-gap: 0.75rem;
   }
 
   @media (max-width: 768px) {

@@ -26,7 +26,7 @@ export class SponsorBarComponent implements OnInit, OnDestroy {
   isHidden = signal(false);
 
   /** Factores de escala sobre las alturas ajustadas a mano de cada logo. */
-  private readonly escalaMobile = 0.5;
+  private readonly escalaMobile = 0.6;
   private readonly escalaDesktop = 0.9;
 
   sponsor: Sponsor[] = [
