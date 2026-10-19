@@ -367,10 +367,15 @@ $menu-breakpoint: 768px;
   }
 
   &__logo-img {
-    height: 50px;
+    height: 40px;
     width: auto;
     display: block;
     transition: filter $transition-base;
+
+    // El agrandado aplica sólo en mobile; en escritorio vuelve al tamaño original
+    @media (max-width: $menu-breakpoint) {
+      height: 50px;
+    }
   }
 
   :host-context([data-theme='dark']) &__logo-img {
