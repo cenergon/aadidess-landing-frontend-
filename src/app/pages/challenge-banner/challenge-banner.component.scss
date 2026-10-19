@@ -5,6 +5,18 @@ $brand-navy: #2a378c;
 $brand-navy-dark: #1b2460;
 $transition: var(--transition-base, 0.2s ease);
 
+// El proyecto no tiene reset global de box-sizing: con width: 100% los botones
+// sumaban su padding y se salían del contenedor en mobile.
+:host {
+  display: block;
+}
+
+:host *,
+:host ::before,
+:host ::after {
+  box-sizing: border-box;
+}
+
 .challenge-banner {
   background-color: var(--color-bg-primary);
   border-top: 3px solid $brand-red;
@@ -30,7 +42,7 @@ $transition: var(--transition-base, 0.2s ease);
   }
 
   &__logo {
-    height: 52px;
+    height: 36px;
     width: auto;
     display: block;
   }
@@ -60,6 +72,7 @@ $transition: var(--transition-base, 0.2s ease);
   }
 
   &__button {
+    box-sizing: border-box;
     flex-shrink: 0;
     display: inline-flex;
     align-items: center;
@@ -119,33 +132,33 @@ $transition: var(--transition-base, 0.2s ease);
   // ---------- Responsive ----------
   @media (max-width: 860px) {
     &__container {
-      flex-wrap: wrap;
-      gap: 0.9rem 1.25rem;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0 1.25rem;
+      text-align: center;
     }
 
     &__logo {
-      height: 42px;
+      height: 28px;
     }
 
     &__title {
       font-size: 1.15rem;
     }
 
+    // En mobile la franja queda más compacta: sólo logo, título y botón
+    &__subtitle {
+      display: none;
+    }
+
     &__content {
-      flex-basis: 100%;
-      order: 3;
+      flex-basis: auto;
     }
 
-    &__button {
-      order: 2;
-      margin-left: auto;
-    }
-  }
-
-  @media (max-width: 560px) {
     &__button {
       width: 100%;
-      order: 3;
+      margin: 0;
     }
   }
 }
