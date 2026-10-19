@@ -50,6 +50,7 @@ import { FAQComponent } from './pages/FAQ/FAQ.component';
 import { DelegacionesComponent } from './pages/delegaciones/delegaciones.component';
 import { HubTravelVuelosComponent } from './pages/hub-travel-vuelos/hub-travel-vuelos.component';
 import { NovedadesComponent } from './pages/novedades/novedades.component';
+import { ChallengeComponent } from './pages/challenge/challenge.component';
 
 
 export const routes: Routes = [
@@ -105,6 +106,7 @@ export const routes: Routes = [
     { path: 'academico/FAQ', component: FAQComponent },
     { path: 'academico/delegaciones', component: DelegacionesComponent},
     { path: 'novedades', component: NovedadesComponent },
+    { path: 'challenge', component: ChallengeComponent },
 
 
     { path: '', component: HomeComponent },

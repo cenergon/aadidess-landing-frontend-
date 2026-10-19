@@ -1,0 +1,23 @@
+<section class="challenge-banner">
+  <div class="challenge-banner__container">
+    <a
+      [routerLink]="route"
+      class="challenge-banner__logo-link"
+      aria-label="Ir a Fundación Challenge"
+    >
+      <img
+        src="images/challenge/logo-challenge.png"
+        alt="Fundación Challenge Argentina"
+        class="challenge-banner__logo"
+        loading="lazy"
+      />
+    </a>
+
+    <div class="challenge-banner__content">
+      <h2 class="challenge-banner__title">{{ titulo }}</h2>
+      <p class="challenge-banner__subtitle">{{ subtitulo }}</p>
+    </div>
+
+    <a [routerLink]="route" class="challenge-banner__button">{{ textoBoton }}</a>
+  </div>
+</section>

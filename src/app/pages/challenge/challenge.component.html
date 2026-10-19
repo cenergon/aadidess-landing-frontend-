@@ -1,0 +1,196 @@
+<!-- PORTADA -->
+<section class="challenge__portada">
+  <img
+    src="images/challenge/challenge-hero.jpg"
+    alt="Persona en esquí adaptado acompañada por un instructor en la nieve"
+    class="challenge__portada-imagen"
+    loading="eager"
+  />
+  <div class="challenge__portada-overlay"></div>
+
+  <div class="challenge__contenedor challenge__portada-contenido">
+    <p class="challenge__kicker">Fundación Challenge Argentina</p>
+    <h1 class="challenge__portada-titulo">La montaña es para todos.</h1>
+    <p class="challenge__portada-bajada">
+      En Challenge hacemos posible que más personas vivan el deporte, la naturaleza y la libertad de
+      llegar más lejos.
+    </p>
+
+    <ul class="challenge__tags">
+      <li>Esquí</li>
+      <li>Trekking</li>
+      <li>Ciclismo</li>
+    </ul>
+    <p class="challenge__portada-lugar">Deporte adaptado en la Patagonia</p>
+
+    <div class="challenge__portada-acciones">
+      @for (accion of acciones; track accion) {
+        <a href="#sumate" class="challenge__btn">{{ accion }}</a>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- BLOQUE 1 -->
+<section class="challenge__bloque">
+  <div class="challenge__contenedor challenge__dos-columnas">
+    <div class="challenge__texto">
+      <h2 class="challenge__titulo">No vemos límites. Vemos posibilidades.</h2>
+      <p>
+        Cada persona vive la montaña de una manera diferente. Por eso adaptamos la experiencia, el
+        equipamiento y la enseñanza para que cada uno pueda descubrir hasta dónde quiere llegar.
+      </p>
+      <p class="challenge__destacado">
+        Porque incluir no es hacer algo por alguien. Es crear las condiciones para que pueda
+        hacerlo.
+      </p>
+    </div>
+    <figure class="challenge__figura">
+      <img
+        src="images/challenge/challenge-esqui.jpg"
+        alt="Instructora acompañando a una niña que aprende a esquiar"
+        loading="lazy"
+      />
+    </figure>
+  </div>
+</section>
+
+<!-- BANDA: LA LIBERTAD TAMBIÉN SE ENTRENA -->
+<section class="challenge__banda">
+  <div class="challenge__contenedor challenge__banda-contenido">
+    <div class="challenge__banda-texto">
+      <h2 class="challenge__banda-titulo">La libertad también se entrena.</h2>
+      <ul class="challenge__banda-lista">
+        <li>Se siente en la nieve.</li>
+        <li>En un sendero.</li>
+        <li>Sobre una bicicleta.</li>
+        <li>En ese instante en que descubrís que podés.</li>
+      </ul>
+    </div>
+    <figure class="challenge__banda-figura">
+      <img
+        src="images/challenge/challenge-duo.jpg"
+        alt="Dos esquiadores con equipo de montaña"
+        loading="lazy"
+      />
+    </figure>
+  </div>
+</section>
+
+<!-- QUÉ HACEMOS -->
+<section class="challenge__bloque challenge__bloque--alterno">
+  <div class="challenge__contenedor">
+    <header class="challenge__encabezado">
+      <p class="challenge__kicker">Qué hacemos</p>
+      <h2 class="challenge__titulo">La naturaleza nos mueve.</h2>
+      <p class="challenge__bajada">
+        Creamos experiencias de deporte adaptado para disfrutar la montaña durante todo el año.
+      </p>
+    </header>
+
+    <div class="challenge__tarjetas">
+      @for (disciplina of disciplinas; track disciplina.titulo) {
+        <article class="challenge__tarjeta">
+          <span class="material-symbols-outlined challenge__tarjeta-icono">{{
+            disciplina.icono
+          }}</span>
+          <h3 class="challenge__tarjeta-titulo">{{ disciplina.titulo }}</h3>
+          <p class="challenge__tarjeta-texto">{{ disciplina.texto }}</p>
+        </article>
+      }
+    </div>
+
+    <div class="challenge__clips">
+      @for (clip of clips; track clip.src) {
+        <figure class="challenge__clip">
+          <video
+            [src]="clip.src"
+            [poster]="clip.poster"
+            [muted]="true"
+            loop
+            playsinline
+            autoplay
+            preload="metadata"
+          ></video>
+          <figcaption class="challenge__clip-titulo">{{ clip.titulo }}</figcaption>
+        </figure>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- COMUNIDAD -->
+<section class="challenge__bloque">
+  <div class="challenge__contenedor challenge__dos-columnas challenge__dos-columnas--invertida">
+    <figure class="challenge__figura">
+      <img
+        src="images/challenge/challenge-comunidad.jpg"
+        alt="Grupo de instructores y esquiadores posando en la nieve"
+        loading="lazy"
+      />
+    </figure>
+    <div class="challenge__texto">
+      <h2 class="challenge__titulo">Nadie llega a la cima solo.</h2>
+      <p>
+        Challenge es una comunidad: alumnos, familias, instructores, voluntarios, instituciones y
+        empresas que creen que la naturaleza puede ser un espacio de encuentro para todos.
+      </p>
+      <ul class="challenge__lista">
+        @for (integrante of comunidad; track integrante) {
+          <li>{{ integrante }}</li>
+        }
+      </ul>
+      <p class="challenge__destacado">
+        Cuando trabajamos juntos, las barreras empiezan a desaparecer.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- QUIÉNES SOMOS -->
+<section class="challenge__bloque challenge__bloque--alterno">
+  <div class="challenge__contenedor challenge__dos-columnas">
+    <div class="challenge__texto">
+      <p class="challenge__kicker">Quiénes somos</p>
+      <h2 class="challenge__titulo">Nacimos en la montaña. Crecimos derribando barreras.</h2>
+      <p>
+        Challenge nació en 2016 en San Carlos de Bariloche con una convicción: el deporte y la
+        naturaleza tienen que ser experiencias posibles para todos.
+      </p>
+      <p>
+        Desde entonces trabajamos para crear oportunidades y hacer que cada vez más personas puedan
+        vivir la montaña.
+      </p>
+      <a
+        [href]="presentacionUrl"
+        class="challenge__btn challenge__btn--navy"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Conocé nuestra historia
+      </a>
+    </div>
+    <figure class="challenge__figura challenge__figura--vertical">
+      <img
+        src="images/challenge/challenge-historia.jpg"
+        alt="Esquiador con chaleco de Fundación Challenge mirando la montaña"
+        loading="lazy"
+      />
+    </figure>
+  </div>
+</section>
+
+<!-- CIERRE -->
+<section class="challenge__cierre" id="sumate">
+  <div class="challenge__contenedor challenge__cierre-contenido">
+    <p class="challenge__cierre-frase">
+      No importa si nunca lo hiciste. Importa que tengas la oportunidad de intentarlo. La montaña
+      puede ser tu lugar también.
+    </p>
+    <h2 class="challenge__cierre-titulo">Hay una montaña esperándote.</h2>
+    <p class="challenge__cierre-bajada">Vení a vivirla.</p>
+    <a routerLink="/contacto" class="challenge__btn challenge__btn--claro">
+      Quiero sumarme a Challenge
+    </a>
+  </div>
+</section>
