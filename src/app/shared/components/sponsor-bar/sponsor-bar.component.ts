@@ -25,6 +25,10 @@ export class SponsorBarComponent implements OnInit, OnDestroy {
 
   isHidden = signal(false);
 
+  /** Factores de escala sobre las alturas ajustadas a mano de cada logo. */
+  private readonly escalaMobile = 0.5;
+  private readonly escalaDesktop = 0.9;
+
   sponsor: Sponsor[] = [
     {
       imagen: 'images/logos/macro-azul.png',
@@ -40,7 +44,7 @@ export class SponsorBarComponent implements OnInit, OnDestroy {
       imagen: 'images/logos/catedral-hd-negro.png',
       alt: 'Catedral',
       imagenDark: 'images/logos/catedral-hd-blanco.png',
-      height: 80
+      height: 80,
     },
   ];
 
@@ -104,15 +108,16 @@ export class SponsorBarComponent implements OnInit, OnDestroy {
   }
 
   /**
-   * Devuelve la altura en px que corresponde según el tema actual,
-   * usando heightDark si está definido para dark, o el height base.
-   * Si no hay ninguno, devuelve 32.
+   * Altura final en px del logo, respetando las proporciones hechas a mano
+   * en `height` / `heightDark` (cada logo está ajustado para "pegar" con el resto).
+   * Se escala el conjunto por un factor en vez de fijar una altura fija.
    */
   getSponsorHeight(sponsor: Sponsor): number {
     const baseHeight =
       this.currentTheme() === 'dark' && sponsor.heightDark != null
         ? sponsor.heightDark
         : (sponsor.height ?? 32);
-    return baseHeight;
+    const factor = this.isMobile() ? this.escalaMobile : this.escalaDesktop;
+    return baseHeight * factor;
   }
 }

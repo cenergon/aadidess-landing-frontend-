@@ -2,10 +2,7 @@
   <a [routerLink]="'/institucional/sponsors'" class="sponsor-bar-link">
     <div class="sponsor-bar">
       <div class="sponsor-bar__carousel">
-        <div
-          class="sponsor-bar__logos"
-          [style.--scroll-duration]="scrollDuration() + 's'"
-        >
+        <div class="sponsor-bar__logos" [style.--scroll-duration]="scrollDuration() + 's'">
           @for (sponsor of displaySponsors(); track $index) {
             <img
               [src]="getImagen(sponsor)"
@@ -13,7 +10,7 @@
               class="sponsor-bar__logo"
               loading="eager"
               decoding="async"
-              [style.height.px]="getSponsorHeight(sponsor) / (isMobile() ? 2 : 1)"
+              [style.height.px]="getSponsorHeight(sponsor)"
               [style.transform]="sponsor.escala ? 'scale(' + sponsor.escala + ')' : null"
             />
           }

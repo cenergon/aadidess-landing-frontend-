@@ -1,4 +1,5 @@
-$logo-height: 32px;
+$logo-height: 32px; // mobile / base
+$logo-height-desktop: 24px; // escritorio (fuera de responsive)
 $gap: 6rem;
 
 .sponsor-bar-link {
@@ -54,6 +55,10 @@ $gap: 6rem;
   margin-right: $gap;
   opacity: 0.85;
   transition: opacity 0.2s;
+
+  @media (min-width: 769px) {
+    height: $logo-height-desktop;
+  }
 }
 
 @keyframes scroll {
