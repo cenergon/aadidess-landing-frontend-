@@ -22,7 +22,13 @@ interface SeccionLinkGroup {
   links: BloqueLink[];
 }
 
-type Seccion = SeccionTexto | SeccionLink | SeccionLinkGroup;
+interface SeccionSubtitulo {
+  tipo: 'subtitulo';
+  contenido: string;
+  orden: number;
+}
+
+type Seccion = SeccionTexto | SeccionLink | SeccionLinkGroup | SeccionSubtitulo;
 
 @Component({
   selector: 'app-noticia',
@@ -95,6 +101,13 @@ export class NoticiaComponent implements OnInit {
       const bloque = bloques[i];
       if (bloque.tipo === 'texto') {
         secciones.push({ tipo: 'texto', contenido: bloque.contenido, orden: bloque.orden });
+        i++;
+      } else if (bloque.tipo === 'subtitulo') {
+        secciones.push({
+          tipo: 'subtitulo',
+          contenido: bloque.contenido,
+          orden: bloque.orden,
+        });
         i++;
       } else {
         // Agrupar links consecutivos

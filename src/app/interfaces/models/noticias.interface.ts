@@ -12,7 +12,13 @@ export interface BloqueLink {
   esPdf?: boolean; // opcional, para indicar si abre PDF
 }
 
-export type Bloque = BloqueTexto | BloqueLink;
+export interface BloqueSubtitulo {
+  tipo: 'subtitulo';
+  orden: number;
+  contenido: string; // admite **negrita**
+}
+
+export type Bloque = BloqueTexto | BloqueLink | BloqueSubtitulo;
 
 export interface Noticia {
   id: number;

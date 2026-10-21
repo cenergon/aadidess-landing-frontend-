@@ -20,6 +20,11 @@
                 class="noticia-detalle__parrafo"
                 [innerHTML]="procesarTexto(seccion.contenido)"
               ></p>
+            } @else if (seccion.tipo === 'subtitulo') {
+              <h2
+                class="noticia-detalle__subtitulo"
+                [innerHTML]="procesarTexto(seccion.contenido)"
+              ></h2>
             } @else if (seccion.tipo === 'link') {
               <div class="noticia-detalle__link-contenedor">
                 @if (seccion.bloque.esPdf) {
