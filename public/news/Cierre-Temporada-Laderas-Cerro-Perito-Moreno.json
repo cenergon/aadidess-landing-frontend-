@@ -1,0 +1,83 @@
+{
+  "id": 66,
+  "titulo": "Cierre de temporada en Laderas Cerro Perito Moreno",
+  "postedAt": "2026-10-21T20:00:00-03:00",
+  "createdAt": "2026-10-21T20:00:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "La temporada de invierno 2026 en **Laderas Cerro Perito Moreno** dejó un balance altamente positivo. Acompañada de una intensa agenda de eventos, recreación, capacitaciones y competencias de nivel nacional e internacional, la montaña se mantuvo activa durante toda la temporada."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "Gracias a las nevadas de las últimas semanas, el centro de esquí extendió su operación hasta el fin de semana del **12 de octubre**, consolidándose nuevamente como **la temporada más larga de la Argentina**."
+    },
+    {
+      "tipo": "subtitulo",
+      "orden": 3,
+      "contenido": "Más nieve, más pistas y una nueva telesilla"
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": "Al inicio de la temporada se avanzó en obras de infraestructura con la ampliación del sistema de nieve de cultivo mediante la incorporación de **cañones de última generación**. Esta mejora permitió extender las pistas en la zona baja, facilitando que los principiantes pudieran aprender y disfrutar del esquí sin necesidad de adquirir el pase completo de la montaña."
+    },
+    {
+      "tipo": "texto",
+      "orden": 5,
+      "contenido": "A comienzos de octubre quedó en funcionamiento la nueva **telesilla cuádruple Mallín Ahogado**, la primera de estas características en la Comarca Andina. A partir de la temporada 2027 este medio será exclusivo para esquiadores y permitirá aumentar significativamente el caudal de pasajeros desde la base hasta la **cota de 1.450 metros**."
+    },
+    {
+      "tipo": "texto",
+      "orden": 6,
+      "contenido": "“Fue un invierno que vivimos a pura emoción, porque logramos llevar a cabo todos nuestros objetivos: generar nuevos esquiadores, poner foco en la actividad recreativa y de alta competencia, y la mejora continua de Laderas, con importantes obras tanto al inicio como al final de la temporada”, sostuvo **Julián Rudolph, director de Relaciones Institucionales**."
+    },
+    {
+      "tipo": "texto",
+      "orden": 7,
+      "contenido": "“El próximo invierno los esquiadores contarán con la nueva silla cuádruple, exclusiva para ellos, y será un gran hito para el desarrollo del centro de ski de El Bolsón”."
+    },
+    {
+      "tipo": "subtitulo",
+      "orden": 8,
+      "contenido": "Una temporada de competencia y comunidad"
+    },
+    {
+      "tipo": "texto",
+      "orden": 9,
+      "contenido": "Durante la temporada, Laderas concentró una agenda deportiva, recreativa y social que reunió a instituciones nacionales e internacionales, deportistas de distintas provincias y nacionalidades y a la comunidad local. Entre los principales eventos se destacaron:"
+    },
+    {
+      "tipo": "texto",
+      "orden": 10,
+      "contenido": "• **Campeonato Argentino de Freeride** (ski y snowboard), con más de 100 participantes.\n• **Doble fecha de esquí alpino** con puntaje válido para la Federación Internacional de Ski (FIS).\n• **Campeonatos nacionales de esquí alpino** (slalom y slalom gigante), organizados por primera vez en Laderas.\n• **Segundo bloque de esquí alpino de la FASA** para la categoría U16, que incluyó el Memorial Leo Rudolph, y el camp de la misma federación para categorías U14 y U16.\n• **Cursos de actualización de Niveles 2 y 3** y el examen de ingreso a Nivel 1 de AADIDESS."
+    },
+    {
+      "tipo": "texto",
+      "orden": 11,
+      "contenido": "También se desarrollaron actividades de inclusión, formación y proyección comunitaria, como la **jornada de esquí adaptado** junto a las Fundaciones Ponete en Mi Lugar y Lemuel para participar de los festejos del Día del Niño; el **Torneo de Esquí Adaptado y Raquetas de Olimpiadas Especiales**; la clásica **Bajada de Antorchas**; el **Programa Esquí Escolar**; y una acción de reforestación con Reforestar Patagonia, declarada de **Interés Turístico, Deportivo y Ambiental** por el Concejo Deliberante de El Bolsón."
+    },
+    {
+      "tipo": "subtitulo",
+      "orden": 12,
+      "contenido": "Gastronomía, alojamiento y tarifas"
+    },
+    {
+      "tipo": "texto",
+      "orden": 13,
+      "contenido": "Otro de los logros de la temporada fue la ampliación de la oferta gastronómica y de alojamiento. Se puso en valor el **Refugio Albrecht Rudolph**, con una nueva concesión que recuperó la filosofía de gente de montaña, y se inauguraron nuevos puntos gastronómicos en distintos sectores del cerro."
+    },
+    {
+      "tipo": "texto",
+      "orden": 14,
+      "contenido": "Laderas se destacó además por ofrecer las mejores tarifas del mercado y promociones orientadas a residentes locales y de provincias vecinas. Como resultado, el centro registró un **aumento superior al 20 % en la cantidad de visitantes** respecto de la temporada 2024, año con buena cantidad de nieve."
+    },
+    {
+      "tipo": "texto",
+      "orden": 15,
+      "contenido": "**Laderas Cerro Perito Moreno**, a solo **25 km de El Bolsón** y en permanente trabajo conjunto con la Agencia de Turismo de El Bolsón (ATEB), inicia ahora la preparación para la temporada de verano, que comenzará el **6 de enero de 2027** con una amplia propuesta de actividades en la montaña."
+    }
+  ]
+}
