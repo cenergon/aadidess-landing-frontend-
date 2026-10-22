@@ -1,0 +1,50 @@
+{
+  "id": 67,
+  "titulo": "Acompañá a la delegación argentina en el Interski Vail 2027",
+  "postedAt": "2026-10-22T18:55:00-03:00",
+  "createdAt": "2026-10-22T18:55:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "¿Te gustaría vivir desde adentro uno de los eventos de deportes de invierno más importantes del mundo?"
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "Desde **AADIDESS**, en conjunto con **Hub Travel**, lanzamos la propuesta para que puedas acompañar al equipo argentino en el próximo **Congreso Interski**, que se llevará a cabo del **4 al 9 de abril de 2027** en **Vail, Colorado**."
+    },
+    {
+      "tipo": "texto",
+      "orden": 3,
+      "contenido": "Para que solo te preocupes por disfrutar de la nieve y alentar a nuestros instructores, gestionamos la **logística integral de tu viaje**:"
+    },
+    {
+      "tipo": "subtitulo",
+      "orden": 4,
+      "contenido": "¿Qué incluye?"
+    },
+    {
+      "tipo": "texto",
+      "orden": 5,
+      "contenido": "• **Acreditación:** gestión completa de tu acreditación oficial al congreso.\n• **Aéreos y traslados:** pasajes y transporte coordinado.\n• **Alojamiento:** reserva en hotel durante los días del evento.\n• **Pases de ski:** accesos a los medios de elevación en Vail."
+    },
+    {
+      "tipo": "subtitulo",
+      "orden": 6,
+      "contenido": "¿Cómo consultar o inscribirte?"
+    },
+    {
+      "tipo": "texto",
+      "orden": 7,
+      "contenido": "Si querés recibir más información, completá el formulario de contacto haciendo clic en el siguiente enlace:"
+    },
+    {
+      "tipo": "link",
+      "orden": 8,
+      "texto": "Formulario de inscripción — Interski Vail 2027",
+      "url": "https://forms.gle/51qzw5EE2YTSLZmFA",
+      "esPdf": false
+    }
+  ]
+}
