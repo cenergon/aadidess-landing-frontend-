@@ -1,31 +1,54 @@
 <section class="autoridades">
   <div class="autoridades__container">
-    <h1 class="autoridades__title">Autoridades</h1>
-    <div class="autoridades__grid">
-      @for (autoridad of autoridades; track autoridad.nombre) {
-        <div class="autoridades__card">
-          <div class="autoridades__avatar">
-            @if (getFotoUrl(autoridad.foto)) {
-              <img
-                [src]="autoridad.foto"
-                [alt]="autoridad.nombre"
-                class="autoridades__foto"
-                loading="lazy"
-              />
-            } @else {
-              <div class="autoridades__placeholder">
-                {{ getInitials(autoridad.nombre) }}
-              </div>
-            }
-          </div>
-          <h2 class="autoridades__nombre">{{ autoridad.nombre }}</h2>
-          @if (autoridad.periodo) {
-            <p class="autoridades__periodo">{{ autoridad.periodo }}</p>
+    <header class="autoridades__header">
+      <p class="autoridades__eyebrow">Institucional</p>
+      <h1 class="autoridades__title">Autoridades</h1>
+      <p class="autoridades__lead">
+        Comisión Directiva y Tribunal de Honor de la Asociación Argentina de Instructores de Esquí,
+        Snowboard y Pisteros Socorristas.
+      </p>
+    </header>
+
+    @for (organo of organos; track organo.id) {
+      <section class="autoridades__organo" [attr.aria-labelledby]="'organo-' + organo.id">
+        <div class="autoridades__organo-head">
+          <h2 class="autoridades__organo-title" [id]="'organo-' + organo.id">{{ organo.titulo }}</h2>
+          @if (organo.bajada) {
+            <p class="autoridades__organo-bajada">{{ organo.bajada }}</p>
           }
-          <p class="autoridades__cargo">{{ autoridad.cargo }}</p>
         </div>
-      }
-    </div>
+
+        <ul class="autoridades__grid" [class.autoridades__grid--horizontal]="organo.horizontal">
+          @for (persona of organo.miembros; track persona.nombre) {
+            <li class="autoridades__card" [class.autoridades__card--destacado]="persona.destacado">
+              <div class="autoridades__retrato">
+                <span class="autoridades__iniciales" aria-hidden="true">{{ getInitials(persona.nombre) }}</span>
+                @if (tieneFoto(persona)) {
+                  <img
+                    [src]="persona.foto"
+                    [alt]="persona.nombre + ', ' + persona.cargo"
+                    class="autoridades__foto"
+                    loading="lazy"
+                    decoding="async"
+                    (error)="marcarSinFoto(persona.nombre)"
+                  />
+                }
+              </div>
+
+              <div class="autoridades__info">
+                <h3 class="autoridades__nombre">{{ persona.nombre }}</h3>
+                @if (persona.cargo) {
+                  <p class="autoridades__cargo">{{ persona.cargo }}</p>
+                }
+                @if (persona.periodo) {
+                  <p class="autoridades__periodo">{{ persona.periodo }}</p>
+                }
+              </div>
+            </li>
+          }
+        </ul>
+      </section>
+    }
   </div>
 </section>
 

@@ -1,6 +1,9 @@
 <section class="delegados" #delegadosContainer>
   <div class="delegados__container">
-    <h2 class="delegados__title">Delegados</h2>
+    <header class="delegados__header">
+      <h2 class="delegados__title">Delegados</h2>
+      <p class="delegados__lead">Socios que representan a cada centro de esquí.</p>
+    </header>
 
     <!-- Chips / Tabs de cerros -->
     <div class="delegados__tabs" role="tablist" aria-label="Seleccionar cerro">
@@ -9,6 +12,7 @@
           class="delegados__tab"
           [class.delegados__tab--active]="cerro.nombre === cerroSeleccionado()"
           (click)="seleccionarCerro(cerro.nombre)"
+          type="button"
           role="tab"
           [attr.aria-selected]="cerro.nombre === cerroSeleccionado()"
         >
@@ -18,15 +22,19 @@
     </div>
 
     <!-- Lista de delegados -->
-    <div class="delegados__list">
+    <div class="delegados__list" aria-live="polite">
       @if (delegadosActuales().length > 0) {
+        <p class="delegados__count">
+          {{ delegadosActuales().length }}
+          {{ delegadosActuales().length === 1 ? 'delegado' : 'delegados' }}
+        </p>
         <ul class="delegados__grid">
           @for (nombre of delegadosActuales(); track nombre) {
             <li class="delegados__item">{{ nombre }}</li>
           }
         </ul>
       } @else {
-        <p class="delegados__empty">Sin delegado</p>
+        <p class="delegados__empty">Sin delegados designados en este centro.</p>
       }
     </div>
   </div>

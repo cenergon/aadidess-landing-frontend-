@@ -1,103 +1,312 @@
-$radius-lg: 12px;
-$transition-smooth: var(--transition-base);
+// Autoridades: mesa directiva, revisores, vocales y Tribunal de Honor.
+//
+// Tokens locales: los que necesita la sección para no depender de variables
+// globales que no existen hoy (`--color-text-secondary`, `--shadow-md`, …).
+// El acento de marca (#60d0f1) queda para detalles sobre fondo oscuro; cuando
+// hace falta leer texto sobre blanco se usa `--aut-ink` (#0e7490, 5.36:1).
+
+:host {
+  --aut-ink: #0e7490;
+  --aut-period: #64748b;
+  --aut-panel: #f7f9fc;
+  --aut-placeholder: #16233b;
+  --aut-ring: rgba(36, 36, 60, 0.1);
+  --aut-shadow: 0 1px 2px rgba(36, 36, 60, 0.04), 0 6px 18px rgba(36, 36, 60, 0.05);
+  --aut-shadow-hover: 0 2px 6px rgba(36, 36, 60, 0.07), 0 14px 32px rgba(36, 36, 60, 0.11);
+  --aut-radius: 16px;
+}
+
+:host-context([data-theme='dark']) {
+  --aut-ink: #7dd3fc;          // 8.77:1 sobre #1e293b
+  --aut-period: #94a3b8;
+  --aut-panel: #16202f;
+  --aut-placeholder: #0b1220;
+  --aut-ring: rgba(148, 163, 184, 0.18);
+  --aut-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 6px 18px rgba(0, 0, 0, 0.25);
+  --aut-shadow-hover: 0 2px 8px rgba(0, 0, 0, 0.35), 0 14px 32px rgba(0, 0, 0, 0.35);
+}
+
+:host *,
+:host *::before,
+:host *::after {
+  box-sizing: border-box;
+}
 
 .autoridades {
-  padding: 3rem 1.5rem;
+  padding: 0.75rem 1.5rem 3rem;
   transition: background-color var(--transition-base), color var(--transition-base);
 
   &__container {
-    max-width: 1200px;
+    max-width: 1180px;
     margin: 0 auto;
   }
 
+  // ---------- Encabezado ----------
+
+  &__header {
+    position: relative;
+    margin-bottom: 2.5rem;
+  }
+
+  &__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0 0 0.75rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--aut-ink);
+
+    &::before {
+      content: '';
+      width: 26px;
+      height: 2px;
+      border-radius: 2px;
+      background: var(--color-accent);
+    }
+  }
+
   &__title {
-    font-size: 2rem;
+    margin: 0;
+    font-size: clamp(1.85rem, 1.3rem + 1.9vw, 2.55rem);
     font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
     color: var(--color-text-primary);
-    margin-bottom: 2rem;
-    text-align: center;
     transition: color var(--transition-base);
   }
 
+  &__lead {
+    margin: 0.85rem 0 0;
+    max-width: 60ch;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--aut-period);
+    transition: color var(--transition-base);
+  }
+
+  // ---------- Bloques por órgano: panel con superficie propia ----------
+
+  &__organo {
+    margin-bottom: 1.35rem;
+    padding: 1.1rem 1.25rem 1.35rem;
+    background: var(--aut-panel);
+    border: 1px solid var(--color-border);
+    border-radius: calc(var(--aut-radius) + 6px);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__organo-head {
+    display: flex;
+    align-items: baseline;
+    gap: 0.35rem 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  &__organo-title {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: var(--color-text-primary);
+    transition: color var(--transition-base);
+
+    &::before {
+      content: '';
+      width: 3px;
+      height: 0.95rem;
+      border-radius: 2px;
+      background: var(--color-accent);
+    }
+  }
+
+  &__organo-bajada {
+    margin: 0;
+    order: 2;
+    flex-basis: 100%;
+    padding-left: 0.8rem;
+    font-size: 0.82rem;
+    color: var(--aut-period);
+    transition: color var(--transition-base);
+  }
+
+  // ---------- Grilla y tarjetas ----------
+
   &__grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
+    // Siete columnas: entran los siete del Comité Técnico en una sola fila.
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 0.9rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 
-    @media (max-width: 992px) {
-      grid-template-columns: repeat(2, 1fr);
+    @media (max-width: 1023px) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
-    @media (max-width: 576px) {
-      grid-template-columns: 1fr;
+
+    @media (max-width: 860px) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    @media (max-width: 620px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.7rem;
     }
   }
 
   &__card {
-    background: var(--color-bg-elevated);
-    border: 1px solid var(--color-border);
-    border-radius: $radius-lg;
-    padding: 2rem 1.5rem;
+    position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    box-shadow: var(--shadow-md);
+    min-width: 0;
+    overflow: hidden;
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: var(--aut-radius);
+    box-shadow: var(--aut-shadow);
     transition: transform var(--transition-base),
                 box-shadow var(--transition-base),
-                background-color var(--transition-base),
                 border-color var(--transition-base);
 
     &:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-lg);
-      border-color: var(--color-accent);
+      transform: translateY(-2px);
+      border-color: color-mix(in srgb, var(--color-accent) 55%, var(--color-border));
+      box-shadow: var(--aut-shadow-hover);
+
+      .autoridades__foto {
+        transform: scale(1.05);
+      }
+    }
+
+    // Presidencia: sólo cambia el borde, fino y en acento.
+    &--destacado {
+      border-color: color-mix(in srgb, var(--color-accent) 70%, var(--color-border));
     }
   }
 
-  &__avatar {
-    width: 88px;
-    height: 88px;
-    border-radius: 50%;
-    margin-bottom: 1rem;
+  // ---------- Mesa directiva: tarjetas apaisadas ----------
+
+  &__grid--horizontal {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    .autoridades__card {
+      flex-direction: row;
+      align-items: stretch;
+    }
+
+    .autoridades__retrato {
+      flex: 0 0 42%;
+    }
+
+    .autoridades__info {
+      flex: 1 1 auto;
+      justify-content: center;
+      border-top: 0;
+      border-left: 1px solid var(--color-border);
+      padding: 0.8rem 0.9rem;
+    }
+
+    // En las apaisadas el cargo entra en una línea: no hace falta reservar dos.
+    .autoridades__cargo {
+      min-height: 0;
+    }
+
+    @media (max-width: 860px) {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
+  &__retrato {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    background: var(--aut-placeholder);
     overflow: hidden;
-    background-color: var(--color-bg-secondary);
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color var(--transition-base);
   }
 
   &__foto {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
+    max-width: 100%;
     object-fit: cover;
+    object-position: center 18%;
+    display: block;
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
-  &__placeholder {
-    font-size: 1.5rem;
+  &__iniciales {
+    font-size: 1.65rem;
     font-weight: 600;
+    letter-spacing: 0.04em;
     color: var(--color-accent);
+    user-select: none;
   }
 
   &__nombre {
-    font-size: 1.1rem;
+    margin: 0;
+    font-size: 0.88rem;
     font-weight: 600;
+    line-height: 1.25;
     color: var(--color-text-primary);
-    margin: 0 0 0.5rem;
+    transition: color var(--transition-base);
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0.7rem 0.8rem 0.85rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  &__cargo {
+    margin: 0;
+    // Dos líneas reservadas: así todas las tarjetas de una fila cierran parejas
+    // aunque un cargo sea más largo ("Revisora de cuentas suplente").
+    min-height: 2.7em;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.35;
+    color: var(--aut-ink);
     transition: color var(--transition-base);
   }
 
   &__periodo {
-    font-size: 0.85rem;
-    color: var(--color-text-secondary);
-    margin: 0 0 0.25rem;
+    margin: 0.1rem 0 0;
+    font-size: 0.64rem;
+    font-weight: 500;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    font-variant-numeric: tabular-nums;
+    color: var(--aut-period);
     transition: color var(--transition-base);
   }
 
-  &__cargo {
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: var(--color-accent);
-    margin: 0;
+  @media (max-width: 620px) {
+    padding: 2.5rem 1rem 2rem;
+
+    &__organo {
+      padding: 0.9rem 0.9rem 1.1rem;
+    }
+
+    &__nombre {
+      font-size: 0.8rem;
+    }
   }
 }

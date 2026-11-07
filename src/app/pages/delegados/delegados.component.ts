@@ -72,6 +72,7 @@ export class DelegadosComponent {
   }
 
   delegadosActuales(): string[] {
-    return this.delegadosPorCerro[this.cerroSeleccionado()] ?? [];
+    const lista = this.delegadosPorCerro[this.cerroSeleccionado()] ?? [];
+    return [...lista].sort((a, b) => a.localeCompare(b, 'es'));
   }
 }

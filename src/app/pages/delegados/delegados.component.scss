@@ -1,100 +1,172 @@
-$radius-md: 8px;
-$radius-full: 999px;
-$transition-smooth: var(--transition-base);
+// Delegados: lista de socios por centro de esquí.
+// Comparte tokens locales con la sección de autoridades para que la página
+// se lea como una sola pieza.
+
+:host {
+  --del-ink: #0e7490;
+  --del-muted: #64748b;
+  --del-radius: 999px;
+}
+
+:host-context([data-theme='dark']) {
+  --del-ink: #7dd3fc;
+  --del-muted: #94a3b8;
+}
+
+:host *,
+:host *::before,
+:host *::after {
+  box-sizing: border-box;
+}
 
 .delegados {
-  padding: 3rem 1.5rem;
+  padding: 3rem 1.5rem 4rem;
+  border-top: 1px solid var(--color-border);
   background-color: var(--color-bg-primary);
-  font-family: 'Roboto', sans-serif;
+  font-family: inherit;
   transition: background-color var(--transition-base), color var(--transition-base);
 
   &__container {
-    max-width: 900px;
+    max-width: 1180px;
     margin: 0 auto;
   }
 
-  &__title {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--color-text-primary);
+  &__header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem 1rem;
+    flex-wrap: wrap;
     margin-bottom: 1.5rem;
-    text-align: center;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--color-border);
+
+    &::after {
+      content: '';
+      flex: 1 1 70px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--color-border), transparent);
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--color-text-primary);
     transition: color var(--transition-base);
   }
 
-  // Tabs
+  &__lead {
+    margin: 0;
+    order: 2;
+    flex-basis: 100%;
+    font-size: 0.9rem;
+    color: var(--del-muted);
+    transition: color var(--transition-base);
+  }
+
+  // ---------- Chips de centros ----------
+
   &__tabs {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 0.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.75rem;
   }
 
   &__tab {
-    background-color: var(--color-bg-elevated);
+    background-color: transparent;
     border: 1px solid var(--color-border);
     color: var(--color-text-primary);
-    font-size: 0.9rem;
+    font-size: 0.875rem;
     font-weight: 500;
-    padding: 0.5rem 1.2rem;
-    border-radius: $radius-full;
+    padding: 0.45rem 1rem;
+    border-radius: var(--del-radius);
     cursor: pointer;
-    transition: all var(--transition-base);
     font-family: inherit;
+    line-height: 1.2;
+    transition: background-color var(--transition-base),
+                border-color var(--transition-base),
+                color var(--transition-base);
 
     &:hover {
-      background-color: var(--color-accent-glow);
-      border-color: var(--color-accent);
+      border-color: color-mix(in srgb, var(--color-accent) 55%, var(--color-border));
+      background-color: var(--color-hover-bg);
     }
 
+    &:focus-visible {
+      outline: 2px solid var(--color-accent-hover);
+      outline-offset: 2px;
+    }
+
+    // Activo legible: el chip celeste con texto blanco daba 1.78:1.
     &--active {
-      background-color: var(--color-accent);
-      color: var(--color-text-inverse);
+      background-color: var(--color-hover-bg);
       border-color: var(--color-accent);
+      color: var(--del-ink);
+      font-weight: 600;
     }
   }
 
-  // Lista de delegados
+  // ---------- Lista ----------
+
   &__list {
     min-height: 80px;
   }
 
+  &__count {
+    margin: 0 0 0.85rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--del-ink);
+    transition: color var(--transition-base);
+  }
+
+  // Lista en columnas que se leen hacia abajo (orden alfabético natural).
   &__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.75rem 1.5rem;
+    columns: 3;
+    column-gap: 1.25rem;
     list-style: none;
     padding: 0;
     margin: 0;
 
     @media (max-width: 768px) {
-      grid-template-columns: repeat(2, 1fr);
+      columns: 2;
     }
+
     @media (max-width: 480px) {
-      grid-template-columns: 1fr;
+      columns: 1;
     }
   }
 
+  // Sin subrayado: el borde inferior hacía que los nombres parecieran links.
   &__item {
     color: var(--color-text-primary);
     font-size: 0.95rem;
-    padding: 0.4rem 0;
-    border-bottom: 1px solid var(--color-border);
-    transition: color var(--transition-base),
-                border-color var(--transition-base);
+    line-height: 1.4;
+    padding: 0.45rem 0.6rem;
+    border-radius: 8px;
+    break-inside: avoid;
+    transition: background-color var(--transition-base),
+                color var(--transition-base);
 
     &:hover {
-      color: var(--color-accent);
-      border-color: var(--color-accent);
+      background-color: var(--color-hover-bg);
     }
   }
 
   &__empty {
-    text-align: center;
-    color: var(--color-text-muted);
-    font-style: italic;
-    padding: 1rem 0;
+    margin: 0;
+    color: var(--del-muted);
+    font-size: 0.95rem;
+    padding: 0.5rem 0;
     transition: color var(--transition-base);
+  }
+
+  @media (max-width: 620px) {
+    padding: 2.5rem 1.15rem 3rem;
   }
 }
