@@ -54,7 +54,8 @@ export class AutoridadesComponent {
           nombre: 'Martín Bacer',
           cargo: 'Presidente',
           periodo: this.periodoGeneral,
-          foto: this.foto('bacer'),
+          // Volvió a la foto anterior (la nueva pasó a Bozic).
+          foto: 'images/martin-bacer.jpg',
           destacado: true
         },
         {
