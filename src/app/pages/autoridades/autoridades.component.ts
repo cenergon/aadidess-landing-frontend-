@@ -150,6 +150,22 @@ export class AutoridadesComponent {
       titulo: 'Comité Técnico',
       miembros: [
         {
+          // Los que además tienen cargo en la comisión van primero.
+          nombre: 'Ivo Bozic',
+          cargo: 'Esquí',
+          foto: this.foto('bozic')
+        },
+        {
+          nombre: 'Juan Manuel Faccio',
+          cargo: 'Esquí',
+          foto: this.foto('faccio')
+        },
+        {
+          nombre: 'Tito Franco',
+          cargo: 'Esquí',
+          foto: this.foto('tito-franco')
+        },
+        {
           nombre: 'Diego Hilaire',
           cargo: 'Esquí',
           foto: this.foto('hilaire')
@@ -170,11 +186,6 @@ export class AutoridadesComponent {
           foto: this.foto('vitale')
         },
         {
-          nombre: 'Tito Franco',
-          cargo: 'Esquí',
-          foto: this.foto('tito-franco')
-        },
-        {
           nombre: 'Ismael de Vedia',
           cargo: 'Snowboard',
           foto: this.foto('deVedia')
@@ -183,7 +194,7 @@ export class AutoridadesComponent {
           nombre: 'Franco Ruffini',
           cargo: 'Snowboard',
           foto: this.foto('ruffini')
-        },
+        }
       ]
     }
   ];

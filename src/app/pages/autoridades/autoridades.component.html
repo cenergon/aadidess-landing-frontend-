@@ -18,7 +18,11 @@
           }
         </div>
 
-        <ul class="autoridades__grid" [class.autoridades__grid--horizontal]="organo.horizontal">
+        <ul
+          class="autoridades__grid"
+          [class.autoridades__grid--horizontal]="organo.horizontal"
+          [class.autoridades__grid--nueve]="organo.id === 'comite-tecnico'"
+        >
           @for (persona of organo.miembros; track persona.nombre) {
             <li class="autoridades__card" [class.autoridades__card--destacado]="persona.destacado">
               <div class="autoridades__retrato">
