@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { AutoridadesComponent } from './pages/autoridades/autoridades.component';
+import { ComiteTecnicoComponent } from './pages/comite-tecnico/comite-tecnico.component';
 import { EstatutoComponent } from './pages/estatuto/estatuto.component';
 import { ReglamentoComiteTecnicoComponent } from './pages/reglamento-comite-tecnico/reglamento-comite-tecnico.component';
 import { RequisitosDelegadosComponent } from './pages/requisitos-delegados/requisitos-delegados.component';
@@ -56,6 +57,7 @@ import { ChallengeComponent } from './pages/challenge/challenge.component';
 export const routes: Routes = [
 
     { path: 'institucional/autoridades', component: AutoridadesComponent },
+    { path: 'institucional/comite-tecnico', component: ComiteTecnicoComponent },
     { path: 'institucional/estatuto', component: EstatutoComponent },
     { path: 'institucional/reglamento-comite-tecnico', component: ReglamentoComiteTecnicoComponent },
     { path: 'institucional/reglamento-academico', component: ReglamentoAcademicoComponent },

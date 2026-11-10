@@ -237,6 +237,7 @@ $menu-breakpoint: 768px;
   }
 
   &__dropdown-toggle {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 0.25rem;
@@ -251,8 +252,28 @@ $menu-breakpoint: 768px;
     transition: color $transition-base;
     white-space: nowrap;
 
-    &:hover {
+    // Subrayado que se abre en hover y queda fijo con el panel abierto:
+    // reemplaza al chevron giratorio.
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $color-accent;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform $transition-base;
+    }
+
+    &:hover,
+    &[aria-expanded='true'] {
       color: $color-accent;
+
+      &::after {
+        transform: scaleX(1);
+      }
     }
 
     @media (max-width: $menu-breakpoint) {
@@ -265,24 +286,24 @@ $menu-breakpoint: 768px;
       white-space: normal;
       border-bottom: 1px solid $color-border;
 
-      &:hover,
-      &[aria-expanded='true'] {
-        color: $color-accent;
+      &::after {
+        display: none; // sin subrayado en el acordeón mobile
       }
     }
   }
 
-  &__chevron {
-    font-size: 1.3rem;
-    transition: transform $transition-base;
-  }
-
-  .navbar__dropdown-toggle[aria-expanded='true'] .navbar__chevron {
-    transform: rotate(180deg);
-  }
-
   &__dropdown-panel {
     position: absolute;
+    // Puente invisible sobre el hueco de 8px entre el ítem y el panel: si el
+    // mouse baja por ahí, sigue dentro del panel y el hover no se corta.
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -12px;
+      height: 12px;
+    }
     top: calc(100% + 8px);
     left: 50%;
     transform: translateX(-50%) translateY(4px);
@@ -341,6 +362,36 @@ $menu-breakpoint: 768px;
       padding-left: 0.9rem;
       border-left: 2px solid $color-accent;
     }
+  }
+
+  // ---- Mega menú: columnas con título ----
+  &__dropdown-panel--mega {
+    width: 660px;
+    max-width: calc(100vw - 2rem);
+    padding: 0.9rem 1rem;
+
+    .navbar__dropdown-panel-inner {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.25rem 1.5rem;
+      align-items: start;
+    }
+  }
+
+  &__panel-title {
+    margin: 0 0 0.3rem;
+    padding: 0 0.75rem;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--color-text-secondary, #64748b);
+  }
+
+  &__panel-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
   }
 
   &__dropdown-link {
@@ -433,10 +484,29 @@ $menu-breakpoint: 768px;
   }
 }
 
+@media (max-width: $menu-breakpoint) {
+  .navbar__dropdown-panel--mega {
+    width: auto;
+    max-width: none;
+    padding: 0;
+
+    .navbar__dropdown-panel-inner {
+      display: block;
+    }
+  }
+
+  .navbar__panel-title {
+    margin: 0.9rem 0 0.1rem;
+  }
+
+  .navbar__panel-col + .navbar__panel-col {
+    margin-top: 0.5rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .navbar__menu,
-  .navbar__dropdown-panel,
-  .navbar__chevron {
+  .navbar__dropdown-panel {
     transition: none;
   }
 }

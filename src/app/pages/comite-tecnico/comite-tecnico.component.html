@@ -1,0 +1,47 @@
+<section class="comite">
+  <div class="comite__container">
+    <header class="comite__header">
+      <p class="comite__eyebrow">Institucional</p>
+      <h1 class="comite__title">Comité Técnico</h1>
+    </header>
+
+    @for (subcomision of subcomisiones; track subcomision.id) {
+      <section class="comite__organo" [attr.aria-labelledby]="'subcomision-' + subcomision.id">
+        <div class="comite__organo-head">
+          <h2 class="comite__organo-title" [id]="'subcomision-' + subcomision.id">
+            {{ subcomision.titulo }}
+          </h2>
+        </div>
+
+        <ul class="comite__grid" [class.comite__grid--ocho]="subcomision.id === 'esqui'">
+          @for (persona of subcomision.integrantes; track persona.nombre) {
+            <li class="comite__card">
+              <div class="comite__retrato">
+                <span class="comite__iniciales" aria-hidden="true">{{
+                  getInitials(persona.nombre)
+                }}</span>
+                @if (tieneFoto(persona)) {
+                  <img
+                    [src]="persona.foto"
+                    [alt]="persona.nombre + ', ' + persona.cargo"
+                    class="comite__foto"
+                    loading="lazy"
+                    decoding="async"
+                    (error)="marcarSinFoto(persona.nombre)"
+                  />
+                }
+              </div>
+
+              <div class="comite__info">
+                <h3 class="comite__nombre">{{ persona.nombre }}</h3>
+                @if (persona.cargo) {
+                  <p class="comite__cargo">{{ persona.cargo }}</p>
+                }
+              </div>
+            </li>
+          }
+        </ul>
+      </section>
+    }
+  </div>
+</section>

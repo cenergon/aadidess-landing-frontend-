@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-bottom-bar',
   standalone: true,
   templateUrl: './bottom-bar.component.html',
-  styleUrls: ['./bottom-bar.component.scss']
+  styleUrls: ['./bottom-bar.component.scss'],
 })
 export class BottomBarComponent {
   abrirEnlace(url: string): void {

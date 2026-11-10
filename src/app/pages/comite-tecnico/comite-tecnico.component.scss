@@ -1,0 +1,247 @@
+// Comité Técnico: subcomisiones de esquí y de snowboard.
+//
+// Mismos tokens que `autoridades.scss` para que ambas páginas se lean igual.
+// El acento de marca (#60d0f1) queda para detalles sobre fondo oscuro; cuando
+// hace falta leer texto sobre blanco se usa `--com-ink` (#0e7490, 5.36:1).
+
+:host {
+  --com-ink: #0e7490;
+  --com-period: #64748b;
+  --com-panel: #f7f9fc;
+  --com-placeholder: #16233b;
+  --com-ring: rgba(36, 36, 60, 0.1);
+  --com-shadow: 0 1px 2px rgba(36, 36, 60, 0.04), 0 6px 18px rgba(36, 36, 60, 0.05);
+  --com-shadow-hover: 0 2px 6px rgba(36, 36, 60, 0.07), 0 14px 32px rgba(36, 36, 60, 0.11);
+  --com-radius: 16px;
+}
+
+:host-context([data-theme='dark']) {
+  --com-ink: #7dd3fc; // 8.77:1 sobre #1e293b
+  --com-period: #94a3b8;
+  --com-panel: #16202f;
+  --com-placeholder: #0b1220;
+  --com-ring: rgba(148, 163, 184, 0.18);
+  --com-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 6px 18px rgba(0, 0, 0, 0.25);
+  --com-shadow-hover: 0 2px 8px rgba(0, 0, 0, 0.35), 0 14px 32px rgba(0, 0, 0, 0.35);
+}
+
+:host *,
+:host *::before,
+:host *::after {
+  box-sizing: border-box;
+}
+
+.comite {
+  padding: 0.75rem 1.5rem 3rem;
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base);
+
+  &__container {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+
+  // ---------- Encabezado ----------
+
+  &__header {
+    position: relative;
+    margin-bottom: 2.5rem;
+  }
+
+  &__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0 0 0.75rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--com-ink);
+
+    &::before {
+      content: '';
+      width: 26px;
+      height: 2px;
+      border-radius: 2px;
+      background: var(--color-accent);
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: clamp(1.85rem, 1.3rem + 1.9vw, 2.55rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    color: var(--color-text-primary);
+    transition: color var(--transition-base);
+  }
+
+  // ---------- Bloques por subcomisión: panel con superficie propia ----------
+
+  &__organo {
+    margin-bottom: 1.35rem;
+    padding: 1.1rem 1.25rem 1.35rem;
+    background: var(--com-panel);
+    border: 1px solid var(--color-border);
+    border-radius: calc(var(--com-radius) + 6px);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__organo-head {
+    display: flex;
+    align-items: baseline;
+    gap: 0.35rem 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  &__organo-title {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: var(--color-text-primary);
+    transition: color var(--transition-base);
+
+    &::before {
+      content: '';
+      width: 3px;
+      height: 0.95rem;
+      border-radius: 2px;
+      background: var(--color-accent);
+    }
+  }
+
+  // ---------- Grilla y tarjetas ----------
+
+  &__grid {
+    display: grid;
+    // Ocho columnas: los ocho de esquí entran en una fila y los cuatro de
+    // snowboard quedan del mismo tamaño, alineados a la izquierda.
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    gap: 0.9rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @media (max-width: 1100px) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    @media (max-width: 860px) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    @media (max-width: 620px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.7rem;
+    }
+  }
+
+  &__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: var(--com-radius);
+    box-shadow: var(--com-shadow);
+    transition:
+      transform var(--transition-base),
+      box-shadow var(--transition-base),
+      border-color var(--transition-base);
+
+    &:hover {
+      transform: translateY(-2px);
+      border-color: color-mix(in srgb, var(--color-accent) 55%, var(--color-border));
+      box-shadow: var(--com-shadow-hover);
+
+      .comite__foto {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  &__retrato {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    background: var(--com-placeholder);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__foto {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center 18%;
+    display: block;
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  &__iniciales {
+    font-size: 1.65rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--color-accent);
+    user-select: none;
+  }
+
+  &__nombre {
+    margin: 0;
+    font-size: 0.88rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--color-text-primary);
+    transition: color var(--transition-base);
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0.7rem 0.8rem 0.85rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  &__cargo {
+    margin: 0;
+    // Dos líneas reservadas: así todas las tarjetas de una fila cierran parejas.
+    min-height: 2.7em;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.35;
+    color: var(--com-ink);
+    transition: color var(--transition-base);
+  }
+
+  @media (max-width: 620px) {
+    padding: 2.5rem 1rem 2rem;
+
+    &__organo {
+      padding: 0.9rem 0.9rem 1.1rem;
+    }
+
+    &__nombre {
+      font-size: 0.8rem;
+    }
+  }
+}

@@ -7,17 +7,16 @@ $transition-smooth: var(--transition-base);
   text-align: center;
   font-size: 0.8rem;
   color: var(--color-text-secondary);
-  transition: background-color var(--transition-base),
-              border-color var(--transition-base),
-              color var(--transition-base);
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    color var(--transition-base);
 
   &__text {
     display: inline-flex;
     align-items: center;
     gap: 0.25rem;
-  }
-
-  &__link {
+    // Todo el texto es el link: se tiñe para que se lea clickeable.
     color: var(--color-accent);
     text-decoration: none;
     cursor: pointer;

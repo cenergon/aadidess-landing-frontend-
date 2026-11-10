@@ -3,11 +3,26 @@ import { CommonModule } from '@angular/common';
 import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
 import { RouterLink } from '@angular/router';
 
+interface NavLink {
+  label: string;
+  link: string;
+  external?: boolean;
+}
+
+/**
+ * Columna de un menú desplegable. Sin `titulo` es un dropdown simple;
+ * con dos o más secciones el panel se abre como mega menú.
+ */
+interface NavSection {
+  titulo?: string;
+  items: NavLink[];
+}
+
 interface NavItem {
   label: string;
   link?: string;
-  children?: NavItem[];
   external?: boolean;
+  sections?: NavSection[];
 }
 
 @Component({
@@ -22,59 +37,105 @@ export class NavBarComponent implements OnInit {
   activeDropdown = signal<string | null>(null);
   isMobile = signal(false);
 
+  /**
+   * Cierre diferido del dropdown. Al mover el mouse en diagonal del ítem al
+   * panel se pasa por una zona que no es ninguno de los dos; sin esta espera
+   * el panel se cierra y se vuelve a abrir (flicker).
+   */
+  private closeTimer?: ReturnType<typeof setTimeout>;
+
+  /** Cinco categorías de primer nivel (ver AGENTS/UX: densidad de navbar). */
   navItems: NavItem[] = [
     {
-      label: 'Institucional',
-      children: [
-        { label: 'Autoridades', link: '/institucional/autoridades' },
-        { label: 'Estatuto', link: '/institucional/estatuto' },
-        {
-          label: 'Reglamento del Comité Técnico',
-          link: '/institucional/reglamento-comite-tecnico',
-        },
-        { label: 'Requisitos para ser Delegado', link: '/institucional/requisitos-delegados' },
-        { label: 'Escuelas y Clubes reconocidos', link: '/institucional/escuelas-clubes' },
-        { label: 'Decálogo', link: 'docs/Decalogo-AA.pdf', external: true },
-        { label: 'Sponsors', link: '/institucional/sponsors' },
-        { label: 'Subcomisión de Esquí Adaptado', link: '/subcomision-esqui-adaptado' },
-        { label: 'Fundación Challenge', link: '/challenge' },
-      ],
-    },
-    {
       label: 'Académico',
-      children: [
-        { label: 'Cursos', link: '/academico/cursos' },
-        { label: 'Calendario', link: '/academico/calendario' },
-        { label: 'Delegaciones', link: '/academico/delegaciones' },
-        { label: 'Reglamento Académico', link: '/institucional/reglamento-academico' },
-        { label: 'Preguntas Frecuentes', link: '/academico/FAQ' },
+      sections: [
+        {
+          items: [
+            { label: 'Cursos', link: '/academico/cursos' },
+            { label: 'Calendario', link: '/academico/calendario' },
+            { label: 'Delegaciones', link: '/academico/delegaciones' },
+            { label: 'Reglamento Académico', link: '/institucional/reglamento-academico' },
+            { label: 'Preguntas Frecuentes', link: '/academico/FAQ' },
+          ],
+        },
       ],
     },
     {
       label: 'Socios',
-      children: [
-        { label: '¿Por qué ser socio?', link: '/socios/por-que-ser-socio' },
-        { label: 'Convenios y Beneficios', link: '/socios/convenios-y-beneficios' },
-        { label: 'Bolsa de Trabajo', link: '/socios/bolsa-de-trabajo' },
-        { label: 'Alquileres para Socios', link: '/socios/alquileres-para-socios' },
-        { label: 'Instructores', link: 'https://qr.aadidess.cipbyte.io/#/home', external: true },
-        { label: 'Hub Travel - Vuelos', link: '/wip' },
-        // dejo /wip ahora hasta que este solucionada la ruta
-        // /socios/hub-travel-vuelos es la ruta que muestra el componente HubTravelVuelosComponent, que a su vez carga el script externo de Aereos.
+      sections: [
+        {
+          titulo: 'Beneficios',
+          items: [
+            { label: '¿Por qué ser socio?', link: '/socios/por-que-ser-socio' },
+            { label: 'Convenios y Beneficios', link: '/socios/convenios-y-beneficios' },
+            { label: 'Alquileres para Socios', link: '/socios/alquileres-para-socios' },
+            { label: 'Hub Travel - Vuelos', link: '/wip' },
+            // /socios/hub-travel-vuelos es la ruta que carga el script externo de Aereos;
+            // dejo /wip hasta que esté solucionada.
+          ],
+        },
+        {
+          titulo: 'Servicios',
+          items: [
+            { label: 'Bolsa de Trabajo', link: '/socios/bolsa-de-trabajo' },
+            {
+              label: 'Instructores',
+              link: 'https://qr.aadidess.cipbyte.io/#/home',
+              external: true,
+            },
+          ],
+        },
+        {
+          titulo: 'Aranceles',
+          items: [
+            { label: 'Aranceles', link: '/aranceles-y-formas-de-pago/aranceles' },
+            { label: 'Formas de Pago', link: '/aranceles-y-formas-de-pago/formas-de-pago' },
+          ],
+        },
       ],
     },
     {
-      label: 'Aranceles y Formas de Pago',
-      children: [
-        { label: 'Aranceles', link: '/aranceles-y-formas-de-pago/aranceles' },
-        { label: 'Formas de Pago', link: '/aranceles-y-formas-de-pago/formas-de-pago' },
+      label: 'Institucional',
+      sections: [
+        {
+          titulo: 'Conducción',
+          items: [
+            { label: 'Autoridades', link: '/institucional/autoridades' },
+            { label: 'Comité Técnico', link: '/institucional/comite-tecnico' },
+            { label: 'Estatuto', link: '/institucional/estatuto' },
+          ],
+        },
+        {
+          titulo: 'Red institucional',
+          items: [
+            { label: 'Requisitos para ser Delegado', link: '/institucional/requisitos-delegados' },
+            { label: 'Escuelas y Clubes reconocidos', link: '/institucional/escuelas-clubes' },
+            { label: 'Subcomisión de Esquí Adaptado', link: '/subcomision-esqui-adaptado' },
+            { label: 'Fundación Challenge', link: '/challenge' },
+          ],
+        },
+        {
+          titulo: 'Recursos',
+          items: [
+            {
+              label: 'Reglamento del Comité Técnico',
+              link: '/institucional/reglamento-comite-tecnico',
+            },
+            { label: 'Decálogo', link: 'docs/Decalogo-AA.pdf', external: true },
+            { label: 'Sponsors', link: '/institucional/sponsors' },
+          ],
+        },
       ],
     },
     {
-      label: 'Noticias y Novedades',
-      children: [
-        { label: 'Noticias', link: '/portal-de-noticias' },
-        { label: 'Novedades', link: '/novedades' },
+      label: 'Noticias',
+      sections: [
+        {
+          items: [
+            { label: 'Portal de noticias', link: '/portal-de-noticias' },
+            { label: 'Novedades', link: '/novedades' },
+          ],
+        },
       ],
     },
     { label: 'Contacto', link: '/contacto' },
@@ -129,11 +190,36 @@ export class NavBarComponent implements OnInit {
   }
 
   setActiveDropdown(label: string | null) {
+    this.cancelClose();
     this.activeDropdown.set(label);
+  }
+
+  /** Abre (o mantiene abierto) el panel del ítem y cancela un cierre pendiente. */
+  openDropdown(label: string): void {
+    this.cancelClose();
+    this.activeDropdown.set(label);
+  }
+
+  /** Cierra con una pequeña espera para tolerar el recorrido del mouse. */
+  scheduleClose(): void {
+    this.cancelClose();
+    this.closeTimer = setTimeout(() => this.activeDropdown.set(null), 220);
+  }
+
+  private cancelClose(): void {
+    if (this.closeTimer) {
+      clearTimeout(this.closeTimer);
+      this.closeTimer = undefined;
+    }
   }
 
   isDropdownOpen(label: string): boolean {
     return this.activeDropdown() === label;
+  }
+
+  /** Un panel con más de una sección se muestra como mega menú en columnas. */
+  isMega(item: NavItem): boolean {
+    return (item.sections?.length ?? 0) > 1;
   }
 
   openExternal(url: string, event?: MouseEvent): void {

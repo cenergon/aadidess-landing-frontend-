@@ -12,10 +12,19 @@ $gap: 6rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem 0.5rem;
+  // La banda es más baja que el logo más alto: el aire vertical de cada logo
+  // (padding transparente del archivo) se recorta, el logo se ve igual.
+  height: 60px;
+  padding: 0 0.5rem;
   background-color: var(--color-bg-elevated, #f8f9fa);
   border-top: 1px solid var(--color-border, #dee2e6);
   overflow: hidden;
+
+  // Entre 769 y 1023 los logos pueden pasar a dos líneas: ahí la banda crece.
+  @media (min-width: 769px) and (max-width: 1023px) {
+    height: auto;
+    padding: 0.15rem 0.5rem;
+  }
 }
 
 .sponsor-bar__carousel {

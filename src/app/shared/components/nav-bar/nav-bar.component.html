@@ -37,12 +37,12 @@
 
       <div class="navbar__menu-body">
         @for (item of navItems; track item.label) {
-          @if (item.children && item.children.length) {
-            <!-- Dropdown / acordeón -->
+          @if (item.sections?.length) {
+            <!-- Dropdown simple o mega menú por secciones -->
             <div
               class="navbar__dropdown"
-              (mouseenter)="!isMobile() && setActiveDropdown(item.label)"
-              (mouseleave)="!isMobile() && setActiveDropdown(null)"
+              (mouseenter)="!isMobile() && openDropdown(item.label)"
+              (mouseleave)="!isMobile() && scheduleClose()"
             >
               <button
                 class="navbar__dropdown-toggle"
@@ -51,33 +51,42 @@
                 (click)="setActiveDropdown(isDropdownOpen(item.label) ? null : item.label)"
               >
                 <span>{{ item.label }}</span>
-                <span class="material-symbols-outlined navbar__chevron" aria-hidden="true">
-                  expand_more
-                </span>
               </button>
               <div
                 class="navbar__dropdown-panel"
                 [class.navbar__dropdown-panel--open]="isDropdownOpen(item.label)"
+                [class.navbar__dropdown-panel--mega]="isMega(item)"
               >
                 <div class="navbar__dropdown-panel-inner">
-                  @for (child of item.children; track child.label) {
-                    @if (child.external) {
-                      <a
-                        href="javascript:void(0)"
-                        class="navbar__dropdown-link"
-                        (click)="openExternal(child.link!); closeMobileMenu()"
-                      >
-                        {{ child.label }}
-                      </a>
-                    } @else {
-                      <a
-                        [routerLink]="child.link"
-                        class="navbar__dropdown-link"
-                        (click)="closeMobileMenu()"
-                      >
-                        {{ child.label }}
-                      </a>
-                    }
+                  @for (section of item.sections ?? []; track section.titulo ?? $index) {
+                    <div class="navbar__panel-col">
+                      @if (section.titulo) {
+                        <p class="navbar__panel-title">{{ section.titulo }}</p>
+                      }
+                      <ul class="navbar__panel-list">
+                        @for (child of section.items; track child.label) {
+                          <li>
+                            @if (child.external) {
+                              <a
+                                href="javascript:void(0)"
+                                class="navbar__dropdown-link"
+                                (click)="openExternal(child.link); closeMobileMenu()"
+                              >
+                                {{ child.label }}
+                              </a>
+                            } @else {
+                              <a
+                                [routerLink]="child.link"
+                                class="navbar__dropdown-link"
+                                (click)="closeMobileMenu()"
+                              >
+                                {{ child.label }}
+                              </a>
+                            }
+                          </li>
+                        }
+                      </ul>
+                    </div>
                   }
                 </div>
               </div>
@@ -130,10 +139,7 @@
         </span>
         Campus Virtual
       </a>
-    }
 
-    <!-- Theme Toggle en la barra (solo desktop) -->
-    @if (!isMobile()) {
       <div class="navbar__theme-toggle-container">
         <app-theme-toggle />
       </div>

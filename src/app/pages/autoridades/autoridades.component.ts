@@ -144,58 +144,6 @@ export class AutoridadesComponent {
           foto: this.foto('mazza')
         }
       ]
-    },
-    {
-      id: 'comite-tecnico',
-      titulo: 'Comité Técnico',
-      miembros: [
-        {
-          // Los que además tienen cargo en la comisión van primero.
-          nombre: 'Ivo Bozic',
-          cargo: 'Esquí',
-          foto: this.foto('bozic')
-        },
-        {
-          nombre: 'Juan Manuel Faccio',
-          cargo: 'Esquí',
-          foto: this.foto('faccio')
-        },
-        {
-          nombre: 'Tito Franco',
-          cargo: 'Esquí',
-          foto: this.foto('tito-franco')
-        },
-        {
-          nombre: 'Diego Hilaire',
-          cargo: 'Esquí',
-          foto: this.foto('hilaire')
-        },
-        {
-          nombre: 'Federico Marcaccini',
-          cargo: 'Esquí',
-          foto: this.foto('marcaccini')
-        },
-        {
-          nombre: 'Matthias Pinna',
-          cargo: 'Esquí',
-          foto: this.foto('pinna')
-        },
-        {
-          nombre: 'Nahuel Vitale',
-          cargo: 'Esquí',
-          foto: this.foto('vitale')
-        },
-        {
-          nombre: 'Ismael de Vedia',
-          cargo: 'Snowboard',
-          foto: this.foto('deVedia')
-        },
-        {
-          nombre: 'Franco Ruffini',
-          cargo: 'Snowboard',
-          foto: this.foto('ruffini')
-        }
-      ]
     }
   ];
 
