@@ -18,7 +18,14 @@ export interface BloqueSubtitulo {
   contenido: string; // admite **negrita**
 }
 
-export type Bloque = BloqueTexto | BloqueLink | BloqueSubtitulo;
+export interface BloqueDestacado {
+  tipo: 'destacado';
+  orden: number;
+  titulo?: string; // opcional, etiqueta corta arriba del texto
+  contenido: string; // admite **negrita** y saltos de línea
+}
+
+export type Bloque = BloqueTexto | BloqueLink | BloqueSubtitulo | BloqueDestacado;
 
 export interface Noticia {
   id: number;

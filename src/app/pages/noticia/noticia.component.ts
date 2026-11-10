@@ -28,7 +28,19 @@ interface SeccionSubtitulo {
   orden: number;
 }
 
-type Seccion = SeccionTexto | SeccionLink | SeccionLinkGroup | SeccionSubtitulo;
+interface SeccionDestacado {
+  tipo: 'destacado';
+  titulo?: string;
+  contenido: string;
+  orden: number;
+}
+
+type Seccion =
+  | SeccionTexto
+  | SeccionLink
+  | SeccionLinkGroup
+  | SeccionSubtitulo
+  | SeccionDestacado;
 
 @Component({
   selector: 'app-noticia',
@@ -109,6 +121,14 @@ export class NoticiaComponent implements OnInit {
           orden: bloque.orden,
         });
         i++;
+      } else if (bloque.tipo === 'destacado') {
+        secciones.push({
+          tipo: 'destacado',
+          titulo: bloque.titulo,
+          contenido: bloque.contenido,
+          orden: bloque.orden,
+        });
+        i++;
       } else {
         // Agrupar links consecutivos
         const links: BloqueLink[] = [bloque as BloqueLink];
@@ -136,22 +156,33 @@ export class NoticiaComponent implements OnInit {
     });
   }
 
-  procesarTexto(texto: string): SafeHtml {
-    // 1. Escapar todo el HTML para evitar XSS
-    let escapado = texto
+  /**
+   * Arma el HTML del bloque: escapa, aplica **negrita** y convierte los
+   * renglones que arrancan con "•" en ítems de lista con viñeta de acento.
+   */
+  procesarTexto(texto: string, claseNegrita = 'negrita-accent'): SafeHtml {
+    const lineas = texto.split('\n');
+    const html = lineas
+      .map((linea, i) => {
+        if (/^\s*[•·]\s+/.test(linea)) {
+          const item = linea.replace(/^\s*[•·]\s+/, '');
+          return `<span class="noticia-detalle__item">${this.formatearInline(item, claseNegrita)}</span>`;
+        }
+        const contenido = this.formatearInline(linea, claseNegrita);
+        return i === lineas.length - 1 ? contenido : `${contenido}<br>`;
+      })
+      .join('');
+    return this.sanitizer.bypassSecurityTrustHtml(html);
+  }
+
+  /** Escapa el HTML para evitar XSS y convierte **texto** en negrita. */
+  private formatearInline(texto: string, claseNegrita: string): string {
+    const escapado = texto
       .replace(/&/g, '&amp;')
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;')
       .replace(/'/g, '&#039;');
-    // 2. Convertir la marca **...** en <strong class="negrita-accent">...</strong>
-    const conNegrita = escapado.replace(
-      /\*\*(.*?)\*\*/g,
-      '<strong class="negrita-accent">$1</strong>'
-    );
-    // 3. Convertir saltos de línea en <br> para que respeten los \n del JSON
-    const conSaltos = conNegrita.replace(/\n/g, '<br>');
-    // 4. Devolver como HTML seguro
-    return this.sanitizer.bypassSecurityTrustHtml(conSaltos);
+    return escapado.replace(/\*\*(.*?)\*\*/g, `<strong class="${claseNegrita}">$1</strong>`);
   }
 }

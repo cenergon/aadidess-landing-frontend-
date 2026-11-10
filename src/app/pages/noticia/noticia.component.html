@@ -20,6 +20,16 @@
                 class="noticia-detalle__parrafo"
                 [innerHTML]="procesarTexto(seccion.contenido)"
               ></p>
+            } @else if (seccion.tipo === 'destacado') {
+              <aside class="noticia-detalle__destacado">
+                @if (seccion.titulo) {
+                  <p class="noticia-detalle__destacado-etiqueta">{{ seccion.titulo }}</p>
+                }
+                <div
+                  class="noticia-detalle__destacado-texto"
+                  [innerHTML]="procesarTexto(seccion.contenido, 'noticia-detalle__destacado-fuerte')"
+                ></div>
+              </aside>
             } @else if (seccion.tipo === 'subtitulo') {
               <h2
                 class="noticia-detalle__subtitulo"

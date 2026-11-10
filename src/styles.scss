@@ -106,6 +106,31 @@ a {
   color: var(--color-accent);
 }
 
+// Ítems de listas en el contenido de noticias. Va global porque el HTML se
+// inyecta con [innerHTML] y no lleva el scope de estilos del componente.
+.noticia-detalle__destacado-fuerte {
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.noticia-detalle__item {
+  display: block;
+  position: relative;
+  padding-left: 1.15rem;
+  margin: 0.3rem 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0.72em;
+    left: 0;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--color-accent);
+  }
+}
+
 /* Interacción táctil: sin resaltado cuadrado por defecto; foco visible accesible */
 * {
   -webkit-tap-highlight-color: transparent;

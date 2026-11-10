@@ -1,0 +1,84 @@
+{
+  "id": 68,
+  "titulo": "Nueva Comisión Directiva y autoridades de AADIDESS electas en Asamblea General Ordinaria",
+  "postedAt": "2026-11-10T12:50:00-03:00",
+  "createdAt": "2026-11-10T12:50:00-03:00",
+  "bloques": [
+    {
+      "tipo": "texto",
+      "orden": 1,
+      "contenido": "El pasado **6 de noviembre de 2026**, en la sede de la Asociación Argentina de Instructores de Esquí, Snowboard y Pisteros Socorristas (AADIDESS), ubicada en **E. Morales N° 483 de San Carlos de Bariloche**, se llevó a cabo la **Asamblea General Ordinaria** de la entidad."
+    },
+    {
+      "tipo": "texto",
+      "orden": 2,
+      "contenido": "Uno de los puntos centrales de la asamblea fue la **elección de autoridades por vencimiento de mandatos**. A continuación se detalla la nueva composición:"
+    },
+    {
+      "tipo": "subtitulo",
+      "orden": 3,
+      "contenido": "Comisión Directiva · período 2026-2030"
+    },
+    {
+      "tipo": "texto",
+      "orden": 4,
+      "contenido": "• **Presidente:** Martín Bacer\n• **Secretario:** Juan Manuel Faccio\n• **Tesorero:** Justo Luis Olivieri"
+    },
+    {
+      "tipo": "subtitulo",
+      "orden": 5,
+      "contenido": "Revisores de Cuentas · período 2026-2028"
+    },
+    {
+      "tipo": "texto",
+      "orden": 6,
+      "contenido": "• **Titular:** Jorge Taricco\n• **Suplente:** Andrea Cimorelli"
+    },
+    {
+      "tipo": "subtitulo",
+      "orden": 7,
+      "contenido": "Vocales Titulares · período 2026-2030"
+    },
+    {
+      "tipo": "texto",
+      "orden": 8,
+      "contenido": "• Pablo Calello\n• Rodolfo Longo\n• Pedro Vergara\n• José María Rossi\n• Gabriel Runschke\n• Ivo Bozic"
+    },
+    {
+      "tipo": "subtitulo",
+      "orden": 9,
+      "contenido": "Vocales Suplentes · período 2026-2030"
+    },
+    {
+      "tipo": "texto",
+      "orden": 10,
+      "contenido": "• María Manzano\n• Fernando Pomar\n• Román Arinovich"
+    },
+    {
+      "tipo": "subtitulo",
+      "orden": 11,
+      "contenido": "Tribunal de Honor · período 2026-2030"
+    },
+    {
+      "tipo": "texto",
+      "orden": 12,
+      "contenido": "• **Presidente:** Federico Corsiglia\n• **Secretario:** Ricardo Djapic\n• **Vocal:** Maximiliano Mazza"
+    },
+    {
+      "tipo": "destacado",
+      "orden": 13,
+      "titulo": "Socio honorario",
+      "contenido": "La Asamblea resolvió **por unanimidad** designar como **Socio Honorario al Sr. Cyrille André**, en reconocimiento a su destacado aporte a los socios de AADIDESS."
+    },
+    {
+      "tipo": "texto",
+      "orden": 14,
+      "contenido": "Desde la Asociación felicitamos a todos los electos y les deseamos una gestión exitosa al servicio de los instructores, snowboarders y pisteros socorristas de todo el país."
+    },
+    {
+      "tipo": "texto",
+      "orden": 15,
+      "contenido": "**Comisión Directiva**\nAsociación Argentina de Instructores de Esquí, Snowboard y Pisteros Socorristas (AADIDESS)."
+    }
+  ]
+}
