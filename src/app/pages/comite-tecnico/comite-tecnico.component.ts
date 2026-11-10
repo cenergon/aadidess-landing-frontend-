@@ -50,16 +50,6 @@ export class ComiteTecnicoComponent {
           foto: this.foto('faccio'),
         },
         {
-          nombre: 'Tito Franco',
-          cargo: 'Esquí',
-          foto: this.foto('tito-franco'),
-        },
-        {
-          nombre: 'Diego Hilaire',
-          cargo: 'Esquí',
-          foto: this.foto('hilaire'),
-        },
-        {
           nombre: 'Federico Marcaccini',
           cargo: 'Esquí',
           foto: this.foto('marcaccini'),
@@ -78,6 +68,16 @@ export class ComiteTecnicoComponent {
           nombre: 'Nahuel Vitale',
           cargo: 'Esquí',
           foto: this.foto('vitale'),
+        },
+        {
+          nombre: 'Tito Franco',
+          cargo: 'Esquí',
+          foto: this.foto('tito-franco'),
+        },
+        {
+          nombre: 'Diego Hilaire',
+          cargo: 'Esquí',
+          foto: this.foto('hilaire'),
         },
       ],
     },
