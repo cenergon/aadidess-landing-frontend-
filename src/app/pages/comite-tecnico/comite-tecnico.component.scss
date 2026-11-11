@@ -84,7 +84,6 @@
   &__organo {
     margin-bottom: 1.35rem;
     padding: 1.1rem 1.25rem 1.35rem;
-    background: var(--com-panel);
     border: 1px solid var(--color-border);
     border-radius: calc(var(--com-radius) + 6px);
 
@@ -127,9 +126,9 @@
 
   &__grid {
     display: grid;
-    // Ocho columnas: los ocho de esquí entran en una fila y los cuatro de
-    // snowboard quedan del mismo tamaño, alineados a la izquierda.
-    grid-template-columns: repeat(8, minmax(0, 1fr));
+    // Una columna por integrante: cada subcomisión entra en una sola fila y el
+    // tamaño de tarjeta se acomoda solo cuando cambia la cantidad.
+    grid-template-columns: repeat(var(--cols, 8), minmax(0, 1fr));
     gap: 0.9rem;
     margin: 0;
     padding: 0;

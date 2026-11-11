@@ -13,7 +13,7 @@
           </h2>
         </div>
 
-        <ul class="comite__grid" [class.comite__grid--ocho]="subcomision.id === 'esqui'">
+        <ul class="comite__grid" [style]="{ '--cols': columnas }">
           @for (persona of subcomision.integrantes; track persona.nombre) {
             <li class="comite__card">
               <div class="comite__retrato">

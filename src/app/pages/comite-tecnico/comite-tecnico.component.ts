@@ -79,6 +79,11 @@ export class ComiteTecnicoComponent {
           cargo: 'Esquí',
           foto: this.foto('hilaire'),
         },
+        {
+          nombre: 'Santiago Murtagh',
+          cargo: 'Esquí',
+          foto: this.foto('murtagh'),
+        },
       ],
     },
     {
@@ -108,6 +113,12 @@ export class ComiteTecnicoComponent {
       ],
     },
   ];
+
+  /**
+   * Columnas de la grilla: la de la subcomisión más numerosa, así todas las
+   * tarjetas quedan del mismo tamaño aunque una disciplina tenga menos gente.
+   */
+  readonly columnas = Math.max(...this.subcomisiones.map((s) => s.integrantes.length));
 
   /** Personas cuya foto todavía no está en public/ (se muestran con iniciales). */
   private readonly sinFoto = signal<ReadonlySet<string>>(new Set<string>());
